@@ -49,13 +49,13 @@ We deal with various number systems in mathematics.
 
 Algebra is the general name given to the rules for manipulating numerical variables.
 
-We often use letters as placeholders for numerical values. We can then manipulate these letters as if they were numbers using the rules of algebra, and hence re-arraging formulae or fing the general solution to an equation. We can then "plug-in" specific numbers to get the answer.
+We often use letters as placeholders for numerical values. We can then manipulate these letters as if they were numbers using the rules of algebra, re-arranging formulae, or finding the general solution to an equation. We can then "plug-in" specific numbers to get the answer.
 
 Being fluent in the notation and manipulations of algebra allows us to progress to higher (more useful and more interesting) areas of mathematics.
 
 ### BEDMAS
 
-Recall that when an expression contains multiple arithmetic operations, there is a certain *precedence* (they must be carried out in a certain order), so that there is no ambiguity in evaluating the answer. This is usually remembered by the mneumonic BEDMAS:
+Recall that when an expression contains multiple arithmetic operations, there is a certain *precedence* (they must be carried out in a certain order), so that there is no ambiguity in evaluating the answer. This is usually remembered by the acronym BEDMAS:
 
 B - Brackets
 
@@ -108,7 +108,7 @@ and more generally, for any numbers $x$ and $a$,
 
 $\underbrace{x\times \dotsb \times x}_{\text{with }a\, x\text{'s}} = x^a$ spoken as "x to the power $a$"
 
-The number $x$ is known as the *base* and the number $n$ is known as the *power*, *index* or *exponent*.
+In the expression $x^n$, the number $x$ is known as the *base* and the number $n$ is known as the *power*, *index* or *exponent*.
 
 Next, we look at rules for combining and simplifying exponents. We start by assuming the base $x$ is a positive real number and the exponent $a$ is a postive integer.
 
@@ -132,7 +132,8 @@ It is also worth seeing a non-example:
 
 $3^3 4^2=?$
 
-There is in general no simple way to combine exponents with different bases (3 and 4 here):
+<!-- Felt statement pre-edit was a bit misleading, e.g., you could decompose into prime factors then combine exponents of like factors -->
+Here:
 
 $$3^3 4^2=(3\times 3 \times 3) \times (4 \times 4) = 27 \times 16=432$$
 
@@ -147,7 +148,7 @@ $$(x^a)^b=x^{ab}$$
 :::
 
 This follows from Rule 1 since
-$$(x^a)^b=\underbrace{x^a\times \dotsb \times x^a}_{b\, \text{times}}=x^{a+\dotsb+a}=x^{ab}$
+$$(x^a)^b=\underbrace{x^a\times \dotsb \times x^a}_{b\, \text{times}}=x^{a+\dotsb+a}=x^{ab}$$
 
 ::: {.example name="Power of a power"}
 $(5^3)^4=5^{12}$
@@ -181,7 +182,7 @@ This follows from the previous rule:
 
 $\left(\frac{x}{y}\right)^a=\left(x\frac{1}{y}\right)^a=x^a\left(\frac{1}{y}\right)^a=x^a\frac{1}{y^a}=\frac{x^a}{y^a}.$
 
-So far we have allowed the exponents to be positive integers. Can we make sense of negative integers as exponents? Consider for $a$ and $b$ as positive integers the product
+So far we have allowed the exponents to be positive integers. Can we make sense of negative integers as exponents? Consider, for $a$ and $b$ as positive integers, the product
 
 $$x^a\frac{1}{x^b}=\frac{x^a}{x^b}$$
 
@@ -197,7 +198,8 @@ More generally, taking $\frac{x^a}{x^b}$ for $a>b$ we have $a$ $x$'s on the top 
 \frac{x^a}{x^b}=x^{a-b} (\#eq:divexps)
 \end{equation}
 
-and following Rule 1 we could think of this as $x^{a-b}=x^{a+(-b)}=x^ax^{-b}$, and therefore using a negative exponent $-b$ gives the reciprocal of $x^b$.
+<!-- Figured reciprocal might be unfamiliar terminology -->
+and following Rule 1 we could think of this as $x^{a-b}=x^{a+(-b)}=x^ax^{-b}$. In particular, $x^{-b} = \frac{1}{x^b}$ (referred to as the reciprocal of $x^b$).
 
 ::: {.theorem #exprule3 name="Rule 5"}
 $$x^{-a}=\frac{1}{x^a}$$
@@ -227,17 +229,19 @@ which is compatible with the "multiply exponents" rule
 $$(x^2)^{-3}=x^{(2\times -3)}=x^{-6}$$.
 :::
 
-So far we have assumed $x$ is positive. What happens when $x=0$? Then $0^a$ is multiplying $0$ by itself $a$ times, so the result is obviously $0$. Note this does not hold when $a=0$ since we have $0^0$, which is an indeterminate form. Also when $-a<0$, have $0^{-a}=\frac{1}{0^a}=\frac{1}{0}$ which is also an indeterminate form. So we need $a>0$ for this result.
+<!-- Changed treatment of zero to the power of zero, following https://en.wikipedia.org/wiki/Zero_to_the_power_of_zero -->
+So far we have assumed $x$ is positive. What happens when $x=0$? Then $0^a$ is multiplying $0$ by itself $a$ times, so the result is obviously $0$. Note this does not hold when $-a<0$, since $0^{-a}=\frac{1}{0^a}=\frac{1}{0}$, which is an indeterminate form. The case in which $a = 0$, that is, $0^0$, is defined differently in different contexts (which is ok, providing it is clear which definition is being used and it is being used consistently). So we restrict to $a>0$ for this result.
 
 ::: {.theorem #exprule3 name="Rule 6"}
 $$0^{a}=0, \text{ for }a>0$$
 :::
 
-Next, we can consider the the exponent $a=0$, that is the value of $x^0$. In \@ref(eq:divexps) with the particular case $b=a$, we have
+Next, we can consider the exponent $a=0$, that is, the value of $x^0$. In \@ref(eq:divexps) with the particular case $b=a$, we have
 
 $$1=\frac{x^a}{x^a}=x^{a-a}=x^0$$
 
-so we get that for any non-zero^[We already know that $0^0$ is an indeterminate form.] value of $x$:
+<!-- Changed footnote on zero to the power of zero -->
+so we get that for any non-zero^[Some consider that $0^0$ is an indeterminate form.] value of $x$:
 
 ::: {.theorem name="Rule 7"}
 $$x^0=1, \text{ for } x\neq 0$$
@@ -253,10 +257,10 @@ where $a$ is a non-zero integer.
 
 Take $(9^\frac{1}{2})^2=9^{(\frac{1}{2}\times 2)}=9^1=9$.
 
-This implies $9^{\frac{1}{2}}=3$, the square root of $9$.
+This implies that $9^{\frac{1}{2}}=3$, the square root of $9$.
 :::
 
-More generally, take $(x^\frac{1}{a})^a=x^{\frac{1}{a}a}=x^1=x$. This means that raising $x^\frac{1}{a}$ to the power $a$ gets us back to $x$, hence the number $x^\frac{1}{a}$ is the $a^\text{th}$ root of $x$. In particular the square root is $x^{\frac{1}{2}}=\sqrt{x}$ and the cube root is $x^{\frac{1}{3}}=\sqrt[3]{x}$; we tend to use the root notation for expressions containing square or cube roots on their own, and use the power notation when combining different roots.
+More generally, take $(x^\frac{1}{a})^a=x^{\frac{1}{a}a}=x^1=x$. This means that raising $x^\frac{1}{a}$ to the power $a$ gets us back to $x$, hence the number $x^\frac{1}{a}$ is the $a^\text{th}$ root of $x$. In particular, the square root is $x^{\frac{1}{2}}=\sqrt{x}$ and the cube root is $x^{\frac{1}{3}}=\sqrt[3]{x}$; we tend to use the root notation for expressions containing square or cube roots on their own, and use the power notation when combining different roots.
 
 ::: {.theorem name="Rule 8"}
 
@@ -266,20 +270,20 @@ $$x^\frac{1}{a}=\sqrt[a]{x}.$$
 
 ::: {.example}
 
-$8^\frac{1}{3}=\sqrt[3]{8}=2$
+$8^\frac{1}{3}=\sqrt[3]{8}=2.$
 :::
 
-Now lets try to make sense of a power of the form $x^{\frac{a}{b}}$ where $a$ is an integer and $b$ is a positive integer. That is, we now allow for any fractional (otherwise known as *rational*) exponent. Since we have $\frac{a}{b}=a\frac{1}{b}$ we can write (using Rule 2):
+Now lets try to make sense of a power of the form $x^{\frac{a}{b}}$ where $a$ is an integer and $b$ is a positive integer. That is, we now allow for any fractional (otherwise known as *rational*) exponent. Since we have $\frac{a}{b}=a\frac{1}{b}$, we can write (using Rule 2):
 
 $$x^{\frac{a}{b}}=x^{a\frac{1}{b}}=(x^a)^{\frac{1}{b}}=\sqrt[b]{x^a},$$
 
-or, equaivalently
+or, equivalently
 
 $$x^{\frac{a}{b}}=x^{\frac{1}{b}a}=(x^{\frac{1}{b}})^a=(\sqrt[b]{x})^a.$$
 
 ::: {.theorem name="Rule 9"}
 Fractional exponents:
-$$x^{\frac{a}{b}}=\sqrt[b]{x^a}=(\sqrt[b]{x})^a$$
+$$x^{\frac{a}{b}}=\sqrt[b]{x^a}=(\sqrt[b]{x})^a.$$
 :::
 
 ### More on exponents
@@ -309,7 +313,7 @@ A summary of the rules:
 We use brackets to set the precedence (or order) of evaluating the different parts of an expression. We evaluate the innermost brackets first. Note we usually omit the multiplication sign when multiplying a bracketed expression.
 
 ::: {.example name="Evaluating brackets"}
-$$5(((2+4)\div (5-2))+1)=5((6\div 3)+1)=5(2+1)=5\times 3 = 15$$
+$$5(((2+4)\div (5-2))+1)=5((6\div 3)+1)=5(2+1)=5\times 3 = 15.$$
 :::
 
 Sometimes you might find it helpful to add "redundant" brackets to make the calculation clearer. For example, we could write
@@ -333,15 +337,21 @@ $$(a+b)(b+c)+2ac=ab+ac+b^2+bc+2ac=ab+3ac+b^2+bc.$$
 
 With more than two brackets, we do the expansion in two steps: it does not matter which expansion we perform first. For example, we could start by expanding the first two sets of brackets in the following
 
-$$\underbrace{(a+b)(c+d)}_{\text{first expand these two}}(e+f)=(ac+ad+bc+bd)(e+f)=ace+ade+bce+bde + acf+adf+bcf+bdf$$
+<!-- Appearing cropped on laptop fullscreen so split into a multline: not sure if supported in RMarkdown -->
+\begin{multline*}
+\underbrace{(a+b)(c+d)}_{\text{first expand these two}}(e+f) \\
+=(ac+ad+bc+bd)(e+f)\\
+=ace+ade+bce+bde + acf+adf+bcf+bdf
+\end{multline*}
 
 but since the order of multiplication is unimportant, we could have started by expanding any two of the three sets of brackets.
 
-In the case of the sum of two numbers (a *binomial* term) to a postive integer power we have a general formula for the expansion, i.e. something of the form
+<!-- Changed sentence ordering for readability -->
+In the case of the sum of two numbers (a *binomial* term) to a postive integer power, i.e. something of the form
 
-$$(a+b)^n.$$
+$$(a+b)^n, \quad \text{where } n \text{ is a positive integer},$$
 
-which involves multiplying out the brackets $n$ times. We start by looking at a slightly simpler form
+we have a general formula for the expansion which involves multiplying out the brackets $n$ times. We start by looking at a slightly simpler form
 $$(1+x)^n.$$
 
 Let's take a look at the expansion for the first few values of $n$.
@@ -352,9 +362,9 @@ $n=1:$ $(1+x)^1=1+x$
 
 $n=2:$ $(1+x)^2=(1+x)(1+x)=x^2+2x+1$
 
-$n=3:$ $(1+x)^3=(1+x)(1+x)^2=(1+x)(x^2+2x+1)=x^3+3x^2+3x+1$
+$n=3:$ $(1+x)^3=(1+x)(1+x)^2=(1+x)(x^2+2x+1)=x^3+3x^2+3x+1.$
 
-The coefficients of $x$ form the $n^\text{th}$ row of Pascal's triangle.
+<!-- Suggested to remove this text as I think it could otherwise do with more info about what Pascal's triangle is, which is perhaps more than is required: The coefficients of $x$ form the $n^\text{th}$ row of Pascal's triangle. -->
 
 The general formula is:
 
@@ -366,13 +376,13 @@ $$\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
 
 and $n!$ is the *factorial* of $n$:
 
-$$n!=n\times(n-1)\times(n-2)\times\dotsb \times3\times 2\times 1$$.
+$$n!=n\times(n-1)\times(n-2)\times\dotsb \times3\times 2\times 1.$$
 
 Given the more general form $(a+b)^n$, we can first extract a factor of $a$ to give
 
 $$(a+b)^n=(a(1+\frac{b}{a}))^n=a^n(1+\frac{b}{a})^n$$
 
-so we now just need to evaluate $(1+\frac{b}{a})^n$ using the formula and substituting $x$ with $\frac{b}{a}$. Alternatively, the full formula is:
+so we now just need to evaluate $(1+\frac{b}{a})^n$ using the formula, and then substitute $x$ with $\frac{b}{a}$. Alternatively, the full formula is:
 
 $$(x+y)^n = \binom{n}{0}x^ny^0+\binom{n}{1}x^{n-1}y^1+\binom{n}{2}x^{n-2}y^2+\dotsb+\binom{n}{n-1}x^1y^{n-1}\binom{n}{n}x^0y^n.$$
 
@@ -380,12 +390,12 @@ $$(x+y)^n = \binom{n}{0}x^ny^0+\binom{n}{1}x^{n-1}y^1+\binom{n}{2}x^{n-2}y^2+\do
 
 At other times, we wish to simplify by extracting common factors from an expression, which we call *factorisation*. In the simplest form, this could just be factorising a single number
 
-$$2x+2y=2(x+y)$$
+$$2x+2y=2(x+y).$$
 
 Or, it could involve extracting more complicated factors, for example
 
 $$2xy+6x^2y=2xy(1+3x)$$
-$$x^2-3x-10=(x+2)(x-5)$$
+$$x^2-3x-10=(x+2)(x-5).$$
 
 The second example here is *factorising a quadratic* which we can do systematically by finding the roots -- we will see how to do this later in section \@ref(quad-eqs).
 
@@ -412,7 +422,7 @@ Equations are often regarded as *formulas*, which can be used to calculate the v
 
 $$A=\pi r^2$$
 
-where the independent variable $r$ is the radius of the cirle and $\pi$ is the mathematical constant $3.141...$. By plugging in a particular value for $r$ we then obtain a value for the area $A$.  We often want to re-arrange equations to make a different variable the dependent variable, or *subject*, of the formula, i.e. to place it alone on the left hand-side. Re-arranging formulae is also known as *transposition*. For example, if we knew the area of a cirlce and wanted to calculate the corresponding radius, we can re-arrange the equation to make $r$ the subject:
+where the independent variable $r$ is the radius of the cirle and $\pi$ is the mathematical constant $3.141...$. By plugging in a particular value for $r$ we then obtain a value for the area $A$.  We often want to re-arrange equations to make a different variable the dependent variable, or *subject*, of the formula, i.e. to place it alone on the left hand-side. Re-arranging formulae is also known as *transposition*. For example, if we knew the area of a circle and wanted to calculate the corresponding radius, we can re-arrange the equation to make $r$ the subject:
 
 $$r=\sqrt{\frac{A}{\pi}}.$$
 
@@ -434,9 +444,12 @@ so that $r^2$ is no longer multiplied by $\pi$. Now, to get from $r^2$ to $r$ we
 
 $$\sqrt{\frac{A}{\pi}}=\sqrt{r^2}=r$$
 
-and finally, we put the subject on the left hand side (since we read from left to right it is simply convention to do this, but mathematically it makes no difference since it is still an equality).
+and finally, we (typically) put the subject on the left hand side (For those who write from left to right, as in the English language, this is a natural convention. Mathematically, it makes no difference which way around the equation is written).
 
-$$r=\sqrt{\frac{A}{\pi}}$$
+$$r=\sqrt{\frac{A}{\pi}}.$$
+
+<!-- Some commentary on use of words dependent and independent, perhaps a bit elaborate! -->
+We note that the use of the words dependent and independent variables can be a bit misleading as they can imply causation (i.e. it is the occurence or setting of the values of the independent variables that causes the dependent variable to take its value). As we have demonstrated in the circle example, we may take either the area or the radius of the circle as the independent variable. As a reflection on causality (and its appropriateness): Is it the radius of the circle that causes its area? or the area that causes the radius? Or do the two merely coexist? (In a perfect harmony?).
 
 ### Conditional equations
 
@@ -468,7 +481,7 @@ which is false, so no value of $x$ can give us equality.
 
 ## Inequalities
 
-We are familiar with the symbols $<, \leq, >$ and $\geq$, (less than, less than or equal to, greater than and greater than or equal to) which are used to define inequalities.
+You may be familiar already with the symbols $<, \leq, >$ and $\geq$, (less than, less than or equal to, greater than and greater than or equal to). These are used to define inequalities.
 
 ::: {.example #ineqs}
 $$x<5$$ denotes all numbers that are strictly less that $5$ (so not including $5$ itself).
