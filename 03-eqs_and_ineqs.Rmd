@@ -166,7 +166,7 @@ More generally, a factor $(x-a)$ corresponds to a root $x=a$. Knowing the factor
 The value $x=a$ is a root of the polynomial equation $f(x)=0$ if and only if $(x-a)$ is a factor of the polynomial $f(x)$.
 :::
 
-We already have a fool-proof way to solve quadratic equations -- use the quadratic formula. There are also formulae for [cubic](https://en.wikipedia.org/wiki/Cubic_equation#General_cubic_formula) and [quartic](https://en.wikipedia.org/wiki/Quartic_equation#The_general_case) polynomials, but these are a bit more complicated. Furthermore, it turns out it is **impossible** to derive a formula for [quintic](https://en.wikipedia.org/wiki/Abel%E2%80%93Ruffini_theorem) and higher degree polynomials! The factor theorem can be helpful in finding roots of polynomials greater than degree 2. Here is an example.
+We already have a fool-proof way to solve quadratic equations -- use the quadratic formula. There are also formulae for [cubic](https://en.wikipedia.org/wiki/Cubic_equation#General_cubic_formula) and [quartic](https://en.wikipedia.org/wiki/Quartic_equation#The_general_case) polynomials, but these are more complicated. Furthermore, it turns out it is **impossible** to derive a formula for <a href="https://en.wikipedia.org/wiki/Abel%E2%80%93Ruffini_theorem" target="_blank">quintic</a> and higher degree polynomials! The factor theorem can be helpful in finding roots of polynomials greater than degree 2. Here is an example.
 
 ::: {.example #factorthmcubic name="Factor theorem applied to a cubic polynomial"}
 Find the roots of the cubic polynomial $$f(x)=x^3-7x-6.$$
@@ -186,11 +186,11 @@ $$x=3, x=-1,\,\text{ and } x=-2.$$
 
 ## Simultaneous equations
 
-Sometimes a problem will be formulated in terms of multiple equations with multiple, shared variables. The set of equations usually represent constraints between the variables and we need to determine which values of the variables are valid solutions, i.e. which values satisfy all of the equations *simultaneously* -- hence such sets of equations are known as *simultaneous equations*. Sometimes we can solve simultaneous equations by rearranging one equation to set one of the variables as the subject and then substitute this into another equation in order to eliminate one of the variables.
+Sometimes a problem will be formulated in terms of multiple equations with multiple, shared variables. The set of equations usually represent constraints between the variables and we need to determine which values of the variables are valid solutions, i.e. which values satisfy all of the equations *simultaneously* -- hence such sets of equations are known as *simultaneous equations*. Sometimes we can solve simultaneous equations by rearranging one equation to set one of the variables as the subject, and then substitute this into another equation in order to eliminate one of the variables.
 
 ### Simultaneous linear equations
 
-We begin with the simplest type of simultaneous equations: the case when all of the equations are *linear*, that is, geometrically they correspond to straight lines in the plane. We will just consider the case of two equations in two unknowns (the variables $x$ and $y$). There are three possible types of solution, which we illustrate with the following three examples.
+We begin with the simplest type of simultaneous equation: the case when all of the equations are *linear*. We will just consider the case of two equations in two unknowns (the variables $x$ and $y$). Geometrically, these correspond to straight lines in the plane. There are three possible types of solution, which we illustrate with the following three examples.
 
 ::: {.example #simul-lin-1}
 Solve the following two simultaneous equations in the variables $x$ and $y$:
@@ -198,9 +198,9 @@ Solve the following two simultaneous equations in the variables $x$ and $y$:
 3x+2y&=5,\\
 x-4y&=1.
 \end{align*}
-We could start by rearranging equation two to make $x$ the subject
-$$x=1+4y$$
-(it does not matter which equation we choose first or which variable we choose first, this choice was just easier to re-arrange) and then substitute this back in for $x$ in equation one
+We could start by rearranging the second equation to make $x$ the subject:
+$$x=1+4y.$$
+It does not matter which equation we choose first or which variable we choose first, this choice was just easier to re-arrange. We can then substitute this back in for $x$ in the first equation:
 $$3(1+4y)+2y=5$$
 and then solve for $y$
 \begin{align*}
@@ -209,7 +209,7 @@ and then solve for $y$
 14y&=2\\
 y&=\frac{1}{7}.
 \end{align*}
-Now that we have the value for $y$ we can substitute this back into either equation to find $x$. Since we already rearranged equation two to make $x$ the subject, we might as well use that:
+Now that we have the value for $y$, we can substitute this back into either equation to find $x$. Since we already rearranged the second equation to make $x$ the subject, we might as well use that:
 $$x=1+4y=1+\frac{4}{7}=\frac{11}{7}.$$
 Hence the solution is
 $$x=\frac{11}{7},\quad y=\frac{1}{7}.$$
@@ -228,17 +228,17 @@ Solve the following two simultaneous equations in the variables $x$ and $y$:
 -x+3y&=2,\\
 2x-6y&=11.
 \end{align*}
-We could start by rearranging equation one to make $x$ the subject
+We could start by rearranging the first equation to make $x$ the subject:
 $$x=3y-2$$
-and then substitute this back in for $x$ in equation two
+and then substitute this back in for $x$ in the second equation:
 $$2(3y-2)-6y=11$$
-and then solve for $y$
+and then attempt to solve for $y$:
 \begin{align*}
 2(3y-2)-6y&=11\\
 6y-6-6y&=11\\
 0&=17.
 \end{align*}
-which is impossible. This tells us there are no solutions to the simultaneous equations; that is, there are no values of $x$ and $y$ that satisfy both equations at the same time. Geometrically, the two equations correspond to parallel lines, and of course, two parallel lines never intersect.
+which is impossible. This tells us there are no solutions to the simultaneous equations; that is, there are no values of $x$ and $y$ that satisfy both equations at the same time. Geometrically, the two equations correspond to parallel lines, and two parallel lines never intersect.
 
 ```{r, linear-parallel, echo=FALSE, fig.cap="The lines $-x+3y=2$ (red line) and  $2x-6y=11$ (blue line) are parallel and do not intersect. [[Open graph in browser.]](https://www.desmos.com/calculator/b0ymbkzxb6)"}
 knitr::include_url("https://www.desmos.com/calculator/b0ymbkzxb6")
@@ -252,9 +252,9 @@ Solve the following two simultaneous equations in the variables $x$ and $y$:
 2x-y&=2\\
 4x-2y&=4
 \end{align*}
-we can rearrange equation one to make $y$ the subject
+we can rearrange the first equation to make $y$ the subject:
 $$y=2x-2$$
-and then substitute this back in for $y$ in equation two
+and then substitute this back in for $y$ in the second equation:
 $$4x-2(2x-2)=4$$
 and then solve for $x$
 \begin{align*}
@@ -265,7 +265,7 @@ and then solve for $x$
 \end{align*}
 This equality holds for any value of $x$, so $x$ can be any number. Therefore so long as $y$ satisfies one of the equations, for example
 $$y=2x-2$$
-then the pair of values $(x,y)$ is a solution: in this case any point on the line $y=2x-2$ is a solution, so we have *infinitely many* solutions. Note that equation two is just $2\times$ equation one, so they are effectively the same equation and describe the same line in the plane, hence *all* of their points intersect. The solutions are just the points that lie on the line described by equation one, or equivalently, equation two.
+then the pair of values $(x,y)$ is a solution: in this case any point on the line $y=2x-2$ is a solution, so we have *infinitely many* solutions. Note in this case that the second equation is just $2\times$ the first equation, so they are effectively the same equation and describe the same line in the plane, hence *all* of their points intersect. The solutions are just the points that lie on the line described by the first equation, or, equivalently, the second equation.
 
 ```{r, linear-same, echo=FALSE, fig.cap="The lines $2x-y=2$ (red line) and  $4x-2y=4$ (blue line) are in fact the same line, so intersect at all points on the line: there is a solution for any value of $x$ or any value of $y$. [[Open graph in browser.]](https://www.desmos.com/calculator/wxbjwyswuz)"}
 knitr::include_url("https://www.desmos.com/calculator/wxbjwyswuz")
@@ -273,7 +273,7 @@ knitr::include_url("https://www.desmos.com/calculator/wxbjwyswuz")
 
 :::
 
-The three examples above demonstrate the three general possibilities for two equations with two unknowns: one pair of solutions $(x,y)$; no solutions; infinitely many solutions along a line. This is simply the three ways that two lines could intersect in the plane: at one point; at no points (parallel, unequal lines); at all points (the equations describe the same line).
+The three examples above demonstrate the three general possibilities for two equations with two unknowns: one solution pair $(x,y)$; no solutions; infinitely many solutions along a line. These are simply the three different ways that two lines could intersect in the plane: at one point; at no points (parallel, unequal lines); at all points (the equations describe the same line).
 
 We shall look at a systematic way to deal with linear simultaneous equations in arbitrary dimensions (any number of equations and any number of variables) in section \@ref(gauss).
 
@@ -293,9 +293,9 @@ x^2-x(7-2x)&=6\\
 3x^2-7x-6&=0\\
 (3x+2)(x-3)&=0\\
 \end{align*}
-so the factorisation tells us
+so the factorisation tells us that
 $$x=-\frac{2}{3},\text{ or } x = 3.$$
-Now substiting these two possibilities back into the first equation gives
+Now substiting these two possibilities back into the first equation gives us two solutions:
 \begin{align*}
 2(-\frac{2}{3})+y&=7\\
 y&=\frac{25}{3}
@@ -319,9 +319,10 @@ knitr::include_url("https://www.desmos.com/calculator/kxu4qhz83t")
 
 The example presented above is relatively simple. In some real-world scenarios equations might be very complicated (with many variables or many simultaneous equations), and it is known that some equations are impossible to solve by hand. In these cases we need to turn to computational techniques. We'll look at some computational techniques in section \@ref(numerics).
 
+<!-- Commented as repeated from earlier
 ## Exponentials and Logarithms
 
-We shall now look at solving some equations involving exponentials and logarithms: recall that these functions are inverses of one another. First, we look at some of the rules for manipulating logs (which can be derived from the rules of exponents).
+We shall now look at solving some equations involving exponentials and logarithms: recall that these functions are inverses of one another. First, we recall some of the rules for manipulating logs (which can be derived from the rules of exponents).
 
 Rules of Logs:
 
@@ -359,8 +360,7 @@ $$\begin{aligned}a^x&=b^{\log_b (a^x)} \quad \text{(note that } b^{\log_b y}=y\t
 The "natural" choice of base for mathematical use is $b=e$ and hence we usually only consider exponential functions in the form
 $$e^{kx} \text{ where } k=\ln(a).$$
 
-
-
+-->
 
 ## Inequalities
 
@@ -371,18 +371,18 @@ We wish to find all values of $x$ satisfying the following inequalities.
 
 1. $2x+6<18.$
 
-    Here we can easily re-arrange the inequality (subtract $6$ from each side and divide by the positive number $2$ -- which preserves the direction of the inequality) to obtain
+    Here we can easily re-arrange the inequality (subtract $6$ from each side and divide by the positive number $2$ -- which preserves the direction of the inequality). This gives
     $$x<6.$$
 
 1. $x^2-7x+12>0$
 
-    Factorise the l.h.s. to give $(x-3)(x-4)>0$, so to be positive the factors on the left need to be either both positive or both negative, i.e.:
+    Factorise the left hand side to give $(x-3)(x-4)>0$, so to be positive the factors on the left need to be either both positive or both negative, i.e.:
 
     a. $(x-3)>0$ and $(x-4)>0$, so we must have both $x>4$ and $x>3$, which means that we must take $x>4$.
 
     a. $(x-3)<0$ and $(x-4)<0$, so we require both $x<3$ and $x<4$, which means we must take $x<3$.
     
-    Since either situation a or b satisfies the inequality the solution is $x<3$ or $x>4$.
+    Since if either situation a holds or situation b holds, then the inequality is satisfied, then the solution is $x<3$ or $x>4$.
 
 1. $\left|10-3x\right|\leq 8$, where $|\cdot|$ denotes the absolute value. We must have both:
     a.
@@ -409,17 +409,17 @@ We wish to find all values of $x$ satisfying the following inequalities.
     \end{gather*}
     giving the solution $x>3$.
 
-    We can check the solution graphically by plotting the l.h.s. and r.h.s. and seeing where the l.h.s. is greater than the r.h.s.
+    We can check the solution graphically by plotting the left hand side and right hand side and seeing where the left hand side is greater than the right hand side.
 
-    ```{r, ineq, echo=FALSE, fig.cap="A plot of the inequality $\\frac{1}{x-3}>\\frac{1}{x-2}$: the solid red line is the l.h.s and the dashed blue line is the r.h.s.. We are interested in finding the values of $x$ where the red line is above the blue line (the red-shaded region). [[Open graph in browser.]](https://www.desmos.com/calculator/ld9jyh4z3y)"}
+    ```{r, ineq, echo=FALSE, fig.cap="A plot of the inequality $\\frac{1}{x-3}>\\frac{1}{x-2}$: the solid red line is the $\\frac{1}{x-3}$ and the dashed blue line is the $\\frac{1}{x-2}$. We are interested in finding the values of $x$ where the red line is above the blue line (the red-shaded region). [[Open graph in browser.]](https://www.desmos.com/calculator/ld9jyh4z3y)"}
     knitr::include_url("https://www.desmos.com/calculator/ld9jyh4z3y?embed")
     ```
 
-    It would appear that something has gone wrong! There is a second interval $x<2$ where the inequality holds true. The problem is that we multiplied by the factor $(x-2)$ forgetting the fact that $x$ is a variable, so this factor could be positive or negative depending on the value of $x$ and hence can flip the inequality. We could still perform this multiplication so long as we keep track of the two possible cases when $(x-2)$ is positive or negative. However, a safer strategy is to first subtract the r.h.s. from the l.h.s., then factorise as much as possible:
+    It would appear that something has gone wrong! There is a second interval $x<2$ where the inequality holds true. The problem is that we multiplied by the factor $(x-2)$ forgetting the fact that $x$ is a variable, so this factor could be positive or negative depending on the value of $x$ and hence can flip the inequality. We could still perform this multiplication so long as we keep track of the two possible cases when $(x-2)$ is positive or negative. However, a safer strategy is to first subtract the right hand side from the left hand side, then factorise as much as possible:
     
     $$\frac{1}{x-3}-\frac{1}{x-2}=\frac{(x-2)-(x-3)}{(x-3)(x-2)}=\frac{1}{(x-3)(x-2)}>0.$$
 
-    Hence for the denominator to be positive we must have either $x>3$ and $x>2$, or $x<3$ and $x<2$. Together these yield the solution $x<2$ or $x>3$.
+    Hence for the denominator to be positive we must have either $x>3$ and $x>2$, or $x<3$ and $x<2.$ Together, these yield the solution $x<2$ or $x>3$.
 :::
 
 The general strategy for finding $P>Q$ (or similar) is therefore: (1) Consider $P-Q$ and factorise as much as possible; (2) Determine the sign of each factor of $P-Q$ for varying $x$; (3) Determine when $P-Q>0$ (and hence when $P>Q$).
