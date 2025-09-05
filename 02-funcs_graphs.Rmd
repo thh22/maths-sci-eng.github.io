@@ -7,7 +7,7 @@ A function $f$ can be thought of as a system that takes an input value $x$ and r
 knitr::include_graphics("figures/function.png")
 ```
 
-You may be familiar with plotting such functions on a graph, where the coordinates $(x,f(x))$, or $(x,y)$ are plotted, against perpendicular axes. This is known as the *Cartesian coordinate system* -- named after the French mathematician, physicist and philosopher René Descartes (1596-1650), who is credited as a founder of analytic geometry and a leading figure in the Scientific Revolution, and also contributed to the nowadays more problematic anthropocentric views, including denying that other (non-human) animals have reason or intelligence.
+You may be familiar with plotting such functions on a graph, where the coordinates $(x,f(x))$, or $(x,y)$ are plotted, against perpendicular axes. This is known as the *Cartesian coordinate system*^[Cartesian coordinates are named after the French mathematician, physicist and philosopher René Descartes (1596-1650), who is credited as a founder of analytic geometry and a leading figure in the Scientific Revolution, Descartes also contributed to the nowadays more problematic anthropocentric views, including denying that other (non-human) animals have reason or intelligence -- see Waddicor, M. H., Montesquieu and the Philosophy of Natural Law (Leiden: Martinus Nijhoff Publishers, 1970), p. 63 <a href="https://web.archive.org/web/20210816214230/https://books.google.com/books?id=sLooBgAAQBAJ&pg=PA63" target="_blank">Archived<\a> 16 August 2021 at the Wayback Machine].
 
 ```{r graph, echo=FALSE, fig.cap = "A function can be plotted in Cartesian Coordinates: the corresponding inputs $x$ and outputs $y=f(x)$ are plotted as points; these sometimes form a continuous curve in the plane.", fig.alt = "Depiction of an arbitrary curve in Cartesian coordinates."}
 knitr::include_graphics("figures/graph.png")
@@ -212,22 +212,22 @@ where $a$ is a positive number called the *base* and $x$ is called the *exponent
 knitr::include_url("https://www.desmos.com/calculator/5d0shgjfag")
 ```
 
-The term "exponential growth" corresponds to such functions; this is where the instantaneous rate of change of a quantity is proportional to its current magnitude -- the characteristic property of exponential functions. More mathematically, the instantaneous rate of change is given by the derivative^[See section \@ref(derivatives).], so we have
+The term "exponential growth" corresponds to such functions; this is where the instantaneous rate of change of a quantity is proportional to its current magnitude -- the characteristic property of exponential functions. More mathematically, the instantaneous rate of change is given by the derivative, which we will introduce in section \@ref(differentiation), and
 \begin{equation}
 \frac{d(a^x)}{dx}=ka^x
 (\#eq:daxdx)
 \end{equation}
-where $k$ is the constant of proportionality^[The phrase "exponential growth" is sometimes used in a casual way to talk about anything that increases "quickly", but mathematicians, scientists and engineers are more precise and would only use the term in its strict mathematical sense, as relating to an exponential function!] (which we shall find in section \@ref(derivatives)).
+for some constant value $k$. The phrase "exponential growth" is sometimes used in a casual way to talk about anything that increases "quickly" -- in its strict mathematical sense, it relates to the growth of an exponential function, that is, where the instantaneous rate of change (gradient) is proportional to its current magnitude. Note that the magnitude of an exponential function may at first be quite small, as may its rate of change (gradient), yet for positive exponents ($x > 0$) the rate of change is always increasing in a way that eventually causes the function to take on very large values and increase very quickly. This is one reason for concern about economic and political tendencies to promote economic growth -- especially where such growth results in negative social and environmental consequences.
 
 Exponential growth is a common occurance in physical systems, at least in the early stages of a process. For example, it can describe the early stages of population growth well, when there are no limits on resources and a constant birth rate; in reality, limits (on food, space, impact of disease etc.) mean that uncurbed exponential growth cannot take place forever.
 
-Any exponential function with any base $a>1$ will grow faster than any polynomial; although a polynomial can be larger for some small range of $x$ values, eventually the exponential graph will "overtake" the polynomial.
+Any exponential function with any base $a>1$ will (eventually, that is, as the magnitude of $x$ gets large) grow faster than any polynomial. In other words, although a polynomial can be larger for some small range of $x$ values, eventually the exponential graph will "overtake" the polynomial.
 
 ```{r, expvspoly, echo=FALSE, fig.cap="The functions $f(x)=a^x$ for varying $a>1$ (red curve) and the monomial $g(x)=x^n$ for varying power $n$ (blue dashed curve); for any value of $a$ and any value of $n$, if you scroll up far enough you will see that the red curve overtakes the dashed blue curve. <a href="https://www.desmos.com/calculator/g22ec0pwpq" target="_blank">[Open graph in new browser tab.]</a>"}
 knitr::include_url("https://www.desmos.com/calculator/g22ec0pwpq")
 ```
 
-There is a special value of the base $a$ for which the constant of proportionality is $k=1$. This is known as Euler's number and is denoted as $e$. It is an irrational number (has an infinite, never repeating decimal expansion):
+There is a special value of the base $a$ for which the constant of proportionality is $k=1$. This is known as Euler's number^[Named after the Swiss mathematician Leonhard Euler, an extraordinarily prolific mathematician even after losing his sight. Indeed, when discussing his blindness, Euler is reported to have said ``Now I will have fewer distractions'' -- see Eves, Howard W. (1969). "Euler's blindness". In Mathematical Circles: A Selection of Mathematical Stories and Anecdotes, Quadrants III and IV. Prindle, Weber, & Schmidt. p. 48. OCLC 260534353. Also quoted by Richeson (2012), p. 17, cited to Eves.] and is denoted as $e$. It is an irrational number (has an infinite, never repeating decimal expansion):
 
 $$e=2.71828182846...$$
 
