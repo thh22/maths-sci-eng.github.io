@@ -4,11 +4,11 @@ In this section we shall look at some solution methods to some forms of commonly
 
 ## Quadratic equations {#quad-eqs}
 
-A particularly common form of equations that arise in science and engineering are *quadratic* equations. These are equations of the form
+*Quadratic* equations are particularly commonly considered. These are equations of the form
 
 $$ax^2+bx+c=0$$
 
-where $a$, $b$ and $c$ are constants and we wish to find the values of $x$ satisfying this equation. Graphically, these are the $x$-coordinates where the polynomial function $f(x)=ax^2+bx+c$ crossses the $x$-axis: these values are known as the *roots* of the polynomial. A quadratic may cross the $x$-axis either twice, just once, or not at all.
+where $a$, $b$ and $c$ are constants. The values of $x$ satisfying this equation coorespond graphically to the $x$-coordinates where the polynomial function $f(x)=ax^2+bx+c$ crossses the $x$-axis: these values are known as the *roots* of the polynomial. A quadratic may cross the $x$-axis either twice, just once, or not at all.
 
 ```{r, quadratic-roots, echo=FALSE, fig.cap="The displayed quadtratic function has 2 roots. Try changing the sliders to find quadratics with just 1 root and with no roots. [[Open graph in browser.]](https://www.desmos.com/calculator/qk8eaxcjx4)"}
 knitr::include_url("https://www.desmos.com/calculator/qk8eaxcjx4")
@@ -33,7 +33,7 @@ then $x=-\alpha$ and $x=-\beta$ are solutions to $ax^2+bx+c=0$, since for $x=-\a
 
 $$(-\alpha+\alpha)(-\alpha+\beta)=0(-\alpha+\beta)=0$$
 
-and similarly for $x=-\beta$. Furthermore, these will be the only two solutions: it is possible there are two different solutions $\alpha\neq\beta$, one "repeated" solution where $\alpha=\beta$ so that the quadratic factorises as $(x+\alpha)(x+\alpha)=(x+\alpha)^2$, or there may be no solutions^[That is, no solutions for which $\alpha$ and $\beta$ are real numbers, but there will instead be complex number solutions.]. In many cases it is easy to spot the values of $\alpha$ and $\beta$. To see this, let's work backwards and expand the brackets:
+and similarly for $x=-\beta$. Furthermore, these will be the only two solutions: it is possible there are two different solutions $\alpha\neq\beta$, one "repeated" solution where $\alpha=\beta$ so that the quadratic factorises as $(x+\alpha)(x+\alpha)=(x+\alpha)^2$, or there may be no solutions^[That is, no solutions for which $\alpha$ and $\beta$ are real numbers, but there will instead be solutions that are complex numbers, a concept we will discuss in section \@ref(complex).]. In many cases it is easy to spot the values of $\alpha$ and $\beta$. To see this, let's work backwards and expand the brackets:
 
 $$(x+\alpha)(x+\beta)=x^2+\beta x +\alpha x +\alpha\beta = x^2 + (\alpha + \beta)x + \alpha\beta$$
 
