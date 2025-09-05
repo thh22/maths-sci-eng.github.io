@@ -466,7 +466,7 @@ In engineering applications it is also common to use base $2$ and base $10$. For
 
 $$\log(x)=\log_{10}(x)$$
 
-but we should always check what the author intends as sometimes $\log(x)$ is used to mean $\ln(x)$. We have the following rules for manipulating logarithms (these follow from the laws of exponents in Theorem \@ref(exprules); try to derive them yourself):
+but we should always check what the author intends as sometimes $\log(x)$ is used to mean $\ln(x)$. We have the following rules for manipulating logarithms (these follow from the laws of exponents in section \@ref(exponents); try to derive them yourself):
 
 ::: {.theorem #logrules name="Rules of Logarithms"}
 
