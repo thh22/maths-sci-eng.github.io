@@ -54,9 +54,10 @@ $$
 
 An equation of the form $ax+by+c=0$ is a general way to express any line in the Cartesian plane and includes both vertical and non-vertical lines. In section \@ref(gauss) we will be using this more general form for solving simultaneous linear equations.
 
-```{r, lines, echo=FALSE, fig.cap="A general line $ax+by+c=0$ (red line) a line specified by a gradient and intercept $y=mx+d$ (blue line), a vertical line $x=A$ (green line) and a horizontal line $y=B$ (orange line). Adjust the sliders to change the constants and check which values of $m,d,A,$ and $B$ correspond to $a,b$ and $c$. <a href=""https://www.desmos.com/calculator/ao47bht5xb"" target="_blank">"[Open graph in new browser tab.]"</a>}
+```{r, lines, echo=FALSE, fig.cap="A general line $ax+by+c=0$ (red line) a line specified by a gradient and intercept $y=mx+d$ (blue line), a vertical line $x=A$ (green line) and a horizontal line $y=B$ (orange line). Adjust the sliders to change the constants and check which values of $m,d,A,$ and $B$ correspond to $a,b$ and $c$.}
 knitr::include_url("https://www.desmos.com/calculator/ao47bht5xb")
 ```
+<a href="https://www.desmos.com/calculator/ao47bht5xb" target="_blank">"[Open preceding graph in new browser tab.]"</a>
 <!--
 <a href="https://www.desmos.com/calculator/ao47bht5xb" target="_blank">[Open graph in new browser tab.]</a>
 Open graph here: \url{https://www.desmos.com/calculator/ao47bht5xb}"
