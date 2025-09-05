@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-11-21" />
+<meta name="date" content="2025-09-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -387,28 +387,28 @@
             <section class="normal" id="section-">
 <div id="functions-and-graphs" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Functions and Graphs<a href="functions-and-graphs.html#functions-and-graphs" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>A function <span class="math inline">\(f\)</span> can be thought of as a machine that takes an input value <span class="math inline">\(x\)</span> and returns an output value <span class="math inline">\(y\)</span>. The output value <span class="math inline">\(y\)</span> corresponding to the input <span class="math inline">\(x\)</span> is also denoted by <span class="math inline">\(f(x)\)</span> (read “<span class="math inline">\(f\)</span> of <span class="math inline">\(x\)</span>”). We most commonly encounter functions whose input is a real number and output is a real number, but there are many other types of functions in mathematics.</p>
+<p>A function <span class="math inline">\(f\)</span> can be thought of as a system that takes an input value <span class="math inline">\(x\)</span> and returns an output value <span class="math inline">\(y\)</span>. The output value <span class="math inline">\(y\)</span> corresponding to the input <span class="math inline">\(x\)</span> is also denoted by <span class="math inline">\(f(x)\)</span> (read “<span class="math inline">\(f\)</span> of <span class="math inline">\(x\)</span>”). We most commonly encounter functions whose input is a real number and output is a real number, but there are many other types of functions in mathematics.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:func"></span>
-<img src="figures/function.png" alt="Depiction of a function as a machine in a box, which takes an input $x$ and returns an output $f(x)$."  />
+<img src="figures/function.png" alt="Depiction of a function as a system, which takes an input $x$ and returns an output $f(x)$." width="200" />
 <p class="caption">
-Figure 2.1: A function can be thought of as a machine: we have an input value <span class="math inline">\(x\)</span>, the machine is the function <span class="math inline">\(f\)</span>, and the output is the value <span class="math inline">\(f(x)\)</span>
+Figure 2.1: A function can be thought of as a system: we have an input value <span class="math inline">\(x\)</span>, the system is the function <span class="math inline">\(f\)</span>, and the output is the value <span class="math inline">\(f(x)\)</span>
 </p>
 </div>
-<p>We are familiar with plotting such functions on a graph, where we draw the coordinates <span class="math inline">\((x,f(x))\)</span>, or <span class="math inline">\((x,y)\)</span>, against perpendicular axes – this is known as the <em>Cartesian coordinate system</em>.</p>
+<p>You may be familiar with plotting such functions on a graph, where the coordinates <span class="math inline">\((x,f(x))\)</span>, or <span class="math inline">\((x,y)\)</span> are plotted, against perpendicular axes. This is known as the <em>Cartesian coordinate system</em><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:graph"></span>
-<img src="figures/graph.png" alt="Depiction of an arbitrary curve in Cartesian coordinates."  />
+<img src="figures/graph.png" alt="Depiction of an arbitrary curve in Cartesian coordinates." width="100" />
 <p class="caption">
-Figure 2.2: A function can be plotted in Cartesian Coordinates: the corresponding inputs <span class="math inline">\(x\)</span> and outputs <span class="math inline">\(y=f(x)\)</span> are plotted as a point; these often form a continuous curve in the plane.
+Figure 2.2: A function can be plotted in Cartesian Coordinates: the corresponding inputs <span class="math inline">\(x\)</span> and outputs <span class="math inline">\(y=f(x)\)</span> are plotted as points; these sometimes form a continuous curve in the plane.
 </p>
 </div>
 <p>In this section we shall take a look at some useful functions, their graphs, and some of their other interesting properties.</p>
 <div id="lines" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Linear Functions<a href="functions-and-graphs.html#lines" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We are familiar with the equation of a straight line:
-<span class="math display">\[y=mx+d\]</span>
-with gradient <span class="math inline">\(m\)</span> and intercepting the <span class="math inline">\(y\)</span>-axis at the value <span class="math inline">\(d\)</span>.</p>
+<p>The equation of a straight line takes the form:
+<span class="math display">\[y=mx+d.\]</span>
+This has a gradient (slope) <span class="math inline">\(m\)</span> and intercepts the <span class="math inline">\(y\)</span>-axis at the value <span class="math inline">\(d\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:mxc"></span>
-<img src="figures/mx+c.png" alt="Straight line graph of $y=\frac{1}{2}x+1$, showing gradient and intercept."  />
+<img src="figures/mx+c.png" alt="Straight line graph of $y=\frac{1}{2}x+1$, showing gradient and intercept." width="600" />
 <p class="caption">
 Figure 2.3: Straight line graph of <span class="math inline">\(y=\frac{1}{2}x+1\)</span>.
 </p>
@@ -426,32 +426,37 @@ On the other hand, when $b=0$ we have the solution $x=-\dfrac{c}{a}$. This is a 
 
 We can also have horizontal lines. This corresponds to an equation of the form $y=B$ (this happens when $a=0$ and where we have set $B=-\dfrac{c}{b}$), so that $y$ does not depend on $x$ and equals the constant value $B$ for all possible values of $x$.
 -->
-<p>Specifying a single point <span class="math inline">\((x_1,y_1)\)</span> and a gradient <span class="math inline">\(m\)</span> is enough to define a (non-vertical) line and we can write the equation of this line as
+<p>Specifying a single point <span class="math inline">\((x_1,y_1)\)</span> and a gradient <span class="math inline">\(m\)</span> is enough to define a (non-vertical) line. The equation of this line takes the form
 <span class="math display">\[
 y-y_1=m(x-x_1).
 \]</span></p>
-<p>Also, a line can be defined by specifying any two points <span class="math inline">\((x_1,y_1)\)</span> and <span class="math inline">\((x_2,y_2)\)</span> that lie on the line. We can calculate the gradient of this line from
+<p>Also, a line can be defined by specifying any two points <span class="math inline">\((x_1,y_1)\)</span> and <span class="math inline">\((x_2,y_2)\)</span> that lie on the line (where <span class="math inline">\(x_2 \neq x_1\)</span>). We can calculate the gradient of this line from
 <span class="math display">\[
-m=\frac{y_2-y_1}{x_2-x_1}
+m=\frac{y_2-y_1}{x_2-x_1}.
 \]</span>
-but there is a problem if <span class="math inline">\(x_2=x_1\)</span> and we have division by <span class="math inline">\(0\)</span> – effectively we have an “infinite” gradient. Since <span class="math inline">\(x_1=x_2\)</span> this, of course, corresponds to a vertical line, which we can write as the equation <span class="math inline">\(x=x_1\)</span>.</p>
-<p>An equation of the form <span class="math inline">\(ax+by+c=0\)</span> is a general way to express any line in the Cartesian plane and includes both vertical and non-vertical lines. In section <a href="#linear"><strong>??</strong></a> we will be using this more general form for solving simultaneous linear equations.</p>
+<!-- but there is a problem if $x_2=x_1$ and we have division by $0$ -- effectively we have an "infinite" gradient. Since $x_1=x_2$ this, of course, corresponds to a vertical line, which we can write as the equation $x=x_1$. --></p>
+<p>An equation of the form <span class="math inline">\(ax+by+c=0\)</span> is a general way to express any line in the Cartesian plane and includes both vertical and non-vertical lines. In section <a href="gauss.html#gauss">7</a> we will be using this more general form for solving simultaneous linear equations.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:lines"></span>
 <iframe src="https://www.desmos.com/calculator/ao47bht5xb" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 2.4: A general line <span class="math inline">\(ax+by+c=0\)</span> (red line) a line specified by a gradient and intercept <span class="math inline">\(y=mx+d\)</span> (blue line), a vertical line <span class="math inline">\(x=A\)</span> (green line) and a horizontal line <span class="math inline">\(y=B\)</span> (orange line). Adjust the sliders to change the constants and check which values of <span class="math inline">\(m,d,A,\)</span> and <span class="math inline">\(B\)</span> correspond to <span class="math inline">\(a,b\)</span> and <span class="math inline">\(c\)</span>. <a href="https://www.desmos.com/calculator/ao47bht5xb">[Open graph in browser.]</a>
+Figure 2.4: A general line <span class="math inline">\(ax+by+c=0\)</span> (red line) a line specified by a gradient and intercept <span class="math inline">\(y=mx+d\)</span> (blue line), a vertical line <span class="math inline">\(x=A\)</span> (green line) and a horizontal line <span class="math inline">\(y=B\)</span> (orange line). Adjust the sliders to change the constants and check which values of <span class="math inline">\(m,d,A,\)</span> and <span class="math inline">\(B\)</span> correspond to <span class="math inline">\(a,b\)</span> and <span class="math inline">\(c\)</span>.
 </p>
 </div>
+<p><a href="https://www.desmos.com/calculator/ao47bht5xb" target="_blank">[Open preceding graph in new browser tab.]</a>
+<!--
+<a href="https://www.desmos.com/calculator/ao47bht5xb" target="_blank">[Open graph in new browser tab.]</a>
+Open graph here: \url{https://www.desmos.com/calculator/ao47bht5xb}"
+--></p>
 <div id="parallel-lines" class="section level3 hasAnchor" number="2.1.1">
 <h3><span class="header-section-number">2.1.1</span> Parallel lines<a href="functions-and-graphs.html#parallel-lines" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A line makes an angle <span class="math inline">\(\theta\)</span> from the positive <span class="math inline">\(x\)</span>-axis, the <em>angle of inclination</em>. This is related to the gradient <span class="math inline">\(m\)</span> by
+<p>A line makes an angle <span class="math inline">\(\theta\)</span> from the positive <span class="math inline">\(x\)</span>-axis, the <em>angle of inclination</em>. This is related to the gradient <span class="math inline">\(m\)</span> through the function <span class="math inline">\(\tan\)</span>, which we will encounter in section <a href="trigonometry.html#trigonometry">4</a>, by
 <span class="math display">\[
 m=\frac{\Delta y}{\Delta x}=\tan(\theta).
 \]</span>
 Two lines are parallel if they have the same angle of inclination <span class="math inline">\(\theta\)</span>, or same gradient <span class="math inline">\(m\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:inclination"></span>
-<img src="figures/inclination.png" alt="Diagram showing the angle of inclination of a line."  />
+<img src="figures/inclination.png" alt="Diagram showing the angle of inclination of a line." width="562" />
 <p class="caption">
 Figure 2.5: The angle of inclination of a line.
 </p>
@@ -461,11 +466,11 @@ Figure 2.5: The angle of inclination of a line.
 y&amp;=mx + d_1\\
 y&amp;=mx + d_2
 \end{align*}\]</span>
-with different <span class="math inline">\(y\)</span>-intercepts <span class="math inline">\(d_1\)</span> and <span class="math inline">\(d_2\)</span>.</p>
+with respective <span class="math inline">\(y\)</span>-intercepts <span class="math inline">\(d_1\)</span> and <span class="math inline">\(d_2\)</span>.</p>
 </div>
 <div id="perpendicular-lines" class="section level3 hasAnchor" number="2.1.2">
 <h3><span class="header-section-number">2.1.2</span> Perpendicular lines<a href="functions-and-graphs.html#perpendicular-lines" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Two lines are perpendicular, or <em>normal</em>, if they meet at a right angle. We have
+<p>Two lines are perpendicular, or <em>normal</em>, if they meet at a right angle. Using definitions and results that we will introduce in section <a href="trigonometry.html#trigonometry">4</a>, we have that
 <span class="math display">\[\begin{align*}
 m_1&amp;=\tan(\theta)\quad\text{and,}\\
 m_2&amp;=\tan\Big(\theta + \frac{\pi}{2}\Big)=\frac{\sin(\theta + \frac{\pi}{2})}{\cos(\theta + \frac{\pi}{2})}\\
@@ -474,7 +479,7 @@ m_2&amp;=\tan\Big(\theta + \frac{\pi}{2}\Big)=\frac{\sin(\theta + \frac{\pi}{2})
 &amp;=-\cot(\theta)
 \end{align*}\]</span></p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:perpendicular"></span>
-<img src="figures/perpendicular.png" alt="Diagram showing a pair of perpendicular lines."  />
+<img src="figures/perpendicular.png" alt="Diagram showing a pair of perpendicular lines." width="562" />
 <p class="caption">
 Figure 2.6: Perpendicular lines.
 </p>
@@ -486,13 +491,13 @@ m_1m_2=-1
 and hence they have the forms
 <span class="math display">\[\begin{align*}
 y&amp;=mx + d_1,\\
-y&amp;=-\frac{1}{m}x + d_2.
+y&amp;=-\frac{1}{m}x + d_2,
 \end{align*}\]</span>
-with <span class="math inline">\(y\)</span>-intercepts <span class="math inline">\(d_1\)</span> and <span class="math inline">\(d_2\)</span>.</p>
-<p>Alternatively, if we describe a line by <span class="math inline">\(ax+by+c=0\)</span> then
+with respective <span class="math inline">\(y\)</span>-intercepts <span class="math inline">\(d_1\)</span> and <span class="math inline">\(d_2\)</span>.</p>
+<p>Alternatively, if we describe a line by <span class="math inline">\(ax+by+c=0\)</span>, then
 <span class="math display">\[\begin{align*}
 ax+by+p&amp;=0\quad\text{is a parallel line}\\
-bx+ay+q&amp;=0\quad\text{is a perpendicular line}
+bx-ay+q&amp;=0\quad\text{is a perpendicular line}
 \end{align*}\]</span>
 where <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> are constants.</p>
 </div>
@@ -507,15 +512,15 @@ f(x)&amp;=x^2\\
 g(x)&amp;=2+\frac{1}{3}x^4 - x^5\\
 h(x)&amp;=-3.6 + x^2 -2x^{10}
 \end{align*}\]</span></p>
-<p>The number <span class="math inline">\(n\)</span> corresponding to the highest power in the polynomial is called the <em>order</em> or <em>degree</em> of the polynomial. For the functions <span class="math inline">\(f, g\)</span> and <span class="math inline">\(h\)</span> above the degrees are <span class="math inline">\(2, 5\)</span> and <span class="math inline">\(10\)</span>, respectively. We have a few special names for polynomials of low degree:</p>
+<p>The number <span class="math inline">\(n\)</span> corresponding to the highest power in the polynomial is called the <em>order</em> or <em>degree</em> of the polynomial. For the functions <span class="math inline">\(f, g\)</span> and <span class="math inline">\(h\)</span> above, the degrees are <span class="math inline">\(2, 5\)</span> and <span class="math inline">\(10\)</span>, respectively. We have a few special names for polynomials of low degree:</p>
 <ul>
 <li>Degree 1: a <em>linear</em> polynomial, since its graph is a line <span class="math inline">\(f(x)=a_0+a_1 x\)</span></li>
 <li>Degree 2: a <em>quadratic</em> polynomial</li>
 <li>Degree 3: a <em>cubic</em> polynomial</li>
 <li>Degree 4: a <em>quartic</em> polynomial</li>
-<li>Degree 5: a <em>quintic</em> polynomial</li>
+<li>Degree 5: a <em>quintic</em> polynomial.</li>
 </ul>
-<p>The higher the degree of the polynomial, the more “wavey” its graph can be; in fact, a degree <span class="math inline">\(n\)</span> polynomial can have at most <span class="math inline">\(n-1\)</span> turning points.</p>
+<p>The higher the degree of the polynomial, the more “wavey” its graph can be; in fact, a degree <span class="math inline">\(n\)</span> polynomial can have at most <span class="math inline">\(n-1\)</span> turning points (where the gradient changes from positive to negative, or vice-versa).</p>
 <p>A polynomial which has only one term is called a <em>monomial</em>, for example</p>
 <p><span class="math display">\[f(x)=2\\
 g(x)=3x^2\\
@@ -526,24 +531,26 @@ h(x)=-4x^5
 <iframe src="https://www.desmos.com/calculator/fxiq9a83fp" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 2.7: A plot of a polynomial of at most degree 5, <span class="math inline">\(f(x)=a_0 + a_1 x + a_2 x^2 + a_3 x^3 + a_4 x^4 + a_5 x^5\)</span>. Adjust the sliders to change the coefficients <span class="math inline">\(a_0\)</span> to <span class="math inline">\(a_5\)</span> to get a feel for the possible shapes of a degree 5 polynomial; set the higher degree coefficients to <span class="math inline">\(0\)</span> to look at lower degree polynomials; also take a look at the monomials up to degree 5. <a href="https://www.desmos.com/calculator/fxiq9a83fp">[Open graph in browser.]</a>
+Figure 2.7: A plot of the polynomial <span class="math inline">\(f(x)=a_0 + a_1 x + a_2 x^2 + a_3 x^3 + a_4 x^4 + a_5 x^5\)</span>. Adjust the sliders to change the coefficients <span class="math inline">\(a_0\)</span> to <span class="math inline">\(a_5\)</span> to get a feel for the possible shapes of this polynomial; set the higher degree coefficients to <span class="math inline">\(0\)</span> to look at lower degree polynomials; also take a look at the monomials up to degree 5.
 </p>
 </div>
+<p><a href="https://www.desmos.com/calculator/fxiq9a83fp" target="_blank">[Open preceding graph in new browser tab.]</a></p>
 </div>
 <div id="rational-functions" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Rational functions<a href="functions-and-graphs.html#rational-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A <em>rational function</em> is one that can be expressed as the quotient of two polynomials, for example</p>
 <p><span class="math display">\[f(x)=\frac{1+x}{2-x+3x^2}\]</span></p>
 <p>is the quotient of a degree 1 polynomial and a degree 2 polynomial.</p>
-<p>They often have values of <span class="math inline">\(x\)</span> where they are undefined due to the denominator evaluating to zero. Furthermore, they often have <em>asymptotes</em>, which means the graph approaches a straight line.</p>
+<p>They often have values of <span class="math inline">\(x\)</span> where they are undefined due to the denominator evaluating to zero. Furthermore, they often have <em>asymptotes</em>, which means the graph approaches (but never quite reaches) a straight line.</p>
 <p>For example, the function <span class="math inline">\(f(x)=\frac{x^{2}}{x^{2}-4}\)</span> has asmptotes at the vertical lines <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=-2\)</span> and at the horizontal line <span class="math inline">\(y=1\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:asymp"></span>
 <iframe src="https://www.desmos.com/calculator/m4ssgias64" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 2.8: A plot of the rational function <span class="math inline">\(f(x)=\frac{x^{2}}{x^{2}-4}\)</span> (solid red line) and its asymptotes (dashed blue lines). <a href="https://www.desmos.com/calculator/m4ssgias64">[Open graph in browser.]</a>
+Figure 2.8: A plot of the rational function <span class="math inline">\(f(x)=\frac{x^{2}}{x^{2}-4}\)</span> (solid red line) and its asymptotes (dashed blue lines).
 </p>
 </div>
+<p><a href="https://www.desmos.com/calculator/m4ssgias64" target="_blank">[Open preceding graph in new browser tab.]</a></p>
 </div>
 <div id="trigonometric-functions" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Trigonometric functions<a href="functions-and-graphs.html#trigonometric-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -553,30 +560,34 @@ Figure 2.8: A plot of the rational function <span class="math inline">\(f(x)=\fr
 <iframe src="https://www.desmos.com/calculator/gyj6vrtzbu" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 2.9: The functions <span class="math inline">\(\sin(x)\)</span> (red curve) and <span class="math inline">\(\cos(x)\)</span> (blue dashed line). <a href="https://www.desmos.com/calculator/gyj6vrtzbu">[Open graph in browser.]</a>
+Figure 2.9: The functions <span class="math inline">\(\sin(x)\)</span> (red curve) and <span class="math inline">\(\cos(x)\)</span> (blue dashed line).
 </p>
 </div>
-<p>In figure <a href="functions-and-graphs.html#fig:sincos">2.9</a> we have plotted the functions with the <span class="math inline">\(x\)</span> axis in units of <em>radians</em>. This is the natural mathematical choice of units, but in applications we tend to use <em>degrees</em>. We’ll understand more about radians and see how these units are related to degrees in section <a href="trigonometry.html#trigonometry">4</a>. Note the graphs repeat every <span class="math inline">\(2\pi\)</span> radians (or equivalently <span class="math inline">\(360^\circ\)</span>) – they are <em>periodic</em> functions with <em>period</em> <span class="math inline">\(2\pi\)</span>.</p>
+<p><a href="https://www.desmos.com/calculator/gyj6vrtzbu" target="_blank">[Open preceding graph in new browser tab.]</a></p>
+<p>In figure <a href="functions-and-graphs.html#fig:sincos">2.9</a> we have plotted the functions with the <span class="math inline">\(x\)</span> axis in units of <em>radians</em>. This is a convenient choice of units from a mathematical perspective, but in applications we tend to use <em>degrees</em>. We’ll understand more about radians and see how these units are related to degrees in section <a href="trigonometry.html#trigonometry">4</a>. Note the graphs repeat every <span class="math inline">\(2\pi\)</span> radians (or equivalently <span class="math inline">\(360^\circ\)</span>) – they are <em>periodic</em> functions with <em>period</em> <span class="math inline">\(2\pi\)</span>.</p>
 <p>The tangent function is defined via sine and cosine as:</p>
 <p><span class="math display" id="eq:tan">\[\begin{equation}
 \tan(x)=\frac{\sin(x)}{\cos(x)}
 \tag{2.1}
 \end{equation}\]</span></p>
-<p>It’s graph looks rather different to sine and cosine.</p>
+<p>Its graph looks rather different to sine and cosine.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:tangent"></span>
 <iframe src="https://www.desmos.com/calculator/ncqey1cfus" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 2.10: The function <span class="math inline">\(\tan(x)\)</span> (green curve). <a href="https://www.desmos.com/calculator/ncqey1cfus">[Open graph in browser.]</a>
+Figure 2.10: The function <span class="math inline">\(\tan(x)\)</span> (green curve).
 </p>
 </div>
-<p>Like sine and cosine it is periodic, but with half the period: it repeats every <span class="math inline">\(\pi\)</span> radians (or <span class="math inline">\(180^\circ\)</span>). It is undefined at <span class="math inline">\(x=\frac{\pi}{2}\)</span> (and repeatedly at intervals of <span class="math inline">\(\pi\)</span>) since at this value <span class="math inline">\(\cos(\frac{\pi}{2})=0\)</span> so we have division by zero. Close to these points, the value of <span class="math inline">\(\cos(x)\)</span> in the denominator of <a href="functions-and-graphs.html#eq:tan">(2.1)</a> is very small, whilst the value of <span class="math inline">\(\sin(x)\)</span> is close to <span class="math inline">\(1\)</span> or <span class="math inline">\(-1\)</span>, which results in very large positive or negative values of <span class="math inline">\(\tan(x)\)</span> and we have vertical asymptotes at these points.</p>
-<p><span class="math display">\[\begin{gather*}
+<p><a href="https://www.desmos.com/calculator/ncqey1cfus" target="_blank">[Open preceding graph in new browser tab.]</a></p>
+<p>Like sine and cosine, it is periodic. But it has half the period: it repeats every <span class="math inline">\(\pi\)</span> radians (or <span class="math inline">\(180^\circ\)</span>). It is undefined at <span class="math inline">\(x=\frac{\pi}{2}\)</span> (and repeatedly at intervals of <span class="math inline">\(\pi\)</span>), since at this value <span class="math inline">\(\cos(\frac{\pi}{2})=0\)</span> so we have division by zero (which is not possible). Close to these points, the value of <span class="math inline">\(\cos(x)\)</span> in the denominator of <a href="functions-and-graphs.html#eq:tan">(2.1)</a> is very small, whilst the value of <span class="math inline">\(\sin(x)\)</span> is close to <span class="math inline">\(1\)</span> or <span class="math inline">\(-1\)</span>, which results in very large positive or negative values of <span class="math inline">\(\tan(x)\)</span> and vertical asymptotes at these points.</p>
+<!-- 
+\begin{gather*}
 \sin^2(x)+\cos^2(x)=1\\
 \sin(2x)=2\sin(x)\cos(x)\\
 \cos(2x)=\cos^2(x)-\sin^2(x)\\
 1+\tan^2(x)=\sec^2(x)
-\end{gather*}\]</span></p>
+\end{gather*}
+-->
 </div>
 <div id="exponentials" class="section level2 hasAnchor" number="2.5">
 <h2><span class="header-section-number">2.5</span> Exponentials<a href="functions-and-graphs.html#exponentials" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -584,30 +595,32 @@ Figure 2.10: The function <span class="math inline">\(\tan(x)\)</span> (green cu
 <span class="math display">\[
 f(x)=a^x
 \]</span>
-where the positive number <span class="math inline">\(a\)</span> is called the .</p>
+where <span class="math inline">\(a\)</span> is a positive number called the <em>base</em> and <span class="math inline">\(x\)</span> is called the <em>exponent</em>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:exponentialfunc"></span>
 <iframe src="https://www.desmos.com/calculator/5d0shgjfag" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 2.11: The function <span class="math inline">\(f(x)=a^x\)</span> for varying positive values of <span class="math inline">\(a\)</span>. <a href="https://www.desmos.com/calculator/5d0shgjfag">[Open graph in browser.]</a>
+Figure 2.11: The function <span class="math inline">\(f(x)=a^x\)</span> for varying positive values of <span class="math inline">\(a\)</span>.
 </p>
 </div>
-<p>The term “exponential growth” corresponds to such functions; this is where the instantaneous rate of change of a quantity is proportional to its current magnitude and this is the characteristic property of exponential functions. More mathematically, the instantaneous rate of change is given by the derivative<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>, so we have
+<p><a href="https://www.desmos.com/calculator/5d0shgjfag" target="_blank">[Open preceding graph in new browser tab.]</a></p>
+<p>The term “exponential growth” corresponds to such functions; this is where the instantaneous rate of change of a quantity is proportional to its current magnitude – the characteristic property of exponential functions. More mathematically, the instantaneous rate of change is given by the derivative, which we will introduce in section <a href="differentiation.html#differentiation">11</a>, and
 <span class="math display" id="eq:daxdx">\[\begin{equation}
 \frac{d(a^x)}{dx}=ka^x
 \tag{2.2}
 \end{equation}\]</span>
-where <span class="math inline">\(k\)</span> is the constant of proportionality<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> (which we shall find in section <a href="#derivatives"><strong>??</strong></a>).</p>
+for some constant value <span class="math inline">\(k\)</span>. The phrase “exponential growth” is sometimes used in a casual way to talk about anything that increases “quickly” – in its strict mathematical sense, it relates to the growth of an exponential function, that is, where the instantaneous rate of change (gradient) is proportional to its current magnitude. Note that the magnitude of an exponential function may at first be quite small, as may its rate of change (gradient), yet for positive exponents (<span class="math inline">\(x &gt; 0\)</span>) the rate of change is always increasing in a way that eventually causes the function to take on very large values and increase very quickly. This is one reason for concern about economic and political tendencies to promote economic growth – especially where such growth results in negative social and environmental consequences.</p>
 <p>Exponential growth is a common occurance in physical systems, at least in the early stages of a process. For example, it can describe the early stages of population growth well, when there are no limits on resources and a constant birth rate; in reality, limits (on food, space, impact of disease etc.) mean that uncurbed exponential growth cannot take place forever.</p>
-<p>Any exponential function with any base <span class="math inline">\(a&gt;1\)</span> will grow faster than any polynomial; although a polynomial can be larger for some small range of <span class="math inline">\(x\)</span> values, eventually the exponential graph will “overtake” the polynomial.</p>
+<p>Any exponential function with any base <span class="math inline">\(a&gt;1\)</span> will (eventually, that is, as the magnitude of <span class="math inline">\(x\)</span> gets large) grow faster than any polynomial. In other words, although a polynomial can be larger for some small range of <span class="math inline">\(x\)</span> values, eventually the exponential graph will “overtake” the polynomial.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:expvspoly"></span>
 <iframe src="https://www.desmos.com/calculator/g22ec0pwpq" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 2.12: The functions <span class="math inline">\(f(x)=a^x\)</span> for varying <span class="math inline">\(a&gt;1\)</span> (red curve) and the monomial <span class="math inline">\(g(x)=x^n\)</span> for varying power <span class="math inline">\(n\)</span> (blue dashed curve); for any value of <span class="math inline">\(a\)</span> and any value of <span class="math inline">\(n\)</span>, if you scroll up far enough you will see that the red curve overtakes the dashed blue curve. <a href="https://www.desmos.com/calculator/g22ec0pwpq">[Open graph in browser.]</a>
+Figure 2.12: The functions <span class="math inline">\(f(x)=a^x\)</span> for varying <span class="math inline">\(a&gt;1\)</span> (red curve) and the monomial <span class="math inline">\(g(x)=x^n\)</span> for varying power <span class="math inline">\(n\)</span> (blue dashed curve); for any value of <span class="math inline">\(a\)</span> and any value of <span class="math inline">\(n\)</span>, if you zoom out far enough you will see that the red curve overtakes the dashed blue curve.
 </p>
 </div>
-<p>There is a special value of the base <span class="math inline">\(a\)</span> for which the constant of proportionality is <span class="math inline">\(k=1\)</span>. This is known as Euler’s number and is denoted as <span class="math inline">\(e\)</span>. It is an irrational number (has an infinite, never repeating decimal expansion):</p>
+<p><a href="https://www.desmos.com/calculator/g22ec0pwpq" target="_blank">[Open preceding graph in new browser tab.]</a></p>
+<p>There is a special value of the base <span class="math inline">\(a\)</span> for which the constant of proportionality is <span class="math inline">\(k=1\)</span>. This is known as Euler’s number<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> and is denoted as <span class="math inline">\(e\)</span>. It is an irrational number (has an infinitely long, never repeating decimal expansion):</p>
 <p><span class="math display">\[e=2.71828182846...\]</span></p>
 <p>The function <span class="math inline">\(e^x\)</span> is referred to as <em>the natural exponential function</em> or just <em>the exponential function</em>. It is also commonly denoted by <span class="math inline">\(\exp(x)\)</span>. Since by definition <span class="math inline">\(k=1\)</span> we have:</p>
 <p><span class="math display">\[\frac{de^x}{dx}=1e^x=e^x.\]</span></p>
@@ -615,34 +628,37 @@ Figure 2.12: The functions <span class="math inline">\(f(x)=a^x\)</span> for var
 <div id="hyperbolic-functions" class="section level2 hasAnchor" number="2.6">
 <h2><span class="header-section-number">2.6</span> Hyperbolic functions<a href="functions-and-graphs.html#hyperbolic-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The hyperbolic functions are defined in terms of the exponential function. They are named after the trigonometric functions due to possessing some similar properties, although their graphs are quite different.</p>
-<p>Hyperbolic sine, usually spoken as “shine” is defined as
-<span class="math display">\[\sinh(x)=\frac{e^x-e^{-x}}{2}\]</span></p>
+<p>Hyperbolic sine, usually pronounced as “shine”, is defined as
+<span class="math display">\[\sinh(x)=\frac{e^x-e^{-x}}{2}.\]</span></p>
 <p>Hyperbolic cosine or “cosh” is defined as
-<span class="math display">\[\cosh(x)=\frac{e^x+e^{-x}}{2}\]</span></p>
+<span class="math display">\[\cosh(x)=\frac{e^x+e^{-x}}{2}.\]</span></p>
 <p>Hyperbolic tangent or “tanch” is defined as
-<span class="math display">\[{\tanh(x)=\dfrac{\sinh(x)}{\cosh(x)}=\dfrac{e^x-e^{-x}}{e^x+e^{-x}}}\]</span></p>
+<span class="math display">\[{\tanh(x)=\dfrac{\sinh(x)}{\cosh(x)}=\dfrac{e^x-e^{-x}}{e^x+e^{-x}}}.\]</span></p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:hyperbol"></span>
 <iframe src="https://www.desmos.com/calculator/xrpc0in171" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 2.13: The functions <span class="math inline">\(\sinh(x)\)</span> (red curve), <span class="math inline">\(\cosh(x)\)</span> (blue curve) and <span class="math inline">\(\tanh(x)\)</span> (green curve). <a href="https://www.desmos.com/calculator/xrpc0in171">[Open graph in browser.]</a>
+Figure 2.13: The functions <span class="math inline">\(\sinh(x)\)</span> (red curve), <span class="math inline">\(\cosh(x)\)</span> (blue curve) and <span class="math inline">\(\tanh(x)\)</span> (green curve).
 </p>
 </div>
-<p>The usual trigonometric identities also hold for the corresponding hyperbolic functions, except that where ever there is a <span class="math inline">\(\sin^2\)</span> we replace it with a <span class="math inline">\(-\sinh^2\)</span>. For example:</p>
-<p><span class="math display">\[\begin{align*}
+<p><a href="https://www.desmos.com/calculator/xrpc0in171" target="_blank">[Open preceding graph in new browser tab.]</a></p>
+<p>In section <a href="trigonometry.html#trigonometry">4</a> we will introduce several trigonometric identities. Similar identities also hold for the corresponding hyperbolic functions, except that where ever there is a <span class="math inline">\(\sin^2\)</span> we replace it with a <span class="math inline">\(-\sinh^2\)</span>. For example:</p>
+<p><span class="math display">\[
+\begin{array}{ll}
 &amp;\text{Trigonometric}           &amp;\text{Hyperbolic}\\
 &amp;\sin^2(x)+\cos^2(x)=1          &amp;\cosh^2(x)-\sinh^2(x)=1          \\
 &amp;\sin(2x)=2\sin(x)\cos(x)       &amp;\sinh(2x)=2\sinh(x)\cosh(x)       \\
 &amp;\cos(2x)=\cos^2(x)-\sin^2(x)   &amp;\cosh(2x)=\cosh^2(x)+\sinh^2(x)   \\
 &amp;1+\tan^2(x)=\sec^2(x)          &amp;1-\tanh^2(x)=\text{sech}^2(x)
-\end{align*}\]</span></p>
-<p>As an example of where these functions arise in the real-world, the shape formed by a flexible cable or chain hanging from its ends under its own weight has the general form
+\end{array}
+\]</span></p>
+<p>As an example of where these functions arise in the real-world, the shape formed by a flexible cable or chain hanging from its ends under its own weight has (to a good approximation) the general form
 <span class="math display">\[\begin{equation*}
 y=a\cosh\left(\frac{x}{a}\right)
 \end{equation*}\]</span>
 and is known as a <em>catenary curve</em>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:catenary"></span>
-<img src="figures/Kette_Kettenkurve_Catenary_2008_PD.jpg" alt="A chain hanging from points forms a catenary."  />
+<img src="figures/Kette_Kettenkurve_Catenary_2008_PD.jpg" alt="A chain hanging from points forms a catenary." width="1136" />
 <p class="caption">
 Figure 2.14: A chain hanging from points forms a catenary. From <a href="https://commons.wikimedia.org/w/index.php?curid=5609313">Wikipedia - Kamel15</a>
 </p>
@@ -650,37 +666,38 @@ Figure 2.14: A chain hanging from points forms a catenary. From <a href="https:/
 </div>
 <div id="inverse-functions" class="section level2 hasAnchor" number="2.7">
 <h2><span class="header-section-number">2.7</span> Inverse Functions<a href="functions-and-graphs.html#inverse-functions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Thinking of a function again as a machine, we sometimes want to run the machine in reverse: given a certain output, we want to know what the original input was. We call this “reversing function” the <em>inverse</em>. We generally denote the inverse of a function <span class="math inline">\(f\)</span> by <span class="math inline">\(f^{-1}\)</span>. This operation is itself a function. For example, if</p>
+<p>Thinking of a function again as a system, we sometimes may be given a certain output and wish to know what the original input was. If there exists a function that returns the input leading to a given output, then We call this function the <em>inverse</em>. We generally denote the inverse of a function <span class="math inline">\(f\)</span> by <span class="math inline">\(f^{-1}\)</span>. This operation is itself a function. For example, if</p>
 <p><span class="math display">\[f(x)=2x+1\]</span></p>
 <p>then the inverse is</p>
 <p><span class="math display">\[f^{-1}(x)=\frac{1}{2}x-\frac{1}{2}.\]</span></p>
-<p>For example, <span class="math inline">\(f(3)=2\times3+1=7\)</span> and <span class="math inline">\(f^{-1}(7)=0.5\times 7- 0.5 = 3\)</span>. So <em>inverse</em> functions “undo” the action of the original function to return to the original value <span class="math inline">\(x\)</span>. If we first apply <span class="math inline">\(f\)</span> and then <span class="math inline">\(f^{-1}\)</span> (known as the <em>composition</em> of <span class="math inline">\(f\)</span> and <span class="math inline">\(f^{-1}\)</span>), or the other way around, then the result is to get back to <span class="math inline">\(x\)</span>:</p>
+<p>For example, <span class="math inline">\(f(3)=2\times3+1=7\)</span> and <span class="math inline">\(f^{-1}(7)=0.5\times 7- 0.5 = 3\)</span>. So <em>inverse</em> functions “undo” the action of the original function to return to the original value <span class="math inline">\(x\)</span>. If we first apply <span class="math inline">\(f\)</span> and then <span class="math inline">\(f^{-1}\)</span> (known as the <em>composition</em> of <span class="math inline">\(f\)</span> and <span class="math inline">\(f^{-1}\)</span>) to a given input <span class="math inline">\(x\)</span>, then the result is to get back to <span class="math inline">\(x\)</span>. The same is also true if we first apply <span class="math inline">\(f^{-1}\)</span> and then <span class="math inline">\(f\)</span>. That is:</p>
 <p><span class="math display">\[f^{-1}(f(x)) = x\]</span>
 and
 <span class="math display">\[f(f^{-1}(x)) = x.\]</span></p>
 <p>WARNING: with exponents the superscript <span class="math inline">\({-1}\)</span> in <span class="math inline">\(a^{-1}\)</span> means <span class="math inline">\(a^{-1}=\frac{1}{a}\)</span>, and in a sense <span class="math inline">\(a^{-1}\)</span> is an inverse: the inverse operation to multiplying a number <span class="math inline">\(x\)</span> by a non-zero number <span class="math inline">\(a\)</span> is to divide by the number <span class="math inline">\(a\)</span>:
 <span class="math display">\[\text{if we multiply a number $x$ by $a$}\quad x\to ax\quad \text{ the reverse process is } \quad ax \to a^{-1}ax=\frac{1}{a}ax=x\]</span>
-HOWEVER, the inverse function <span class="math inline">\(f^{-1}\)</span> is not generally given by <span class="math inline">\(f^{-1}(x)=\dfrac{1}{f(x)}\)</span>, it is more complicated than that. The notation <span class="math inline">\(f^{-1}\)</span> is used becuase it is similar in spirit to the relationship between multipliction and division.</p>
+HOWEVER, the inverse function <span class="math inline">\(f^{-1}\)</span> is not generally given by <span class="math inline">\(f^{-1}(x)=\dfrac{1}{f(x)}\)</span>, it is more complicated than that. The notation <span class="math inline">\(f^{-1}\)</span> is used becuase it is similar in spirit to the relationship between multiplication and division.</p>
 <p>It is not always possible to do this reverse process, as sometimes there is more than one possible input <span class="math inline">\(x\)</span> which gives the output <span class="math inline">\(y\)</span>. For example, if the original function is</p>
 <p><span class="math display">\[f(x)=x^2\]</span></p>
-<p>and the output is <span class="math inline">\(f(x)=4\)</span>, then the input could have been <span class="math inline">\(x=2\)</span> or it could have been <span class="math inline">\(x=-2\)</span>. An extreme example is the function <span class="math inline">\(f(x)=0\)</span> for all <span class="math inline">\(x\)</span>. This sends all inputs <span class="math inline">\(x\)</span> to the same output value <span class="math inline">\(0\)</span>, so any value of <span class="math inline">\(x\)</span> could have been the input. We call such functions “many-to-one” (many inputs give the same output). In order to have an inverse, our function must be “one-to-one” (each output comes from a unique input). Going back to <span class="math inline">\(f(x)=x^2\)</span>, we are not completely stuck in finding an inverse. If we only consider non-negative inputs to the function, then the output does have a unique input. The inverse is then the square root function <span class="math inline">\(f^{-1}(x)=\sqrt{x}\)</span>. We sometimes call such an inverse a <em>partial inverse</em>. We are just considering the inverse of half of the <span class="math inline">\(y=x^2\)</span> graph where <span class="math inline">\(x\)</span> is non-negative. We will revisit this particular example in more generality in the Root functions section below.</p>
+<p>and the output is <span class="math inline">\(f(x)=4\)</span>, then the input could have been <span class="math inline">\(x=2\)</span> or it could have been <span class="math inline">\(x=-2\)</span>. We call such functions “many-to-one” (many inputs give the same output). An extreme example is the function <span class="math inline">\(f(x)=0\)</span> for all <span class="math inline">\(x\)</span>. This sends all inputs <span class="math inline">\(x\)</span> to the same output value <span class="math inline">\(0\)</span>, so knowing that the ouput is <span class="math inline">\(0\)</span> doesn’t give us any information about what the input <span class="math inline">\(x\)</span> was.</p>
+<p>In order to have an inverse, our function must be “one-to-one” (each output comes from a unique input). Going back to <span class="math inline">\(f(x)=x^2\)</span>, we are not completely stuck in finding an inverse. If we only consider non-negative inputs to the function, then the output does have a unique input. The inverse is then the square root function <span class="math inline">\(f^{-1}(x)=\sqrt{x}\)</span>. We sometimes call such an inverse a <em>partial inverse</em>. We are just considering the inverse of half of the <span class="math inline">\(y=x^2\)</span> graph where <span class="math inline">\(x\)</span> is non-negative. We will revisit this particular example in more generality in the subsection on root functions later in this section.</p>
 <p>Graphically, the inverse function is the reflection in the line <span class="math inline">\(y=x\)</span> (can you understand why this is true?).</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:inverse"></span>
-<img src="figures/inverse.png" alt="The graph of the function y=2x+1 and its inverse y=0.5x-0.5, together with the line y=x to show the reflective symmetry."  />
+<img src="figures/inverse.png" alt="The graph of the function y=2x+1 and its inverse y=0.5x-0.5, together with the line y=x to show the reflective symmetry." width="600" />
 <p class="caption">
 Figure 2.15: The function y=2x+1 and its inverse y=0.5x-0.5.
 </p>
 </div>
 <div id="finding-the-inverse-of-a-function" class="section level3 hasAnchor" number="2.7.1">
 <h3><span class="header-section-number">2.7.1</span> Finding the inverse of a function<a href="functions-and-graphs.html#finding-the-inverse-of-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>When we have an algebraic forumula for a function there is a general proceedure for finding the inverse:</p>
+<p>When we have an algebraic formula for a function there is a general procedure for finding the inverse:</p>
 <ol style="list-style-type: decimal">
 <li>If necessary, restrict to inputs where the function is one-to-one (to obtain a partial inverse);</li>
 <li>Re-arrange <span class="math inline">\(y=f(x)\)</span> to give <span class="math inline">\(x\)</span> in terms of <span class="math inline">\(y\)</span>;</li>
 <li>Interchange the variable labels <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> to obtain <span class="math inline">\(y=f^{-1}(x)\)</span>.</li>
 </ol>
 <p>Let’s take a look at some examples.</p>
-<p>::: {.example algebraic_inverses}</p>
+<p>:::{.example algebraic_inverses}</p>
 <ol style="list-style-type: decimal">
 <li>Find the inverse of <span class="math inline">\(f(x)=2x+1\)</span>.</li>
 </ol>
@@ -709,13 +726,14 @@ x&amp;=\sqrt{y+1}.
 <p>swapping the variable names <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span></p>
 <p><span class="math display">\[y=\sqrt{x+1}\]</span></p>
 <p>Therefore <span class="math inline">\(g^{-1}(x)=\sqrt{x+1}\)</span>.</p>
-<div class="figure" style="text-align: center">
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:x2m1Inv"></span>
 <iframe src="https://www.desmos.com/calculator/l763j7dm90" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-(#fig:x2-1_inv)The function <span class="math inline">\(g(x)=x^2-1\)</span> (red curve) and its partial inverse <span class="math inline">\(g^{-1}(x)=\sqrt{x+1}\)</span> (blue curve) together with the line of symmetry <span class="math inline">\(y=x\)</span>. <a href="https://www.desmos.com/calculator/l763j7dm90">[Open graph in browser.]</a>
+Figure 2.16: The function <span class="math inline">\(g(x)=x^2-1\)</span> (red curve) and its partial inverse <span class="math inline">\(g^{-1}(x)=\sqrt{x+1}\)</span> (blue curve) together with the line of symmetry <span class="math inline">\(y=x\)</span>.
 </p>
 </div>
+<p><a href="https://www.desmos.com/calculator/l763j7dm90" target="_blank">[Open preceding graph in new browser tab.]</a></p>
 <ol start="3" style="list-style-type: decimal">
 <li>Find the inverse of <span class="math inline">\(h(x)=\dfrac{x-2}{x-3}\)</span>.</li>
 </ol>
@@ -732,34 +750,37 @@ x&amp;=\dfrac{3y-2}{y-1}
 <p>and swapping the variable names <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span></p>
 <p><span class="math display">\[y=\dfrac{3x-2}{x-1}.\]</span></p>
 <p>Therefore the inverse is <span class="math inline">\(h^{-1}(x)=\dfrac{3x-2}{x-1}\)</span>.</p>
-<div class="figure" style="text-align: center">
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:RationalInv"></span>
 <iframe src="https://www.desmos.com/calculator/wsktzns4ca" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-(#fig:rational_inv)The function <span class="math inline">\(h(x)=\dfrac{x-2}{x-3}\)</span> (red curve) and its partial inverse <span class="math inline">\(h^{-1}(x)=\dfrac{3x-2}{x-1}\)</span> (blue curve) together with the line of symmetry <span class="math inline">\(y=x\)</span>. <a href="https://www.desmos.com/calculator/wsktzns4ca">[Open graph in browser.]</a>
+Figure 2.17: The function <span class="math inline">\(h(x)=\dfrac{x-2}{x-3}\)</span> (red curve) and its partial inverse <span class="math inline">\(h^{-1}(x)=\dfrac{3x-2}{x-1}\)</span> (blue curve) together with the line of symmetry <span class="math inline">\(y=x\)</span>.
 </p>
 </div>
-<p>:::</p>
+<p><a href="https://www.desmos.com/calculator/wsktzns4ca" target="_blank">[Open preceding graph in new browser tab.]</a>
+:::</p>
 </div>
 <div id="root-functions" class="section level3 hasAnchor" number="2.7.2">
 <h3><span class="header-section-number">2.7.2</span> Root functions<a href="functions-and-graphs.html#root-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Taking the <span class="math inline">\(n^\text{th}\)</span> root of a number <span class="math inline">\(x\)</span>, <span class="math inline">\(\sqrt[n]{x}\)</span>, returns the answer to the question “what number multiplied by itself <span class="math inline">\(n\)</span> times equals <span class="math inline">\(x\)</span>?”. We saw in section <a href="foundations.html#exponents">1.2.3</a> that this is the same as taking the power <span class="math inline">\(x^\frac{1}{n}\)</span>. Taking the <span class="math inline">\(n^\text{th}\)</span> root can also be thought of as reversing the operation of taking the <span class="math inline">\(n^\text{th}\)</span> power (and vice versa). In this sense, the functions <span class="math inline">\(f(x)=x^n\)</span> and <span class="math inline">\(g(x)=\sqrt[n]{x}\)</span> are inverses of one another.</p>
-<p>However, when <span class="math inline">\(n\)</span> is even <span class="math inline">\(x^n\)</span> returns the same non-negative number for a non-negative input <span class="math inline">\(x\)</span> and the corresponding negative input <span class="math inline">\(-x\)</span>. For example, <span class="math inline">\(f(x)=x^2\)</span> gives <span class="math inline">\(f(2)=2\times 2=4\)</span> and <span class="math inline">\(f(-2)=-2\times -2 =4\)</span>. More generally, if <span class="math inline">\(n\)</span> is even we are multiplying <span class="math inline">\(x\)</span> by itself an even number of times, and if <span class="math inline">\(x\)</span> is negative then the minus signs all cancel. This means that we cannot find a proper inverse function for <span class="math inline">\(x^n\)</span> with <span class="math inline">\(n\)</span> even. We instead have a so-called <em>partial inverse</em> <span class="math inline">\(f^{-1}(x)=x^{\frac{1}{n}}\)</span> which only takes non-negative inputs and returns non-negative outputs. Graphically, we are just considering the inverse of half of the <span class="math inline">\(x^n\)</span> graph where <span class="math inline">\(x\)</span> is non-negative.</p>
+<p>However, when <span class="math inline">\(n\)</span> is even, <span class="math inline">\(x^n\)</span> returns the same non-negative number for a non-negative input <span class="math inline">\(x\)</span> and the corresponding negative input <span class="math inline">\(-x\)</span>. For example, <span class="math inline">\(f(x)=x^2\)</span> gives <span class="math inline">\(f(2)=2\times 2=4\)</span> and <span class="math inline">\(f(-2)=-2\times -2 =4\)</span>. More generally, if <span class="math inline">\(n\)</span> is even, then we are multiplying <span class="math inline">\(x\)</span> by itself an even number of times, and if <span class="math inline">\(x\)</span> is negative then the minus signs all cancel. This means that we cannot find a proper inverse function for <span class="math inline">\(x^n\)</span> with <span class="math inline">\(n\)</span> even. We instead have a so-called <em>partial inverse</em> <span class="math inline">\(f^{-1}(x)=x^{\frac{1}{n}}\)</span> which only takes non-negative inputs and returns non-negative outputs. Graphically, we are just considering the inverse of half of the <span class="math inline">\(x^n\)</span> graph where <span class="math inline">\(x\)</span> is non-negative.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:roots"></span>
 <iframe src="https://www.desmos.com/calculator/j3elzr5cks" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 2.16: The functions <span class="math inline">\(f(x)=x^2\)</span> (red curve) <span class="math inline">\(g(x)=\sqrt{x}\)</span> (blue curve) are reflections of each other in the line <span class="math inline">\(y=x\)</span> (dashed black line) for non-negative values of <span class="math inline">\(x\)</span>. <a href="https://www.desmos.com/calculator/j3elzr5cks">[Open graph in browser.]</a>
+Figure 2.18: The functions <span class="math inline">\(f(x)=x^2\)</span> (red curve) <span class="math inline">\(g(x)=\sqrt{x}\)</span> (blue curve) are reflections of each other in the line <span class="math inline">\(y=x\)</span> (dashed black line) for non-negative values of <span class="math inline">\(x\)</span>.
 </p>
 </div>
+<p><a href="https://www.desmos.com/calculator/j3elzr5cks" target="_blank">[Open preceding graph in new browser tab.]</a></p>
 <p>If <span class="math inline">\(n\)</span> is an odd number then it also makes sense for negative values of <span class="math inline">\(x\)</span> (why?) and we have a full inverse function.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:cuberoots"></span>
 <iframe src="https://www.desmos.com/calculator/exmc148194" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 2.17: The functions <span class="math inline">\(f(x)=x^3\)</span> (red curve) <span class="math inline">\(g(x)=x^{rac{1}{3}}\)</span> (blue curve) are reflections of each other in the line <span class="math inline">\(y=x\)</span> (dashed black line) for all values of <span class="math inline">\(x\)</span>. <a href="https://www.desmos.com/calculator/exmc148194">[Open graph in browser.]</a>
+Figure 2.19: The functions <span class="math inline">\(f(x)=x^3\)</span> (red curve) <span class="math inline">\(g(x)=x^{1/3}\)</span> (blue curve) are reflections of each other in the line <span class="math inline">\(y=x\)</span> (dashed black line) for all values of <span class="math inline">\(x\)</span>.
 </p>
 </div>
+<p><a href="https://www.desmos.com/calculator/exmc148194" target="_blank">[Open preceding graph in new browser tab.]</a></p>
 <p>It is important to keep these facts in mind when re-arranging equations. For example, consider the equation of the area <span class="math inline">\(A\)</span> of a circle of radius <span class="math inline">\(r\)</span>:</p>
 <p><span class="math display">\[A=\pi r^2.\]</span></p>
 <p>To find the radius as a function of area, we first re-arrange to give</p>
@@ -772,30 +793,33 @@ Figure 2.17: The functions <span class="math inline">\(f(x)=x^3\)</span> (red cu
 <div id="inverse_trig_funcs" class="section level3 hasAnchor" number="2.7.3">
 <h3><span class="header-section-number">2.7.3</span> Inverse Trigonometric Functions<a href="functions-and-graphs.html#inverse_trig_funcs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Since the trigonometric functions are not one-to-one, we must restrict them if we want to define a partial inverse. Since the input to a trigonometry function is an angle, the output of an inverse trigonometric function is an angle.</p>
-<p>The inverse sine or “arcsine” function is defined for inputs <span class="math inline">\(-1\le x \le 1\)</span> and gives outputs in the range <span class="math inline">\(-\frac{\pi}{2}\le y \le \frac{\pi}{2}\)</span> radians or <span class="math inline">\(-90^\circ \le y \le 90^\circ\)</span>. It is written as <span class="math inline">\(\sin^{-1}(x)\)</span> or <span class="math inline">\(\arcsin(x)\)</span>.</p>
+<p>The inverse sine or “arcsine” function is defined for inputs <span class="math inline">\(-1\le x \le 1\)</span> and gives outputs in the range <span class="math inline">\(-\frac{\pi}{2} \le y \le \frac{\pi}{2}\)</span> radians or <span class="math inline">\(-90^{\circ} \le y \le 90^{\circ}\)</span>. It is written as <span class="math inline">\(\sin^{-1}(x)\)</span> or <span class="math inline">\(\arcsin(x)\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:arcsin"></span>
 <iframe src="https://www.desmos.com/calculator/eddkyckfo5" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 2.18: The function <span class="math inline">\(\arcsin(x)\)</span> (blue curve). <a href="https://www.desmos.com/calculator/eddkyckfo5">[Open graph in browser.]</a>
+Figure 2.20: The function <span class="math inline">\(\arcsin(x)\)</span> (blue curve).
 </p>
 </div>
-<p>The inverse cosine or “arccos” function is defined for inputs <span class="math inline">\(-1\le x \le 1\)</span> and gives outputs in the range <span class="math inline">\(0\le y\le \pi\)</span> radians or $0y ^$. It is written as <span class="math inline">\(\cos^{-1}(x)\)</span> or <span class="math inline">\(\arccos(x)\)</span>.</p>
+<p><a href="https://www.desmos.com/calculator/eddkyckfo5" target="_blank">[Open preceding graph in new browser tab.]</a></p>
+<p>The inverse cosine or “arccos” function is defined for inputs <span class="math inline">\(-1\le x \le 1\)</span> and gives outputs in the range <span class="math inline">\(0\le y\le \pi\)</span> radians or <span class="math inline">\(0 \le y \le 180^{\circ}\)</span>. It is written as <span class="math inline">\(\cos^{-1}(x)\)</span> or <span class="math inline">\(\arccos(x)\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:arccos"></span>
 <iframe src="https://www.desmos.com/calculator/uoqsozktti" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 2.19: The function <span class="math inline">\(\arccos(x)\)</span> (blue curve). <a href="https://www.desmos.com/calculator/uoqsozktti">[Open graph in browser.]</a>
+Figure 2.21: The function <span class="math inline">\(\arccos(x)\)</span> (blue curve).
 </p>
 </div>
-<p>The inverse tangent or “arctan” function is defined for any real number input <span class="math inline">\(x\)</span>, and gives outputs in the range <span class="math inline">\(-\frac{\pi}{2} &lt; x &lt; \frac{\pi}{2}\)</span> radians or <span class="math inline">\(-90^\circ &lt; y &lt; 90^\circ\)</span> degrees. It is written as <span class="math inline">\(\tan^{-1}(x)\)</span> or <span class="math inline">\(\arctan(x)\)</span>.</p>
+<p><a href="https://www.desmos.com/calculator/uoqsozktti" target="_blank">[Open preceding graph in new browser tab.]</a></p>
+<p>The inverse tangent or “arctan” function is defined for any real number input <span class="math inline">\(x\)</span>, and gives outputs in the range <span class="math inline">\(-\frac{\pi}{2} &lt; x &lt; \frac{\pi}{2}\)</span> radians or <span class="math inline">\(-90^{\circ} &lt; y &lt; 90^{\circ}\)</span> degrees. It is written as <span class="math inline">\(\tan^{-1}(x)\)</span> or <span class="math inline">\(\arctan(x)\)</span>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:arctan"></span>
 <iframe src="https://www.desmos.com/calculator/fo2mklyvjb" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 2.20: The function <span class="math inline">\(\arctan(x)\)</span> (blue curve). <a href="https://www.desmos.com/calculator/fo2mklyvjb">[Open graph in browser.]</a>
+Figure 2.22: The function <span class="math inline">\(\arctan(x)\)</span> (blue curve).
 </p>
 </div>
+<p><a href="https://www.desmos.com/calculator/fo2mklyvjb" target="_blank">[Open preceding graph in new browser tab.]</a></p>
 </div>
 <div id="logarithms" class="section level3 hasAnchor" number="2.7.4">
 <h3><span class="header-section-number">2.7.4</span> Logarithms<a href="functions-and-graphs.html#logarithms" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -804,18 +828,19 @@ Figure 2.20: The function <span class="math inline">\(\arctan(x)\)</span> (blue 
 and
 <span class="math display">\[a^{\log_a(x)}=x\]</span>.</p>
 <p>For the base <span class="math inline">\(a=e\)</span>, we call the logarithm <span class="math inline">\(\log_e(x)\)</span> the <em>natural logarithm</em> and use the notation</p>
-<p><span class="math display">\[\ln(x)=\log_e(x)\]</span></p>
-<p><span class="math inline">\(\ln(x)\)</span> is usually spoken as <em>lun x</em> or <em>L.N. of x</em>.</p>
+<p><span class="math display">\[\ln(x)=\log_e(x).\]</span></p>
+<p><span class="math inline">\(\ln(x)\)</span> is usually pronounced as <em>lun x</em> or <em>L.N. of x</em>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:expln"></span>
 <iframe src="https://www.desmos.com/calculator/wlp8muzfqk" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-Figure 2.21: The functions <span class="math inline">\(f(x)=a^x\)</span> for varying <span class="math inline">\(a&gt;1\)</span> (red curve) and the inverse <span class="math inline">\(g(x)=\log_a(x)\)</span> (blue curve) together with the line <span class="math inline">\(y=x\)</span> to show the symmetry of the function and its inverse. <a href="https://www.desmos.com/calculator/wlp8muzfqk">[Open graph in browser.]</a>
+Figure 2.23: The functions <span class="math inline">\(f(x)=a^x\)</span> for varying <span class="math inline">\(a&gt;1\)</span> (red curve) and the inverse <span class="math inline">\(g(x)=\log_a(x)\)</span> (blue curve) together with the line <span class="math inline">\(y=x\)</span> to show the symmetry of the function and its inverse.
 </p>
 </div>
+<p><a href="https://www.desmos.com/calculator/wlp8muzfqk" target="_blank">[Open preceding graph in new browser tab.]</a></p>
 <p>In engineering applications it is also common to use base <span class="math inline">\(2\)</span> and base <span class="math inline">\(10\)</span>. For base <span class="math inline">\(10\)</span>, the following notation is sometimes used</p>
 <p><span class="math display">\[\log(x)=\log_{10}(x)\]</span></p>
-<p>but we should always check what the author intends as sometimes <span class="math inline">\(\log(x)\)</span> is used to mean <span class="math inline">\(\ln(x)\)</span>. We have the following rules for manipulating logarithms (these follow from the laws of exponents in Theorem <a href="#exprules"><strong>??</strong></a>; try to derive them yourself):</p>
+<p>but we should always check what the author intends as sometimes <span class="math inline">\(\log(x)\)</span> is used to mean <span class="math inline">\(\ln(x)\)</span>. We have the following rules for manipulating logarithms (many of these follow from the laws of exponents in section <a href="foundations.html#exponents">1.2.3</a>; try to derive them yourself):</p>
 <div class="theorem">
 <p><span id="thm:logrules" class="theorem"><strong>Theorem 2.1  (Rules of Logarithms) </strong></span></p>
 <ol style="list-style-type: decimal">
@@ -828,12 +853,12 @@ Figure 2.21: The functions <span class="math inline">\(f(x)=a^x\)</span> for var
 </div>
 <p>We can also change between bases in logarithms with the following rule</p>
 <div class="theorem">
-<p><span id="thm:changebase" class="theorem"><strong>Theorem 2.2  (Change of Base Rule) </strong></span>Let <span class="math inline">\(y=a^x\)</span>, then <span class="math inline">\(x=\log_a(y)\)</span>. Also, <span class="math inline">\(\log_b(y)=x\log_b(a)\)</span>, and so <span class="math inline">\(x=\dfrac{\log_b(y)}{\log_b(a)}\)</span>. Therefore,
+<p><span id="thm:changebase" class="theorem"><strong>Theorem 2.2  (Change of Base Rule) </strong></span>For any given <span class="math inline">\(a, b, y &gt; 0\)</span>,
 <span class="math display">\[\begin{equation*}
 \log_a(y)=\dfrac{\log_b (y)}{\log_b (a)}.
-\end{equation*}\]</span>
-This allows us to calculate <span class="math inline">\(\log_a\)</span> of a number in terms of <span class="math inline">\(\log_b\)</span>.</p>
+\end{equation*}\]</span></p>
 </div>
+<p>This change of base theorem allows us to calculate <span class="math inline">\(\log_a\)</span> of a number in terms of <span class="math inline">\(\log_b\)</span>. It follows since, if <span class="math inline">\(y=a^x\)</span>, then <span class="math inline">\(x=\log_a(y)\)</span>. Also, <span class="math inline">\(\log_b(y)=x\log_b(a)\)</span>, and so <span class="math inline">\(x=\dfrac{\log_b(y)}{\log_b(a)} = \log_a(y)\)</span>.</p>
 <p>An exponential function with base <span class="math inline">\(a\)</span> can be re-written in any other base <span class="math inline">\(b\)</span> with a constant factor in the argument as follows:
 <span class="math display">\[\begin{align*}
 a^x&amp;=b^{\log_b (a^x)} \quad \text{(note that $b^{\log_b y}=y$)} \\
@@ -844,19 +869,19 @@ The “natural” choice of base for mathematical use is <span class="math inlin
 </div>
 <div id="logarthmic-plots" class="section level3 hasAnchor" number="2.7.5">
 <h3><span class="header-section-number">2.7.5</span> Logarthmic plots<a href="functions-and-graphs.html#logarthmic-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>When we have quatities that change over a large range of magnitudes, it can be more convenient to plot them on a “logarthmic scale” so that they do not take up so much space on the page. For example, the Ricther Magnitude Scale for measuring earthquakes is a logarthmic scale, which takes the logarithm to the base 10 of the amplitude of waves recorded by seismographs.</p>
+<p>When we have quantities that change over a large range of magnitudes, it can be more convenient to plot them on a “logarthmic scale” so that they do not take up so much space on the page. For example, the Ricther Magnitude Scale for measuring earthquakes is a logarthmic scale, which takes the logarithm to the base 10 of the amplitude of waves recorded by seismographs.</p>
 <p>The following is a “semi-log” plot, where the <span class="math inline">\(y\)</span>-axis is the logarithmic scale and the <span class="math inline">\(x\)</span>-axis is a (normal) linear scale. This means that every unit moved up along the <span class="math inline">\(y\)</span>-axis actually represents a power of 10 increase in the amplitude of the seismograph waves.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:earthquake"></span>
-<img src="figures/2016_Central_Italy_earthquake_(magnitude).png" alt="Plot showing 2016 Central Italy Earthquake Data."  />
+<img src="figures/2016_Central_Italy_earthquake_(magnitude).png" alt="Plot showing 2016 Central Italy Earthquake Data." width="325" />
 <p class="caption">
-Figure 2.22: Magnitude of the August 2016 Central Italy earthquake (red dot) and aftershocks (which continued to occur after the period shown here). From <a href="https://commons.wikimedia.org/w/index.php?curid=50891603">Wikipedia - Phoenix7777</a>.
+Figure 2.24: Magnitude of the August 2016 Central Italy earthquake (red dot) and aftershocks (which continued to occur after the period shown here). From <a href="https://commons.wikimedia.org/w/index.php?curid=50891603">Wikipedia - Phoenix7777</a>.
 </p>
 </div>
-<p>The logarithmic nature of the scale is sometimes made clearer by labelling the axis with an exponentially increasing scale and drawing in the minor gridlines. In figure <a href="functions-and-graphs.html#fig:semilog">2.23</a> the major grid lines on the <span class="math inline">\(y\)</span>-axis increase by a power of <span class="math inline">\(10\)</span>. The minor grid lines between <span class="math inline">\(1\)</span> and <span class="math inline">\(10\)</span> represent increments of <span class="math inline">\(1\)</span> unit, then the minor grid lines between <span class="math inline">\(10\)</span> and <span class="math inline">\(10^2=100\)</span> represent increments of <span class="math inline">\(10\)</span> units, and so on.</p>
+<p>The logarithmic nature of the scale is sometimes made clearer by labelling the axis with an exponentially increasing scale and drawing in the minor gridlines. In figure <a href="functions-and-graphs.html#fig:semilog">2.25</a> the major grid lines on the <span class="math inline">\(y\)</span>-axis increase by a power of <span class="math inline">\(10\)</span>. The minor grid lines between <span class="math inline">\(1\)</span> and <span class="math inline">\(10\)</span> represent increments of <span class="math inline">\(1\)</span> unit, then the minor grid lines between <span class="math inline">\(10\)</span> and <span class="math inline">\(10^2=100\)</span> represent increments of <span class="math inline">\(10\)</span> units, and so on.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:semilog"></span>
-<img src="figures/Semilog_graph_paper.png" alt="Semi log graph paper (base 10)."  />
+<img src="figures/Semilog_graph_paper.png" alt="Semi log graph paper (base 10)." width="350" />
 <p class="caption">
-Figure 2.23: Semi log graph paper (base 10). From <a href="https://commons.wikimedia.org/w/index.php?curid=79843775">wikimedia</a>.
+Figure 2.25: Semi log graph paper (base 10). From <a href="https://commons.wikimedia.org/w/index.php?curid=79843775">wikimedia</a>.
 </p>
 </div>
 
@@ -866,8 +891,8 @@ Figure 2.23: Semi log graph paper (base 10). From <a href="https://commons.wikim
 <div class="footnotes">
 <hr />
 <ol start="3">
-<li id="fn3"><p>See section <a href="#derivatives"><strong>??</strong></a>.<a href="functions-and-graphs.html#fnref3" class="footnote-back">↩︎</a></p></li>
-<li id="fn4"><p>The phrase “exponential growth” is sometimes used in a casual way to talk about anything that increases “quickly”, but mathematicians, scientists and engineers are more precise and would only use the term in its strict mathematical sense, as relating to an exponential function!<a href="functions-and-graphs.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Cartesian coordinates are named after the French mathematician, physicist and philosopher René Descartes (1596-1650), who is credited as a founder of analytic geometry and a leading figure in the Scientific Revolution, Descartes also contributed to the nowadays more problematic anthropocentric views, including denying that other (non-human) animals have reason or intelligence – see Waddicor, M. H., Montesquieu and the Philosophy of Natural Law (Leiden: Martinus Nijhoff Publishers, 1970), p. 63 <a href="https://web.archive.org/web/20210816214230/https://books.google.com/books?id=sLooBgAAQBAJ&pg=PA63" target="_blank">Archived</a> 16 August 2021 at the Wayback Machine<a href="functions-and-graphs.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Named after the Swiss mathematician Leonhard Euler, an extraordinarily prolific mathematician even after losing his sight. Indeed, when discussing his blindness, Euler is reported to have said ``Now I will have fewer distractions’’ – see Eves, Howard W. (1969). “Euler’s blindness”. In Mathematical Circles: A Selection of Mathematical Stories and Anecdotes, Quadrants III and IV. Prindle, Weber, &amp; Schmidt. p. 48. OCLC 260534353. Also quoted by Richeson (2012), p. 17, cited to Eves.<a href="functions-and-graphs.html#fnref4" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

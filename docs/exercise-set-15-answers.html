@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-11-21" />
+<meta name="date" content="2025-09-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -421,7 +421,7 @@
 <p>Answer:</p>
 <p>There are 15 distinct letters and we are choosing 4. We are interested in the different orders, so this is a question about <em>permutations</em>. The number of permutations is:</p>
 <p><span class="math display">\[{}_{15} P_4=\frac{15!}{(15-4)!}=\frac{15!}{11!}=32760.\]</span></p></li>
-<li><p>In a meal deal you can choose any 3 items from: sandwich, wrap, pasta, sushi, crisps, drink, chocolate. How many different meal deals are there?</p>
+<li><p>In a meal deal you can choose any 3 different items from: sandwich, wrap, pasta, sushi, crisps, drink, chocolate. How many different meal deals are there?</p>
 <p>Answer:</p>
 <p>In this case, we are not interested in the ordering of the three items when buying them, so this is a question about <em>combinations</em>. The number of combinations is</p>
 <p><span class="math display">\[{}_7 C_3={7 \choose 3}=\frac{7!}{3!4!}=35.\]</span></p></li>
@@ -452,6 +452,7 @@
 <li><em>straight</em>: five cards of sequential rank, but not all of the same suit, for instance, <span class="math inline">\(A\spadesuit\,2\heartsuit\,3\spadesuit\,4\clubsuit\,5\diamondsuit\)</span></li>
 </ol>
 <p>Answers:</p>
+<p>There are <span class="math inline">\({ 52 \choose 5}=2598960\)</span> poker hands in total.</p>
 <ol style="list-style-type: lower-alpha">
 <li><p><em>four-of-a-kind</em>: There are <span class="math inline">\({13 \choose 1}\)</span> way of choosing the number on the four-of-a-kind, and then given the number, there are <span class="math inline">\({4 \choose 4} = 1\)</span> ways to choose the suits. Then we have <span class="math inline">\({12 \choose 1}\)</span> ways to choose the number for the remaining card, and <span class="math inline">\({4 \choose 1}\)</span> ways to choose the suit. Hence the answer is:
 <span class="math display">\[
@@ -474,8 +475,8 @@
 </ol>
 <p>Answers:</p>
 <p>Perhaps the easiest way of answering this question is by drawing out a “probability tree” and adding together the probabilities that give the required outcomes.</p>
-<p><img src="figures/probtree1.png" style="display: block; margin: auto;" /></p>
-<p><img src="figures/probtree2.png" style="display: block; margin: auto;" /></p>
+<p><img src="figures/probtree1.png" width="562" style="display: block; margin: auto;" /></p>
+<p><img src="figures/probtree2.png" width="562" style="display: block; margin: auto;" /></p>
 <ol style="list-style-type: lower-alpha">
 <li><span class="math inline">\(P(\text{A,B})+P(\text{B,A})=\frac{2}{7}+\frac{2}{7}=\frac{4}{7}\)</span></li>
 <li><span class="math inline">\(P(\text{A,B})+P(\text{B,A})+P(\text{A,A})=1-P(\text{B,B})=1-\frac{1}{7}=\frac{6}{7}\)</span></li>

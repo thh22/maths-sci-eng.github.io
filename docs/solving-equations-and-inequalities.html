@@ -23,7 +23,7 @@
 <meta name="author" content="Dr Mark Callaway" />
 
 
-<meta name="date" content="2023-11-21" />
+<meta name="date" content="2025-09-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -390,9 +390,9 @@
 <p>In this section we shall look at some solution methods to some forms of commonly encountered equations and inequalities.</p>
 <div id="quad-eqs" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Quadratic equations<a href="solving-equations-and-inequalities.html#quad-eqs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A particularly common form of equations that arise in science and engineering are <em>quadratic</em> equations. These are equations of the form</p>
+<p><em>Quadratic</em> equations are particularly commonly considered. These are equations of the form</p>
 <p><span class="math display">\[ax^2+bx+c=0\]</span></p>
-<p>where <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are constants and we wish to find the values of <span class="math inline">\(x\)</span> satisfying this equation. Graphically, these are the <span class="math inline">\(x\)</span>-coordinates where the polynomial function <span class="math inline">\(f(x)=ax^2+bx+c\)</span> crossses the <span class="math inline">\(x\)</span>-axis: these values are known as the <em>roots</em> of the polynomial. A quadratic may cross the <span class="math inline">\(x\)</span>-axis either twice, just once, or not at all.</p>
+<p>where <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are constants. The values of <span class="math inline">\(x\)</span> satisfying this equation coorespond graphically to the <span class="math inline">\(x\)</span>-coordinates where the polynomial function <span class="math inline">\(f(x)=ax^2+bx+c\)</span> crossses the <span class="math inline">\(x\)</span>-axis: these values are known as the <em>roots</em> of the polynomial. A quadratic may cross the <span class="math inline">\(x\)</span>-axis either twice, just once, or not at all.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:quadratic-roots"></span>
 <iframe src="https://www.desmos.com/calculator/qk8eaxcjx4" width="672" height="400px" data-external="1">
 </iframe>
@@ -409,15 +409,16 @@ Figure 3.1: The displayed quadtratic function has 2 roots. Try changing the slid
 <p><span class="math display">\[x^2+bx+c=0.\]</span></p>
 <p>If we can write a quadratic equation as a product of two simple linear factors in the form<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>:</p>
 <p><span class="math display">\[x^2+bx+c = (x+\alpha)(x+\beta)\]</span></p>
-<p>then <span class="math inline">\(x=-\alpha\)</span> and <span class="math inline">\(x=-\beta\)</span> are solutions to <span class="math inline">\(ax^2+bx+c=0\)</span>, since for <span class="math inline">\(x=-\alpha\)</span></p>
-<p><span class="math display">\[(-\alpha+\alpha)(-\alpha+\beta)=0(-\alpha+\beta)=0\]</span></p>
-<p>and similarly for <span class="math inline">\(x=-\beta\)</span>. Furthermore, these will be the only two solutions: it is possible there are two different solutions <span class="math inline">\(\alpha\neq\beta\)</span>, one “repeated” solution where <span class="math inline">\(\alpha=\beta\)</span> so that the quadratic factorises as <span class="math inline">\((x+\alpha)(x+\alpha)=(x+\alpha)^2\)</span>, or there may be no solutions<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>. In many cases it is easy to spot the values of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>. To see this, let’s work backwards and expand the brackets:</p>
+<p>then <span class="math inline">\(x=-\alpha\)</span> and <span class="math inline">\(x=-\beta\)</span> are solutions to <span class="math inline">\(ax^2+bx+c=0\)</span>, since, for <span class="math inline">\(x=-\alpha\)</span></p>
+<p><span class="math display">\[(-\alpha+\alpha)(-\alpha+\beta)=0(-\alpha+\beta)=0,\]</span></p>
+<p>and similarly for <span class="math inline">\(x=-\beta\)</span>. Furthermore, these will be the only two solutions. It is possible there are two different solutions <span class="math inline">\(\alpha\neq\beta\)</span>, or one “repeated” solution where <span class="math inline">\(\alpha=\beta\)</span> so that the quadratic factorises as <span class="math inline">\((x+\alpha)(x+\alpha)=(x+\alpha)^2\)</span>. It may also be the case that the polynomial cannot be written as a product of two linear factors in this way, i.e., that there are no solutions<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>.</p>
+<p>In many cases it is easy to spot the values of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>. To see this, let’s work backwards and expand the brackets:</p>
 <p><span class="math display">\[(x+\alpha)(x+\beta)=x^2+\beta x +\alpha x +\alpha\beta = x^2 + (\alpha + \beta)x + \alpha\beta\]</span></p>
 <p>so we just need to find the values of <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> that sum to <span class="math inline">\(b\)</span> and multiply together to give <span class="math inline">\(c\)</span>.</p>
 <div class="example">
 <p><span id="exm:factorise" class="example"><strong>Example 3.1  </strong></span>If we have
 <span class="math display">\[x^2+5x+6=0\]</span>
-we are looking for two numbers that sum to make <span class="math inline">\(5\)</span> and multiply to make <span class="math inline">\(6\)</span>, so the answer is clearly <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=3\)</span>, giving the factorisation
+then we are looking for two numbers that sum to make <span class="math inline">\(5\)</span> and multiply to make <span class="math inline">\(6\)</span>, so the answer is clearly <span class="math inline">\(x=2\)</span> and <span class="math inline">\(x=3\)</span>, giving the factorisation
 <span class="math display">\[x^2+5x+6=(x+2)(x+3).\]</span></p>
 </div>
 <p>If we have a more general quadratic where <span class="math inline">\(a\neq1\)</span>, then we could start by taking out a factor of <span class="math inline">\(a\)</span>
@@ -426,36 +427,38 @@ and then dividing both sides by <span class="math inline">\(a\)</span>
 <span class="math display">\[x^2+\frac{b}{a}x+\frac{c}{a}=0\]</span>
 The values of <span class="math inline">\(x\)</span> satisfying this new equation will be the same as those for the original, so we can now use the above method to find the solutions. However, sometimes we not only want the solution, but also want to know how to factorise the quadratic. In this case we shall have to keep the factor of <span class="math inline">\(a\)</span>. To factorise we just need to find the values of the coefficients in the factorisation that will give the answer we need when we expand the brackets.</p>
 <div class="example">
-<p><span id="exm:factorise2" class="example"><strong>Example 3.2  </strong></span>Solve <span class="math inline">\(4x^2 + 8x + 3 = 0\)</span> by factorising.</p>
+<p><span id="exm:factorise2" class="example"><strong>Example 3.2  </strong></span>Solve <span class="math inline">\(4x^2 + 8x + 3 = 0\)</span> by factorising into the form <span class="math inline">\((ax + \alpha)(bx + \beta)\)</span>, where <span class="math inline">\(a, b, \alpha\)</span> and <span class="math inline">\(\beta\)</span> are all integers, and <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are both positive.</p>
 <p>We need the <span class="math inline">\(x\)</span> terms to multiply together to make <span class="math inline">\(4x^2\)</span>, so we could have either
 <span class="math display">\[(4x + \star)(x + \star)\]</span>
 or
-<span class="math display">\[(2x + \star)(2x + \star)\]</span>
-and we need the constant terms to multiply together to make <span class="math inline">\(3\)</span>, so we could have either
+<span class="math display">\[(2x + \star)(2x + \star).\]</span>
+We also need the constant terms to multiply together to make <span class="math inline">\(3\)</span>, so we could have either
 <span class="math display">\[(\star + 3)(\star + 1)\]</span>
 or
 <span class="math display">\[(\star - 3)(\star - 1).\]</span>
 The sum of the products of the outer terms and inner terms needs to be <span class="math inline">\(8x\)</span> and the only way this is possible is with
 <span class="math display">\[(2x+3)(2x+1).\]</span></p>
 <p>The solutions then come from solving for each factor being <span class="math inline">\(0\)</span>, giving
-<span class="math display">\[x=-\frac{3}{2}\quad\text{ or }\quad x= -\frac{1}{2}\]</span></p>
-<p>Alternatively, we can start by looking for two numbers that add to give the <span class="math inline">\(b\)</span> coefficient, and multiply to give <span class="math inline">\(ac\)</span>. In this case, we are looking for numbers that add to give <span class="math inline">\(8\)</span> and multiply to give <span class="math inline">\(4\times3=12\)</span>. The only option is <span class="math inline">\(2\)</span> and <span class="math inline">\(6\)</span>. Now we write <span class="math inline">\(8x=2x+6x\)</span> to give
-<span class="math display">\[4x^2 + 2x + 6x + 3 = 0\]</span>
+<span class="math display">\[x=-\frac{3}{2}\quad\text{ or }\quad x= -\frac{1}{2}.\]</span>
+<!--
+Alternatively, we can start by looking for two numbers that add to give the $b$ coefficient, and multiply to give $ac$. In this case, we are looking for numbers that add to give $8$ and multiply to give $4\times3=12$. The only option is $2$ and $6$. Now we write $8x=2x+6x$ to give
+$$4x^2 + 2x + 6x + 3 = 0$$
 and next, we factorise the first two terms and last two terms to give
-<span class="math display">\[2x(2x+1)+3(2x+1)\]</span>
-and noticing the common factor of <span class="math inline">\((2x+1)\)</span>, we can factorise this to give
-<span class="math display">\[(2x+3)(2x+1)\]</span>
-as before.</p>
+$$2x(2x+1)+3(2x+1)$$
+and noticing the common factor of $(2x+1)$, we can factorise this to give
+$$(2x+3)(2x+1)$$
+as before.
+--></p>
 </div>
-<p>Not all quadratics will factorise “nicely”, that is to say, where the coefficients in the linear factors will be integers. In this case, it can be very difficult to determine the coefficients by inspection and the following two methods can be applied instead.</p>
+<p>Not all quadratics will factorise “nicely”, that is to say, where the coefficients in the linear factors will be integers. In this case, it can be very difficult to determine the coefficients by inspection, and the following two methods can be applied instead.</p>
 </div>
 <div id="completing-the-square" class="section level3 hasAnchor" number="3.1.2">
 <h3><span class="header-section-number">3.1.2</span> Completing the square<a href="solving-equations-and-inequalities.html#completing-the-square" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>In this method, we first rewrite a quadratic equation
 <span class="math display">\[ax^2+bx+c=0\]</span>
 into the form
-<span class="math display">\[a(x-h)^2+k=0\]</span>
-that is, a squared term plus a constant, hence the name “completing the square”.</p>
+<span class="math display">\[a((x-h)^2+k)=0,\]</span>
+that is, a squared term plus a constant, multiplied by some other constant. Hence the name “completing the square”.</p>
 <p>We then solve by rearranging and taking square roots
 <span class="math display">\[\begin{align*}
 (x-h)^2+k&amp;=0\\
@@ -465,7 +468,7 @@ x&amp;=h\pm\sqrt{-k}
 \end{align*}\]</span>
 where <span class="math inline">\(\pm\)</span> means there is one solution coming from taking the <span class="math inline">\(+\)</span> option and the other from taking the <span class="math inline">\(-\)</span> option.</p>
 <p>We just need to find <span class="math inline">\(h\)</span> and <span class="math inline">\(k\)</span>. They are given by
-<span class="math display">\[h=-\frac{b}{2a},\quad k=c-\frac{b^2}{4a}.\]</span></p>
+<span class="math display">\[h=-\frac{b}{2a},\quad k=\frac{4ac-b^2}{4a^2}.\]</span></p>
 <p>It is not necessary to remember these formulae, we can instead figure out the coefficients as we go along.</p>
 <div class="example">
 <p><span id="exm:completesqr" class="example"><strong>Example 3.3  (Completing the Square) </strong></span>Consider the quadratic equation
@@ -486,7 +489,7 @@ and so we need to “complete the square” by adding <span class="math inline">
 x&amp;=-3\pm\sqrt{22}.
 \end{align*}\]</span></p>
 </div>
-<p>Another use of completing the square is in determining the location of the minimum or maximum point of a quadratic function. We know that the graph of such a function is a parabola which either opens upwards in a “<span class="math inline">\(\cup\)</span>” shape or opens downwards in a “<span class="math inline">\(\cap\)</span>” shape, so it has a minimum or a maximum, respectively: the sign of the <span class="math inline">\(x^2\)</span> coefficient determines this, with <span class="math inline">\(+\)</span> corresponding to upward opening and <span class="math inline">\(-\)</span> corresponding to downward opening. In the previous example, after completing the square we obtained <span class="math inline">\(y=2(x+3)^2-44\)</span>, and since the coefficient in <span class="math inline">\(2x^2\)</span> is positive the quadratic function must have a minimum somewhere. Since the term <span class="math inline">\((x+3)^2\)</span> must be positive, the smallest it can be is when <span class="math inline">\(x=-3\)</span> and the term is <span class="math inline">\((-3+3)^2=0\)</span>. This means we must have a minimum at <span class="math inline">\(x=-3\)</span> where <span class="math inline">\(y=2(-3+3)^2-44=-44\)</span>. This idea can be generalised: find the value of <span class="math inline">\(x\)</span> that makes the squared term <span class="math inline">\(0\)</span>, and then the minimum/maximum <span class="math inline">\(y\)</span> value is equal to the constant term.</p>
+<p>Another use of completing the square is in determining the location of the minimum or maximum point of a quadratic function. We know that the graph of such a function is a parabola which either opens upwards in a “<span class="math inline">\(\cup\)</span>” shape or opens downwards in a “<span class="math inline">\(\cap\)</span>” shape, so it has a minimum or a maximum, respectively. The sign of the <span class="math inline">\(x^2\)</span> coefficient determines this, with <span class="math inline">\(+\)</span> corresponding to upward opening and <span class="math inline">\(-\)</span> corresponding to downward opening. In the previous example, after completing the square we obtained <span class="math inline">\(y=2(x+3)^2-44\)</span>, and since the coefficient in <span class="math inline">\(2x^2\)</span> is positive the quadratic function must have a minimum somewhere. Since the term <span class="math inline">\((x+3)^2\)</span> must be positive, the smallest it can be is when <span class="math inline">\(x=-3\)</span> and the term is <span class="math inline">\((-3+3)^2=0\)</span>. This means we must have a minimum at <span class="math inline">\(x=-3\)</span> where <span class="math inline">\(y=2(-3+3)^2-44=-44\)</span>. This idea can be generalised: find the value of <span class="math inline">\(x\)</span> that makes the squared term <span class="math inline">\(0\)</span>, and then the minimum/maximum <span class="math inline">\(y\)</span> value is equal to the constant term.</p>
 </div>
 <div id="the-quadratic-formula" class="section level3 hasAnchor" number="3.1.3">
 <h3><span class="header-section-number">3.1.3</span> The quadratic formula<a href="solving-equations-and-inequalities.html#the-quadratic-formula" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -496,7 +499,7 @@ x&amp;=-3\pm\sqrt{22}.
 <span class="math display">\[ax^2+bx+c=0\]</span>
 are given by
 <span class="math display">\[x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.\]</span></p>
-<p>If the quantity <span class="math inline">\(\Delta = b^2-4ac\)</span>, known as the <em>discriminant</em>, is such that <span class="math inline">\(\Delta&gt;0\)</span> then there will be two different solutions, if <span class="math inline">\(\Delta = 0\)</span> then there will be one solution; if <span class="math inline">\(\Delta\)</span> is negative, then there are no real number solutions (since we cannot take the square root of a negative number).</p>
+<p>If the quantity <span class="math inline">\(\Delta = b^2-4ac\)</span>, known as the <em>discriminant</em>, is such that <span class="math inline">\(\Delta&gt;0\)</span> then there will be two different solutions; if <span class="math inline">\(\Delta = 0\)</span> then there will be one solution; if <span class="math inline">\(\Delta\)</span> is negative, then there are no real number solutions (since we cannot take the square root of a negative number).</p>
 </div>
 <div class="exercise">
 <p><span id="exr:quadform" class="exercise"><strong>Exercise 3.1  </strong></span>Derive the quadratic formula. Hint: use the method of “completing the square” on the general form of a quadratic equation <span class="math inline">\(ax^2+bx+c=0\)</span>.</p>
@@ -514,7 +517,7 @@ If the product of two numbers is zero, then either one or both of the numbers mu
 <span class="math display">\[(x+2)=0 \quad \implies\quad x=-2\]</span>
 or
 <span class="math display">\[(x-5)=0\quad \implies\quad x=5.\]</span>
-More generally, a factor <span class="math inline">\((x-a)\)</span> corresponds to a root <span class="math inline">\(x=a\)</span>. Knowing the factors tells us the roots, and vice versa. It turns out this holds more generally for any degree polynomial.</p>
+More generally, a factor <span class="math inline">\((x-a)\)</span> corresponds to a root <span class="math inline">\(x=a\)</span>. Knowing the factors tells us the roots, and vice versa. It turns out that this holds more generally for polynomials of any given degree.</p>
 <div class="theorem">
 <p><span id="thm:factors" class="theorem"><strong>Theorem 3.2  (Factor Theorem) </strong></span>The value <span class="math inline">\(x=a\)</span> is a root of the polynomial equation <span class="math inline">\(f(x)=0\)</span> if and only if <span class="math inline">\((x-a)\)</span> is a factor of the polynomial <span class="math inline">\(f(x)\)</span>.</p>
 </div>
@@ -753,7 +756,7 @@ Figure 3.6: A plot of the inequality <span class="math inline">\(\frac{1}{x-3}&g
 <hr />
 <ol start="5">
 <li id="fn5"><p>In fact, any quadratic can be factorised as a product of two linear factors, but we may need complex numbers to do this; more on this in section <a href="complex.html#complex">5</a>.<a href="solving-equations-and-inequalities.html#fnref5" class="footnote-back">↩︎</a></p></li>
-<li id="fn6"><p>That is, no solutions for which <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are real numbers, but there will instead be complex number solutions.<a href="solving-equations-and-inequalities.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p>That is, no solutions for which <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> are real numbers, but there will instead be solutions that are complex numbers, a concept we will discuss in section <a href="complex.html#complex">5</a>.<a href="solving-equations-and-inequalities.html#fnref6" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
