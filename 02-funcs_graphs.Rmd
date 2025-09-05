@@ -223,7 +223,7 @@ Exponential growth is a common occurance in physical systems, at least in the ea
 
 Any exponential function with any base $a>1$ will (eventually, that is, as the magnitude of $x$ gets large) grow faster than any polynomial. In other words, although a polynomial can be larger for some small range of $x$ values, eventually the exponential graph will "overtake" the polynomial.
 
-```{r, expvspoly, echo=FALSE, fig.cap="The functions $f(x)=a^x$ for varying $a>1$ (red curve) and the monomial $g(x)=x^n$ for varying power $n$ (blue dashed curve); for any value of $a$ and any value of $n$, if you scroll up far enough you will see that the red curve overtakes the dashed blue curve. <a href="https://www.desmos.com/calculator/g22ec0pwpq" target="_blank">[Open graph in new browser tab.]</a>"}
+```{r, expvspoly, echo=FALSE, fig.cap="The functions $f(x)=a^x$ for varying $a>1$ (red curve) and the monomial $g(x)=x^n$ for varying power $n$ (blue dashed curve); for any value of $a$ and any value of $n$, if you zoom out far enough you will see that the red curve overtakes the dashed blue curve. <a href="https://www.desmos.com/calculator/g22ec0pwpq" target="_blank">[Open graph in new browser tab.]</a>"}
 knitr::include_url("https://www.desmos.com/calculator/g22ec0pwpq")
 ```
 
