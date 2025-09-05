@@ -3,7 +3,7 @@
 A function $f$ can be thought of as a system that takes an input value $x$ and returns an output value $y$. The output value $y$ corresponding to the input $x$ is also denoted by $f(x)$ (read "$f$ of $x$"). We most commonly encounter functions whose input is a real number and output is a real number, but there are many other types of functions in mathematics.
 
 
-```{r func, echo=FALSE, fig.cap = "A function can be thought of as a system: we have an input value $x$, the machine is the function $f$, and the output is the value $f(x)$", fig.alt = "Depiction of a function as a system, which takes an input $x$ and returns an output $f(x)$."}
+```{r func, echo=FALSE, fig.cap = "A function can be thought of as a system: we have an input value $x$, the system is the function $f$, and the output is the value $f(x)$", fig.alt = "Depiction of a function as a system, which takes an input $x$ and returns an output $f(x)$."}
 knitr::include_graphics("figures/function.png")
 ```
 
@@ -278,7 +278,7 @@ knitr::include_graphics("figures/Kette_Kettenkurve_Catenary_2008_PD.jpg")
 
 ## Inverse Functions
 
-Thinking of a function again as a machine, we sometimes want to run the machine in reverse: given a certain output, we want to know what the original input was. We call this "reversing function" the *inverse*. We generally denote the inverse of a function $f$ by $f^{-1}$. This operation is itself a function. For example, if
+Thinking of a function again as a system, we sometimes may be given a certain output and wish to know what the original input was. If there exists a function that returns the input leading to a given output, then We call this function the *inverse*. We generally denote the inverse of a function $f$ by $f^{-1}$. This operation is itself a function. For example, if
 
 $$f(x)=2x+1$$
 
@@ -313,7 +313,7 @@ knitr::include_graphics("figures/inverse.png")
 
 ### Finding the inverse of a function
 
-When we have an algebraic forumula for a function there is a general proceedure for finding the inverse:
+When we have an algebraic formula for a function there is a general procedure for finding the inverse:
 
 1. If necessary, restrict to inputs where the function is one-to-one (to obtain a partial inverse);
 2. Re-arrange $y=f(x)$ to give $x$ in terms of $y$;
