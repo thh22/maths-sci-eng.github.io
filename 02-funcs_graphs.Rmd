@@ -466,7 +466,7 @@ In engineering applications it is also common to use base $2$ and base $10$. For
 
 $$\log(x)=\log_{10}(x)$$
 
-but we should always check what the author intends as sometimes $\log(x)$ is used to mean $\ln(x)$. We have the following rules for manipulating logarithms (these follow from the laws of exponents in section \@ref(exponents); try to derive them yourself):
+but we should always check what the author intends as sometimes $\log(x)$ is used to mean $\ln(x)$. We have the following rules for manipulating logarithms (many of these follow from the laws of exponents in section \@ref(exponents); try to derive them yourself):
 
 ::: {.theorem #logrules name="Rules of Logarithms"}
 
@@ -480,13 +480,12 @@ but we should always check what the author intends as sometimes $\log(x)$ is use
 We can also change between bases in logarithms with the following rule
 
 ::: {.theorem #changebase name="Change of Base Rule"}
-
-Let $y=a^x$, then $x=\log_a(y)$. Also, $\log_b(y)=x\log_b(a)$, and so $x=\dfrac{\log_b(y)}{\log_b(a)}$. Therefore,
+For any given $a, b, y > 0$,
 \begin{equation*}
 \log_a(y)=\dfrac{\log_b (y)}{\log_b (a)}.
 \end{equation*}
-This allows us to calculate $\log_a$ of a number in terms of $\log_b$.
 :::
+This change of base theorem allows us to calculate $\log_a$ of a number in terms of $\log_b$. It follows since, if $y=a^x$, then $x=\log_a(y)$. Also, $\log_b(y)=x\log_b(a)$, and so $x=\dfrac{\log_b(y)}{\log_b(a)} = \log_a(y)$.
 
 An exponential function with base $a$ can be re-written in any other base $b$ with a constant factor in the argument as follows:
 \begin{align*}
