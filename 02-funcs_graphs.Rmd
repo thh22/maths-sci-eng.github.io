@@ -212,16 +212,16 @@ where $a$ is a positive number called the *base* and $x$ is called the *exponent
 knitr::include_url("https://www.desmos.com/calculator/5d0shgjfag")
 ```
 
-The term "exponential growth" corresponds to such functions; this is where the instantaneous rate of change of a quantity is proportional to its current magnitude -- the characteristic property of exponential functions. More mathematically, the instantaneous rate of change is given by the derivative^[See section \@ref(derivatives).], so we have
+The term "exponential growth" corresponds to such functions; this is where the instantaneous rate of change of a quantity is proportional to its current magnitude -- the characteristic property of exponential functions. More mathematically, the instantaneous rate of change is given by the derivative, which we will introduce in section \@ref(differentiation), and
 \begin{equation}
 \frac{d(a^x)}{dx}=ka^x
 (\#eq:daxdx)
 \end{equation}
-where $k$ is the constant of proportionality^[The phrase "exponential growth" is sometimes used in a casual way to talk about anything that increases "quickly", but mathematicians, scientists and engineers are more precise and would only use the term in its strict mathematical sense, as relating to an exponential function!] (which we shall find in section \@ref(derivatives)).
+for some constant value $k$. The phrase "exponential growth" is sometimes used in a casual way to talk about anything that increases "quickly" -- in its strict mathematical sense, it relates to the growth of an exponential function, that is, where the instantaneous rate of change (gradient) is proportional to its current magnitude. Note that the magnitude of an exponential function may at first be quite small, as may its rate of change (gradient), yet for positive exponents ($x > 0$) the rate of change is always increasing in a way that eventually causes the function to take on very large values and increase very quickly. This is one reason for concern about economic and political tendencies to promote economic growth -- especially where such growth results in negative social and environmental consequences.
 
 Exponential growth is a common occurance in physical systems, at least in the early stages of a process. For example, it can describe the early stages of population growth well, when there are no limits on resources and a constant birth rate; in reality, limits (on food, space, impact of disease etc.) mean that uncurbed exponential growth cannot take place forever.
 
-Any exponential function with any base $a>1$ will grow faster than any polynomial; although a polynomial can be larger for some small range of $x$ values, eventually the exponential graph will "overtake" the polynomial.
+Any exponential function with any base $a>1$ will (eventually, that is, as the magnitude of $x$ gets large) grow faster than any polynomial. In other words, although a polynomial can be larger for some small range of $x$ values, eventually the exponential graph will "overtake" the polynomial.
 
 ```{r, expvspoly, echo=FALSE, fig.cap="The functions $f(x)=a^x$ for varying $a>1$ (red curve) and the monomial $g(x)=x^n$ for varying power $n$ (blue dashed curve); for any value of $a$ and any value of $n$, if you scroll up far enough you will see that the red curve overtakes the dashed blue curve. <a href="https://www.desmos.com/calculator/g22ec0pwpq" target="_blank">[Open graph in new browser tab.]</a>"}
 knitr::include_url("https://www.desmos.com/calculator/g22ec0pwpq")
