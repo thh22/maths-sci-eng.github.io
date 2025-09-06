@@ -1,12 +1,12 @@
 # Complex Numbers {#complex}
 
-We are familiar with integers ($\dots, -5, -4, -3, -2, -1, 0, 1 \dots$), denoted by $\mathbb{Z}$, and rational numbers ($1/2, 4/5$, etc.), denoted by $\mathbb{Q}$. We also know about irrational numbers such as $e$, $\pi$ (the area of a circle with radius equal to $1$) or $\sqrt{2}$ --- one solution of the quadratic equation
+Thus far, we have been working with integers ($\dots, -5, -4, -3, -2, -1, 0, 1 \dots$), denoted by $\mathbb{Z}$, and rational numbers ($1/2, 4/5$, etc.), denoted by $\mathbb{Q}$. We have also discussed irrational numbers such as $e$, $\pi$ (the area of a circle with radius equal to $1$) or $\sqrt{2}$ --- one solution of the quadratic equation
 $$
 x^2 - 2 = 0.
 $$
 The collection of natural numbers, integers, rational and irrational numbers make up what we call the *real numbers*, denoted by $\mathbb{R}$.
 
-But do we have "enough" numbers? The answer is no! We do not have to look hard for why we do not have enough numbers. The simple equation
+But do we have "enough" numbers? Arguably, the answer to this question is no! For example, consider the simple equation
 $$
 x^2 + 1 = 0
 $$
@@ -18,7 +18,7 @@ does not have real number solutions!
 
 ## $i$ and complex numbers
 
-Our fix is to define the *imaginary number* $i$ by^[Engineers often use the notation $j$ instead of $i$.]
+One approach to this issue is to define the *imaginary number* $i$ by^[Engineers often use the notation $j$ instead of $i$.]
 $$
 i = \sqrt{-1},\quad \text{ so that }\quad i^2 = -1.
 $$
@@ -37,7 +37,7 @@ This leads us to *Complex Numbers*, denoted by $\mathbb{C}$, defined as the set 
 $$
 z = x + i y, \quad \text{where $x$ and $y$ are real numbers}.
 $$
-This form is also called the *Cartesian representation* of a complex number. It has a *real part* $\mathbf{Re}(z) = x$ and an *imaginary part* $\mathbf{Im}(z) = y$. We can then represent a complex number graphically by plotting the real and imaginary parts as coordinates in a Cartesian coordinate system, as in figure \@ref(fig:complexcart), known as the *complex plane*. The $x$-axis is called the *real axis* and the $y$-axis is called the *imaginary axis*.
+This form is also called the *Cartesian representation* of a complex number. It has a *real part* $\mathbf{Re}(z) = x$ and an *imaginary part* $\mathbf{Im}(z) = y$. We can then represent a complex number graphically by plotting the real and imaginary parts as coordinates in a Cartesian coordinate system known as the *complex plane*, as in figure \@ref(fig:complexcart). The $x$-axis is called the *real axis* and the $y$-axis is called the *imaginary axis*.
 
 ```{r complexcart, echo=FALSE, fig.cap = "The complex number $z = x + iy$ in Cartesian coordinates.", fig.alt = "The complex number $z = x + iy$ in Cartesian coordinates."}
 knitr::include_graphics("figures/complexcart.png")
@@ -53,9 +53,9 @@ Every non-zero, complex, single variable, degree $n$ polynomial, has exactly $n$
 
 To clarify the above theorem, we are talking about a polynomial of the form
 $$f(x)=a_0 + a_1 x + a_2 x^2 + \dotsb + a_n x^n$$
-where the variable $x$ can be a complex number (so can also be a real number) and the coefficients $a_i$ are complex numbers (so can also be real numbers) and at least one of these coefficients is not $0$. Since we allow the single variable $x$ to be a complex number, the roots may be complex numbers. Note that some of the $n$ roots might be *repeated roots*, for example, according to the theorem the quadratic
+where the variable $x$ can be a complex number (so can also be a real number) and the coefficients $a_i$ are complex numbers (so can also be real numbers), and at least one of these coefficients is not $0$. Since we allow the single variable $x$ to be a complex number, the roots may be complex numbers. Note that some of the $n$ roots might be *repeated roots*. For example, the quadratic
 $$x^2-4x+4=(x-2)(x-2)$$
-must have two roots and in this case they happen to be repeated roots; we say the root is $x=2$ with *multiplicity* 2.
+is considered, in the Fundamental Theorem of Algebra, to have two roots, which happen to be repeated roots; we say the root $x=2$ has *multiplicity* 2. 
 
 ## Complex arithmetic
 
@@ -67,7 +67,7 @@ z \times w &= (x + iy) \times (u + iv) = x u + i x v + i yu + i^2 y v = (xu - yv
 \end{align*}
 
 ::: {.example #complexarithmetic name="Complex Arithmetic"}
-Let $z = 3 - 5i$ (that is, $z = 3 + (-5)i$) and $w = 2 + i$ then
+Let $z = 3 - 5i$ (that is, $z = 3 + (-5)i$) and $w = 2 + i$. Then
 $$
 z + w = 5 - 4i, \qquad z - w = 1 - 6i,
 $$
@@ -88,18 +88,20 @@ The *modulus* of $z = x + iy$ is
 $$
 |z| = \sqrt{x^2 + y^2} \qquad \text{(the non-negative square root).}
 $$
-Geometrically, this is the distance of $z$ (i.e. the point $P$) from the origin -- See figure \@ref(fig:complexcart). Note that if $b = 0$ (so that $z$ is actually a real number), then this definition of $|z|$ agrees with the usual modulus (absolute value) for real numbers.
+Geometrically, this is the distance of $z$ (i.e. the point $P$ in figure \@ref(fig:complexcart)) from the origin. Note that if $b = 0$ (so that $z$ is actually a real number), then this definition of $|z|$ agrees with the usual modulus (absolute value) for real numbers.
 
 ::: {.example #conjugate name="Complex conjugate"}
 For $z = 2 - i$, we have $\overline{z} = 2 + i$ and $|z| = \sqrt{2^2 + (-1)^2} = \sqrt{5}$.
 :::
 
-Some properties of modulus and conjugate: For any complex numbers $z, w$,
+Here are some properties of the modulus and conjugate.
+
+For any complex numbers $z, w$,
 
 * $\overline{\overline{z}} = z$;
-* $\overline{z \pm w} = \overline{z} + \overline{w}$;
+* $\overline{z + w} = \overline{z} + \overline{w}$;
 * $\overline{z\times w} = \overline{z}\times \overline{w}$;
-* $|z|$ is a positive real number unless $z = 0$ with $|0| = 0$;
+* $|z|$ is a positive real number unless $z = 0$, and $|0| = 0$;
 * $z\times \overline{z} = |z|^2$;
 * $|z\times w| = |z|\,|w|$.
 
@@ -113,7 +115,7 @@ Let $z = 2 + 3i$ and $w = 4 - 2i$.
 \frac{z}{w}&=\frac{2 + 3i}{4 - 2i}\frac{4+2i}{4+2i}\\
 &=\frac{8+4i+12i+6i^2}{16+4}\\
 &=\frac{2+16i}{20}\\
-&=\frac{1}{10}+\frac{4}{5}i
+&=\frac{1}{10}+\frac{4}{5}i.
 \end{align*}
 :::
 
@@ -150,7 +152,7 @@ e^{i\theta}=\cos (\theta) + i \sin(\theta).
 $$
 :::
 
-This can be derived from the power series of $e^\theta, \sin(\theta)$ and $\cos(\theta)$. Eulers formula allows us to write any complex number $z$ in yet another form, the *exponential form* of $z$:
+This can be derived from the power series of $e^\theta, \sin(\theta)$ and $\cos(\theta)$, which we will cover in section \ref@(PowerSeries). Euler's formula allows us to write any complex number $z$ in yet another form, the *exponential form* of $z$:
 $$
 z = r (\cos (\theta) + i \sin (\theta)) = re^{i\theta}.
 $$

@@ -149,7 +149,7 @@ Infinite series can be convergent (sum to a finite value) or divergent (to $+\in
     This curious result was found by Leonhard Euler in 1734: see [The Basel Problem](https://en.wikipedia.org/wiki/Basel_problem). It is not easy to solve with the techniques considered in these notes and is best tackled with more powerful mathematical tools, like *Fourier Series*.
 :::
 
-## Power Series
+## Power Series {#PowerSeries}
 
 Let $t$ be a fixed real number. A *power series* is a series of the form
 $$

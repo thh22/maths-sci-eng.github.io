@@ -2,7 +2,9 @@
 
 ## Pythagoras
 
-Probably the most fundamental result in trigonometry is the Pythagorean Theorem. This concerns the length of the the three sides of a right angled triangle. Here, two lines meet at a right angle if they are perpendicular to one another, i.e., the angle between them is $90^{\circ}$. And the longest side of the triangle, which is the one opposite the right angle, is called the *hypotenuse*.
+Probably the most fundamental result in trigonometry is the Pythagorean Theorem. This is named after Pythagoras, a Greek Philosopher, although is believed to have been known before his time by the Babylonians and Indians (see Riedweg, Christoph (2005) [2002]. Pythagoras: His Life, Teachings, and Influence. Ithaca, New York: Cornell University Press. ISBN 978-0-8014-7452-1, p. 27; Burkert, Walter (1 June 1972). <a href="https://archive.org/details/lorescienceinanc0000burk/mode/2up" target="_blank">Lore and Science in Ancient Pythagoreanism</a>. Cambridge, Massachusetts: Harvard University Press. ISBN 978-0-674-53918-1 – via Internet Archive, pp. 429, 462; Kahn, Charles H. (2001). <a href="https://archive.org/details/pythagoraspythag0000kahn" target="_blank">Pythagoras and the Pythagoreans: A Brief History</a>. Indianapolis, Indiana and Cambridge, England: Hackett Publishing Company. ISBN 978-0-87220-575-8. OCLC 46394974 – via Internet Archive, p. 32.)
+
+This theorem concerns the length of the the three sides of a right angled triangle. Here, two lines meet at a right angle if they are perpendicular to one another, i.e., the angle between them is $90^{\circ}$. And the longest side of the triangle, which is the one opposite the right angle, is called the *hypotenuse*.
 
 ::: {.theorem #pythag name="Pythagorean Theorem"}
 
