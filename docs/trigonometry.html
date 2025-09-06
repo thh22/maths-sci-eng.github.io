@@ -23,7 +23,7 @@
 <meta name="author" content="Drs Mark Callaway, Tim Hughes and Ed Branford" />
 
 
-<meta name="date" content="2025-09-05" />
+<meta name="date" content="2025-09-06" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -116,11 +116,11 @@
 <li class="chapter" data-level="2.4" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#trigonometric-functions"><i class="fa fa-check"></i><b>2.4</b> Trigonometric functions</a></li>
 <li class="chapter" data-level="2.5" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#exponentials"><i class="fa fa-check"></i><b>2.5</b> Exponentials</a></li>
 <li class="chapter" data-level="2.6" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#hyperbolic-functions"><i class="fa fa-check"></i><b>2.6</b> Hyperbolic functions</a></li>
-<li class="chapter" data-level="2.7" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#inverse-functions"><i class="fa fa-check"></i><b>2.7</b> Inverse Functions</a>
+<li class="chapter" data-level="2.7" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#inverse-functions-invfunc"><i class="fa fa-check"></i><b>2.7</b> Inverse Functions (#InvFunc)</a>
 <ul>
 <li class="chapter" data-level="2.7.1" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#finding-the-inverse-of-a-function"><i class="fa fa-check"></i><b>2.7.1</b> Finding the inverse of a function</a></li>
 <li class="chapter" data-level="2.7.2" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#root-functions"><i class="fa fa-check"></i><b>2.7.2</b> Root functions</a></li>
-<li class="chapter" data-level="2.7.3" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#inverse_trig_funcs"><i class="fa fa-check"></i><b>2.7.3</b> Inverse Trigonometric Functions</a></li>
+<li class="chapter" data-level="2.7.3" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#inverse-trigonometric-functions"><i class="fa fa-check"></i><b>2.7.3</b> <span id="inverse_trig_funcs">Inverse Trigonometric Functions</span></a></li>
 <li class="chapter" data-level="2.7.4" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#logarithms"><i class="fa fa-check"></i><b>2.7.4</b> Logarithms</a></li>
 <li class="chapter" data-level="2.7.5" data-path="functions-and-graphs.html"><a href="functions-and-graphs.html#logarthmic-plots"><i class="fa fa-check"></i><b>2.7.5</b> Logarthmic plots</a></li>
 </ul></li>
@@ -384,12 +384,11 @@
 <h1><span class="header-section-number">Chapter 4</span> Trigonometry<a href="trigonometry.html#trigonometry" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="pythagoras" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> Pythagoras<a href="trigonometry.html#pythagoras" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The most fundamental result in trigonometry is the Pythagorean Theorem:</p>
+<p>Probably the most fundamental result in trigonometry is the Pythagorean Theorem. This concerns the length of the the three sides of a right angled triangle. Here, two lines meet at a right angle if they are perpendicular to one another, i.e., the angle between them is <span class="math inline">\(90^{\circ}\)</span>. And the longest side of the triangle, which is the one opposite the right angle, is called the <em>hypotenuse</em>.</p>
 <div class="theorem">
-<p><span id="thm:pythag" class="theorem"><strong>Theorem 4.1  (Pythagorean Theorem) </strong></span>In a right-angle triangle, the <em>hypotenuse</em> is the side opposite the right angle.</p>
-<p>In any right-angle triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides.</p>
-<p>With reference to figure <a href="trigonometry.html#fig:pythag">4.1</a>, we have</p>
-<p><span class="math display">\[c^2=a^2+b^2\]</span></p>
+<p><span id="thm:pythag" class="theorem"><strong>Theorem 4.1  (Pythagorean Theorem) </strong></span>In any right-angle triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides.</p>
+<p>In other words, in figure <a href="trigonometry.html#fig:pythag">4.1</a>, we have</p>
+<p><span class="math display">\[c^2=a^2+b^2.\]</span></p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:pythag"></span>
 <img src="figures/pythag.png" alt="A right-angled triangle labelled with sides $a, b$ and $c$, with $c$ being the hypotenuse." width="296" />
 <p class="caption">
@@ -402,19 +401,19 @@ Figure 4.1: A right-angled triangle with sides <span class="math inline">\(a, b\
 <div id="degrees-and-radians" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Degrees and radians<a href="trigonometry.html#degrees-and-radians" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We can measure an angle in two different units: degrees or radians.</p>
-<p>In <em>degrees</em>, we split a full circle into 360 segments and then call the angle bewteen each segment 1 degree, or <span class="math inline">\(1^\circ\)</span>. Of course a full circle is <span class="math inline">\(360^\circ\)</span>.</p>
+<p>In <em>degrees</em>, we split a full circle into 360 segments and then call the angle between each segment 1 degree, or <span class="math inline">\(1^\circ\)</span>. A full circle is then <span class="math inline">\(360^\circ\)</span>.</p>
 <p>An alternative measure of angle is <em>radians</em>. In this case, we start from the fact that the circumference of a circle is given by
 <span class="math display">\[
 C=2\pi r
 \]</span>
-where <span class="math inline">\(r\)</span> is the radius of the circle. If we had a circle with radius <span class="math inline">\(r=1\)</span>, then the circumference is <span class="math inline">\(C=2\pi\)</span>. Now we consider this circle to be split into <span class="math inline">\(2\pi\)</span> segments<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>, with each segment being 1 radian, or <span class="math inline">\(1 \text{ rad}\)</span>. A full circle is then <span class="math inline">\(2\pi \text{ rad} = 6.283 \text{ rad}\)</span> (to 3 d.p.).</p>
-<p>Sometimes it is more convenient to work in degrees, and other times it is more convenient to work in radians. We can easily convert between degrees and radians as follows. If we have an angle <span class="math inline">\(D^\circ\)</span> in degrees, then the corresponding angle in radians <span class="math inline">\(R \text{ rad}\)</span> is:
+where <span class="math inline">\(r\)</span> is the radius of the circle. If we had a circle with radius <span class="math inline">\(r=1\)</span>, then the circumference is <span class="math inline">\(C=2\pi\)</span>. Now we consider this circle to be split into <span class="math inline">\(2\pi\)</span> segments<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>, with each segment being 1 radian, or <span class="math inline">\(1 \text{ rad}\)</span>. A full circle is then <span class="math inline">\(2\pi \text{ rad} = 6.283 \text{ rad}\)</span> to 3 decimal places (3 d.p.).</p>
+<p>Sometimes it is more convenient to work in degrees, and other times it is more convenient to work in radians. We can easily convert between degrees and radians as follows. If we have an angle <span class="math inline">\(D\)</span> in degrees, then the corresponding angle <span class="math inline">\(R\)</span> in radians is:
 <span class="math display">\[
-R \text{ rad}=\frac{2\pi}{360}\times D^\circ
+R =\frac{2\pi}{360}\times D
 \]</span>
 and in the other direction
 <span class="math display">\[
-D^\circ=\frac{360}{2\pi}\times R \text{ rad}.
+D=\frac{360}{2\pi}\times R.
 \]</span></p>
 <p>Where possible, we would state radians as multiples of <span class="math inline">\(\pi\)</span>, so in particular:</p>
 <table>
@@ -470,7 +469,7 @@ D^\circ=\frac{360}{2\pi}\times R \text{ rad}.
 Figure 4.2: A right-angled triangle.
 </p>
 </div>
-<p>Recall that we can calculate relationships between angles and side lengths of a right-angled triangle (as described in figure <a href="trigonometry.html#fig:rh-triangle">4.2</a>) using sine, cosine and tangent:</p>
+<p>We can calculate relationships between angles and side lengths of a right-angled triangle (as described in figure <a href="trigonometry.html#fig:rh-triangle">4.2</a>) using sine, cosine and tangent functions:</p>
 <p><span class="math display">\[\begin{align*}
 \sin(\theta)&amp;=\frac{Opp.}{Hyp.}\\
 \cos(\theta)&amp;=\frac{Adj.}{Hyp.}\\
@@ -479,14 +478,14 @@ Figure 4.2: A right-angled triangle.
 <p>A useful way to remember these relationships is the mnemonic “SOH CAH TOA”:</p>
 <p><strong>SOH</strong> - <strong>S</strong>ine equals <strong>O</strong>pposite over <strong>H</strong>ypotenuse</p>
 <p><strong>CAH</strong> - <strong>C</strong>osine equals <strong>A</strong>djacent over <strong>H</strong>ypotenuse</p>
-<p><strong>TOA</strong> - <strong>T</strong>an equals <strong>O</strong>pposite over <strong>A</strong>djacent</p>
+<p><strong>TOA</strong> - <strong>T</strong>an equals <strong>O</strong>pposite over <strong>A</strong>djacent.</p>
 <p>These are most commonly used to determine angles by using the <em>inverse</em> functions:</p>
 <p><span class="math display">\[\begin{align*}
 \theta&amp;=\sin^{-1}(\frac{Opp.}{Hyp.})\\
 \theta&amp;=\cos^{-1}(\frac{Adj.}{Hyp.})\\
-\theta&amp;=\tan^{-1}(\frac{Opp.}{Adj.})
+\theta&amp;=\tan^{-1}(\frac{Opp.}{Adj.}).
 \end{align*}\]</span></p>
-<p><strong>WARNING</strong>: the notation suggests we are taking <span class="math inline">\(\sin\)</span> to the power <span class="math inline">\(-1\)</span>, so that <span class="math inline">\(\sin^{-1}=\frac{1}{\sin}\)</span>, but this is NOT how the inverse is defined. Remember that the inverse “undoes” the action of the function. Scientific calculators will have buttons to apply these functions. The inverses are also sometimes called</p>
+<p><strong>WARNING</strong>: the notation suggests we are taking <span class="math inline">\(\sin\)</span> to the power <span class="math inline">\(-1\)</span>, so that <span class="math inline">\(\sin^{-1}=\frac{1}{\sin}\)</span>, but this is NOT how the inverse is defined. Remember that the inverse “undoes” the action of the function, i.e., <span class="math inline">\(\sin^{-1}\)</span> is the function such that <span class="math inline">\(\sin^{-1}(\sin(\theta)) = \theta\)</span> for any given input <span class="math inline">\(\theta\)</span>. Scientific calculators will have buttons to apply these functions. The inverses are also sometimes called</p>
 <p><span class="math display">\[\begin{align*}
 \arcsin&amp;=\sin^{-1},\\
 \arccos&amp;=\cos^{-1},\\
@@ -497,7 +496,7 @@ Figure 4.2: A right-angled triangle.
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:inversetrigexmp"></span>
 <img src="figures/rh-triangleexmp.png" alt="A right angled triangle with hypotenuse legth 14 units and adjacent length 8 units." width="258" />
 <p class="caption">
-Figure 4.3: A right angled triangle with hypotenuse legth 14 units and adjacent length 8 units.
+Figure 4.3: A right angled triangle with hypotenuse legnth 14 units and adjacent length 8 units.
 </p>
 </div>
 <p>Since we have the lengths of the hypotenuse and adjacent, we can use <span class="math inline">\(\cos^{-1}\)</span> to find <span class="math inline">\(\theta\)</span>. Using a calculator we find</p>
@@ -512,7 +511,7 @@ Figure 4.3: A right angled triangle with hypotenuse legth 14 units and adjacent 
 </div>
 <div id="sine-and-cosine-rules" class="section level2 hasAnchor" number="4.4">
 <h2><span class="header-section-number">4.4</span> Sine and cosine rules<a href="trigonometry.html#sine-and-cosine-rules" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The Pythagorean Theorem and Trigonometric ratios above only apply to right-angle triangles. For general triangles, the sine and cosine rules give us useful relationsips between angles and side lengths.</p>
+<p>The Pythagorean Theorem and trigonometric ratios only apply to right-angle triangles. For general triangles, the sine and cosine rules give us useful relationsips between angles and side lengths.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:tri"></span>
 <img src="figures/triangle.png" alt="A general triangle with angles $A, B,$ and $C$ and the corresponding opposite sides as $a, b$ and $c$." width="270" />
 <p class="caption">
@@ -520,16 +519,22 @@ Figure 4.4: A general triangle with angles <span class="math inline">\(A, B,\)</
 </p>
 </div>
 <div class="theorem">
-<p><span id="thm:sinerule" class="theorem"><strong>Theorem 4.2  (Sine Rule) </strong></span>Label a triangle with angles <span class="math inline">\(A, B,\)</span> and <span class="math inline">\(C\)</span> and the corresponding opposite sides as <span class="math inline">\(a, b\)</span> and <span class="math inline">\(c\)</span> (as in figure <a href="trigonometry.html#fig:tri">4.4</a>). Then,</p>
-<p><span class="math display">\[\frac{a}{\sin(A)}=\frac{b}{\sin(B)}=\frac{c}{\sin(C)}.\]</span></p>
-<p>This is useful when we have:</p>
-<ol style="list-style-type: decimal">
-<li>one side and any two angles, or</li>
-<li>two sides and an angle (but not the included angle).</li>
-</ol>
+<p><span id="thm:TriangleSum" class="theorem"><strong>Theorem 4.2  (Triangle Sum Theorem) </strong></span>For any given triangle, the sum of the angles is <span class="math inline">\(180^{\circ}\)</span> (<span class="math inline">\(\pi \text{ rad}\)</span>). In other words, for a triangle with angles <span class="math inline">\(A, B,\)</span> and <span class="math inline">\(C\)</span> as in figure <a href="trigonometry.html#fig:tri">4.4</a>, we have that
+<span class="math display">\[
+A + B + C = 180^{\circ}.
+\]</span></p>
 </div>
 <div class="theorem">
-<p><span id="thm:cosinerule" class="theorem"><strong>Theorem 4.3  (Cosine Rule) </strong></span>Label a triangle with angles <span class="math inline">\(A, B,\)</span> and <span class="math inline">\(C\)</span> and the corresponding opposite sides as <span class="math inline">\(a, b\)</span> and <span class="math inline">\(c\)</span> (as in figure <a href="trigonometry.html#fig:tri">4.4</a>). Then,</p>
+<p><span id="thm:sinerule" class="theorem"><strong>Theorem 4.3  (Sine Rule) </strong></span>Label a triangle with angles <span class="math inline">\(A, B,\)</span> and <span class="math inline">\(C\)</span> and the corresponding opposite sides as <span class="math inline">\(a, b\)</span> and <span class="math inline">\(c\)</span> (as in figure <a href="trigonometry.html#fig:tri">4.4</a>). Then,</p>
+<p><span class="math display">\[\frac{a}{\sin(A)}=\frac{b}{\sin(B)}=\frac{c}{\sin(C)}.\]</span></p>
+</div>
+<p>The sine rule and triangle sum theorem are useful when we have:</p>
+<ol style="list-style-type: decimal">
+<li>one side length and any two angles, or</li>
+<li>two side lengths and an angle (but not the angle between the two sides).</li>
+</ol>
+<div class="theorem">
+<p><span id="thm:cosinerule" class="theorem"><strong>Theorem 4.4  (Cosine Rule) </strong></span>Label a triangle with angles <span class="math inline">\(A, B,\)</span> and <span class="math inline">\(C\)</span> and the corresponding opposite sides as <span class="math inline">\(a, b\)</span> and <span class="math inline">\(c\)</span> (as in figure <a href="trigonometry.html#fig:tri">4.4</a>). Then,</p>
 <p><span class="math display">\[\begin{align*}
 a^2&amp;= b^2 +c^2 -2bc\cos(A)\quad\text{ or,}\\
 b^2&amp;=a^2+c^2-2ac\cos(B)\quad\text{ or,}\\
@@ -537,14 +542,14 @@ c^2&amp;=a^2+b^2-2ab\cos(C).
 \end{align*}\]</span></p>
 <p>This is useful when we have:</p>
 <ol style="list-style-type: decimal">
-<li>two sides and the included angle, or</li>
-<li>three sides.</li>
+<li>two side lengths and the angle between these two sides, or</li>
+<li>three side lengths.</li>
 </ol>
 </div>
 </div>
 <div id="angles-in-cartesian-coordinates" class="section level2 hasAnchor" number="4.5">
 <h2><span class="header-section-number">4.5</span> Angles in Cartesian Coordinates<a href="trigonometry.html#angles-in-cartesian-coordinates" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>When calculating angles in the Cartesian plane we need to be a bit careful with the inverse trigonometric functions, because they are only directly valid in certain ranges (see section @ref(inverse_trig_funcs)). The easiest way around this is to always find a suitable right-anged triangle, and then interpret the angles and lengths correctly in the plane (as we will show below). We usually measure angles in the Cartesian plane from the positive <span class="math inline">\(x\)</span>-axis in an anti-clockwise direction. Negative angles correspond to measuring in the clockwise direction, so that, for example: <span class="math inline">\(180^\circ\)</span> is equivalent to <span class="math inline">\(-180^\circ\)</span>, <span class="math inline">\(90^\circ\)</span> is equivalent to <span class="math inline">\(-270^\circ\)</span>, etc. Also, angles greater than <span class="math inline">\(360^\circ\)</span>, or <span class="math inline">\(2\pi\text{ rad}\)</span>, correspond to “wrapping” around the circle more than once, for example: <span class="math inline">\(360^\circ\)</span> is equivalent to <span class="math inline">\(0^\circ\)</span>, <span class="math inline">\(405^\circ\)</span> is equivalent to <span class="math inline">\(45^\circ\)</span>, <span class="math inline">\(-540^\circ\)</span> is equivalent to <span class="math inline">\(180^\circ\)</span>.</p>
+<p>When calculating angles in the Cartesian plane, we need to be a bit careful with the inverse trigonometric functions, because they are only directly valid in certain ranges (see the subsection on <span id="inverse_trig_funcs">Inverse Trigonometric Functions</span> in Section @ref{InvFunc}). The easiest way around this is to always find a suitable right-anged triangle, and then interpret the angles and lengths correctly in the plane (as we will show below). We usually measure angles in the Cartesian plane from the positive <span class="math inline">\(x\)</span>-axis in an anti-clockwise direction. Negative angles correspond to measuring in the clockwise direction, so that, for example: <span class="math inline">\(180^\circ\)</span> is equivalent to <span class="math inline">\(-180^\circ\)</span>, <span class="math inline">\(90^\circ\)</span> is equivalent to <span class="math inline">\(-270^\circ\)</span>, etc. Also, angles greater than <span class="math inline">\(360^\circ\)</span>, or <span class="math inline">\(2\pi\text{ rad}\)</span>, correspond to “wrapping” around the circle more than once, for example: <span class="math inline">\(360^\circ\)</span> is equivalent to <span class="math inline">\(0^\circ\)</span>, <span class="math inline">\(405^\circ\)</span> is equivalent to <span class="math inline">\(45^\circ\)</span>, <span class="math inline">\(-540^\circ\)</span> is equivalent to <span class="math inline">\(180^\circ\)</span>.</p>
 <p>Let’s consider a circle centered at the origin, which has equation <span class="math inline">\(x^2+y^2=r^2\)</span>, where <span class="math inline">\(r\)</span> is the radius (note that by Pythagoras this equation is all points that are a distance <span class="math inline">\(r\)</span> from the origin).</p>
 <p>What is the angle between the <span class="math inline">\(x\)</span>-axis and a radial line joining the origin <span class="math inline">\((0,0)\)</span> to a point <span class="math inline">\((x,y)\)</span> on the circle? Let’s first assume <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are positive. We can consider a triangle formed from the points <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((x,y)\)</span> and <span class="math inline">\((x,0)\)</span>. Then we know the hypotenuse has length <span class="math inline">\(r\)</span>, the opposite has length <span class="math inline">\(y\)</span> and the adjacent has length <span class="math inline">\(x\)</span>, and since we have a right-angled triangle we can use all of the usual trigonometric ratios to calculate angles and lengths in this triangle.</p>
 <p>Now consider a point <span class="math inline">\((x,y)\)</span> with <span class="math inline">\(x\)</span> negative and <span class="math inline">\(y\)</span> positive, that is, in the second quadrant. We can draw a right-angled triangle between the points <span class="math inline">\((0,0)\)</span>, <span class="math inline">\((x,0)\)</span> and <span class="math inline">\((x,y)\)</span>. Since we want to consider lengths in this triangle, we take the positive value <span class="math inline">\(|x|\)</span>. Then the angle <span class="math inline">\(\phi\)</span> between the negative <span class="math inline">\(x\)</span>-axis and the radial line can be found from <span class="math inline">\(\phi = \arctan\left(\frac{y}{|x|}\right)\)</span>. However, the actual angle we want is <span class="math inline">\(\theta\)</span>, and so we can get this from <span class="math inline">\(\theta = 180^\circ - \phi\)</span>, or in radians <span class="math inline">\(\theta=\pi-\phi\)</span>. We can do a similar proceedure in the remaining two quadrants.</p>
