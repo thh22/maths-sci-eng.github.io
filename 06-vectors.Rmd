@@ -1,35 +1,26 @@
 # Vectors
 
-In physics, we distiguish between *scalar* quantities and *vector* quantities:
+We first describe the distinction between *scalar* quantities and *vector* quantities:
 
 * Scalars are defined by a single numeric value. Examples include distance, speed, time, temperature, pressure, mass and energy.
-* Vectors have associated both a numeric value and a direction. Examples include displacement, velocity, acceleration, force, and momentum.
+* Vectors have associated both a numeric value and a direction. For objects in three dimensional space, examples include displacement, velocity, acceleration, force, and momentum. These each correspond to three dimensional vector.
 
-We depict vectors by arrows whose length is proportional to the magnitude of the quantity in question and whose direction is that of the action of the quantity. In symbols, we will use bold typeface to indicate a vector, such as $\mathbf{v}$, and we will denote a vector from point $A$ to $B$ by $\overrightarrow{AB}$. See figure \@ref(fig:vector).
+Vectors in two or three dimensions are often depicted as arrows whose length is proportional to the magnitude of the quantity in question and whose direction is that of the action of the quantity. In symbols, we will use bold typeface to indicate a vector, such as $\mathbf{v}$, and we will denote a vector from point $A$ to $B$ by $\overrightarrow{AB}$. See figure \@ref(fig:vector).
 
 ```{r vector, echo=FALSE, fig.cap = "The vector $\\mathbf{v} = \\overrightarrow{AB}$ is the vector from $A$ to $B$.", fig.alt = "A vector $\\mathbf{v}$ between points $A$ and $B$.", out.width= "40%"}
 knitr::include_graphics("figures/vector.png")
 ```
 
 
-Next we develop the mathematics of vectors. They are invaluable tools in science and engineering and in particular they can make light work of some otherwise difficult geometric calculations.
+Next we develop the mathematics of vectors. They are very valuable tools and can make light work of some otherwise difficult calculations.
 
 ## Vector addition
 
-Geometrically, to add two vectors together we can place the tail of one vector at the head of the other and take the vector that goes from the starting point to the finish point.
+Geometrically, to add two 2 dimensional vectors together, or to add two 3 dimensional vectors together, we can place the tail of one vector at the head of the other and take the vector that goes from the starting point to the finish point.
 
 ```{r label, echo=FALSE, fig.cap = "Addition of two vectors $\\textbf{v}$ and $\\textbf{w}$ by aligning them tail to head.", fig.alt = "Geometric addition of two vectors $\\textbf{v}$ and $\\textbf{w}$ by aligning them tail to head.", out.width= "30%"}
 knitr::include_graphics("figures/vecadd.png")
 ```
-
-::: {.example #vecadd name="Vector addition"}
-A swallow is flying at 40 km/h due north with an easterly wind blowing at a speed of 20 km/h. The swallow's groundspeed can be found by adding the velocity vectors:
-\begin{align*}
-\mathbf{v} &= 40 \text{ km/h North}\\
-\mathbf{w} &= 20 \text{ km/h West}\\
-\mathbf{v}+\mathbf{w}&=20\sqrt{5} \text{ km/h North by North West}.
-\end{align*}
-:::
 
 Alternatively, we can use the parallelogram rule (which amounts to the same thing): we draw a parallelogram with two of the non-parallel sides given by the vectors and take the diagonal as the resultant vector, as in figure \@ref(fig:vecaddpara).
 
@@ -38,11 +29,23 @@ Alternatively, we can use the parallelogram rule (which amounts to the same thin
 knitr::include_graphics("figures/vecaddpara.png")
 ```
 
+::: {.example #vecadd name="Vector addition"}
+A swallow is flying at 40 km/h due north with an easterly wind blowing at a speed of 20 km/h. The swallow's velocity can be found by adding the velocity vectors:
+\begin{align*}
+\mathbf{v} &= 40 \text{ km/h North}\\
+\mathbf{w} &= 20 \text{ km/h West}.
+\end{align*}
+This vector addition can be shown to result in the overall velocity of
+$$
+\mathbf{v}+\mathbf{w}&=20\sqrt{5} \text{ km/h North by North West}.
+$$
+:::
+
 ## Scalar multiplication
 
-If we multiply a vector by a positive scalar, we change only the magnitude of the vector and keep its direction. For example, if the swallow in example \@ref(exm:vecadd) starts flying twice as fast, we have the velocity vector
+If we multiply a vector by a positive scalar, we change only the magnitude of the vector and keep its direction the same. For example, if the swallow in example \@ref(exm:vecadd) starts flying twice as fast, we have the velocity vector
 $$2\mathbf{v} = 80 \text{ km/h North}.$$
-If we multiply by a negative value, the vector now points in the opposite direction:
+If we multiply by a negative value, the direction of the vector is reversed:
 $$-2\mathbf{v} = 80 \text{ km/h South}.$$
 
 ```{r scalarmult, echo=FALSE, fig.cap = "Scalar multiplication of a vector $\\mathbf{v}$.", fig.alt = "Scalar multiplication of a vector $\\mathbf{v}$.", out.width= "25%"}

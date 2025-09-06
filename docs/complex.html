@@ -539,23 +539,23 @@ u &amp;= (re^{i\theta}) \times (se^{i\phi})\\
 &amp;= R e^{i\alpha},
 \end{align*}\]</span>
 where <span class="math inline">\(R = rs\)</span> is the distance of <span class="math inline">\(u\)</span> from the origin and <span class="math inline">\(\alpha = \theta + \phi\)</span> is the argument of <span class="math inline">\(u\)</span>.</p>
-<p><strong>Caution</strong>: For <span class="math inline">\(z = x + iy\)</span> (with <span class="math inline">\(x \neq 0\)</span>), if <span class="math inline">\(\theta = \arg(z)\)</span> then we always have <span class="math inline">\(\tan (\theta) = y/x\)</span>. However, this does not mean that <span class="math inline">\(\theta = \tan^{-1}(y/x)\)</span>. The <span class="math inline">\(\tan^{-1}\)</span> (or <span class="math inline">\(\arctan\)</span>) function can only give values in the first and fourth quadrants (between <span class="math inline">\(-\pi/2\)</span> and <span class="math inline">\(\pi/2\)</span>), but the argument of a complex number could be in any of the four quadrants (between <span class="math inline">\(-\pi\)</span> and <span class="math inline">\(\pi\)</span>). Therefore, to find the argument of a complex number always draw a diagram. (A quick sketch is all that is needed.)</p>
+<p><strong>Caution</strong>: For <span class="math inline">\(z = x + iy\)</span> (with <span class="math inline">\(x \neq 0\)</span>), if <span class="math inline">\(\theta = \arg(z)\)</span> then we always have <span class="math inline">\(\tan (\theta) = y/x\)</span>. However, this does not mean that <span class="math inline">\(\theta = \tan^{-1}(y/x)\)</span>. The <span class="math inline">\(\tan^{-1}\)</span> (or <span class="math inline">\(\arctan\)</span>) function can only give values in the first and fourth quadrants (between <span class="math inline">\(-\pi/2\)</span> and <span class="math inline">\(\pi/2\)</span>), but the argument of a complex number could be in any of the four quadrants (between <span class="math inline">\(-\pi\)</span> and <span class="math inline">\(\pi\)</span>). Therefore, to find the argument of a complex number, always draw (or imagine) a diagram. (A quick sketch is all that is needed.)</p>
 </div>
 <div id="roots-of-complex-numbers" class="section level2 hasAnchor" number="5.4">
 <h2><span class="header-section-number">5.4</span> Roots of complex numbers<a href="complex.html#roots-of-complex-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We know that square roots of positive real numbers have two solutions, for example <span class="math inline">\(\sqrt{4}=\pm 2\)</span>. This agrees with Theorem (thm:FTA) as we could formulate this as a solution to the equation</p>
+<p>We have seen how square roots of positive real numbers have two solutions, for example <span class="math inline">\(\sqrt{4}=\pm 2\)</span>. This agrees with Theorem <a href="complex.html#thm:FTA">5.1</a> as we could formulate this as a solution to the equation</p>
 <p><span class="math display">\[x^2=4\]</span></p>
 <p>which is the quadratic</p>
 <p><span class="math display">\[x^2-4=0\]</span></p>
 <p>and so must have two roots. More generally, the <span class="math inline">\(n^\text{th}\)</span> root of any number <span class="math inline">\(w\)</span> can be formulated as the solutions to the polynomial equation</p>
 <p><span class="math display">\[z^n-w=0.\]</span></p>
-<p>Theorem (thm:FTA) implies that there are <span class="math inline">\(n\)</span> solutions, allowing for these to be complex numbers. Furthermore, it turns out that these roots will be distinct (no repeated roots). The easiest way to find these roots is using the exponential form. We can write <span class="math inline">\(w\)</span> as</p>
+<p>Theorem <a href="complex.html#thm:FTA">5.1</a> implies that there are <span class="math inline">\(n\)</span> solutions, allowing for these to be complex numbers. Furthermore, it turns out that these roots will be distinct (no repeated roots). The easiest way to find these roots is using the exponential form. We can write <span class="math inline">\(w\)</span> as</p>
 <p><span class="math display">\[w=re^{i\theta}\]</span></p>
 <p>then the first <span class="math inline">\(n^\text{th}\)</span> root is</p>
 <p><span class="math display">\[w^{\frac{1}{n}}=(re^{i\theta})^\frac{1}{n}=r^\frac{1}{n}e^{i\frac{\theta}{n}}\]</span></p>
-<p>but where are the remaining <span class="math inline">\(n-1\)</span> roots? Well, since we can also write <span class="math inline">\(w=re^{i(\theta+2m\pi)}\)</span>, so</p>
+<p>but where are the remaining <span class="math inline">\(n-1\)</span> roots? Well, since we can also write <span class="math inline">\(w=re^{i(\theta+2m\pi)}\)</span>, then</p>
 <p><span class="math display">\[w^{\frac{1}{n}}=r^{\frac{1}{n}}e^{i(\frac{\theta}{n}+\frac{2m}{n}\pi)}\]</span></p>
-<p>and we have a distinct solution for all values of <span class="math inline">\(m=0,\dotsc,n-1\)</span>. Once we reach <span class="math inline">\(m=n\)</span> we have gone full circle and are back to the original solution. To double check these are solutions, we can take them to the power <span class="math inline">\(n\)</span></p>
+<p>and we have a distinct solution for all values of <span class="math inline">\(m=0,\dotsc,n-1\)</span>. Once we reach <span class="math inline">\(m=n\)</span> we have gone full circle and are back to the original solution. To double check these are solutions, we can take them to the power <span class="math inline">\(n\)</span>:</p>
 <p><span class="math display">\[\begin{align*}
 (r^{\frac{1}{n}}e^{i(\frac{\theta}{n}+\frac{2m}{n}\pi)})^n&amp;=re^{in(\frac{\theta}{n}+\frac{2m}{n}\pi)}\\
 &amp;=re^{i(\frac{n\theta}{n}+\frac{2mn}{n}\pi)}\\
@@ -572,7 +572,7 @@ then the solutions are
 <span class="math display">\[\begin{align*}
 w_1&amp;=\sqrt[3]{2}e^{i0}=\sqrt[3]{2}\\
 w_2&amp;=\sqrt[3]{2}e^{i(0+\frac{2\pi}{3})}=\sqrt[3]{2}e^{i\frac{2\pi}{3}}\\
-w_3&amp;=\sqrt[3]{2}e^{i(0+\frac{2(2)\pi}{3})}=\sqrt[3]{2}e^{i\frac{4\pi}{3}}
+w_3&amp;=\sqrt[3]{2}e^{i(0+\frac{2(2)\pi}{3})}=\sqrt[3]{2}e^{i\frac{4\pi}{3}}.
 \end{align*}\]</span></p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:complexrootsexmp"></span>
 <img src="figures/complexroots.png" alt="The cube roots of $2$ in the complex plane. Note they are evenly spaced around a circle of radius $\sqrt[3]{2}$." width="260" />
@@ -584,25 +584,28 @@ Figure 5.4: The cube roots of <span class="math inline">\(2\)</span> in the comp
 </div>
 <div id="eitheta-and-trigonometric-identities" class="section level2 hasAnchor" number="5.5">
 <h2><span class="header-section-number">5.5</span> <span class="math inline">\(e^{i\theta}\)</span> and trigonometric identities<a href="complex.html#eitheta-and-trigonometric-identities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>There are many double angle, and similar, formulas relating the various trig. functions. Remembering them can be quite a struggle. In fact we can recover them easily using complex numbers in polar form:
+<p>There are many double angle, and similar, formulas relating the various trigonometric functions. Remembering them can be quite a struggle. In fact, we can recover them easily using complex numbers in polar form:
 <span class="math display">\[
 e^{i \theta} = \cos (\theta) + i \sin (\theta).
 \]</span>
-So for arbitrary <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\phi\)</span>
+So, for arbitrary <span class="math inline">\(\theta\)</span> and <span class="math inline">\(\phi\)</span>,
 <span class="math display">\[
 e^{i \theta} e^{i \phi} = \begin{cases} (\cos (\theta) + i \sin (\theta)) \times (\cos (\phi) + i \sin (\phi)) &amp; \text{or} \\
 e^{i (\theta + \phi)} = \cos (\theta + \phi) + i \sin (\theta + \phi). \end{cases}
 \]</span>
 It follows that
 <span class="math display">\[\begin{align*}
-(\cos (\theta) + i \sin (\theta)) \times (\cos (\phi) + i \sin (\phi))
+(\cos (\theta) + i \sin (\theta)) &amp;\times (\cos (\phi) + i \sin (\phi)) \\
 &amp;= \cos (\theta) \cos (\phi) - \sin (\theta) \sin (\phi) + i (\cos (\theta) \sin (\phi) + \sin (\theta) \cos (\phi))\\
-&amp;= \cos (\theta + \phi) + i \sin (\theta + \phi)
+&amp;= \cos (\theta + \phi) + i \sin (\theta + \phi).
 \end{align*}\]</span>
 and equating real and imaginary parts on the left and right hand sides gives:
 <span class="math display">\[
-\cos (\theta) \cos (\phi) - \sin (\theta) \sin (\phi)   = \cos (\theta + \phi) \qquad
-\text{and}\qquad \cos (\theta) \sin (\phi) + \sin (\theta) \cos (\phi) = \sin (\theta + \phi)
+\cos (\theta) \cos (\phi) - \sin (\theta) \sin (\phi)   = \cos (\theta + \phi)
+\]</span>
+and
+<span class="math display">\[
+\cos (\theta) \sin (\phi) + \sin (\theta) \cos (\phi) = \sin (\theta + \phi).
 \]</span></p>
 
 </div>
