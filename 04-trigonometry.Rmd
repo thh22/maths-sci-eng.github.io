@@ -182,7 +182,7 @@ f(x)=A\sin(\omega x + \phi)
 $$
 with parameters $A,\omega$ and $\phi$ is known as a *sinusoidal function*.
 
-```{r sinusoid, echo=FALSE, fig.cap = "A sinusoidal wave form plotted in radians, for the case in which $\omega = 1$.", fig.alt = "A sinusoidal wave form labelled with amplitude $A$, phase $\\phi$ and period $T$."}
+```{r sinusoid, echo=FALSE, fig.cap = "A sinusoidal wave form plotted in radians, for the case in which $\\omega = 1$.", fig.alt = "A sinusoidal wave form labelled with amplitude $A$, phase $\\phi$ and period $T$."}
 knitr::include_graphics("figures/sinusoid.png")
 ```
 
