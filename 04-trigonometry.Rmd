@@ -165,16 +165,16 @@ This is useful when we have:
 
 When calculating angles in the Cartesian plane, we need to be a bit careful with the inverse trigonometric functions, because they are only directly valid in certain ranges (see subsection \@ref(InvTrigFuncs)). The easiest way around this is to always find a suitable right-anged triangle, and then interpret the angles and lengths correctly in the plane (as we will show below). We usually measure angles in the Cartesian plane from the positive $x$-axis in an anti-clockwise direction. Negative angles correspond to measuring in the clockwise direction, so that, for example: $180^\circ$ is equivalent to $-180^\circ$, $90^\circ$ is equivalent to $-270^\circ$, etc. Also, angles greater than $360^\circ$, or $2\pi\text{ rad}$, correspond to "wrapping" around the circle more than once, for example: $360^\circ$ is equivalent to $0^\circ$, $405^\circ$ is equivalent to $45^\circ$, $-540^\circ$ is equivalent to $180^\circ$.
 
-Let's consider a circle centered at the origin, which has equation $x^2+y^2=r^2$, where $r$ is the radius (note that by Pythagoras this equation is all points that are a distance $r$ from the origin).
+Let's consider a circle centered at the origin, which has equation $x^2+y^2=r^2$, where $r$ is the radius (note that by the Pythagorean Theorem, when $r$ is fixed, the solutions to this equation give the set of points $(x, y)$ that are a distance $r$ from the origin).
 
-What is the angle between the $x$-axis and a radial line joining the origin $(0,0)$ to a point $(x,y)$ on the circle? Let's first assume $x$ and $y$ are positive. We can consider a triangle formed from the points $(0,0)$, $(x,y)$ and $(x,0)$. Then we know the hypotenuse has length $r$, the opposite has length $y$ and the adjacent has length $x$, and since we have a right-angled triangle we can use all of the usual trigonometric ratios to calculate angles and lengths in this triangle.
+What is the angle between the $x$-axis and a radial line joining the origin $(0,0)$ to a point $(x,y)$ on the circle? Let's first assume that $x$ and $y$ are positive. We can consider a triangle formed from the points $(0,0)$, $(x,y)$ and $(x,0)$. Then we know the hypotenuse has length $r$, the opposite has length $y$ and the adjacent has length $x$, and since we have a right-angled triangle we can use all of the usual trigonometric ratios to calculate angles and lengths in this triangle.
 
-Now consider a point $(x,y)$ with $x$ negative and $y$ positive, that is, in the second quadrant. We can draw a right-angled triangle between the points $(0,0)$, $(x,0)$ and $(x,y)$. Since we want to consider lengths in this triangle, we take the positive value $|x|$. Then the angle $\phi$ between the negative $x$-axis and the radial line can be found from $\phi = \arctan\left(\frac{y}{|x|}\right)$. However, the actual angle we want is $\theta$, and so we can get this from $\theta = 180^\circ - \phi$, or in radians $\theta=\pi-\phi$. We can do a similar proceedure in the remaining two quadrants.
+Now consider a point $(x,y)$ with $x$ negative and $y$ positive, that is, in the second quadrant. We can draw a right-angled triangle between the points $(0,0)$, $(x,0)$ and $(x,y)$. Since we want to consider lengths in this triangle, we take the positive value $|x|$. Then the angle $\phi$ between the negative $x$-axis and the radial line can be found from $\phi = \arctan\left(\frac{y}{|x|}\right)$. However, the actual angle we want is $\theta$, and so we can get this from $\theta = 180^\circ - \phi$, or in radians $\theta=\pi-\phi$. We can follow a similar procedure in the remaining two quadrants.
 
 
 ## Trigonometric waveforms
 
-The trigonometric functions often arise in applications in the context of *waves*. Whilst there are different forms of waves, trigonometric waves are arguably the most ubiquitous. 
+The trigonometric functions often arise in applications in the context of *waves*. Whilst there are different forms of waves, trigonometric waves are arguably the most ubiquitous in mathematics and modelling. 
 
 In general, a function of the form
 $$
@@ -182,13 +182,13 @@ f(x)=A\sin(\omega x + \phi)
 $$
 with parameters $A,\omega$ and $\phi$ is known as a *sinusoidal function*.
 
-```{r sinusoid, echo=FALSE, fig.cap = "A sinusoidal wave form plotted in radians.", fig.alt = "A sinusoidal wave form labelled with amplitude $A$, phase $\\phi$ and period $T$."}
+```{r sinusoid, echo=FALSE, fig.cap = "A sinusoidal wave form plotted in radians, for the case in which $\omega = 1$.", fig.alt = "A sinusoidal wave form labelled with amplitude $A$, phase $\\phi$ and period $T$."}
 knitr::include_graphics("figures/sinusoid.png")
 ```
 
 * $A$ is called the *amplitude* -- this determines the range of values, from $-A$ to $A$;
 * $\omega$ is the *angular frequency* -- the rate of change of the sine function argument in units of radians per second or degrees per second;
-* $\phi$ is the *phase* -- this determines the offset of the sine function at $x=0$ in units of radians or degrees.
+* $\phi$ is the *phase* -- this determines the offset of the sine function at $x=0$ in units of radians or degrees. When $\omega = 1$, the sine function will pass through the $x$-axis at $-\phi$ as in figure \@ref(fig:sinusoid). More generally, the function will pass through the $x$-axis at $-\frac{\phi}{\omega}$.
 * $T=\frac{2\pi}{\omega}$ is the length of one cycle e.g. measured from peak to peak, or trough to trough. If $x$ represents time, then $T$ is called the *period*. If $x$ represents distance, then $T$ is usually denoted by $\lambda$ and called the *wavelength*.
 
 ```{r, sinusoidal, echo=FALSE, fig.cap="The function $f(x)=A\\sin(\\omega x + \\phi)$ (blue curve). [[Open graph in browser.]](https://www.desmos.com/calculator/l0f1omebm2)"}
