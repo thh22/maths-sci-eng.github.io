@@ -182,13 +182,13 @@ f(x)=A\sin(\omega x + \phi)
 $$
 with parameters $A,\omega$ and $\phi$ is known as a *sinusoidal function*.
 
-```{r sinusoid, echo=FALSE, fig.cap = "A sinusoidal wave form plotted in radians, for the case in which $\\omega = 1$.", fig.alt = "A sinusoidal wave form labelled with amplitude $A$, phase $\\phi$ and period $T$."}
+```{r sinusoid, echo=FALSE, fig.cap = "A sinusoidal wave form. The distance marked $\\phi$ should read $\\frac{\phi}{\omega}$.", fig.alt = "A sinusoidal wave form labelled with amplitude $A$, phase $\\phi$ and period $T$."}
 knitr::include_graphics("figures/sinusoid.png")
 ```
 
 * $A$ is called the *amplitude* -- this determines the range of values, from $-A$ to $A$;
-* $\omega$ is the *angular frequency* -- the rate of change of the sine function argument in units of radians per second or degrees per second;
-* $\phi$ is the *phase* -- this determines the offset of the sine function at $x=0$ in units of radians or degrees. When $\omega = 1$, the sine function will pass through the $x$-axis at $-\phi$ as in figure \@ref(fig:sinusoid). More generally, the function will pass through the $x$-axis at $-\frac{\phi}{\omega}$.
+* $\omega$ is the *angular frequency* -- the rate of change of the sine function argument. When $x$ represents time (in seconds), this has units of radians per second or degrees per second;
+* $\phi$ is the *phase* -- this determines the offset of the sine function at $x=0$ in units of radians or degrees. The function will pass through the $x$-axis at $-\frac{\phi}{\omega}$ (see figure \@ref(fig:sinusoid)).
 * $T=\frac{2\pi}{\omega}$ is the length of one cycle e.g. measured from peak to peak, or trough to trough. If $x$ represents time, then $T$ is called the *period*. If $x$ represents distance, then $T$ is usually denoted by $\lambda$ and called the *wavelength*.
 
 ```{r, sinusoidal, echo=FALSE, fig.cap="The function $f(x)=A\\sin(\\omega x + \\phi)$ (blue curve). [[Open graph in browser.]](https://www.desmos.com/calculator/l0f1omebm2)"}
