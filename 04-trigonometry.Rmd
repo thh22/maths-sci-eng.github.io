@@ -182,7 +182,7 @@ f(x)=A\sin(\omega x + \phi)
 $$
 with parameters $A,\omega$ and $\phi$ is known as a *sinusoidal function*.
 
-```{r sinusoid, echo=FALSE, fig.cap = "A sinusoidal wave form. The distance marked $\\phi$ should be divided by $\\omega$.", fig.alt = "A sinusoidal wave form labelled with amplitude $A$, phase $\\phi$ and period $T$."}
+```{r sinusoid, echo=FALSE, fig.cap = "A sinusoidal wave form. The distance marked $\\phi$ should be divided by $\\omega$ - this is a mistake in the image.", fig.alt = "A sinusoidal wave form labelled with amplitude $A$, phase $\\phi$ and period $T$."}
 knitr::include_graphics("figures/sinusoid.png")
 ```
 
@@ -203,17 +203,23 @@ where:
 
 $R=\sqrt{a^2+b^2}$
 
-$\phi=\tan^{-1}(b/a)$
+$\phi=\tan^{-1}(b/a),$
 
-Such waves are associated with *circular motion*. If we imagine a particle moving around a circle at a constant angular speed and take the projection onto one of the coordinate axes, for example the $y$-axis, then the displacement from the origin plotted against time will draw out a sinusoid. This is becuase the position on the $y$-axis is $y=r\sin(\theta)$.
+or, equivalently
 
-```{r, circular_motion, echo=FALSE, fig.cap="Click the play button in block 1 (next to variable $t$, the angle). Demonstration of a sinusoidal wave from circular motion: as the angle $t$ increases and the point moves around the circle (red) the projection onto the $y$ axis (blue) describes a sinusoid (green). [[Open graph in browser.]](https://www.desmos.com/calculator/7kznu6egdw)"}
+$a=R\cos(\phi)$
+
+$b=R\sin(\phi).$
+
+Such waves are associated with *circular motion*. If we imagine a particle moving around a circle at a constant angular speed and take the projection onto the $y$-axis, then the displacement from the origin plotted against time will draw out a sinusoid. This is because the position on the $y$-axis is $y=r\sin(\theta)$.
+
+```{r, CircularMotion, echo=FALSE, fig.cap="Click the play button in block 1 (next to variable $t$, the angle). Demonstration of a sinusoidal wave from circular motion: as the angle $t$ increases and the point moves around the circle (red) the projection onto the $y$ axis (blue) describes a sinusoid (green). [[Open graph in browser.]](https://www.desmos.com/calculator/7kznu6egdw)"}
 knitr::include_url("https://www.desmos.com/calculator/7kznu6egdw")
 ```
 
 ## Trigonometric identities
 
-Recall that there are a number of useful relationships between the trigonometric functions. Here are some key ones.
+There are a number of useful relationships between the trigonometric functions. Here are some key ones.
 
 
 ### Pythagorean identities
@@ -223,7 +229,7 @@ These follow from the Pythagorean theorem.
 \begin{gather*}
 \sin^2(\theta)+\cos^2(\theta)=1\\
 1+\tan^2(\theta)=\sec^2(\theta)\\
-\cot^2(\theta)+1=\operatorname{cosec}^2(\theta)
+\cot^2(\theta)+1=\operatorname{cosec}^2(\theta).
 \end{gather*}
 
 ### Compound angle formulae
@@ -236,7 +242,7 @@ The following formulae allow us to manipulate sines, cosines and tangents of the
 \cos(\theta+\phi)&=\cos(\theta)\cos(\phi)-\sin(\theta)\sin(\phi)\\
 \cos(\theta-\phi)&=\cos(\theta)\cos(\phi)+\sin(\theta)\sin(\phi)\\
 \tan(\theta+\phi)&=\frac{\tan(\theta)+\tan(\phi)}{1-\tan(\theta)\tan(\phi)}\\
-\tan(\theta-\phi)&=\frac{\tan(\theta)-\tan(\phi)}{1+\tan(\theta)\tan(\phi)}
+\tan(\theta-\phi)&=\frac{\tan(\theta)-\tan(\phi)}{1+\tan(\theta)\tan(\phi)}.
 \end{align*}
 
 ### Double angle formulae
