@@ -287,7 +287,7 @@ knitr::include_graphics("figures/Kette_Kettenkurve_Catenary_2008_PD.jpg")
 ```
 
 
-## Inverse Functions
+## Inverse Functions (#InvFunc)
 
 Thinking of a function again as a system, we sometimes may be given a certain output and wish to know what the original input was. If there exists a function that returns the input leading to a given output, then we call this function the *inverse*. We generally denote the inverse of a function $f$ by $f^{-1}$. This operation is itself a function. For example, if
 
@@ -437,7 +437,7 @@ However, in this particular context only the positive solution makes sense since
 $$r=\sqrt{\frac{A}{\pi}}.$$
 
 
-### Inverse Trigonometric Functions {#inverse_trig_funcs}
+### [Inverse Trigonometric Functions]{#inverse_trig_funcs}
 
 Since the trigonometric functions are not one-to-one, we must restrict them if we want to define a partial inverse. Since the input to a trigonometry function is an angle, the output of an inverse trigonometric function is an angle.
 

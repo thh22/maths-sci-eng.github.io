@@ -2,18 +2,16 @@
 
 ## Pythagoras
 
-The most fundamental result in trigonometry is the Pythagorean Theorem:
+Probably the most fundamental result in trigonometry is the Pythagorean Theorem. This concerns the length of the the three sides of a right angled triangle. Here, two lines meet at a right angle if they are perpendicular to one another, i.e., the angle between them is $90^{\circ}$. And the longest side of the triangle, which is the one opposite the right angle, is called the *hypotenuse*.
 
 ::: {.theorem #pythag name="Pythagorean Theorem"}
 
 
-In a right-angle triangle, the *hypotenuse* is the side opposite the right angle.
-
 In any right-angle triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides.
 
-With reference to figure \@ref(fig:pythag), we have
+In other words, in figure \@ref(fig:pythag), we have
 
-$$c^2=a^2+b^2$$
+$$c^2=a^2+b^2.$$
 
 ```{r pythag, echo=FALSE, fig.cap = "A right-angled triangle with sides $a, b$ and $c$, with $c$ being the hypotenuse.", fig.alt = "A right-angled triangle labelled with sides $a, b$ and $c$, with $c$ being the hypotenuse."}
 knitr::include_graphics("figures/pythag.png")
@@ -27,21 +25,21 @@ One particular application is finding the distance between two points in a Carte
 
 We can measure an angle in two different units: degrees or radians.
 
-In *degrees*, we split a full circle into 360 segments and then call the angle bewteen each segment 1 degree, or $1^\circ$. Of course a full circle is $360^\circ$.
+In *degrees*, we split a full circle into 360 segments and then call the angle between each segment 1 degree, or $1^\circ$. A full circle is then $360^\circ$.
 
 An alternative measure of angle is *radians*. In this case, we start from the fact that the circumference of a circle is given by
 $$
 C=2\pi r
 $$
-where $r$ is the radius of the circle. If we had a circle with radius $r=1$, then the circumference is $C=2\pi$. Now we consider this circle to be split into $2\pi$ segments^[Note this is not an integer number of segments! It is approximately 6.283 segments.], with each segment being 1 radian, or $1 \text{ rad}$. A full circle is then $2\pi \text{ rad} = 6.283 \text{ rad}$ (to 3 d.p.).
+where $r$ is the radius of the circle. If we had a circle with radius $r=1$, then the circumference is $C=2\pi$. Now we consider this circle to be split into $2\pi$ segments^[Note this is not an integer number of segments! It is approximately 6.283 segments.], with each segment being 1 radian, or $1 \text{ rad}$. A full circle is then $2\pi \text{ rad} = 6.283 \text{ rad}$ to 3 decimal places (3 d.p.).
 
-Sometimes it is more convenient to work in degrees, and other times it is more convenient to work in radians. We can easily convert between degrees and radians as follows. If we have an angle $D^\circ$ in degrees, then the corresponding angle in radians $R \text{ rad}$ is:
+Sometimes it is more convenient to work in degrees, and other times it is more convenient to work in radians. We can easily convert between degrees and radians as follows. If we have an angle $D$ in degrees, then the corresponding angle $R$ in radians is:
 $$
-R \text{ rad}=\frac{2\pi}{360}\times D^\circ
+R =\frac{2\pi}{360}\times D
 $$
 and in the other direction
 $$
-D^\circ=\frac{360}{2\pi}\times R \text{ rad}.
+D=\frac{360}{2\pi}\times R.
 $$
 
 Where possible, we would state radians as multiples of $\pi$, so in particular:
@@ -67,7 +65,7 @@ Calculating angles and side lengths of right-angled triangles is of fundamental 
 knitr::include_graphics("figures/rh-triangle.png")
 ```
 
-Recall that we can calculate relationships between angles and side lengths of a right-angled triangle (as described in figure \@ref(fig:rh-triangle)) using sine, cosine and tangent:
+We can calculate relationships between angles and side lengths of a right-angled triangle (as described in figure \@ref(fig:rh-triangle)) using sine, cosine and tangent functions:
 
 \begin{align*}
 \sin(\theta)&=\frac{Opp.}{Hyp.}\\
@@ -81,17 +79,17 @@ A useful way to remember these relationships is the mnemonic "SOH CAH TOA":
 
 **CAH** - **C**osine equals **A**djacent over **H**ypotenuse
 
-**TOA** - **T**an equals **O**pposite over **A**djacent
+**TOA** - **T**an equals **O**pposite over **A**djacent.
 
 These are most commonly used to determine angles by using the *inverse* functions:
 
 \begin{align*}
 \theta&=\sin^{-1}(\frac{Opp.}{Hyp.})\\
 \theta&=\cos^{-1}(\frac{Adj.}{Hyp.})\\
-\theta&=\tan^{-1}(\frac{Opp.}{Adj.})
+\theta&=\tan^{-1}(\frac{Opp.}{Adj.}).
 \end{align*}
 
-**WARNING**: the notation suggests we are taking $\sin$ to the power $-1$, so that $\sin^{-1}=\frac{1}{\sin}$, but this is NOT how the inverse is defined. Remember that the inverse "undoes" the action of the function. Scientific calculators will have buttons to apply these functions. The inverses are also sometimes called
+**WARNING**: the notation suggests we are taking $\sin$ to the power $-1$, so that $\sin^{-1}=\frac{1}{\sin}$, but this is NOT how the inverse is defined. Remember that the inverse "undoes" the action of the function, i.e., $\sin^{-1}$ is the function such that $\sin^{-1}(\sin(\theta)) = \theta$ for any given input $\theta$. Scientific calculators will have buttons to apply these functions. The inverses are also sometimes called
 
 \begin{align*}
 \arcsin&=\sin^{-1},\\
@@ -103,7 +101,7 @@ These are most commonly used to determine angles by using the *inverse* function
 ::: {.example #inversetrig name="Applying inverse trig. functions"}
 Calculate the angle $\theta$ in the following triangle.
 
-```{r inversetrigexmp, fig.cap = "A right angled triangle with hypotenuse legth 14 units and adjacent length 8 units.", fig.alt = "A right angled triangle with hypotenuse legth 14 units and adjacent length 8 units."}
+```{r inversetrigexmp, fig.cap = "A right angled triangle with hypotenuse legnth 14 units and adjacent length 8 units.", fig.alt = "A right angled triangle with hypotenuse legth 14 units and adjacent length 8 units."}
 knitr::include_graphics("figures/rh-triangleexmp.png")
 ```
 
@@ -123,23 +121,29 @@ We also have special names for the reciprocal trigonometric functions:
 
 ## Sine and cosine rules
 
-The Pythagorean Theorem and Trigonometric ratios above only apply to right-angle triangles. For general triangles, the sine and cosine rules give us useful relationsips between angles and side lengths.
+The Pythagorean Theorem and trigonometric ratios only apply to right-angle triangles. For general triangles, the sine and cosine rules give us useful relationsips between angles and side lengths.
 
 ```{r tri, echo=FALSE, fig.cap = "A general triangle with angles $A, B,$ and $C$ and the corresponding opposite sides as $a, b$ and $c$.", fig.alt = "A general triangle with angles $A, B,$ and $C$ and the corresponding opposite sides as $a, b$ and $c$."}
 knitr::include_graphics("figures/triangle.png")
 ```
 
+::: {.theorem #TriangleSum name="Triangle Sum Theorem"}
+For any given triangle, the sum of the angles is $180^{\circ}$ ($\pi \text{ rad}$). In other words, for a triangle with angles $A, B,$ and $C$ as in figure \@ref(fig:tri), we have that
+$$
+A + B + C = 180^{\circ}.
+$$
+:::
+
 ::: {.theorem #sinerule name="Sine Rule"}
 Label a triangle with angles $A, B,$ and $C$ and the corresponding opposite sides as $a, b$ and $c$ (as in figure \@ref(fig:tri)). Then,
 
 $$\frac{a}{\sin(A)}=\frac{b}{\sin(B)}=\frac{c}{\sin(C)}.$$
-
-This is useful when we have:
-
-1. one side and any two angles, or
-1. two sides and an angle (but not the included angle).
-
 :::
+
+The sine rule and triangle sum theorem are useful when we have:
+
+1. one side length and any two angles, or
+1. two side lengths and an angle (but not the angle between the two sides).
 
 ::: {.theorem #cosinerule name="Cosine Rule"}
 Label a triangle with angles $A, B,$ and $C$ and the corresponding opposite sides as $a, b$ and $c$ (as in figure \@ref(fig:tri)). Then,
@@ -152,14 +156,14 @@ c^2&=a^2+b^2-2ab\cos(C).
 
 This is useful when we have:
 
-1. two sides and the included angle, or
-2. three sides.
+1. two side lengths and the angle between these two sides, or
+2. three side lengths.
 
 :::
 
 ## Angles in Cartesian Coordinates
 
-When calculating angles in the Cartesian plane we need to be a bit careful with the inverse trigonometric functions, because they are only directly valid in certain ranges (see section \@ref(inverse_trig_funcs)). The easiest way around this is to always find a suitable right-anged triangle, and then interpret the angles and lengths correctly in the plane (as we will show below). We usually measure angles in the Cartesian plane from the positive $x$-axis in an anti-clockwise direction. Negative angles correspond to measuring in the clockwise direction, so that, for example: $180^\circ$ is equivalent to $-180^\circ$, $90^\circ$ is equivalent to $-270^\circ$, etc. Also, angles greater than $360^\circ$, or $2\pi\text{ rad}$, correspond to "wrapping" around the circle more than once, for example: $360^\circ$ is equivalent to $0^\circ$, $405^\circ$ is equivalent to $45^\circ$, $-540^\circ$ is equivalent to $180^\circ$.
+When calculating angles in the Cartesian plane, we need to be a bit careful with the inverse trigonometric functions, because they are only directly valid in certain ranges (see the subsection on [Inverse Trigonometric Functions]{#inverse_trig_funcs} in Section \@ref{InvFunc}). The easiest way around this is to always find a suitable right-anged triangle, and then interpret the angles and lengths correctly in the plane (as we will show below). We usually measure angles in the Cartesian plane from the positive $x$-axis in an anti-clockwise direction. Negative angles correspond to measuring in the clockwise direction, so that, for example: $180^\circ$ is equivalent to $-180^\circ$, $90^\circ$ is equivalent to $-270^\circ$, etc. Also, angles greater than $360^\circ$, or $2\pi\text{ rad}$, correspond to "wrapping" around the circle more than once, for example: $360^\circ$ is equivalent to $0^\circ$, $405^\circ$ is equivalent to $45^\circ$, $-540^\circ$ is equivalent to $180^\circ$.
 
 Let's consider a circle centered at the origin, which has equation $x^2+y^2=r^2$, where $r$ is the radius (note that by Pythagoras this equation is all points that are a distance $r$ from the origin).
 

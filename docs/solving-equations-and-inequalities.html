@@ -4,23 +4,23 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Solving Equations and Inequalities | Mathematics for Scientists and Engineers</title>
-  <meta name="description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  <title>Chapter 3 Solving Equations and Inequalities | Introduction to Mathematics for Data Science</title>
+  <meta name="description" content="Mathematics Self Study Materials for University of Exeter in Cornwall" />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Solving Equations and Inequalities | Mathematics for Scientists and Engineers" />
+  <meta property="og:title" content="Chapter 3 Solving Equations and Inequalities | Introduction to Mathematics for Data Science" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  <meta property="og:description" content="Mathematics Self Study Materials for University of Exeter in Cornwall" />
   <meta name="github-repo" content="maths-sci-eng/maths-sci-eng.github.io" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Solving Equations and Inequalities | Mathematics for Scientists and Engineers" />
+  <meta name="twitter:title" content="Chapter 3 Solving Equations and Inequalities | Introduction to Mathematics for Data Science" />
   
-  <meta name="twitter:description" content="Mathematics Lecture Notes for UoE Penryn Science and Engineering Disciplines." />
+  <meta name="twitter:description" content="Mathematics Self Study Materials for University of Exeter in Cornwall" />
   
 
-<meta name="author" content="Dr Mark Callaway" />
+<meta name="author" content="Drs Mark Callaway, Tim Hughes and Ed Branford" />
 
 
 <meta name="date" content="2025-09-05" />
@@ -139,12 +139,7 @@
 <li class="chapter" data-level="3.3.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#simultaneous-linear-equations"><i class="fa fa-check"></i><b>3.3.1</b> Simultaneous linear equations</a></li>
 <li class="chapter" data-level="3.3.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#non-linear-simultaneous-equations"><i class="fa fa-check"></i><b>3.3.2</b> Non-linear simultaneous equations</a></li>
 </ul></li>
-<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#exponentials-and-logarithms"><i class="fa fa-check"></i><b>3.4</b> Exponentials and Logarithms</a>
-<ul>
-<li class="chapter" data-level="3.4.1" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#standard-bases"><i class="fa fa-check"></i><b>3.4.1</b> Standard Bases</a></li>
-<li class="chapter" data-level="3.4.2" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#change-of-base-for-exponentials"><i class="fa fa-check"></i><b>3.4.2</b> Change of Base for Exponentials</a></li>
-</ul></li>
-<li class="chapter" data-level="3.5" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.5</b> Inequalities</a></li>
+<li class="chapter" data-level="3.4" data-path="solving-equations-and-inequalities.html"><a href="solving-equations-and-inequalities.html#inequalities-1"><i class="fa fa-check"></i><b>3.4</b> Inequalities</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="trigonometry.html"><a href="trigonometry.html"><i class="fa fa-check"></i><b>4</b> Trigonometry</a>
 <ul>
@@ -377,7 +372,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Mathematics for Scientists and Engineers</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Introduction to Mathematics for Data Science</a>
           </h1>
         </div>
 
@@ -521,7 +516,7 @@ More generally, a factor <span class="math inline">\((x-a)\)</span> corresponds 
 <div class="theorem">
 <p><span id="thm:factors" class="theorem"><strong>Theorem 3.2  (Factor Theorem) </strong></span>The value <span class="math inline">\(x=a\)</span> is a root of the polynomial equation <span class="math inline">\(f(x)=0\)</span> if and only if <span class="math inline">\((x-a)\)</span> is a factor of the polynomial <span class="math inline">\(f(x)\)</span>.</p>
 </div>
-<p>We already have a fool-proof way to solve quadratic equations – use the quadratic formula. There are also formulae for <a href="https://en.wikipedia.org/wiki/Cubic_equation#General_cubic_formula">cubic</a> and <a href="https://en.wikipedia.org/wiki/Quartic_equation#The_general_case">quartic</a> polynomials, but these are a bit more complicated. Furthermore, it turns out it is <strong>impossible</strong> to derive a formula for <a href="https://en.wikipedia.org/wiki/Abel%E2%80%93Ruffini_theorem">quintic</a> and higher degree polynomials! The factor theorem can be helpful in finding roots of polynomials greater than degree 2. Here is an example.</p>
+<p>We already have a fool-proof way to solve quadratic equations – use the quadratic formula. There are also formulae for <a href="https://en.wikipedia.org/wiki/Cubic_equation#General_cubic_formula">cubic</a> and <a href="https://en.wikipedia.org/wiki/Quartic_equation#The_general_case">quartic</a> polynomials, but these are more complicated. Furthermore, it turns out it is <strong>impossible</strong> to derive a formula for <a href="https://en.wikipedia.org/wiki/Abel%E2%80%93Ruffini_theorem" target="_blank">quintic</a> and higher degree polynomials! The factor theorem can be helpful in finding roots of polynomials greater than degree 2. Here is an example.</p>
 <div class="example">
 <p><span id="exm:factorthmcubic" class="example"><strong>Example 3.4  (Factor theorem applied to a cubic polynomial) </strong></span>Find the roots of the cubic polynomial <span class="math display">\[f(x)=x^3-7x-6.\]</span></p>
 <p>After a little trial and error with small integer values of <span class="math inline">\(x\)</span> we find
@@ -538,19 +533,19 @@ Hence the roots are
 </div>
 <div id="simultaneous-equations" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> Simultaneous equations<a href="solving-equations-and-inequalities.html#simultaneous-equations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Sometimes a problem will be formulated in terms of multiple equations with multiple, shared variables. The set of equations usually represent constraints between the variables and we need to determine which values of the variables are valid solutions, i.e. which values satisfy all of the equations <em>simultaneously</em> – hence such sets of equations are known as <em>simultaneous equations</em>. Sometimes we can solve simultaneous equations by rearranging one equation to set one of the variables as the subject and then substitute this into another equation in order to eliminate one of the variables.</p>
+<p>Sometimes a problem will be formulated in terms of multiple equations with multiple, shared variables. The set of equations usually represent constraints between the variables and we need to determine which values of the variables are valid solutions, i.e. which values satisfy all of the equations <em>simultaneously</em> – hence such sets of equations are known as <em>simultaneous equations</em>. Sometimes we can solve simultaneous equations by rearranging one equation to set one of the variables as the subject, and then substitute this into another equation in order to eliminate one of the variables.</p>
 <div id="simultaneous-linear-equations" class="section level3 hasAnchor" number="3.3.1">
 <h3><span class="header-section-number">3.3.1</span> Simultaneous linear equations<a href="solving-equations-and-inequalities.html#simultaneous-linear-equations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We begin with the simplest type of simultaneous equations: the case when all of the equations are <em>linear</em>, that is, geometrically they correspond to straight lines in the plane. We will just consider the case of two equations in two unknowns (the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>). There are three possible types of solution, which we illustrate with the following three examples.</p>
+<p>We begin with the simplest type of simultaneous equation: the case when all of the equations are <em>linear</em>. We will just consider the case of two equations in two unknowns (the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>). Geometrically, these correspond to straight lines in the plane. There are three possible types of solution, which we illustrate with the following three examples.</p>
 <div class="example">
 <p><span id="exm:simul-lin-1" class="example"><strong>Example 3.5  </strong></span>Solve the following two simultaneous equations in the variables <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>:
 <span class="math display">\[\begin{align*}
 3x+2y&amp;=5,\\
 x-4y&amp;=1.
 \end{align*}\]</span>
-We could start by rearranging equation two to make <span class="math inline">\(x\)</span> the subject
-<span class="math display">\[x=1+4y\]</span>
-(it does not matter which equation we choose first or which variable we choose first, this choice was just easier to re-arrange) and then substitute this back in for <span class="math inline">\(x\)</span> in equation one
+We could start by rearranging the second equation to make <span class="math inline">\(x\)</span> the subject:
+<span class="math display">\[x=1+4y.\]</span>
+It does not matter which equation we choose first or which variable we choose first, this choice was just easier to re-arrange. We can then substitute this back in for <span class="math inline">\(x\)</span> in the first equation:
 <span class="math display">\[3(1+4y)+2y=5\]</span>
 and then solve for <span class="math inline">\(y\)</span>
 <span class="math display">\[\begin{align*}
@@ -559,7 +554,7 @@ and then solve for <span class="math inline">\(y\)</span>
 14y&amp;=2\\
 y&amp;=\frac{1}{7}.
 \end{align*}\]</span>
-Now that we have the value for <span class="math inline">\(y\)</span> we can substitute this back into either equation to find <span class="math inline">\(x\)</span>. Since we already rearranged equation two to make <span class="math inline">\(x\)</span> the subject, we might as well use that:
+Now that we have the value for <span class="math inline">\(y\)</span>, we can substitute this back into either equation to find <span class="math inline">\(x\)</span>. Since we already rearranged the second equation to make <span class="math inline">\(x\)</span> the subject, we might as well use that:
 <span class="math display">\[x=1+4y=1+\frac{4}{7}=\frac{11}{7}.\]</span>
 Hence the solution is
 <span class="math display">\[x=\frac{11}{7},\quad y=\frac{1}{7}.\]</span>
@@ -578,17 +573,17 @@ Figure 3.2: The lines <span class="math inline">\(3x+2y=5\)</span> (red line) an
 -x+3y&amp;=2,\\
 2x-6y&amp;=11.
 \end{align*}\]</span>
-We could start by rearranging equation one to make <span class="math inline">\(x\)</span> the subject
+We could start by rearranging the first equation to make <span class="math inline">\(x\)</span> the subject:
 <span class="math display">\[x=3y-2\]</span>
-and then substitute this back in for <span class="math inline">\(x\)</span> in equation two
+and then substitute this back in for <span class="math inline">\(x\)</span> in the second equation:
 <span class="math display">\[2(3y-2)-6y=11\]</span>
-and then solve for <span class="math inline">\(y\)</span>
+and then attempt to solve for <span class="math inline">\(y\)</span>:
 <span class="math display">\[\begin{align*}
 2(3y-2)-6y&amp;=11\\
 6y-6-6y&amp;=11\\
 0&amp;=17.
 \end{align*}\]</span>
-which is impossible. This tells us there are no solutions to the simultaneous equations; that is, there are no values of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> that satisfy both equations at the same time. Geometrically, the two equations correspond to parallel lines, and of course, two parallel lines never intersect.</p>
+which is impossible. This tells us there are no solutions to the simultaneous equations; that is, there are no values of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> that satisfy both equations at the same time. Geometrically, the two equations correspond to parallel lines, and two parallel lines never intersect.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:linear-parallel"></span>
 <iframe src="https://www.desmos.com/calculator/b0ymbkzxb6" width="672" height="400px" data-external="1">
 </iframe>
@@ -603,9 +598,9 @@ Figure 3.3: The lines <span class="math inline">\(-x+3y=2\)</span> (red line) an
 2x-y&amp;=2\\
 4x-2y&amp;=4
 \end{align*}\]</span>
-we can rearrange equation one to make <span class="math inline">\(y\)</span> the subject
+we can rearrange the first equation to make <span class="math inline">\(y\)</span> the subject:
 <span class="math display">\[y=2x-2\]</span>
-and then substitute this back in for <span class="math inline">\(y\)</span> in equation two
+and then substitute this back in for <span class="math inline">\(y\)</span> in the second equation:
 <span class="math display">\[4x-2(2x-2)=4\]</span>
 and then solve for <span class="math inline">\(x\)</span>
 <span class="math display">\[\begin{align*}
@@ -616,7 +611,7 @@ and then solve for <span class="math inline">\(x\)</span>
 \end{align*}\]</span>
 This equality holds for any value of <span class="math inline">\(x\)</span>, so <span class="math inline">\(x\)</span> can be any number. Therefore so long as <span class="math inline">\(y\)</span> satisfies one of the equations, for example
 <span class="math display">\[y=2x-2\]</span>
-then the pair of values <span class="math inline">\((x,y)\)</span> is a solution: in this case any point on the line <span class="math inline">\(y=2x-2\)</span> is a solution, so we have <em>infinitely many</em> solutions. Note that equation two is just <span class="math inline">\(2\times\)</span> equation one, so they are effectively the same equation and describe the same line in the plane, hence <em>all</em> of their points intersect. The solutions are just the points that lie on the line described by equation one, or equivalently, equation two.</p>
+then the pair of values <span class="math inline">\((x,y)\)</span> is a solution: in this case any point on the line <span class="math inline">\(y=2x-2\)</span> is a solution, so we have <em>infinitely many</em> solutions. Note in this case that the second equation is just <span class="math inline">\(2\times\)</span> the first equation, so they are effectively the same equation and describe the same line in the plane, hence <em>all</em> of their points intersect. The solutions are just the points that lie on the line described by the first equation, or, equivalently, the second equation.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:linear-same"></span>
 <iframe src="https://www.desmos.com/calculator/wxbjwyswuz" width="672" height="400px" data-external="1">
 </iframe>
@@ -625,7 +620,7 @@ Figure 3.4: The lines <span class="math inline">\(2x-y=2\)</span> (red line) and
 </p>
 </div>
 </div>
-<p>The three examples above demonstrate the three general possibilities for two equations with two unknowns: one pair of solutions <span class="math inline">\((x,y)\)</span>; no solutions; infinitely many solutions along a line. This is simply the three ways that two lines could intersect in the plane: at one point; at no points (parallel, unequal lines); at all points (the equations describe the same line).</p>
+<p>The three examples above demonstrate the three general possibilities for two equations with two unknowns: one solution pair <span class="math inline">\((x,y)\)</span>; no solutions; infinitely many solutions along a line. These are simply the three different ways that two lines could intersect in the plane: at one point; at no points (parallel, unequal lines); at all points (the equations describe the same line).</p>
 <p>We shall look at a systematic way to deal with linear simultaneous equations in arbitrary dimensions (any number of equations and any number of variables) in section <a href="gauss.html#gauss">7</a>.</p>
 </div>
 <div id="non-linear-simultaneous-equations" class="section level3 hasAnchor" number="3.3.2">
@@ -644,9 +639,9 @@ x^2-x(7-2x)&amp;=6\\
 3x^2-7x-6&amp;=0\\
 (3x+2)(x-3)&amp;=0\\
 \end{align*}\]</span>
-so the factorisation tells us
+so the factorisation tells us that
 <span class="math display">\[x=-\frac{2}{3},\text{ or } x = 3.\]</span>
-Now substiting these two possibilities back into the first equation gives
+Now substiting these two possibilities back into the first equation gives us two solutions:
 <span class="math display">\[\begin{align*}
 2(-\frac{2}{3})+y&amp;=7\\
 y&amp;=\frac{25}{3}
@@ -670,52 +665,66 @@ Figure 3.5: The lines <span class="math inline">\(2x+y=7\)</span> (red line) and
 </div>
 </div>
 <p>The example presented above is relatively simple. In some real-world scenarios equations might be very complicated (with many variables or many simultaneous equations), and it is known that some equations are impossible to solve by hand. In these cases we need to turn to computational techniques. We’ll look at some computational techniques in section <a href="numerics.html#numerics">18</a>.</p>
-</div>
-</div>
-<div id="exponentials-and-logarithms" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Exponentials and Logarithms<a href="solving-equations-and-inequalities.html#exponentials-and-logarithms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>We shall now look at solving some equations involving exponentials and logarithms: recall that these functions are inverses of one another. First, we look at some of the rules for manipulating logs (which can be derived from the rules of exponents).</p>
-<p>Rules of Logs:</p>
-<p>1.   <span class="math inline">\(\log_a(xy)=\log_a(x)+\log_a(y)\)</span></p>
-<p>2.   <span class="math inline">\(\log_a(x^p)=p\log_a(x)\)</span></p>
-<p>3.   <span class="math inline">\(\log_a(\frac{x}{y})=\log_a(x)-\log_a(y)\)</span></p>
-<p>4.   <span class="math inline">\(\log_a(1)=0\)</span></p>
-<p>5.   <span class="math inline">\(\log_a(a)=1\)</span></p>
-<div id="standard-bases" class="section level3 hasAnchor" number="3.4.1">
-<h3><span class="header-section-number">3.4.1</span> Standard Bases<a href="solving-equations-and-inequalities.html#standard-bases" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In science and engineering applications it is common to use base <span class="math inline">\(e\)</span>, base <span class="math inline">\(2\)</span> and base <span class="math inline">\(10\)</span>. For base <span class="math inline">\(10\)</span>, the following notation is sometimes used</p>
-<p><span class="math display">\[\log(x)=\log_{10}(x)\]</span></p>
-<p>but we should always check what the author intends as sometimes <span class="math inline">\(\log(x)\)</span> is used to mean <span class="math inline">\(\ln(x)\)</span>.</p>
-<p>We can also change between bases in logarithms with the following rule:</p>
-<p><span class="math display">\[\begin{equation*}
+<!-- Commented as repeated from earlier
+## Exponentials and Logarithms
+
+We shall now look at solving some equations involving exponentials and logarithms: recall that these functions are inverses of one another. First, we recall some of the rules for manipulating logs (which can be derived from the rules of exponents).
+
+Rules of Logs:
+
+1\. &emsp; $\log_a(xy)=\log_a(x)+\log_a(y)$
+
+2\. &emsp; $\log_a(x^p)=p\log_a(x)$
+
+3\. &emsp; $\log_a(\frac{x}{y})=\log_a(x)-\log_a(y)$
+
+4\. &emsp; $\log_a(1)=0$
+
+5\. &emsp; $\log_a(a)=1$
+
+### Standard Bases
+
+In science and engineering applications it is common to use base $e$, base $2$ and base $10$. For base $10$, the following notation is sometimes used
+
+$$\log(x)=\log_{10}(x)$$
+
+but we should always check what the author intends as sometimes $\log(x)$ is used to mean $\ln(x)$.
+
+We can also change between bases in logarithms with the following rule:
+
+\begin{equation*}
 \log_a(y)=\dfrac{\log_b (y)}{\log_b (a)}.
-\end{equation*}\]</span>
-This allows us to calculate <span class="math inline">\(\log_a\)</span> of a number in terms of <span class="math inline">\(\log_b\)</span>.</p>
+\end{equation*}
+This allows us to calculate $\log_a$ of a number in terms of $\log_b$.
+
+### Change of Base for Exponentials
+
+An exponential function with base $a$ can be re-written in any other base $b$ with a constant factor in the argument as follows:
+
+$$\begin{aligned}a^x&=b^{\log_b (a^x)} \quad \text{(note that } b^{\log_b y}=y\text{)} \\&=b^{x\log_b (a)}\\&=b^{kx},\quad \text{where }k=\log_b(a).\end{aligned}$$
+
+The "natural" choice of base for mathematical use is $b=e$ and hence we usually only consider exponential functions in the form
+$$e^{kx} \text{ where } k=\ln(a).$$
+
+-->
 </div>
-<div id="change-of-base-for-exponentials" class="section level3 hasAnchor" number="3.4.2">
-<h3><span class="header-section-number">3.4.2</span> Change of Base for Exponentials<a href="solving-equations-and-inequalities.html#change-of-base-for-exponentials" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>An exponential function with base <span class="math inline">\(a\)</span> can be re-written in any other base <span class="math inline">\(b\)</span> with a constant factor in the argument as follows:</p>
-<p><span class="math display">\[\begin{aligned}a^x&amp;=b^{\log_b (a^x)} \quad \text{(note that } b^{\log_b y}=y\text{)} \\&amp;=b^{x\log_b (a)}\\&amp;=b^{kx},\quad \text{where }k=\log_b(a).\end{aligned}\]</span></p>
-<p>The “natural” choice of base for mathematical use is <span class="math inline">\(b=e\)</span> and hence we usually only consider exponential functions in the form
-<span class="math display">\[e^{kx} \text{ where } k=\ln(a).\]</span></p>
 </div>
-</div>
-<div id="inequalities-1" class="section level2 hasAnchor" number="3.5">
-<h2><span class="header-section-number">3.5</span> Inequalities<a href="solving-equations-and-inequalities.html#inequalities-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="inequalities-1" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Inequalities<a href="solving-equations-and-inequalities.html#inequalities-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Assume we are comparing two expressions <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> that depend on the variable <span class="math inline">\(x\)</span> and need to find, for example, the values of <span class="math inline">\(x\)</span> for which <span class="math inline">\(P&gt;Q\)</span>. Let us take a look at a range of examples to see how to solve these types of problems.</p>
 <div class="example">
 <p><span id="exm:solvineqs" class="example"><strong>Example 3.9  </strong></span>We wish to find all values of <span class="math inline">\(x\)</span> satisfying the following inequalities.</p>
 <ol style="list-style-type: decimal">
 <li><p><span class="math inline">\(2x+6&lt;18.\)</span></p>
-<p>Here we can easily re-arrange the inequality (subtract <span class="math inline">\(6\)</span> from each side and divide by the positive number <span class="math inline">\(2\)</span> – which preserves the direction of the inequality) to obtain
+<p>Here we can easily re-arrange the inequality (subtract <span class="math inline">\(6\)</span> from each side and divide by the positive number <span class="math inline">\(2\)</span> – which preserves the direction of the inequality). This gives
 <span class="math display">\[x&lt;6.\]</span></p></li>
 <li><p><span class="math inline">\(x^2-7x+12&gt;0\)</span></p>
-<p>Factorise the l.h.s. to give <span class="math inline">\((x-3)(x-4)&gt;0\)</span>, so to be positive the factors on the left need to be either both positive or both negative, i.e.:</p>
+<p>Factorise the left hand side to give <span class="math inline">\((x-3)(x-4)&gt;0\)</span>, so to be positive the factors on the left need to be either both positive or both negative, i.e.:</p>
 <ol style="list-style-type: lower-alpha">
 <li><p><span class="math inline">\((x-3)&gt;0\)</span> and <span class="math inline">\((x-4)&gt;0\)</span>, so we must have both <span class="math inline">\(x&gt;4\)</span> and <span class="math inline">\(x&gt;3\)</span>, which means that we must take <span class="math inline">\(x&gt;4\)</span>.</p></li>
 <li><p><span class="math inline">\((x-3)&lt;0\)</span> and <span class="math inline">\((x-4)&lt;0\)</span>, so we require both <span class="math inline">\(x&lt;3\)</span> and <span class="math inline">\(x&lt;4\)</span>, which means we must take <span class="math inline">\(x&lt;3\)</span>.</p></li>
 </ol>
-<p>Since either situation a or b satisfies the inequality the solution is <span class="math inline">\(x&lt;3\)</span> or <span class="math inline">\(x&gt;4\)</span>.</p></li>
+<p>Since if either situation a holds or situation b holds, then the inequality is satisfied, then the solution is <span class="math inline">\(x&lt;3\)</span> or <span class="math inline">\(x&gt;4\)</span>.</p></li>
 <li><p><span class="math inline">\(\left|10-3x\right|\leq 8\)</span>, where <span class="math inline">\(|\cdot|\)</span> denotes the absolute value. We must have both:</p>
 <ol style="list-style-type: lower-alpha">
 <li><p><span class="math display">\[\begin{align*}
@@ -736,16 +745,16 @@ And,</p></li>
 \frac{(x-2)-(x-3)}{x-3}=\frac{1}{x-3}&gt;0
 \end{gather*}\]</span>
 giving the solution <span class="math inline">\(x&gt;3\)</span>.</p>
-<p>We can check the solution graphically by plotting the l.h.s. and r.h.s. and seeing where the l.h.s. is greater than the r.h.s.</p>
+<p>We can check the solution graphically by plotting the left hand side and right hand side and seeing where the left hand side is greater than the right hand side.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:ineq"></span>
 <iframe src="https://www.desmos.com/calculator/ld9jyh4z3y?embed" width="672" height="400px" data-external="1"></iframe>
 <p class="caption">
-Figure 3.6: A plot of the inequality <span class="math inline">\(\frac{1}{x-3}&gt;\frac{1}{x-2}\)</span>: the solid red line is the l.h.s and the dashed blue line is the r.h.s.. We are interested in finding the values of <span class="math inline">\(x\)</span> where the red line is above the blue line (the red-shaded region). <a href="https://www.desmos.com/calculator/ld9jyh4z3y">[Open graph in browser.]</a>
+Figure 3.6: A plot of the inequality <span class="math inline">\(\frac{1}{x-3}&gt;\frac{1}{x-2}\)</span>: the solid red line is the <span class="math inline">\(\frac{1}{x-3}\)</span> and the dashed blue line is the <span class="math inline">\(\frac{1}{x-2}\)</span>. We are interested in finding the values of <span class="math inline">\(x\)</span> where the red line is above the blue line (the red-shaded region). <a href="https://www.desmos.com/calculator/ld9jyh4z3y">[Open graph in browser.]</a>
 </p>
 </div>
-<p>It would appear that something has gone wrong! There is a second interval <span class="math inline">\(x&lt;2\)</span> where the inequality holds true. The problem is that we multiplied by the factor <span class="math inline">\((x-2)\)</span> forgetting the fact that <span class="math inline">\(x\)</span> is a variable, so this factor could be positive or negative depending on the value of <span class="math inline">\(x\)</span> and hence can flip the inequality. We could still perform this multiplication so long as we keep track of the two possible cases when <span class="math inline">\((x-2)\)</span> is positive or negative. However, a safer strategy is to first subtract the r.h.s. from the l.h.s., then factorise as much as possible:</p>
+<p>It would appear that something has gone wrong! There is a second interval <span class="math inline">\(x&lt;2\)</span> where the inequality holds true. The problem is that we multiplied by the factor <span class="math inline">\((x-2)\)</span> forgetting the fact that <span class="math inline">\(x\)</span> is a variable, so this factor could be positive or negative depending on the value of <span class="math inline">\(x\)</span> and hence can flip the inequality. We could still perform this multiplication so long as we keep track of the two possible cases when <span class="math inline">\((x-2)\)</span> is positive or negative. However, a safer strategy is to first subtract the right hand side from the left hand side, then factorise as much as possible:</p>
 <p><span class="math display">\[\frac{1}{x-3}-\frac{1}{x-2}=\frac{(x-2)-(x-3)}{(x-3)(x-2)}=\frac{1}{(x-3)(x-2)}&gt;0.\]</span></p>
-<p>Hence for the denominator to be positive we must have either <span class="math inline">\(x&gt;3\)</span> and <span class="math inline">\(x&gt;2\)</span>, or <span class="math inline">\(x&lt;3\)</span> and <span class="math inline">\(x&lt;2\)</span>. Together these yield the solution <span class="math inline">\(x&lt;2\)</span> or <span class="math inline">\(x&gt;3\)</span>.</p></li>
+<p>Hence for the denominator to be positive we must have either <span class="math inline">\(x&gt;3\)</span> and <span class="math inline">\(x&gt;2\)</span>, or <span class="math inline">\(x&lt;3\)</span> and <span class="math inline">\(x&lt;2.\)</span> Together, these yield the solution <span class="math inline">\(x&lt;2\)</span> or <span class="math inline">\(x&gt;3\)</span>.</p></li>
 </ol>
 </div>
 <p>The general strategy for finding <span class="math inline">\(P&gt;Q\)</span> (or similar) is therefore: (1) Consider <span class="math inline">\(P-Q\)</span> and factorise as much as possible; (2) Determine the sign of each factor of <span class="math inline">\(P-Q\)</span> for varying <span class="math inline">\(x\)</span>; (3) Determine when <span class="math inline">\(P-Q&gt;0\)</span> (and hence when <span class="math inline">\(P&gt;Q\)</span>).</p>
