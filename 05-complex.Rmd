@@ -173,11 +173,11 @@ u &= (re^{i\theta}) \times (se^{i\phi})\\
 \end{align*}
 where $R = rs$ is the distance of $u$ from the origin and $\alpha = \theta + \phi$ is the argument of $u$.
 
-**Caution**: For $z = x + iy$ (with $x \neq 0$), if $\theta = \arg(z)$ then we always have $\tan (\theta) = y/x$. However, this does not mean that $\theta = \tan^{-1}(y/x)$. The $\tan^{-1}$ (or $\arctan$) function can only give values in the first and fourth quadrants (between $-\pi/2$ and $\pi/2$), but the argument of a complex number could be in any of the four quadrants (between $-\pi$ and $\pi$). Therefore, to find the argument of a complex number always draw a diagram. (A quick sketch is all that is needed.)
+**Caution**: For $z = x + iy$ (with $x \neq 0$), if $\theta = \arg(z)$ then we always have $\tan (\theta) = y/x$. However, this does not mean that $\theta = \tan^{-1}(y/x)$. The $\tan^{-1}$ (or $\arctan$) function can only give values in the first and fourth quadrants (between $-\pi/2$ and $\pi/2$), but the argument of a complex number could be in any of the four quadrants (between $-\pi$ and $\pi$). Therefore, to find the argument of a complex number, always draw (or imagine) a diagram. (A quick sketch is all that is needed.)
 
 ## Roots of complex numbers
 
-We know that square roots of positive real numbers have two solutions, for example $\sqrt{4}=\pm 2$. This agrees with Theorem \ref@(thm:FTA) as we could formulate this as a solution to the equation
+We have seen how square roots of positive real numbers have two solutions, for example $\sqrt{4}=\pm 2$. This agrees with Theorem \@ref(thm:FTA) as we could formulate this as a solution to the equation
 
 $$x^2=4$$
 
@@ -189,7 +189,7 @@ and so must have two roots. More generally, the $n^\text{th}$ root of any number
 
 $$z^n-w=0.$$
 
-Theorem \ref@(thm:FTA) implies that there are $n$ solutions, allowing for these to be complex numbers. Furthermore, it turns out that these roots will be distinct (no repeated roots). The easiest way to find these roots is using the exponential form. We can write $w$ as
+Theorem \@ref(thm:FTA) implies that there are $n$ solutions, allowing for these to be complex numbers. Furthermore, it turns out that these roots will be distinct (no repeated roots). The easiest way to find these roots is using the exponential form. We can write $w$ as
 
 $$w=re^{i\theta}$$
 
@@ -197,11 +197,11 @@ then the first $n^\text{th}$ root is
 
 $$w^{\frac{1}{n}}=(re^{i\theta})^\frac{1}{n}=r^\frac{1}{n}e^{i\frac{\theta}{n}}$$
 
-but where are the remaining $n-1$ roots? Well, since we can also write $w=re^{i(\theta+2m\pi)}$, so
+but where are the remaining $n-1$ roots? Well, since we can also write $w=re^{i(\theta+2m\pi)}$, then
 
 $$w^{\frac{1}{n}}=r^{\frac{1}{n}}e^{i(\frac{\theta}{n}+\frac{2m}{n}\pi)}$$
 
-and we have a distinct solution for all values of $m=0,\dotsc,n-1$. Once we reach $m=n$ we have gone full circle and are back to the original solution. To double check these are solutions, we can take them to the power $n$
+and we have a distinct solution for all values of $m=0,\dotsc,n-1$. Once we reach $m=n$ we have gone full circle and are back to the original solution. To double check these are solutions, we can take them to the power $n$:
 
 \begin{align*}
 (r^{\frac{1}{n}}e^{i(\frac{\theta}{n}+\frac{2m}{n}\pi)})^n&=re^{in(\frac{\theta}{n}+\frac{2m}{n}\pi)}\\
@@ -222,7 +222,7 @@ then the solutions are
 \begin{align*}
 w_1&=\sqrt[3]{2}e^{i0}=\sqrt[3]{2}\\
 w_2&=\sqrt[3]{2}e^{i(0+\frac{2\pi}{3})}=\sqrt[3]{2}e^{i\frac{2\pi}{3}}\\
-w_3&=\sqrt[3]{2}e^{i(0+\frac{2(2)\pi}{3})}=\sqrt[3]{2}e^{i\frac{4\pi}{3}}
+w_3&=\sqrt[3]{2}e^{i(0+\frac{2(2)\pi}{3})}=\sqrt[3]{2}e^{i\frac{4\pi}{3}}.
 \end{align*}
 
 ```{r complexrootsexmp, echo=FALSE, fig.cap = "The cube roots of $2$ in the complex plane. Note they are evenly spaced around a circle of radius $\\sqrt[3]{2}$.", fig.alt = "The cube roots of $2$ in the complex plane. Note they are evenly spaced around a circle of radius $\\sqrt[3]{2}$."}
@@ -232,23 +232,26 @@ knitr::include_graphics("figures/complexroots.png")
 
 ## $e^{i\theta}$ and trigonometric identities
 
-There are many double angle, and similar, formulas relating the various trig. functions. Remembering them can be quite a struggle. In fact we can recover them easily using complex numbers in polar form:
+There are many double angle, and similar, formulas relating the various trigonometric functions. Remembering them can be quite a struggle. In fact, we can recover them easily using complex numbers in polar form:
 $$
 e^{i \theta} = \cos (\theta) + i \sin (\theta).
 $$
-So for arbitrary $\theta$ and $\phi$
+So, for arbitrary $\theta$ and $\phi$, 
 $$
 e^{i \theta} e^{i \phi} = \begin{cases} (\cos (\theta) + i \sin (\theta)) \times (\cos (\phi) + i \sin (\phi)) & \text{or} \\ 
 e^{i (\theta + \phi)} = \cos (\theta + \phi) + i \sin (\theta + \phi). \end{cases}
 $$
 It follows that
 \begin{align*}
-(\cos (\theta) + i \sin (\theta)) \times (\cos (\phi) + i \sin (\phi)) 
+(\cos (\theta) + i \sin (\theta)) &\times (\cos (\phi) + i \sin (\phi)) \\
 &= \cos (\theta) \cos (\phi) - \sin (\theta) \sin (\phi) + i (\cos (\theta) \sin (\phi) + \sin (\theta) \cos (\phi))\\
-&= \cos (\theta + \phi) + i \sin (\theta + \phi)
+&= \cos (\theta + \phi) + i \sin (\theta + \phi).
 \end{align*}
 and equating real and imaginary parts on the left and right hand sides gives:
 $$
-\cos (\theta) \cos (\phi) - \sin (\theta) \sin (\phi)	= \cos (\theta + \phi) \qquad
-\text{and}\qquad \cos (\theta) \sin (\phi) + \sin (\theta) \cos (\phi) = \sin (\theta + \phi)
+\cos (\theta) \cos (\phi) - \sin (\theta) \sin (\phi)	= \cos (\theta + \phi)
+$$
+and
+$$
+\cos (\theta) \sin (\phi) + \sin (\theta) \cos (\phi) = \sin (\theta + \phi).
 $$
