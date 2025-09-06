@@ -224,17 +224,18 @@ There are a number of useful relationships between the trigonometric functions. 
 
 ### Pythagorean identities
 
-These follow from the Pythagorean theorem.
+The following identities are a result of the Pythagorean theorem:
 
 \begin{gather*}
 \sin^2(\theta)+\cos^2(\theta)=1\\
 1+\tan^2(\theta)=\sec^2(\theta)\\
 \cot^2(\theta)+1=\operatorname{cosec}^2(\theta).
 \end{gather*}
+Here and hereafter, we adopt the commonly used convention that $\sin^2$ denotes the function for which $\sin^2(\theta) = \sin(\theta) \times \sin(\theta)$ for all inputs $\theta$, and likewise for $\cos^2$ and so forth.
 
 ### Compound angle formulae
 
-The following formulae allow us to manipulate sines, cosines and tangents of the sum or difference of two angles.
+The following formulae allow us to manipulate sines, cosines and tangents of the sum or difference of two angles:
 
 \begin{align*}
 \sin(\theta+\phi)&=\sin(\theta)\cos(\phi)+\cos(\theta)\sin(\phi)\\
@@ -252,27 +253,27 @@ Setting $\phi=\theta$ in the compound angle formulae gives the following double 
 \begin{align*}
 \sin(2\theta)&=2\sin(\theta)\cos(\theta)\\
 \cos(2\theta)&=\cos^2(\theta)-\sin^2(\theta)\\
-\tan(2\theta)&=\frac{2\tan(\theta)}{1-\tan^2(\theta)}
+\tan(2\theta)&=\frac{2\tan(\theta)}{1-\tan^2(\theta).}
 \end{align*}
 
 ### Product to sum formulae
 
-From the compound angle formulae we can derive the following.
+From the compound angle formulae, we can derive the following:
 
 \begin{align*}
 \sin(\theta)\cos(\phi)&=\frac{1}{2}[\sin(\theta+\phi)+\sin(\theta-\phi)]\\
 \cos(\theta)\sin(\phi)&=\frac{1}{2}[\sin(\theta+\phi)-\sin(\theta-\phi)]\\
 \cos(\theta)\cos(\phi)&=\frac{1}{2}[\cos(\theta+\phi)+\cos(\theta-\phi)]\\
-\sin(\theta)\sin(\phi)&=-\frac{1}{2}[\cos(\theta+\phi)-\cos(\theta-\phi)]\\
+\sin(\theta)\sin(\phi)&=-\frac{1}{2}[\cos(\theta+\phi)-\cos(\theta-\phi)].\\
 \end{align*}
 
 ### Sum to product formulae
 
-In the other direction (also derived from the compound angle formulae) we have the following.
+In the other direction (also derived from the compound angle formulae), we have the following:
 
 \begin{align*}
 \sin(\theta)+\sin(\phi)=2\sin\left(\frac{\theta+\phi}{2}\right)\cos\left(\frac{\theta-\phi}{2}\right)\\
 \sin(\theta)-\sin(\phi)=2\cos\left(\frac{\theta+\phi}{2}\right)\sin\left(\frac{\theta-\phi}{2}\right)\\
 \cos(\theta)+\cos(\phi)=2\cos\left(\frac{\theta+\phi}{2}\right)\cos\left(\frac{\theta-\phi}{2}\right)\\
-\cos(\theta)-\cos(\phi)=-2\sin\left(\frac{\theta+\phi}{2}\right)\sin\left(\frac{\theta-\phi}{2}\right)
+\cos(\theta)-\cos(\phi)=-2\sin\left(\frac{\theta+\phi}{2}\right)\sin\left(\frac{\theta-\phi}{2}\right).
 \end{align*}

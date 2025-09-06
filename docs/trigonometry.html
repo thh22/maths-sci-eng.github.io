@@ -565,7 +565,7 @@ with parameters <span class="math inline">\(A,\omega\)</span> and <span class="m
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:sinusoid"></span>
 <img src="figures/sinusoid.png" alt="A sinusoidal wave form labelled with amplitude $A$, phase $\phi$ and period $T$." width="525" />
 <p class="caption">
-Figure 4.5: A sinusoidal wave form. The distance marked <span class="math inline">\(\phi\)</span> should be divided by <span class="math inline">\(\omega\)</span>.
+Figure 4.5: A sinusoidal wave form. The distance marked <span class="math inline">\(\phi\)</span> should be divided by <span class="math inline">\(\omega\)</span> - this is a mistake in the image.
 </p>
 </div>
 <ul>
@@ -585,26 +585,29 @@ Figure 4.6: The function <span class="math inline">\(f(x)=A\sin(\omega x + \phi)
 <p><span class="math display">\[a\cos(\theta)+b\sin(\theta)=R\cos(\theta-\phi)\]</span></p>
 <p>where:</p>
 <p><span class="math inline">\(R=\sqrt{a^2+b^2}\)</span></p>
-<p><span class="math inline">\(\phi=\tan^{-1}(b/a)\)</span></p>
-<p>Such waves are associated with <em>circular motion</em>. If we imagine a particle moving around a circle at a constant angular speed and take the projection onto one of the coordinate axes, for example the <span class="math inline">\(y\)</span>-axis, then the displacement from the origin plotted against time will draw out a sinusoid. This is becuase the position on the <span class="math inline">\(y\)</span>-axis is <span class="math inline">\(y=r\sin(\theta)\)</span>.</p>
-<div class="figure" style="text-align: center">
+<p><span class="math inline">\(\phi=\tan^{-1}(b/a),\)</span></p>
+<p>or, equivalently</p>
+<p><span class="math inline">\(a=R\cos(\phi)\)</span></p>
+<p><span class="math inline">\(b=R\sin(\phi).\)</span></p>
+<p>Such waves are associated with <em>circular motion</em>. If we imagine a particle moving around a circle at a constant angular speed and take the projection onto the <span class="math inline">\(y\)</span>-axis, then the displacement from the origin plotted against time will draw out a sinusoid. This is because the position on the <span class="math inline">\(y\)</span>-axis is <span class="math inline">\(y=r\sin(\theta)\)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:CircularMotion"></span>
 <iframe src="https://www.desmos.com/calculator/7kznu6egdw" width="672" height="400px" data-external="1">
 </iframe>
 <p class="caption">
-(#fig:circular_motion)Click the play button in block 1 (next to variable <span class="math inline">\(t\)</span>, the angle). Demonstration of a sinusoidal wave from circular motion: as the angle <span class="math inline">\(t\)</span> increases and the point moves around the circle (red) the projection onto the <span class="math inline">\(y\)</span> axis (blue) describes a sinusoid (green). <a href="https://www.desmos.com/calculator/7kznu6egdw">[Open graph in browser.]</a>
+Figure 4.7: Click the play button in block 1 (next to variable <span class="math inline">\(t\)</span>, the angle). Demonstration of a sinusoidal wave from circular motion: as the angle <span class="math inline">\(t\)</span> increases and the point moves around the circle (red) the projection onto the <span class="math inline">\(y\)</span> axis (blue) describes a sinusoid (green). <a href="https://www.desmos.com/calculator/7kznu6egdw">[Open graph in browser.]</a>
 </p>
 </div>
 </div>
 <div id="trigonometric-identities" class="section level2 hasAnchor" number="4.7">
 <h2><span class="header-section-number">4.7</span> Trigonometric identities<a href="trigonometry.html#trigonometric-identities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Recall that there are a number of useful relationships between the trigonometric functions. Here are some key ones.</p>
+<p>There are a number of useful relationships between the trigonometric functions. Here are some key ones.</p>
 <div id="pythagorean-identities" class="section level3 hasAnchor" number="4.7.1">
 <h3><span class="header-section-number">4.7.1</span> Pythagorean identities<a href="trigonometry.html#pythagorean-identities" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>These follow from the Pythagorean theorem.</p>
 <p><span class="math display">\[\begin{gather*}
 \sin^2(\theta)+\cos^2(\theta)=1\\
 1+\tan^2(\theta)=\sec^2(\theta)\\
-\cot^2(\theta)+1=\operatorname{cosec}^2(\theta)
+\cot^2(\theta)+1=\operatorname{cosec}^2(\theta).
 \end{gather*}\]</span></p>
 </div>
 <div id="compound-angle-formulae" class="section level3 hasAnchor" number="4.7.2">
@@ -616,7 +619,7 @@ Figure 4.6: The function <span class="math inline">\(f(x)=A\sin(\omega x + \phi)
 \cos(\theta+\phi)&amp;=\cos(\theta)\cos(\phi)-\sin(\theta)\sin(\phi)\\
 \cos(\theta-\phi)&amp;=\cos(\theta)\cos(\phi)+\sin(\theta)\sin(\phi)\\
 \tan(\theta+\phi)&amp;=\frac{\tan(\theta)+\tan(\phi)}{1-\tan(\theta)\tan(\phi)}\\
-\tan(\theta-\phi)&amp;=\frac{\tan(\theta)-\tan(\phi)}{1+\tan(\theta)\tan(\phi)}
+\tan(\theta-\phi)&amp;=\frac{\tan(\theta)-\tan(\phi)}{1+\tan(\theta)\tan(\phi)}.
 \end{align*}\]</span></p>
 </div>
 <div id="double-angle-formulae" class="section level3 hasAnchor" number="4.7.3">
