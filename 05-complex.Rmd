@@ -152,7 +152,7 @@ e^{i\theta}=\cos (\theta) + i \sin(\theta).
 $$
 :::
 
-This can be derived from the power series of $e^\theta, \sin(\theta)$ and $\cos(\theta)$, which we will cover in section \ref@(PowerSeries). Euler's formula allows us to write any complex number $z$ in yet another form, the *exponential form* of $z$:
+This can be derived from the power series of $e^\theta, \sin(\theta)$ and $\cos(\theta)$, which we will cover in section \@ref(PowerSeries). Euler's formula allows us to write any complex number $z$ in yet another form, the *exponential form* of $z$:
 $$
 z = r (\cos (\theta) + i \sin (\theta)) = re^{i\theta}.
 $$

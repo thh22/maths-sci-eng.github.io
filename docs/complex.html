@@ -241,7 +241,7 @@
 <ul>
 <li class="chapter" data-level="14.1" data-path="series.html"><a href="series.html#sigma-notation"><i class="fa fa-check"></i><b>14.1</b> Sigma Notation</a></li>
 <li class="chapter" data-level="14.2" data-path="series.html"><a href="series.html#infinite-series"><i class="fa fa-check"></i><b>14.2</b> Infinite Series</a></li>
-<li class="chapter" data-level="14.3" data-path="series.html"><a href="series.html#power-series"><i class="fa fa-check"></i><b>14.3</b> Power Series</a></li>
+<li class="chapter" data-level="14.3" data-path="series.html"><a href="series.html#PowerSeries"><i class="fa fa-check"></i><b>14.3</b> Power Series</a></li>
 <li class="chapter" data-level="14.4" data-path="series.html"><a href="series.html#taylor-series"><i class="fa fa-check"></i><b>14.4</b> Taylor Series</a>
 <ul>
 <li class="chapter" data-level="14.4.1" data-path="series.html"><a href="series.html#linearisation"><i class="fa fa-check"></i><b>14.4.1</b> Linearisation</a></li>
@@ -382,12 +382,12 @@
             <section class="normal" id="section-">
 <div id="complex" class="section level1 hasAnchor" number="5">
 <h1><span class="header-section-number">Chapter 5</span> Complex Numbers<a href="complex.html#complex" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>We are familiar with integers (<span class="math inline">\(\dots, -5, -4, -3, -2, -1, 0, 1 \dots\)</span>), denoted by <span class="math inline">\(\mathbb{Z}\)</span>, and rational numbers (<span class="math inline">\(1/2, 4/5\)</span>, etc.), denoted by <span class="math inline">\(\mathbb{Q}\)</span>. We also know about irrational numbers such as <span class="math inline">\(e\)</span>, <span class="math inline">\(\pi\)</span> (the area of a circle with radius equal to <span class="math inline">\(1\)</span>) or <span class="math inline">\(\sqrt{2}\)</span> — one solution of the quadratic equation
+<p>Thus far, we have been working with integers (<span class="math inline">\(\dots, -5, -4, -3, -2, -1, 0, 1 \dots\)</span>), denoted by <span class="math inline">\(\mathbb{Z}\)</span>, and rational numbers (<span class="math inline">\(1/2, 4/5\)</span>, etc.), denoted by <span class="math inline">\(\mathbb{Q}\)</span>. We have also discussed irrational numbers such as <span class="math inline">\(e\)</span>, <span class="math inline">\(\pi\)</span> (the area of a circle with radius equal to <span class="math inline">\(1\)</span>) or <span class="math inline">\(\sqrt{2}\)</span> — one solution of the quadratic equation
 <span class="math display">\[
 x^2 - 2 = 0.
 \]</span>
 The collection of natural numbers, integers, rational and irrational numbers make up what we call the <em>real numbers</em>, denoted by <span class="math inline">\(\mathbb{R}\)</span>.</p>
-<p>But do we have “enough” numbers? The answer is no! We do not have to look hard for why we do not have enough numbers. The simple equation
+<p>But do we have “enough” numbers? Arguably, the answer to this question is no! For example, consider the simple equation
 <span class="math display">\[
 x^2 + 1 = 0
 \]</span>
@@ -398,7 +398,7 @@ a x^2 + b x + c = 0, \quad \text{with}\quad b^2 - 4 ac &lt; 0
 does not have real number solutions!</p>
 <div id="i-and-complex-numbers" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> <span class="math inline">\(i\)</span> and complex numbers<a href="complex.html#i-and-complex-numbers" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Our fix is to define the <em>imaginary number</em> <span class="math inline">\(i\)</span> by<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>
+<p>One approach to this issue is to define the <em>imaginary number</em> <span class="math inline">\(i\)</span> by<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>
 <span class="math display">\[
 i = \sqrt{-1},\quad \text{ so that }\quad i^2 = -1.
 \]</span>
@@ -416,7 +416,7 @@ x = -2 \pm 3 i.
 <span class="math display">\[
 z = x + i y, \quad \text{where $x$ and $y$ are real numbers}.
 \]</span>
-This form is also called the <em>Cartesian representation</em> of a complex number. It has a <em>real part</em> <span class="math inline">\(\mathbf{Re}(z) = x\)</span> and an <em>imaginary part</em> <span class="math inline">\(\mathbf{Im}(z) = y\)</span>. We can then represent a complex number graphically by plotting the real and imaginary parts as coordinates in a Cartesian coordinate system, as in figure <a href="complex.html#fig:complexcart">5.1</a>, known as the <em>complex plane</em>. The <span class="math inline">\(x\)</span>-axis is called the <em>real axis</em> and the <span class="math inline">\(y\)</span>-axis is called the <em>imaginary axis</em>.</p>
+This form is also called the <em>Cartesian representation</em> of a complex number. It has a <em>real part</em> <span class="math inline">\(\mathbf{Re}(z) = x\)</span> and an <em>imaginary part</em> <span class="math inline">\(\mathbf{Im}(z) = y\)</span>. We can then represent a complex number graphically by plotting the real and imaginary parts as coordinates in a Cartesian coordinate system known as the <em>complex plane</em>, as in figure <a href="complex.html#fig:complexcart">5.1</a>. The <span class="math inline">\(x\)</span>-axis is called the <em>real axis</em> and the <span class="math inline">\(y\)</span>-axis is called the <em>imaginary axis</em>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:complexcart"></span>
 <img src="figures/complexcart.png" alt="The complex number $z = x + iy$ in Cartesian coordinates." width="384" />
 <p class="caption">
@@ -430,9 +430,9 @@ Figure 5.1: The complex number <span class="math inline">\(z = x + iy\)</span> i
 </div>
 <p>To clarify the above theorem, we are talking about a polynomial of the form
 <span class="math display">\[f(x)=a_0 + a_1 x + a_2 x^2 + \dotsb + a_n x^n\]</span>
-where the variable <span class="math inline">\(x\)</span> can be a complex number (so can also be a real number) and the coefficients <span class="math inline">\(a_i\)</span> are complex numbers (so can also be real numbers) and at least one of these coefficients is not <span class="math inline">\(0\)</span>. Since we allow the single variable <span class="math inline">\(x\)</span> to be a complex number, the roots may be complex numbers. Note that some of the <span class="math inline">\(n\)</span> roots might be <em>repeated roots</em>, for example, according to the theorem the quadratic
+where the variable <span class="math inline">\(x\)</span> can be a complex number (so can also be a real number) and the coefficients <span class="math inline">\(a_i\)</span> are complex numbers (so can also be real numbers), and at least one of these coefficients is not <span class="math inline">\(0\)</span>. Since we allow the single variable <span class="math inline">\(x\)</span> to be a complex number, the roots may be complex numbers. Note that some of the <span class="math inline">\(n\)</span> roots might be <em>repeated roots</em>. For example, the quadratic
 <span class="math display">\[x^2-4x+4=(x-2)(x-2)\]</span>
-must have two roots and in this case they happen to be repeated roots; we say the root is <span class="math inline">\(x=2\)</span> with <em>multiplicity</em> 2.</p>
+is considered, in the Fundamental Theorem of Algebra, to have two roots, which happen to be repeated roots; we say the root <span class="math inline">\(x=2\)</span> has <em>multiplicity</em> 2.</p>
 </div>
 <div id="complex-arithmetic" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Complex arithmetic<a href="complex.html#complex-arithmetic" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -443,7 +443,7 @@ z - w &amp;= (x + iy) - (u + iv) = (x-u) + i (y-v),\\
 z \times w &amp;= (x + iy) \times (u + iv) = x u + i x v + i yu + i^2 y v = (xu - yv) + i (xv + yu).
 \end{align*}\]</span></p>
 <div class="example">
-<p><span id="exm:complexarithmetic" class="example"><strong>Example 5.1  (Complex Arithmetic) </strong></span>Let <span class="math inline">\(z = 3 - 5i\)</span> (that is, <span class="math inline">\(z = 3 + (-5)i\)</span>) and <span class="math inline">\(w = 2 + i\)</span> then
+<p><span id="exm:complexarithmetic" class="example"><strong>Example 5.1  (Complex Arithmetic) </strong></span>Let <span class="math inline">\(z = 3 - 5i\)</span> (that is, <span class="math inline">\(z = 3 + (-5)i\)</span>) and <span class="math inline">\(w = 2 + i\)</span>. Then
 <span class="math display">\[
 z + w = 5 - 4i, \qquad z - w = 1 - 6i,
 \]</span>
@@ -462,16 +462,17 @@ This is the “mirror image” of <span class="math inline">\(z\)</span> in the 
 <span class="math display">\[
 |z| = \sqrt{x^2 + y^2} \qquad \text{(the non-negative square root).}
 \]</span>
-Geometrically, this is the distance of <span class="math inline">\(z\)</span> (i.e. the point <span class="math inline">\(P\)</span>) from the origin – See figure <a href="complex.html#fig:complexcart">5.1</a>. Note that if <span class="math inline">\(b = 0\)</span> (so that <span class="math inline">\(z\)</span> is actually a real number), then this definition of <span class="math inline">\(|z|\)</span> agrees with the usual modulus (absolute value) for real numbers.</p>
+Geometrically, this is the distance of <span class="math inline">\(z\)</span> (i.e. the point <span class="math inline">\(P\)</span> in figure <a href="complex.html#fig:complexcart">5.1</a>) from the origin. Note that if <span class="math inline">\(b = 0\)</span> (so that <span class="math inline">\(z\)</span> is actually a real number), then this definition of <span class="math inline">\(|z|\)</span> agrees with the usual modulus (absolute value) for real numbers.</p>
 <div class="example">
 <p><span id="exm:conjugate" class="example"><strong>Example 5.2  (Complex conjugate) </strong></span>For <span class="math inline">\(z = 2 - i\)</span>, we have <span class="math inline">\(\overline{z} = 2 + i\)</span> and <span class="math inline">\(|z| = \sqrt{2^2 + (-1)^2} = \sqrt{5}\)</span>.</p>
 </div>
-<p>Some properties of modulus and conjugate: For any complex numbers <span class="math inline">\(z, w\)</span>,</p>
+<p>Here are some properties of the modulus and conjugate.</p>
+<p>For any complex numbers <span class="math inline">\(z, w\)</span>,</p>
 <ul>
 <li><span class="math inline">\(\overline{\overline{z}} = z\)</span>;</li>
-<li><span class="math inline">\(\overline{z \pm w} = \overline{z} + \overline{w}\)</span>;</li>
+<li><span class="math inline">\(\overline{z + w} = \overline{z} + \overline{w}\)</span>;</li>
 <li><span class="math inline">\(\overline{z\times w} = \overline{z}\times \overline{w}\)</span>;</li>
-<li><span class="math inline">\(|z|\)</span> is a positive real number unless <span class="math inline">\(z = 0\)</span> with <span class="math inline">\(|0| = 0\)</span>;</li>
+<li><span class="math inline">\(|z|\)</span> is a positive real number unless <span class="math inline">\(z = 0\)</span>, and <span class="math inline">\(|0| = 0\)</span>;</li>
 <li><span class="math inline">\(z\times \overline{z} = |z|^2\)</span>;</li>
 <li><span class="math inline">\(|z\times w| = |z|\,|w|\)</span>.</li>
 </ul>
@@ -483,7 +484,7 @@ Geometrically, this is the distance of <span class="math inline">\(z\)</span> (i
 \frac{z}{w}&amp;=\frac{2 + 3i}{4 - 2i}\frac{4+2i}{4+2i}\\
 &amp;=\frac{8+4i+12i+6i^2}{16+4}\\
 &amp;=\frac{2+16i}{20}\\
-&amp;=\frac{1}{10}+\frac{4}{5}i
+&amp;=\frac{1}{10}+\frac{4}{5}i.
 \end{align*}\]</span></p>
 </div>
 <p>A useful fact: if a polynomial has <em>real</em> coefficients and has a complex root <span class="math inline">\(z\)</span>, then its complex conjugate <span class="math inline">\(\overline{z}\)</span> is also a root; we say that complex roots appear in <em>complex conjugate pairs</em> in real polynomials.</p>
@@ -517,7 +518,7 @@ z = r \cos(\theta) + i (r \sin(\theta)) = r (\cos(\theta) + i \sin(\theta)),
 e^{i\theta}=\cos (\theta) + i \sin(\theta).
 \]</span></p>
 </div>
-<p>This can be derived from the power series of <span class="math inline">\(e^\theta, \sin(\theta)\)</span> and <span class="math inline">\(\cos(\theta)\)</span>. Eulers formula allows us to write any complex number <span class="math inline">\(z\)</span> in yet another form, the <em>exponential form</em> of <span class="math inline">\(z\)</span>:
+<p>This can be derived from the power series of <span class="math inline">\(e^\theta, \sin(\theta)\)</span> and <span class="math inline">\(\cos(\theta)\)</span>, which we will cover in section (PowerSeries). Euler’s formula allows us to write any complex number <span class="math inline">\(z\)</span> in yet another form, the <em>exponential form</em> of <span class="math inline">\(z\)</span>:
 <span class="math display">\[
 z = r (\cos (\theta) + i \sin (\theta)) = re^{i\theta}.
 \]</span></p>
