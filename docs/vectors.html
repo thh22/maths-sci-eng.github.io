@@ -382,35 +382,27 @@
             <section class="normal" id="section-">
 <div id="vectors" class="section level1 hasAnchor" number="6">
 <h1><span class="header-section-number">Chapter 6</span> Vectors<a href="vectors.html#vectors" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>In physics, we distiguish between <em>scalar</em> quantities and <em>vector</em> quantities:</p>
+<p>We first describe the distinction between <em>scalar</em> quantities and <em>vector</em> quantities:</p>
 <ul>
 <li>Scalars are defined by a single numeric value. Examples include distance, speed, time, temperature, pressure, mass and energy.</li>
-<li>Vectors have associated both a numeric value and a direction. Examples include displacement, velocity, acceleration, force, and momentum.</li>
+<li>Vectors have associated both a numeric value and a direction. For objects in three dimensional space, examples include displacement, velocity, acceleration, force, and momentum. These each correspond to three dimensional vector.</li>
 </ul>
-<p>We depict vectors by arrows whose length is proportional to the magnitude of the quantity in question and whose direction is that of the action of the quantity. In symbols, we will use bold typeface to indicate a vector, such as <span class="math inline">\(\mathbf{v}\)</span>, and we will denote a vector from point <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> by <span class="math inline">\(\overrightarrow{AB}\)</span>. See figure <a href="vectors.html#fig:vector">6.1</a>.</p>
+<p>Vectors in two or three dimensions are often depicted as arrows whose length is proportional to the magnitude of the quantity in question and whose direction is that of the action of the quantity. In symbols, we will use bold typeface to indicate a vector, such as <span class="math inline">\(\mathbf{v}\)</span>, and we will denote a vector from point <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span> by <span class="math inline">\(\overrightarrow{AB}\)</span>. See figure <a href="vectors.html#fig:vector">6.1</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:vector"></span>
 <img src="figures/vector.png" alt="A vector $\mathbf{v}$ between points $A$ and $B$." width="40%" />
 <p class="caption">
 Figure 6.1: The vector <span class="math inline">\(\mathbf{v} = \overrightarrow{AB}\)</span> is the vector from <span class="math inline">\(A\)</span> to <span class="math inline">\(B\)</span>.
 </p>
 </div>
-<p>Next we develop the mathematics of vectors. They are invaluable tools in science and engineering and in particular they can make light work of some otherwise difficult geometric calculations.</p>
+<p>Next we develop the mathematics of vectors. They are very valuable tools and can make light work of some otherwise difficult calculations.</p>
 <div id="vector-addition" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> Vector addition<a href="vectors.html#vector-addition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Geometrically, to add two vectors together we can place the tail of one vector at the head of the other and take the vector that goes from the starting point to the finish point.</p>
+<p>Geometrically, to add two 2 dimensional vectors together, or to add two 3 dimensional vectors together, we can place the tail of one vector at the head of the other and take the vector that goes from the starting point to the finish point.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:label"></span>
 <img src="figures/vecadd.png" alt="Geometric addition of two vectors $\textbf{v}$ and $\textbf{w}$ by aligning them tail to head." width="30%" />
 <p class="caption">
 Figure 6.2: Addition of two vectors <span class="math inline">\(\textbf{v}\)</span> and <span class="math inline">\(\textbf{w}\)</span> by aligning them tail to head.
 </p>
-</div>
-<div class="example">
-<p><span id="exm:vecadd" class="example"><strong>Example 6.1  (Vector addition) </strong></span>A swallow is flying at 40 km/h due north with an easterly wind blowing at a speed of 20 km/h. The swallow’s groundspeed can be found by adding the velocity vectors:
-<span class="math display">\[\begin{align*}
-\mathbf{v} &amp;= 40 \text{ km/h North}\\
-\mathbf{w} &amp;= 20 \text{ km/h West}\\
-\mathbf{v}+\mathbf{w}&amp;=20\sqrt{5} \text{ km/h North by North West}.
-\end{align*}\]</span></p>
 </div>
 <p>Alternatively, we can use the parallelogram rule (which amounts to the same thing): we draw a parallelogram with two of the non-parallel sides given by the vectors and take the diagonal as the resultant vector, as in figure <a href="vectors.html#fig:vecaddpara">6.3</a>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:vecaddpara"></span>
@@ -419,12 +411,23 @@ Figure 6.2: Addition of two vectors <span class="math inline">\(\textbf{v}\)</sp
 Figure 6.3: Parallelogram for addition of two vectors <span class="math inline">\(\textbf{v}\)</span> and <span class="math inline">\(\textbf{w}\)</span>.
 </p>
 </div>
+<div class="example">
+<p><span id="exm:vecadd" class="example"><strong>Example 6.1  (Vector addition) </strong></span>A swallow is flying at 40 km/h due north with an easterly wind blowing at a speed of 20 km/h. The swallow’s velocity can be found by adding the velocity vectors:
+<span class="math display">\[\begin{align*}
+\mathbf{v} &amp;= 40 \text{ km/h North}\\
+\mathbf{w} &amp;= 20 \text{ km/h West}.
+\end{align*}\]</span>
+This vector addition can be shown to result in the overall velocity of
+<span class="math display">\[
+\mathbf{v}+\mathbf{w}&amp;=20\sqrt{5} \text{ km/h North by North West}.
+\]</span></p>
+</div>
 </div>
 <div id="scalar-multiplication" class="section level2 hasAnchor" number="6.2">
 <h2><span class="header-section-number">6.2</span> Scalar multiplication<a href="vectors.html#scalar-multiplication" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>If we multiply a vector by a positive scalar, we change only the magnitude of the vector and keep its direction. For example, if the swallow in example <a href="vectors.html#exm:vecadd">6.1</a> starts flying twice as fast, we have the velocity vector
+<p>If we multiply a vector by a positive scalar, we change only the magnitude of the vector and keep its direction the same. For example, if the swallow in example <a href="vectors.html#exm:vecadd">6.1</a> starts flying twice as fast, we have the velocity vector
 <span class="math display">\[2\mathbf{v} = 80 \text{ km/h North}.\]</span>
-If we multiply by a negative value, the vector now points in the opposite direction:
+If we multiply by a negative value, the direction of the vector is reversed:
 <span class="math display">\[-2\mathbf{v} = 80 \text{ km/h South}.\]</span></p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:scalarmult"></span>
 <img src="figures/scalarmult.png" alt="Scalar multiplication of a vector $\mathbf{v}$." width="25%" />

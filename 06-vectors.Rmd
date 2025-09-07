@@ -36,8 +36,9 @@ A swallow is flying at 40 km/h due north with an easterly wind blowing at a spee
 \mathbf{w} &= 20 \text{ km/h West}.
 \end{align*}
 This vector addition can be shown to result in the overall velocity of
+
 $$
-\mathbf{v}+\mathbf{w}&=20\sqrt{5} \text{ km/h North by North West}.
+\mathbf{v}+\mathbf{w}=20\sqrt{5} \text{ km/h North by North West}.
 $$
 :::
 
@@ -52,13 +53,13 @@ $$-2\mathbf{v} = 80 \text{ km/h South}.$$
 knitr::include_graphics("figures/scalarmult.png")
 ```
 
-Finally, if we multiply by $0$, we get the *zero-vector* $\mathbf{0}$, which has magnitude $0$ and no direction:
-$$0\mathbf{v}=\mathbf{0}$$.
+Finally, if we multiply by $0$, we get the *zero-vector* $\mathbf{0}$, which has magnitude $0$:
+$$0\mathbf{v}=\mathbf{0}.$$
 
 
 ## Vectors in Cartesian coordinates
 
-We mostly deal with vectors in a Cartesian coordinate system. We then define vectors of length 1 that point out from the origin along the coordinate axes. In three dimensions we label these as $\mathbf{i}$ along the $x$-axis, $\mathbf{j}$ along the $y$-axis and $\mathbf{k}$ along the $z$-axis. In two dimensions we simply drop the $\mathbf{k}$ vector.
+We mostly deal with vectors in a Cartesian coordinate system. We then define vectors of length 1 that point out from the origin along the coordinate axes. In three dimensions we label these as $\mathbf{i}$ along the $x$-axis, $\mathbf{j}$ along the $y$-axis, and $\mathbf{k}$ along the $z$-axis. In two dimensions, we simply drop the $\mathbf{k}$ vector.
 
 We can then write any vector $\overrightarrow{OA}$ from the origin $O$ to a point $A$ as some combination of the these vectors. For example, the vector in the plane from the origin to the point $A=(2,3)$ is given by:
 $$\overrightarrow{OA}=2\mathbf{i} + 3\mathbf{j}.$$
@@ -86,16 +87,16 @@ z
 \end{pmatrix}.
 $$
 
-Now addition and scalar multiplication can be carried out component-wise as follows. If we have
+Addition and scalar multiplication can be carried out component-wise as follows. If we have
 $$\mathbf{v}=x\mathbf{i}+y\mathbf{j}+z\mathbf{k}$$
 and
 $$\mathbf{w}=x'\mathbf{i}+y'\mathbf{j}+z'\mathbf{k}$$
 then
-$$\mathbf{v}+\mathbf{w}=(x+x')\mathbf{i}+(y+y')\mathbf{j}+(z+z')\mathbf{k}$$
-and with $a$ a scalar,
+$$\mathbf{v}+\mathbf{w}=(x+x')\mathbf{i}+(y+y')\mathbf{j}+(z+z')\mathbf{k}.$$
+Also, for any given scalar $a$,
 $$a\mathbf{v}=ax\mathbf{i}+ay\mathbf{j}+az\mathbf{k}.$$
 
-Or, as column vectors with
+Equivalently, writing $\mathbf{v}$ and $\mathbf{w}$ as column vectors:
 $$
 \mathbf{v} = 
 \begin{pmatrix}
@@ -109,14 +110,14 @@ z
 x'\\
 y'\\
 z'
-\end{pmatrix}
+\end{pmatrix},
 $$
-we have
+we have that
 $$\mathbf{v}+\mathbf{w}= \begin{pmatrix}
 x+x'\\
 y+y'\\
 z+z'
-\end{pmatrix}.
+\end{pmatrix},
 $$
 and
 $$
@@ -133,8 +134,8 @@ $$\overrightarrow{AB} = \begin{pmatrix} b_1 - a_1 \\ b_2 - a_2\\ b_3 - a_3\end{p
 $$
 In 3-dimensional Cartesian coordinates, the *length* of the vector
 $$\mathbf{v} = \begin{pmatrix} x\\ y\\ z\end{pmatrix}$$
-is written as $|\mathbf{v}|$ and defined as
-$$|\mathbf{v}| = \sqrt{x^2 + y^2 + z^2}$$.
+is written as $|\mathbf{v}|$, and defined as
+$$|\mathbf{v}| = \sqrt{x^2 + y^2 + z^2}.$$
 This is essentially a three-dimensional version of the Pythagorean theorem.
 
 A vector $\mathbf{u}$ is said to be a *unit vector* if it has unit length. That is, if $|\mathbf{u}| = 1$. For any non-zero vector $\mathbf{v}$, the vector
@@ -145,7 +146,7 @@ is a unit vector in the same direction as $\mathbf{v}$.
 
 ::: {.example #unitvec}
 Let 
-$$\mathbf{v} = \begin{pmatrix} 2\\ -3\\ 6\end{pmatrix}$$
+$$\mathbf{v} = \begin{pmatrix} 2\\ -3\\ 6\end{pmatrix}.$$
 
 Then the length of $\mathbf{v}$ is $|\mathbf{v}| = \sqrt{2^2 + 3^2 + 6^2} = 7$. So the unit vector $\mathbf{u}$ parallel to $\mathbf{v}$ is
 $$
@@ -155,11 +156,11 @@ $$
 
 ## Vector products
 
-We have seen how to add vectors and how to multiply vectors with a scalar. In the following, we see how to multiply two vectors with each other.
+We have explained how to add vectors and how to multiply vectors with a scalar. In the following, we describe two vector *products*.
 
 ### Dot product
 
-The *dot product* (also called the *scalar product* or *inner product*) of two vectors $\mathbf{u}$ and $\mathbf{v}$, denoted $\mathbf{u}\cdot\mathbf{v}$, is defined to be the quantity
+Given a pair of vectors $\mathbf{u}$ and $\mathbf{v}$ that are both two dimensional (or both three dimensional), their *dot product* (also called the *scalar product* or *inner product*), denoted $\mathbf{u}\cdot\mathbf{v}$, is equal to
 \begin{equation}
 \mathbf{u}\cdot\mathbf{v} = |\mathbf{u}||\mathbf{v}|\cos(\theta)
 (\#eq:dotprod)
@@ -169,10 +170,10 @@ where $\theta$ is the angle between the vectors $\mathbf{u}$ and $\mathbf{v}$. N
 ```{r dotproj, echo=FALSE, fig.cap = "The projection of $\\mathbf{v}$ onto $\\mathbf{u}$.", fig.alt = "The projection of $\\mathbf{v}$ onto $\\mathbf{u}$.", out.width= "40%"}
 knitr::include_graphics("figures/dotproj.png")
 ```
-An immediate application of the scalar product is the projection of one vector onto another. Consider Figure \@ref(fig:dotproj), which shows the projection of the vector $\mathbf{v}$ onto the vector $\mathbf{u}$. We drop a line from the tip of $\mathbf{v}$ running at right angles to the direction of the vector $\mathbf{u}$. This is akin to thinking of the shadow that $\mathbf{v}$ would cast on the vector $\mathbf{u}$ if the Sun is shining at right angles to $\mathbf{u}$. The length of the shadow is the projection of $\mathbf{v}$ onto $\mathbf{u}$, or
+An immediate application of the scalar product is the projection of one vector onto another. Consider Figure \@ref(fig:dotproj), which shows the projection of the vector $\mathbf{v}$ onto the vector $\mathbf{u}$. We drop a line from the tip of $\mathbf{v}$ running at right angles to the direction of the vector $\mathbf{u}$. This is akin to thinking of the shadow that $\mathbf{v}$ would cast on the vector $\mathbf{u}$ if the sun is shining at right angles to $\mathbf{u}$. The length of the shadow is the projection of $\mathbf{v}$ onto $\mathbf{u}$, or
 $$|\mathbf{v}|\cos(\theta).$$
 We have:
-$$\mathbf{u} \cdot \mathbf{v} = |\mathbf{u}| \times \text{projection of $\mathbf{v}$ onto $\mathbf{u}$}$$
+$$\mathbf{u} \cdot \mathbf{v} = |\mathbf{u}| \times \text{projection of $\mathbf{v}$ onto $\mathbf{u}$}.$$
 Since there was nothing special about choosing the projection onto $\mathbf{v}$ -- we could have chosen the projection onto $\mathbf{u}$ -- it is also true that:
 $$\mathbf{u} \cdot \mathbf{v}= |\mathbf{v}| \times \text{projection of $\mathbf{u}$ onto $\mathbf{v}$}.$$
 
@@ -194,9 +195,9 @@ W &= |\mathbf{F}|\cos(\theta) \times |\mathbf{x}| \\
 i.e. the dot product of $\mathbf{F}$ and $\mathbf{x}$.
 :::
 
-Note that if the dot product is $\mathbf{u}\cdot\mathbf{v}=0$ then either $\cos(\frac{\pi}{2})=0$ so that the two vectors are perpendicular, or one or both of $\mathbf{u}$ and $\mathbf{v}$ are the zero vector $\mathbf{0}$. When the dot product is zero, we say that the two vectors are *orthogonal*.
+Note that if the dot product is $\mathbf{u}\cdot\mathbf{v}=0$, then either $\cos(\frac{\pi}{2})=0$ so that the two vectors are perpendicular, or one or both of $\mathbf{u}$ and $\mathbf{v}$ are the zero vector $\mathbf{0}$. When the dot product is zero, we say that the two vectors are *orthogonal*.
 
-Some other properties of the dot product that follow from the definition are:
+Some other properties of the dot product are:
 
 * $\mathbf{u} \cdot \mathbf{v} = \mathbf{v} \cdot \mathbf{u}$;
 * $(a\mathbf{u}) \cdot \mathbf{v} = \mathbf{u} \cdot (a\mathbf{v})= a(\mathbf{u} \cdot \mathbf{v})$;
@@ -204,7 +205,7 @@ Some other properties of the dot product that follow from the definition are:
 * $\mathbf{u}\cdot\mathbf{u} = |\mathbf{u}|^2$.
 
 
-::: {.theorem #calcdot name="Calculating the dot product"}
+::: {.example #calcdot name="Calculating the dot product"}
 In Cartesian coordinates, the dot product of two vectors
 $$\mathbf{u} = x\mathbf{i} + y\mathbf{j} + z\mathbf{k} \qquad\text{and}\qquad \mathbf{v} = a\mathbf{i} + b\mathbf{j} + c\mathbf{k}$$
 can be calulated as
@@ -217,10 +218,9 @@ To see this, consider the full product:
 \begin{align*}
 \mathbf{u} \cdot \mathbf{v} &= xa \mathbf{i} \cdot \mathbf{i} + xb \mathbf{i} \cdot \mathbf{j} + xc \mathbf{i} \cdot \mathbf{k} \\
 &\phantom{={}} + ya \mathbf{j} \cdot \mathbf{i} + yb \mathbf{j} \cdot \mathbf{j} + yc \mathbf{j} \cdot \mathbf{k} \\
-&\phantom{={}} + za \mathbf{k} \cdot \mathbf{i} + zb \mathbf{k} \cdot \mathbf{j} + zc \mathbf{k} \cdot \mathbf{k} \\
-&= xa + yb + zc,
+&\phantom{={}} + za \mathbf{k} \cdot \mathbf{i} + zb \mathbf{k} \cdot \mathbf{j} + zc \mathbf{k} \cdot \mathbf{k}.
 \end{align*}
-then noting that the unit vectors $\mathbf{i}$, $\mathbf{j}$ and $\mathbf{k}$ have unit length and are perpendicular to one another, we first have by the property $\mathbf{u}\cdot\mathbf{u}=|\mathbf{u}|^2$ that
+Noting that the unit vectors $\mathbf{i}$, $\mathbf{j}$ and $\mathbf{k}$ have unit length and are perpendicular to one another, we first have by the property $\mathbf{u}\cdot\mathbf{u}=|\mathbf{u}|^2$ that
 $$
 \mathbf{i}\cdot\mathbf{i} = \mathbf{j}\cdot\mathbf{j} =\mathbf{k}\cdot\mathbf{k}=1,
 $$
@@ -231,6 +231,10 @@ and secondly, by orthogonality each of the following products are zero
 \mathbf{k} \cdot \mathbf{i}&,\; \mathbf{k} \cdot \mathbf{j}.
 \end{align*}
 
+It then follows that
+$$
+\mathbf{u} \cdot \mathbf{v} = xa + yb + zc.
+$$
 
 ::: {.example #dottriangle name="Geometry"}
 Consider a triangle in three-dimensional space whose vertices are given by the points
@@ -277,13 +281,13 @@ $$
 
 ### Cross product 
 
-Let $\mathbf{u}$ and $\mathbf{v}$ be vectors in a three-dimensional space and let $\theta$ be the angle between the vectors. Note there are potentially two choices for the angle between two vectors: both $\theta$ and $2\pi - \theta$. Unlike the case of the dot product, we need to be clear about our choice of angle $\theta$. We choose the angle $\theta$ such that $0 \le \theta < \pi$. The *cross product* (or *vector product*) $\mathbf{u}\times\mathbf{v}$ of two vectors $\mathbf{u}$ and $\mathbf{v}$ in three-dimensional space is defined to be the (unique) vector of length
+Let $\mathbf{u}$ and $\mathbf{v}$ be vectors in a three-dimensional space and let $\theta$ be the angle between the vectors. Note there are potentially two choices for the angle between two vectors: both $\theta$ and $2\pi - \theta$. Unlike the case of the dot product, we need to be clear about our choice of angle $\theta$. We choose the angle $\theta$ such that $0 \le \theta < \pi$. The *cross product* (or *vector product*) $\mathbf{u}\times\mathbf{v}$ of two vectors $\mathbf{u}$ and $\mathbf{v}$ in three-dimensional space is then defined to be the (unique) vector of length
 $$
 |\mathbf{u}||\mathbf{v}|\sin(\theta)
 $$
 that is orthogonal to both the vectors $\mathbf{u}$ and $\mathbf{v}$, such that $\mathbf{u}, \mathbf{v}$ and $\mathbf{u}\times\mathbf{v}$ form a *right-handed system*.
 
-The last part of the definition needs some explanation. There are always two possible directions that are perpendicular to $\mathbf{u}$ and to $\mathbf{v}$, one being the opposite of the other. When we say that a set of three vectors $\{\mathbf{u}, \mathbf{v}, \mathbf{w}\}$ forms a right-handed system, we mean that if take our right hand and point our thumb in the direction of $\mathbf{u}$ and our index finger in the direction of $\mathbf{v}$, then our  middle finger points (roughly) in the direction of $\mathbf{w}$. From Figure \@ref(fig:crossprod) we see that $\{\mathbf{u}, \mathbf{v}, \mathbf{u}\times\mathbf{v}\}$ form a right-handed system.
+The last part of the definition needs some explanation. There are always two possible directions that are perpendicular to $\mathbf{u}$ and to $\mathbf{v}$, one being the opposite of the other. When we say that a set of three vectors $\{\mathbf{u}, \mathbf{v}, \mathbf{w}\}$ forms a right-handed system, we mean that if we take a right hand and point the thumb in the direction of $\mathbf{u}$ and the index finger in the direction of $\mathbf{v}$, then the  middle finger points (roughly) in the direction of $\mathbf{w}$. From Figure \@ref(fig:crossprod) we see that $\{\mathbf{u}, \mathbf{v}, \mathbf{u}\times\mathbf{v}\}$ form a right-handed system.
 
 ```{r crossprod, fig.cap = "The cross product of $\\mathbf{u}$ and $\\mathbf{v}$.", fig.alt = "The cross product of $\\mathbf{u}$ and $\\mathbf{v}$.", out.width="40%"}
 knitr::include_graphics("figures/crossprod.png")
@@ -292,7 +296,7 @@ knitr::include_graphics("figures/crossprod.png")
 The cross product has the following properties:
 
 * $\mathbf{u}\times\mathbf{v} = -(\mathbf{v} \times \mathbf{u})$;
-* $\mathbf{u}\times\mathbf{v} = \mathbf{0}$ if and only if $\mathbf{u}$ and $\mathbf{v}$ are parallel, or $\mathbf{u} = \mathbf{0}$ or $\mathbf{v} = \mathbf{0}$;
+* $\mathbf{u}\times\mathbf{v} = \mathbf{0}$ if and only if $\mathbf{u}$ and $\mathbf{v}$ are parallel, or $\mathbf{u} = \mathbf{0}$, or $\mathbf{v} = \mathbf{0}$;
 * $|\mathbf{u}\times\mathbf{v}| = |\mathbf{u}||\mathbf{v}|$ if and only if $\mathbf{u}$ and $\mathbf{v}$ are orthogonal;
 * $(a\mathbf{u})\times\mathbf{v} = \mathbf{u}\times(a\mathbf{v}) = a(\mathbf{u}\times\mathbf{v})$;
 * $\mathbf{u}\times(\mathbf{v}+\mathbf{w}) = \mathbf{u}\times\mathbf{v} + \mathbf{u}\times\mathbf{w}$.
@@ -315,7 +319,7 @@ $$
 \mathbf{u} \times \mathbf{v} =  (u_2v_3 - u_3v_2)\mathbf{i} + (u_3v_1 - u_1v_3)\mathbf{j} + (u_1v_2 - u_2v_1)\mathbf{k}.
 $$
 
-An easy way to remember this is to compute the determinant:
+If you are familiar with determinants and how to compute them, then one way to remember this formula for the cross product is to compute the determinant:
 $$
 \mathbf{u}\times\mathbf{v} = \begin{vmatrix}  \mathbf{i} & \mathbf{j} & \mathbf{k}\\ u_1 & u_2 & u_3\\ v_1 & v_2 & v_3\end{vmatrix}.
 $$
@@ -323,7 +327,7 @@ $$
 
 
 ::: {.example #magnetic name="Magnetic fields"}
-The vector product occurs in many equations in physics. For instance, consider a charged particle moving through a magnetic field. Let the charge on the particle be $q$ Coulombs, let its velocity vector be $\mathbf{v}$ metres per second and let the magnetic field be $\mathbf{B}$ Teslas. Then the force $\mathbf{F}$ Newtons experienced by the particle is
+The vector product occurs in many equations in physics. For instance, consider a charged particle moving through a magnetic field. Let the charge on the particle be $q$ Coulombs, let its velocity vector be $\mathbf{v}$ metres per second, and let the magnetic flux density be $\mathbf{B}$ Teslas. Then the force $\mathbf{F}$ experienced by the particle (in Newtons) is
 $$
 \textbf{F} = q\mathbf{v}\times\textbf{B}.
 $$
@@ -335,7 +339,7 @@ What is the area of the triangle with vertices
 $$
 A = (2,4,-1), \qquad B = (0,3,1), \qquad C = (-3,1,5)?
 $$
-Note that this is the same triangle that we considered in Example \@ref{exm:dottriangle}, where we considered the lengths of the sides and the angles at the vertices.
+Note that this is the same triangle that we considered in Example \@ref(exm:dottriangle), where we considered the lengths of the sides and the angles at the vertices.
 
 ```{r crosstriangle, fig.cap = "Computing the area of a triangle via the vector product.", fig.alt = "Computing the area of a triangle via the vector product.", out.width="40%"}
 knitr::include_graphics("figures/crosstriangle.png")
