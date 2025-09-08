@@ -314,10 +314,10 @@ Here is a formal definition of the reduced echelon form.
 ::: {.definition #REF name="Reduced Echelon Form"}
 A matrix is said to be in *reduced echelon form (REF)* if:
 
-    1. all the rows consisting entirely of zeros lie below all non-zero rows (note, there need not be any zero rows, and there need not be any non-zero rows);
-    1. the first non-zero entry in a given row lies at least one place to the right of all the first non-zero entries in each of the previous rows;
-    1. every leading entry is $1$;
-    1. the first non-zero entry in each row is the only non-zero entry in its column.
+1. all the rows consisting entirely of zeros lie below all non-zero rows (note, there need not be any zero rows, and there need not be any non-zero rows);
+1. the first non-zero entry in a given row lies at least one place to the right of all the first non-zero entries in each of the previous rows;
+1. every leading entry is $1$;
+1. the first non-zero entry in each row is the only non-zero entry in its column.
 :::
 
 The following are some examples of possible reduced echelon forms for $3\times 3$ coefficient matrices.
