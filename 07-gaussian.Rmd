@@ -106,7 +106,7 @@ x_2&=\frac{1}{7}.
 Add 4 times the second equation to the first to eliminate $x_2$ from the first equation
 \begin{align*}
 x_1-4x_2+4x_2&=1+\frac{4}{7}\\
-x_2&=\frac{1}{7}.
+x_1&=\frac{11}{7}.
 \end{align*}
 and hence we have the solution
 \begin{align*}
@@ -115,7 +115,7 @@ x_2&=\frac{1}{7}.
 \end{align*}
 :::
 
-Note that in the above example, it is the coefficients $a_{ij}$ and $b_i$ that we are manipulating -- the $x_j$'s just came along for the ride. So, let's simplify things by just writing down the coefficients in the system of equations in a table as follows:
+Note that, in the above example, it is the coefficients $a_{ij}$ and $b_i$ that we are manipulating -- the terms $x_1$ and $x_2$ just came along for the ride. So, let's simplify things by just writing down the coefficients in the system of equations in a table as follows:
 $$\left(\begin{array}{rr|r}
 3&2\\
 1&-4
@@ -129,14 +129,14 @@ $$\left(\begin{array}{rr|r}
 \end{array}
 \right).
 $$
-We call this the *augmented matrix*. Now in solving the system of equations, we simply add/subtract multiples of rows of this augmented matrix. Labelling each row as $R_1$ and $R_2$ we perform the following operations:
+We call this the *augmented matrix*. Now, in solving the system of equations, we update the augmented matrix by adding/subtracting multiples of its rows and rearranging its rows according to some simple rules. Labeling each row as $R_1$ and $R_2$, we perform the following operations:
 
 1. swap rows 1 and 2: $R_1\leftrightarrow R_2$
     $$\left(\begin{array}{rr|r}
     1&-4&1\\
     3&2&5
     \end{array}
-    \right).
+    \right),
     $$
 
 1. subtract 3 times row 1 from row 2: $R_2 \to R_2-3R_1$
@@ -144,7 +144,7 @@ We call this the *augmented matrix*. Now in solving the system of equations, we 
     1&-4&1\\
     0&14&2
     \end{array}
-    \right).
+    \right),
     $$
 
 1. divide row 2 by 14: $R_2\to \frac{1}{14}R_2$
@@ -152,7 +152,7 @@ We call this the *augmented matrix*. Now in solving the system of equations, we 
     1&-4&1\\
     0&1&\frac{1}{7}
     \end{array}
-    \right).
+    \right),
     $$
 
 1. add 4 times the second row to the first: $R_1 \to R_1+4 R_2$
@@ -160,7 +160,7 @@ We call this the *augmented matrix*. Now in solving the system of equations, we 
     1&0&\frac{11}{7}\\
     0&1&\frac{1}{7}
     \end{array}
-    \right)
+    \right).
     $$
 
 This represents
@@ -168,14 +168,16 @@ This represents
 1\times x_1 + 0 \times x_2 &=x_1= \frac{11}{7}\\
 0\times x_1 + 1 \times x_2 &=x_2= \frac{1}{7}\\
 \end{align*}
-that is, we can just read off the solutions in the right-most column. This method is known as Gaussian^[The method is named after Carl Friedrich Gauss (1777--1855) born in Braunschweig in the Holy Roman Empire, in what is now Germany. Gauss worked at the University of Gottingen.] elimination and provides a systematic way to solve simultaneous linear equations. Note that each step in the above process is reversible. For instance, the operation
+that is, we can just read off the solutions in the right-most column. This is an application of a general method known as Gaussian elimination^[The method is named after Carl Friedrich Gauss (1777--1855), a mathematician and physicist born in Braunschweig in the Holy Roman Empire, in what is now Germany. Gauss contributed broadly to mathematics and science and had a reputation for perfectionism and only publishing work that he considered to be complete and above criticism.], and provides a systematic way to solve simultaneous linear equations. 
+
+Note that each step in the above process can be reversed using the same set of operations. For instance, the operation
 $$R_1 \to R_1 + 4R_2$$
 can be reversed by performing
 $$R_1 \to R_1 - 4R_2.$$
 This means that the final set of equations produced by Gaussian elimination is equivalent to the original set of equations and therefore has the same set of solutions.
 
 
-No matter the number of variables or equations, the aim is to reduce the coefficient matrix to a diagonal of $1$'s (or as close as possible, we'll clarify this shortly) and $0$'s everywhere else, like so
+No matter the number of variables or equations, the aim is to reduce the coefficient matrix to a diagonal of $1$'s (or as close as possible, we'll clarify this shortly) and $0$'s everywhere else, like so:
 $$\left(\begin{array}{rrrr|r}
 1&0&\dotsb&0&\omega_1\\
 0&1&\dotsb&0&\omega_2\\
@@ -184,24 +186,30 @@ $$\left(\begin{array}{rrrr|r}
 \end{array}
 \right),
 $$
-then read off the solutions as $x_1=\omega_1, x_2=\omega_2,\dotsc, x_n=\omega_n$ from the right hand column.
+we can then read off the solutions as $x_1=\omega_1, x_2=\omega_2,\dotsc, x_n=\omega_n$ from the right hand column. This approach will work whenever the original set of equations were not overdetermined and had a unique solution.
 
+We refer to the operations used in Gaussian elimination as *elementary row operations (EROs)*. These operations are:
 
-The following *elementary row operations (EROs)* comprise all operations required for Gaussian elimination:
-
-1. $R_i \to R_i + \alpha R_k$, where $k \neq i$ and $\alpha \neq 0$ is some scalar;
+1. $R_i \to R_i + \alpha R_k$, where $\alpha \neq 0$ is some scalar;
 1. $R_i \to \alpha R_i$, where $\alpha \neq 0$ is some scalar;
-1. $R_i \leftrightarrow R_k$, where $k\neq i$, denotes the swapping of the $i$-th and $k$-th rows.
+1. $R_i \leftrightarrow R_k$, that is, the swapping of the $i$-th and $k$-th rows;
 
-We now present a sketch of the full Gaussian elimination procedure using these EROs. First, note that we call the first non-zero entry (reading from left to right) in any row of a matrix the *leading entry*. A leading entry will always be used as a *pivot*, where a pivot is an element used to zero-out the other entries in the same column as the pivot.
+for any given pair of rows $R_i$, $R_k$ of the augmented matrix, $i \neq k$.
 
-1. select the leading entry in the top row as a pivot;
+We now present a sketch of the full Gaussian elimination procedure using these EROs. The key is to use the non-zero coefficient in a given row of the augmented matrix, and then apply the first of the three EROs in order to transform all of the other rows such that the corresponding coefficient in each of these other rows becomes zero. This process can be repeated in a systematic way going from the top of the augmented matrix to the bottom then returning to the top, such that the resulting transformed matrix has at most one non-zero coefficient in each row (not including the final column of the augmented matrix), and the columns containing of the non-zero entries in each of the rows are distinct. Moreover, the second of the three EROs can be used to set the value of the non-zero coefficients to one (again, not including the final column of the augmented matrix). The approach is as follows:
+
+<!--
+First, note that we call the first non-zero entry (reading from left to right) in any row of a matrix the *leading entry*. A leading entry will always be used as a *pivot*, where a pivot is an element used to zero-out the other entries in the same column as the pivot.
+-->
+
+1. select the first non-zero entry in the top row as a pivot (if this row is non-zero);
 1. perform EROs to eliminate the entries below the pivot;
 1. move down to the next row and continue the process;
 1. having reached the bottom row, work back up again, that is:
-1. select the bottom right entry in the matrix of coefficients as the pivot;
+1. select the final non-zero entry in the final row of the matrix of coefficients as the pivot (if this row is non-zero);
+1. scale this row to set the value of the pivot to one;
 1. perform EROs to eliminate the entries above the pivot;
-1. move to the row above and continue the process;
+1. move to the row above and continue the process (from step 4 onwards);
 1. having reached the top row, stop and read off the solutions.
 
 Let's have a look at another example applying these steps, this time in 3-dimensions.
@@ -292,6 +300,8 @@ R_1 \to R_1 - R_2\colon \quad \\
 $$
 We read off the solution $(x,y,z) = (1,3,-1)$.
 :::
+
+We note that there are alternative approaches to Gaussian elimination. For example, the method of partial pivoting can be used to select pivots with large magnitudes, which can be preferable from a computational perspective. This is because the method involves dividing by the pivot, and division by a small number is more prone to computational errors due to *rounding*, since a computer cannot encode every possible number so must instead represent numbers by close approximations (e.g. the nearest *floating point* number).
 
 ## Echelon Form
 
