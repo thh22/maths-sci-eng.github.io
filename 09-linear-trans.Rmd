@@ -2,10 +2,10 @@
 
 We have seen that we can formulate a system of linear equations as a matrix-vector equation
 $$A\mathbf{x}=\mathbf{b}$$
-and viewed this in two ways:
+and we have viewed this in two different ways:
 
-1. as a compact way of expressing the system of linear equations: multiplying the vector $\mathbf{x}$ by the matrix $A$, each row in the resulting vector equation is one of the linear equations
-2. as a vector equation with the l.h.s. being a linear combination of the columns of $A$
+1. as a compact way of expressing a system of linear equations: perform matrix multiplication of the vector $\mathbf{x}$ by the matrix $A$, and each row in the resulting vector equation is one of the linear equations
+2. as a vector equation with the left hand side being a linear combination of the columns of $A$.
 
 We now introduce a third point of view:
 
@@ -13,23 +13,23 @@ We now introduce a third point of view:
 
 As a function, the matrix $A$ represents a *Linear Transformation*. This is a type of function $f$ whose inputs and outputs are vectors, with the following properties:
 
-I.  $f(\mathbf{x}_1+\mathbf{x}_2)=f(\mathbf{x}_1)+f(\mathbf{x}_2)$ for any two vectors $\mathbf{x}_1$ and $\mathbf{x}_2$
-II.  $f(\lambda\mathbf{x})=\lambda f(\mathbf{x})$ for any scalar $\lambda$ and vector $\mathbf{x}$
+I.  $f(\mathbf{x}_1+\mathbf{x}_2)=f(\mathbf{x}_1)+f(\mathbf{x}_2)$ for any two vectors $\mathbf{x}_1$ and $\mathbf{x}_2$.
+II.  $f(\lambda\mathbf{x})=\lambda f(\mathbf{x})$ for any scalar $\lambda$ and vector $\mathbf{x}$.
 
 Translating this to matrices:
 
-I.  $A(\mathbf{x}_1+\mathbf{x}_2)=A\mathbf{x}_1+A\mathbf{x}_2$ for any two vectors $\mathbf{x}_1$ and $\mathbf{x}_2$
-II.  $A(\lambda\mathbf{x})=\lambda A\mathbf{x}$ for any scalar $\lambda$ and vector $\mathbf{x}$
+I.  $A(\mathbf{x}_1+\mathbf{x}_2)=A\mathbf{x}_1+A\mathbf{x}_2$ for any two vectors $\mathbf{x}_1$ and $\mathbf{x}_2$.
+II.  $A(\lambda\mathbf{x})=\lambda A\mathbf{x}$ for any scalar $\lambda$ and vector $\mathbf{x}$.
 
-**Exercise:** convice yourself that these properties hold by evaluating the left and right hand sides for a general $3\times 3$ matrix and confirming they are equal.
+**Exercise:** convince yourself that these properties hold by evaluating the left and right hand sides for a general $3\times 3$ matrix and confirming they are equal.
 
 
 ::: {.example #rotation name="Rotation about the origin"}
-The following matrix rotates a vector by an angle $\theta$ anticlockwise about the origin.
+The following matrix rotates a vector by an angle $\theta$ anticlockwise about the origin:
 $$R_\theta=\begin{pmatrix}
 \cos(\theta)& -\sin(\theta)\\
 \sin(\theta)& \cos(\theta)
-\end{pmatrix}
+\end{pmatrix}.
 $$
 
 ```{r rotmat, echo = FALSE, fig.cap = "The action of $R_\\theta$ on a vector $\\mathbf{v}$", fig.alt = "The action of $R_\\theta$ on a vector $\\mathbf{v}$", out.width="50%"}
@@ -45,9 +45,9 @@ It turns out that all linear transformations can (in a certain sense) be decompo
 :::
 
 
-Of course not all functions have these special properties.
+Of course, not all functions have these special properties.
 
-**Exercise:** convince yourself that $f(x)=x^2$ is **not** a linear transformation by finding values $x$ and $y$ (real numbers are 1-dimensional vectors) and a scalar $\lambda$ for which the above properties I. and II. do not hold.
+**Exercise:** convince yourself that $f(x)=x^2$ is **not** a linear transformation by finding values $x$ and $y$ (real numbers are 1-dimensional vectors) and a scalar $\lambda$ for which $f(\lambda x) \neq \lambda f(x)$ and $f(x+y) \neq f(x) + f(y)$.
 
 Now, if we were trying to solve an equation involving a function, say $f(x)=b$, we would apply the inverse $f^{-1}$ to both sides to get
 \begin{align*}
@@ -56,7 +56,7 @@ f^{-1}(f(x))&=f^{-1}(b)\\
 x&=f^{-1}(b).
 \end{align*}
 
-Note this only works if $f^{-1}$ exists -- we know that not all functions have inverses^[Sometimes we make do with so called *partial inverses* as we have for the inverse trigonometric functions and the square root function.]. We will soon show a condition for the existence of the inverse of a matrix $A$, which we denote by $A^{-1}$ and that is itself another matrix. We will then have another way to solve linear equations by applying the inverse matrix:
+Note, this only works if $f^{-1}$ exists -- we know that not all functions have inverses^[Sometimes we make do with so called *partial inverses* as we previously introduced for the cases of inverse trigonometric functions and the square root function.]. We will soon show a condition for the existence of the inverse of a matrix $A$, which we denote by $A^{-1}$ and that is itself another matrix. We will then have another way to solve linear equations *for invertible matrices* by applying the inverse matrix:
 
 \begin{align*}
 A\mathbf{x}&=\mathbf{b}\\
@@ -70,7 +70,7 @@ First, we look at the algebra of matrices.
 
 ### Addition and Subtraction
 
-We can add and subtract two matrices, so long as the have the same dimensions $m\times n$. Then the sum and difference of two matrices $A$ and $B$ are
+We can add and subtract two matrices, so long as they have the same dimensions $m\times n$. The sum and difference of two such matrices $A$ and $B$ are defined as
 
 $$A+B=(a_{ij}+b_{ij}),\qquad A-B=(a_{ij}-b_{ij}),$$
 
@@ -83,13 +83,13 @@ A = \begin{pmatrix} 2 & 9 & 6 \\ -1 & 3 & 5 \end{pmatrix}
 \qquad\text{and}\qquad
 B = \begin{pmatrix} 0 & 3 & -1 \\ 2 & 7 & 8 \end{pmatrix}.
 $$
-Because the both matrices have dimensions $2 \times 3$, we may calculate
+Because both the matrices have dimensions $2 \times 3$, we may calculate
 $$
 A + B = \begin{pmatrix} 2 & 12 & 5 \\ 1 & 10 & 13 \end{pmatrix}
 \qquad\text{and}\qquad
 A - B = \begin{pmatrix} 2 & 6 & 7 \\ -3 & -4 & -3 \end{pmatrix}.
 $$
-Note, that matrix addition is *commutative*^[The technical term for the fact that we can swap the order.], that is
+Note that matrix addition is *commutative*^[The technical term for the fact that we can swap the order.], that is
 $$
 A + B = B + A.
 $$
@@ -104,7 +104,7 @@ $$
 that is, we multiply every entry of $A$ by $\lambda$.
 
 ::: {.example #matscalar name="Scalar Multiplication"}
-With $A$ as in Example \@ref(exm:mat_add), $\lambda = 2$ and $\mu = -1$, we have
+With $A$ as in Example \@ref(exm:matadd), $\lambda = 2$ and $\mu = -1$, we have
 $$
 \lambda A = 2A = \begin{pmatrix} 4 & 18 & 12 \\ -2 & 6 & 10 \end{pmatrix}
 \qquad\text{and}\qquad
