@@ -382,11 +382,11 @@
             <section class="normal" id="section-">
 <div id="matrices" class="section level1 hasAnchor" number="8">
 <h1><span class="header-section-number">Chapter 8</span> Matrices<a href="matrices.html#matrices" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>A matrix <span class="math inline">\(A\)</span> is a two-dimensional array of numbers. We say that <span class="math inline">\(A\)</span> is an <span class="math inline">\(m \times n\)</span> matrix if it has <span class="math inline">\(m\)</span> rows and <span class="math inline">\(n\)</span> columns, for some natural numbers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>. We use the notation
+<p>A matrix <span class="math inline">\(A\)</span> is a two-dimensional array of numbers. For a given pair of natural numbers <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>, we say that <span class="math inline">\(A\)</span> is an <span class="math inline">\(m \times n\)</span> matrix if it has <span class="math inline">\(m\)</span> rows and <span class="math inline">\(n\)</span> columns. We use the notation
 <span class="math display">\[
 A = (a_{ij})_{m \times n}, \qquad \text{or more simply} \qquad A = (a_{ij}),
 \]</span>
-to indicate that the entry in row <span class="math inline">\(i\)</span> and column <span class="math inline">\(j\)</span> of <span class="math inline">\(A\)</span> is <span class="math inline">\(a_{ij}\)</span>. We refer to <span class="math inline">\(a_{ij}\)</span> as the <span class="math inline">\(i\)</span>–<span class="math inline">\(j\)</span> entry of the matrix <span class="math inline">\(A\)</span>.</p>
+to indicate that <span class="math inline">\(A\)</span> is an <span class="math inline">\(m \times n\)</span> matrix and the entry in row <span class="math inline">\(i\)</span> and column <span class="math inline">\(j\)</span> of <span class="math inline">\(A\)</span> is <span class="math inline">\(a_{ij}\)</span>. We refer to <span class="math inline">\(a_{ij}\)</span> as the <span class="math inline">\(i\)</span>–<span class="math inline">\(j\)</span> entry of the matrix <span class="math inline">\(A\)</span>.</p>
 <div id="linearrevisited" class="section level2 hasAnchor" number="8.1">
 <h2><span class="header-section-number">8.1</span> Solving linear systems revisited<a href="matrices.html#linearrevisited" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In the previous chapter, given a set of <span class="math inline">\(m\)</span> linear equations with <span class="math inline">\(n\)</span> variables</p>
@@ -406,13 +406,13 @@ a_{21}&amp;a_{22}&amp;\dotsb&amp;a_{2n}\\
 a_{m1}&amp;a_{n2}&amp;\dotsb&amp;a_{mn}
 \end{pmatrix}.
 \]</span></p>
-<p>We will now write the variables and r.h.s. as vectors of length <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> respectively
+<p>We will now write the variables and right hand sides of the set of linear equations as vectors of length <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> respectively:
 <span class="math display">\[
 \mathbf{x} = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}
 \qquad\text{and}\qquad
 \mathbf{b} = \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix}.
 \]</span></p>
-<p>Next, we define the operation of multiplying a vector <span class="math inline">\(\mathbf{x}\)</span> of length <span class="math inline">\(n\)</span> by an <span class="math inline">\(m\times n\)</span> matrix <span class="math inline">\(A\)</span>. The result is a vector of length <span class="math inline">\(m\)</span> whose first entry is the sum of the element-wise products of the first row of <span class="math inline">\(A\)</span> with the vector <span class="math inline">\(\mathbf{x}\)</span>, the second entry is the sum of the element-wise products of the second row of <span class="math inline">\(A\)</span> with the vector <span class="math inline">\(\mathbf{x}\)</span> and so on:</p>
+<p>Next, we define the operation of multiplying a vector <span class="math inline">\(\mathbf{x}\)</span> of length <span class="math inline">\(n\)</span> by an <span class="math inline">\(m\times n\)</span> matrix <span class="math inline">\(A\)</span>. The result is a vector of length <span class="math inline">\(m\)</span> whose first entry is the sum of the element-wise products of the first row of <span class="math inline">\(A\)</span> with the vector <span class="math inline">\(\mathbf{x}\)</span>, the second entry is the sum of the element-wise products of the second row of <span class="math inline">\(A\)</span> with the vector <span class="math inline">\(\mathbf{x}\)</span>, and so on:</p>
 <p><span class="math display">\[
 A\mathbf{x}=\begin{pmatrix}
 a_{11}&amp;a_{12}&amp;\dotsb&amp;a_{1n}\\
@@ -427,26 +427,28 @@ a_{11}x_1+a_{12}x_2+\dotsb+a_{1n}x_n\\
 a_{21}x_1+a_{22}x_2+\dotsb+a_{2n}x_n\\
 \vdots\\
 a_{m1}x_1+a_{m2}x_2+\dotsb+a_{mn}x_n
-\end{pmatrix}
+\end{pmatrix}.
 \]</span>
 Hence we can express the system of equations more compactly as
 <span class="math display">\[A\mathbf{x}=\mathbf{b}\]</span>
-where each row of the expanded equation corresponds to one of the linear equations. In the previous chapter we saw that solving such a system corresponds to finding the intersection points of the hyperplanes defined by these rows. We will call this the <em>row picture</em> of linear equations. However, there is another way to interpret <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span> in terms of column vectors. We must first introduce some new definitions.</p>
+where each row of the expanded equation corresponds to one of the linear equations. In the previous chapter, we saw that solving such a system corresponds to finding the intersection points of the hyperplanes defined by these rows. We will call this the <em>row picture</em> of linear equations.</p>
+<p>There is another way to interpret <span class="math inline">\(A\mathbf{x}=\mathbf{b}\)</span> in terms of column vectors. To describe this, we first introduce some new definitions.</p>
 <div class="definition">
 <p><span id="def:lincomb" class="definition"><strong>Definition 8.1  (Linear combinations) </strong></span>Consider a list of vectors
 <span class="math display">\[\mathbf{v}_1, \mathbf{v}_2,\dotsc,\mathbf{v}_n.\]</span></p>
 <ul>
-<li><p>A <em>linear combination</em> of a list of vectors is a sum of the form
+<li><p>A <em>linear combination</em> of these vectors is a sum of the form
 <span class="math display">\[
   \alpha_1\mathbf{v}_1+\alpha_2\mathbf{v}_2 + \dotsb + \alpha_n\mathbf{v}_n
   \]</span>
 for some scalar coefficients <span class="math inline">\(\alpha_i\)</span>.</p></li>
-<li><p>A list of vectors is called <em>linearly independent</em> if we cannot write one of the vectors as a linear combination of the others, such as
+<li><p>A list of vectors <span class="math inline">\(\mathbf{v}_1, \ldots , \mathbf{v}_n\)</span> is called <em>linearly independent</em> if we cannot write one of the vectors as a linear combination of the others, that is, if there do not exist any relationships among the vectors of the form
 <span class="math display">\[
   \mathbf{v}_i=\alpha_1\mathbf{v}_1+\alpha_2\mathbf{v}_2+\dotsb+\alpha_{i-1}\mathbf{v}_{i-1}+\alpha_{i+1}\mathbf{v}_{i+1}+\dotsb+\alpha_n\mathbf{v}_n
   \]</span>
-(none of the vectors depends on the others).</p></li>
-<li><p>The <em>span</em> of a list of vectors is all of the possible linear combinations. If we can reach any vector in the space by taking some linear combination then we say the vectors <em>span</em> the space.</p></li>
+(none of the vectors depends linearly on the others).</p></li>
+<li><p>A linear subspace is a set of vectors of the form <span class="math inline">\(\alpha_1 \mathbf{v}_1 + \ldots + \alpha_n \mathbf{v}_n\)</span>, where <span class="math inline">\(\alpha_1, \ldots , \alpha_n\)</span> range over all possible values, and <span class="math inline">\(\mathbf{v}_1, \ldots \mathbf{v}_n\)</span> are fixed vectors. Examples include lines (one-dimensional subspaces) and planes (two-dimensional subspaces).</p></li>
+<li><p>The <em>span</em> of a list of vectors <span class="math inline">\(\mathbf{v}_1, \ldots , \mathbf{v}_n\)</span> is all of the possible linear combinations, that is, the set of vectors of the form <span class="math inline">\(\alpha_1 \mathbf{v}_1 + \ldots + \alpha_n \mathbf{v}_n\)</span>. If we can reach any vector in a given linear subspace by taking some linear combination of <span class="math inline">\(\mathbf{v}_1, \ldots , \mathbf{v}_n\)</span>, then we say that the vectors <span class="math inline">\(\mathbf{v}_1, \ldots , \mathbf{v}_n\)</span> <em>span</em> the subspace.</p></li>
 </ul>
 </div>
 <p>An intuitive way to think about linearly independent vectors is that they all point in “independent” directions. An intuitive way to think about the span is as all the points we can reach in the space by only walking in the directions of the list of vectors. Figure <a href="matrices.html#fig:2dspan">8.1</a> demonstrates the concepts of linear combinations and span in 2-dimensions.</p>

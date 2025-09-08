@@ -87,7 +87,7 @@ knitr::include_url("https://www.geogebra.org/calculator/qeyeahkb")
 ```
 
 
-If we consider each column of the matrix $A$ as a vector $\mathbf{a}_i$ of length $m$, then the multiplication $A\mathbf{x}$ can also be written as
+Consider again the matrix $A$ introduced earlier. If we consider each column of the matrix $A$ as a vector $\mathbf{a}_i$ of length $m$, then the multiplication $A\mathbf{x}$ can also be written as
 \begin{align*}
 A\mathbf{x}&=x_1\mathbf{a}_1 + x_2\mathbf{a}_2 + \dotsb + x_n\mathbf{a}_n\\
 &=x_1
@@ -110,17 +110,17 @@ a_{m1}x_1+a_{m2}x_2+\dotsb+a_{mn}x_n
 \end{align*}
 That is, $A\mathbf{x}$ is the *linear combination* of the columns $\mathbf{a}_i$ with coefficients $x_i$. We will call this the *column picture* of matrix equations. As we shall come to see, this different point of view is very powerful in understanding the nature of linear equations.
 
-Finding a solution to $A\mathbf{x}=\mathbf{b}$ can now be interpreted as answering the question: can we find a linear combination of the column vectors of $A$ that sum to give the vector $\mathbf{b}$? Or in other words: is the vector $\mathbf{b}$ in the span of the columns of $A$?
+Finding a solution to $A\mathbf{x}=\mathbf{b}$ can now be interpreted as answering the question: can we find a linear combination of the column vectors of $A$ that sum to give the vector $\mathbf{b}$? Or, in other words: is the vector $\mathbf{b}$ in the span of the columns of $A$?
 
-The question of unique solutions or infinitely many solutions becomes: is there one way or infinitely many ways to take a linear combination of the columns of $A$ to reach the vector $\mathbf{b}$? Or in other words: are the columns of $A$ linearly independent?
+The question of unique solutions or infinitely many solutions becomes: is there one way or infinitely many ways to take a linear combination of the columns of $A$ to reach the vector $\mathbf{b}$? Or, in other words: are the columns of $A$ linearly independent?
 
-These questions can once again be answered from inspecting the REF of the augmented matrix. In the statements below we shall refer to the coefficient matrix part of the REF as the l.h.s. and the final augmented column as the r.h.s. 
+These questions can once again be answered from inspecting the REF of the augmented matrix. In the statements below we shall refer to the coefficient matrix part of the REF as the l.h.s. (as it corresponds to the left hand side of the matrix equation introduced at the start of this section) and the final augmented column as the r.h.s (as it corresponds to the right hand side of this matrix equation). 
 
 1. If there is a row of zeros in the l.h.s. but a non-zero value in the corresponding row of the r.h.s., then there are **no solutions** ($\mathbf{b}$ is not in the span of the columns of $A$).
-1. If all zero rows in the l.h.s. have a zero in the corresponding row of the r.h.s, together with every column in the l.h.s. containing a leading entry, then there is a **unique solution** ($\mathbf{b}$ is in the span of the columns of $A$ together with the columns being linearly independent).
+1. If all zero rows in the l.h.s. have a zero in the corresponding row of the r.h.s, and every column in the l.h.s. contains a leading entry (i.e., an entry that is the first non-zero entry of one of the rows of the matrix), then there is a **unique solution** ($\mathbf{b}$ is in the span of the columns of $A$ together with the columns being linearly independent).
 1. If all zero rows in the l.h.s. have a zero in the corresponding row of the r.h.s, but not every column in the l.h.s. contains a leading entry, then there are **infinitely many solutions** ($\mathbf{b}$ is in the span of the columns of $A$ but the columns are linearly dependent).
 
-A list of vectors that both span the space and are linearly independent are called a *basis*. A basis can be used as a coordinate system. We generally use the *standard basis* consisting of the unit vectors $\mathbf{i}, \mathbf{j}$ and $\mathbf{k}$. The coordinates of a vector $\mathbf{v}$ in this basis are the values $\alpha_i$ in the linear combination $\mathbf{v}=\alpha_1\mathbf{i} + \alpha_2\mathbf{j} + \alpha_3\mathbf{k}$. If we had a different basis $\mathbf{p}, \mathbf{q}, \mathbf{r}$ then we could also express $\mathbf{v}$ as $\mathbf{v}=\beta_1\mathbf{p}+\beta_2\mathbf{q}+\beta_3\mathbf{r}$ and specify points using $\beta_1,\beta_2$ and $\beta_3$ as coordinates.
+A list of vectors that both span the space and are linearly independent is called a *basis*. A basis can be used as a coordinate system. We generally use the *standard basis* consisting of the unit vectors $\mathbf{i}, \mathbf{j}$ and $\mathbf{k}$. The coordinates of a vector $\mathbf{v}$ in this basis are the values $\alpha_i$ in the linear combination $\mathbf{v}=\alpha_1\mathbf{i} + \alpha_2\mathbf{j} + \alpha_3\mathbf{k}$. If we had a different basis $\mathbf{p}, \mathbf{q}, \mathbf{r}$ then we could also express $\mathbf{v}$ as $\mathbf{v}=\beta_1\mathbf{p}+\beta_2\mathbf{q}+\beta_3\mathbf{r}$ and specify points using $\beta_1,\beta_2$ and $\beta_3$ as coordinates. Note here that $\mathbf{i}, \mathbf{j}$ and $\mathbf{k}$ are unit vectors (that is, their magnitudes are all equal to one) and they are orthogonal to one another. However, a general set of independent vectors (such as $\mathbf{p}, \mathbf{q}$ and $\mathbf{r}$ in the preceding example) need not have these properties.
 
 
 ## Determinants
@@ -165,7 +165,7 @@ Compute the determinant of the matrix $A = \left(\begin{smallmatrix} 1 & 2 & 3\\
 + 3\begin{vmatrix} 4 & 5\\ 7 & 8\end{vmatrix} \\
 &= 1\left(5\times 9-6\times 8\right) - 2\left(4\times 9 - 6\times 7\right) + 3(4\times 8 - 5\times 7)\\
 &= -3 - 2(-6)+3(-3)\\
-&=0
+&=0.
 \end{align*}
 :::
 
@@ -173,5 +173,5 @@ Compute the determinant of the matrix $A = \left(\begin{smallmatrix} 1 & 2 & 3\\
 Let $A$ be a square matrix. There is a unique solution to $A\mathbf{x}=\mathbf{b}$ for any vector $\mathbf{b}$ if and only if $\det(A)\neq 0$.
 :::
 
-This gives us a useful test if we want to know if there are unique solutions for any vector $\mathbf{b}$. Note however that even if $\det(A)=0$ there could be solutions for a particular vector $\mathbf{b}$ -- we would have to perform Guassian elimination to check.
+This gives us a useful test if we want to know if there are unique solutions for any vector $\mathbf{b}$. Note however that even if $\det(A)=0$ there could be solutions for a particular vector $\mathbf{b}$ -- we would have to perform Gaussian elimination to check.
 
