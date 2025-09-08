@@ -474,7 +474,6 @@ $$
 It can easily be checked that $AX = I_3 = XA$, so $X$ is the inverse of $A$.
 :::
 
-Note that in the case of a singular matrix, this would be revealed in the above Gaussian elimination by yeilding an inconsistent set of equations.
+Note that if we have a singular matrix then the fact that it is singular would be revealed in this Gaussian elimination approach by yielding an inconsistent set of equations.
 
-The advantage of having the matrix inverse is that we can now compute the solutions to $A\mathbf{x}=\mathbf{y}$ for *any* vector $\mathbf{y}$ and we only had to perform the Guassian elimintation process once.
-
+The advantage of having the matrix inverse is that we can now compute the solutions to $A\mathbf{x}=\mathbf{y}$ for *any* vector $\mathbf{y}$ and we only had to perform the Gaussian elimination process once.

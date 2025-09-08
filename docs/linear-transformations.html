@@ -579,8 +579,8 @@ for all input values <span class="math inline">\(x\)</span> and output values <s
 For a matrix, function composition is given by matrix multiplication, so the definition of the inverse matrix <span class="math inline">\(A^{-1}\)</span> of a matrix <span class="math inline">\(A\)</span> requires
 <span class="math display">\[A^{-1}A\mathbf{x}=\mathbf{x}\quad\text{and}\quad AA^{-1}\mathbf{y}=\mathbf{y}\]</span>
 for all input vectors <span class="math inline">\(\mathbf{x}\)</span> and output vectors <span class="math inline">\(\mathbf{y}\)</span>.</p>
-<p>It turns out<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> that this only works for <em>square</em> matrices, that is, a matrix <span class="math inline">\(A\)</span> with same number of rows and columns. This immediately implies that <span class="math inline">\(A^{-1}\)</span> is also an <span class="math inline">\(n\times n\)</span> matrix.</p>
-<p>Now another way to express the matrix inverse is via the statement:
+<p>It turns out<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a> that this only works for <em>square</em> matrices, that is, a matrix <span class="math inline">\(A\)</span> with same number of rows and columns. This immediately implies that <span class="math inline">\(A^{-1}\)</span> is also a square matrix with the same number of rows and columns as <span class="math inline">\(A\)</span>.</p>
+<p>Another way to express the matrix inverse is via the statement:
 <span class="math display">\[A^{-1}A=I_n=AA^{-1}\]</span>
 since applying <span class="math inline">\(A\)</span> and its inverse <span class="math inline">\(A^{-1}\)</span> has the same effect as applying the identity matrix.</p>
 <p><strong>Exercise:</strong> Show that the matrix
@@ -612,15 +612,15 @@ That is, we require that
 \begin{pmatrix} a - c &amp; b - d \\ -a + c &amp; -b + d \end{pmatrix}
 = \begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}.
 \]</span>
-Comparing the entries in the left-most column of the matrices on the left- and right-hand sides of the above matrix equation, we deduce that, both
+Comparing the entries in the left-most column of the matrices on the left- and right-hand sides of the above matrix equation, we deduce that both
 <span class="math display">\[
-a - c = 1 \qquad\text{and}\qquad -a + c = 0,
+a - c = 1 \qquad\text{and}\qquad -a + c = 0
 \]</span>
-which, adding both equations, gives <span class="math inline">\(0 = 1\)</span>, which is not true. Thus, assuming that <span class="math inline">\(A\)</span> has an inverse leads to a contradiction, so there cannot be an inverse of <span class="math inline">\(A\)</span></p>
+Adding these two equations together gives <span class="math inline">\(0 = 1\)</span>, which is not true. Thus, assuming that <span class="math inline">\(A\)</span> has an inverse leads to a contradiction. This implies that there cannot be an inverse of <span class="math inline">\(A\)</span>.</p>
 </div>
 <div id="finding-the-inverse-of-a-2times-2-matrix" class="section level3 hasAnchor" number="9.2.1">
 <h3><span class="header-section-number">9.2.1</span> Finding the inverse of a <span class="math inline">\(2\times 2\)</span> matrix<a href="linear-transformations.html#finding-the-inverse-of-a-2times-2-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We start by presenting the formula for the inverse of a <span class="math inline">\(2\times 2\)</span> matrix, which is relatively straightforward. Then we will discuss how to find the inverse of a general <span class="math inline">\(n\times n\)</span> matrix, which is more involved, in the next section.</p>
+<p>We start by presenting the formula for the inverse of a <span class="math inline">\(2\times 2\)</span> matrix, which is relatively straightforward. We will discuss how to find the inverse of a general <span class="math inline">\(n\times n\)</span> matrix, which is more involved, in the next section.</p>
 <div class="theorem">
 <p><span id="thm:2by2inverse" class="theorem"><strong>Theorem 9.1  (Inverse of a 2 x 2 matrix) </strong></span>Let <span class="math inline">\(A\)</span> be the <span class="math inline">\(2\times 2\)</span> matrix
 <span class="math display">\[A=\begin{pmatrix}
@@ -633,11 +633,12 @@ d&amp;-b\\
 -c&amp;a
 \end{pmatrix}.\]</span></p>
 </div>
-<p>Note that the formula only makes sense if <span class="math inline">\(\det(A)\neq 0\)</span>. It turns out that the condition <span class="math inline">\(\det(A)\neq 0\)</span> is precisely the condition that must be satisfied for invertibility (for any size matrix).</p>
+<p>Note that the formula is only defined if <span class="math inline">\(\det(A)\neq 0\)</span>. It turns out that the condition <span class="math inline">\(\det(A)\neq 0\)</span> is precisely the condition that must be satisfied for invertibility (for any size of matrix).</p>
 <div class="theorem">
-<p><span id="thm:invertible" class="theorem"><strong>Theorem 9.2  (Existence of matrix inverse) </strong></span>An <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(A\)</span> is invertible if and only if <span class="math inline">\(\det(A)\neq 0\)</span>. If <span class="math inline">\(A\)</span> is not invertible, then we say that <span class="math inline">\(A\)</span> is <em>singular</em>.</p>
+<p><span id="thm:invertible" class="theorem"><strong>Theorem 9.2  (Existence of matrix inverse) </strong></span>An <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(A\)</span> is invertible if and only if <span class="math inline">\(\det(A)\neq 0\)</span>.</p>
 </div>
 <p>This is an extension to not being able to divide by zero in the one-dimensional case: we cannot solve <span class="math inline">\(ax=b\)</span> if <span class="math inline">\(a=0\)</span>.</p>
+<p>If <span class="math inline">\(A\)</span> is not invertible, then <span class="math inline">\(A\)</span> is called <em>singular</em>.</p>
 <div class="example">
 <p><span id="exm:inverse" class="example"><strong>Example 9.8  (2 x 2 inverse examples) </strong></span></p>
 <ol style="list-style-type: decimal">
@@ -646,14 +647,14 @@ d&amp;-b\\
 The determinant of <span class="math inline">\(A\)</span> is <span class="math inline">\(\det(A) = 1\times 10 - 5\times 2 = 0\)</span>. Thus <span class="math inline">\(A\)</span> is singular.</p></li>
 <li><p>Let
 <span class="math display">\[M = \begin{pmatrix} 7 &amp; 3 \\ 2 &amp; 3 \end{pmatrix}.\]</span>
-We have <span class="math inline">\(\det(M) = 15\)</span>, hence, <span class="math inline">\(M\)</span> is invertible and its inverse is
+We have <span class="math inline">\(\det(M) = 15\)</span>, hence, <span class="math inline">\(M\)</span> is invertible. Applying the previous formula for the inverse of a <span class="math inline">\(2 \times 2\)</span> matrix gives:
 <span class="math display">\[M^{-1} = \frac{1}{15} \begin{pmatrix} 3 &amp; -3 \\ -2 &amp; 7 \end{pmatrix}.\]</span></p></li>
 </ol>
 </div>
 </div>
 <div id="finding-the-inverse-of-an-ntimes-n-matrix" class="section level3 hasAnchor" number="9.2.2">
 <h3><span class="header-section-number">9.2.2</span> Finding the inverse of an <span class="math inline">\(n\times n\)</span> matrix<a href="linear-transformations.html#finding-the-inverse-of-an-ntimes-n-matrix" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>There does exist a formula that is a generalisation of that for <span class="math inline">\(2\times 2\)</span> matrices, based on <a href="https://en.wikipedia.org/wiki/Invertible_matrix#Analytic_solution">Cramer’s Rule</a>. This is important in the theory of matrices, but not very useful in practice for large matrices. Hence we present a different way of computing the inverse, via Guassian elimination.</p>
+<p>There does exist a formula that is a generalisation of that for <span class="math inline">\(2\times 2\)</span> matrices, based on <a href="https://en.wikipedia.org/wiki/Invertible_matrix#Analytic_solution">Cramer’s Rule</a>. This is important in the theory of matrices, but not very useful in practice for large matrices. Hence we present a different way of computing the inverse, via Gaussian elimination.</p>
 <p>For the moment, denote <span class="math inline">\(X=A^{-1}\)</span>. We are looking for <span class="math inline">\(X\)</span> such that <span class="math inline">\(AX=I_n\)</span> and <span class="math inline">\(XA=I_n\)</span>. It turns out that if <span class="math inline">\(X\)</span> satisfies either one of these equations then it is the unique inverse, so we shall just consider <span class="math inline">\(AX=I_n\)</span>.</p>
 <p>By the rules of matrix multiplication, the first column of <span class="math inline">\(I_n\)</span> is the result of taking the dot product of the rows of <span class="math inline">\(A\)</span> with the first column of <span class="math inline">\(X\)</span>. Denoting the <span class="math inline">\(i^\text{th}\)</span> row of <span class="math inline">\(A\)</span> by <span class="math inline">\(\mathbf{a}_i\)</span> and the <span class="math inline">\(j^\text{th}\)</span> column of <span class="math inline">\(X\)</span> by <span class="math inline">\(\mathbf{x}_j\)</span>, we have</p>
 <p><span class="math display">\[
@@ -732,7 +733,7 @@ For the above matrix <span class="math inline">\(A\)</span>, the augmented matri
 0 &amp; 1 &amp; 3 &amp; 0 &amp; 0 &amp; 1
 \end{array}\right).
 \]</span>
-First, we swap rows <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span>, which gives
+First, we swap rows <span class="math inline">\(2\)</span> and <span class="math inline">\(3\)</span>,<a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a> which gives
 <span class="math display">\[
 \begin{array}{l}
 \quad\\
@@ -808,6 +809,7 @@ It can easily be checked that <span class="math inline">\(AX = I_3 = XA\)</span>
 <li id="fn10"><p>Sometimes we make do with so called <em>partial inverses</em> as we previously introduced for the cases of inverse trigonometric functions and the square root function.<a href="linear-transformations.html#fnref10" class="footnote-back">↩︎</a></p></li>
 <li id="fn11"><p>The technical term for the fact that we can swap the order.<a href="linear-transformations.html#fnref11" class="footnote-back">↩︎</a></p></li>
 <li id="fn12"><p>Due to the <a href="https://en.wikipedia.org/wiki/Rank%E2%80%93nullity_theorem" target="_blank">rank-nullity theorem</a>.<a href="linear-transformations.html#fnref12" class="footnote-back">↩︎</a></p></li>
+<li id="fn13"><p>This is a slight deviation from Gaussian elimination to simplify the algebra in this example. Providing, as is the case here, we only work with EROs, then the approach remains valid.<a href="linear-transformations.html#fnref13" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
