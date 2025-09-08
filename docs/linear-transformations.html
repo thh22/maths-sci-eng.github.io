@@ -384,10 +384,10 @@
 <h1><span class="header-section-number">Chapter 9</span> Linear Transformations<a href="linear-transformations.html#linear-transformations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>We have seen that we can formulate a system of linear equations as a matrix-vector equation
 <span class="math display">\[A\mathbf{x}=\mathbf{b}\]</span>
-and viewed this in two ways:</p>
+and we have viewed this in two different ways:</p>
 <ol style="list-style-type: decimal">
-<li>as a compact way of expressing the system of linear equations: multiplying the vector <span class="math inline">\(\mathbf{x}\)</span> by the matrix <span class="math inline">\(A\)</span>, each row in the resulting vector equation is one of the linear equations</li>
-<li>as a vector equation with the l.h.s. being a linear combination of the columns of <span class="math inline">\(A\)</span></li>
+<li>as a compact way of expressing a system of linear equations: perform matrix multiplication of the vector <span class="math inline">\(\mathbf{x}\)</span> by the matrix <span class="math inline">\(A\)</span>, and each row in the resulting vector equation is one of the linear equations</li>
+<li>as a vector equation with the left hand side being a linear combination of the columns of <span class="math inline">\(A\)</span>.</li>
 </ol>
 <p>We now introduce a third point of view:</p>
 <ol start="3" style="list-style-type: decimal">
@@ -395,21 +395,21 @@ and viewed this in two ways:</p>
 </ol>
 <p>As a function, the matrix <span class="math inline">\(A\)</span> represents a <em>Linear Transformation</em>. This is a type of function <span class="math inline">\(f\)</span> whose inputs and outputs are vectors, with the following properties:</p>
 <ol style="list-style-type: upper-roman">
-<li><span class="math inline">\(f(\mathbf{x}_1+\mathbf{x}_2)=f(\mathbf{x}_1)+f(\mathbf{x}_2)\)</span> for any two vectors <span class="math inline">\(\mathbf{x}_1\)</span> and <span class="math inline">\(\mathbf{x}_2\)</span></li>
-<li><span class="math inline">\(f(\lambda\mathbf{x})=\lambda f(\mathbf{x})\)</span> for any scalar <span class="math inline">\(\lambda\)</span> and vector <span class="math inline">\(\mathbf{x}\)</span></li>
+<li><span class="math inline">\(f(\mathbf{x}_1+\mathbf{x}_2)=f(\mathbf{x}_1)+f(\mathbf{x}_2)\)</span> for any two vectors <span class="math inline">\(\mathbf{x}_1\)</span> and <span class="math inline">\(\mathbf{x}_2\)</span>.</li>
+<li><span class="math inline">\(f(\lambda\mathbf{x})=\lambda f(\mathbf{x})\)</span> for any scalar <span class="math inline">\(\lambda\)</span> and vector <span class="math inline">\(\mathbf{x}\)</span>.</li>
 </ol>
 <p>Translating this to matrices:</p>
 <ol style="list-style-type: upper-roman">
-<li><span class="math inline">\(A(\mathbf{x}_1+\mathbf{x}_2)=A\mathbf{x}_1+A\mathbf{x}_2\)</span> for any two vectors <span class="math inline">\(\mathbf{x}_1\)</span> and <span class="math inline">\(\mathbf{x}_2\)</span></li>
-<li><span class="math inline">\(A(\lambda\mathbf{x})=\lambda A\mathbf{x}\)</span> for any scalar <span class="math inline">\(\lambda\)</span> and vector <span class="math inline">\(\mathbf{x}\)</span></li>
+<li><span class="math inline">\(A(\mathbf{x}_1+\mathbf{x}_2)=A\mathbf{x}_1+A\mathbf{x}_2\)</span> for any two vectors <span class="math inline">\(\mathbf{x}_1\)</span> and <span class="math inline">\(\mathbf{x}_2\)</span>.</li>
+<li><span class="math inline">\(A(\lambda\mathbf{x})=\lambda A\mathbf{x}\)</span> for any scalar <span class="math inline">\(\lambda\)</span> and vector <span class="math inline">\(\mathbf{x}\)</span>.</li>
 </ol>
-<p><strong>Exercise:</strong> convice yourself that these properties hold by evaluating the left and right hand sides for a general <span class="math inline">\(3\times 3\)</span> matrix and confirming they are equal.</p>
+<p><strong>Exercise:</strong> convince yourself that these properties hold by evaluating the left and right hand sides for a general <span class="math inline">\(3\times 3\)</span> matrix and confirming they are equal.</p>
 <div class="example">
-<p><span id="exm:rotation" class="example"><strong>Example 9.1  (Rotation about the origin) </strong></span>The following matrix rotates a vector by an angle <span class="math inline">\(\theta\)</span> anticlockwise about the origin.
+<p><span id="exm:rotation" class="example"><strong>Example 9.1  (Rotation about the origin) </strong></span>The following matrix rotates a vector by an angle <span class="math inline">\(\theta\)</span> anticlockwise about the origin:
 <span class="math display">\[R_\theta=\begin{pmatrix}
 \cos(\theta)&amp; -\sin(\theta)\\
 \sin(\theta)&amp; \cos(\theta)
-\end{pmatrix}
+\end{pmatrix}.
 \]</span></p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:rotmat"></span>
 <img src="figures/rotationmat.png" alt="The action of $R_\theta$ on a vector $\mathbf{v}$" width="50%" />
@@ -424,15 +424,15 @@ Figure 9.1: The action of <span class="math inline">\(R_\theta\)</span> on a vec
 </ol>
 <p>It turns out that all linear transformations can (in a certain sense) be decomposed as a rotation or reflection, followed by a coordinate scaling, followed by another rotation or reflection, as explained by the <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition">Singular Value Decomposition theorem</a>.</p>
 </div>
-<p>Of course not all functions have these special properties.</p>
-<p><strong>Exercise:</strong> convince yourself that <span class="math inline">\(f(x)=x^2\)</span> is <strong>not</strong> a linear transformation by finding values <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> (real numbers are 1-dimensional vectors) and a scalar <span class="math inline">\(\lambda\)</span> for which the above properties I. and II. do not hold.</p>
+<p>Of course, not all functions have these special properties.</p>
+<p><strong>Exercise:</strong> convince yourself that <span class="math inline">\(f(x)=x^2\)</span> is <strong>not</strong> a linear transformation by finding values <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> (real numbers are 1-dimensional vectors) and a scalar <span class="math inline">\(\lambda\)</span> for which <span class="math inline">\(f(\lambda x) \neq \lambda f(x)\)</span> and <span class="math inline">\(f(x+y) \neq f(x) + f(y)\)</span>.</p>
 <p>Now, if we were trying to solve an equation involving a function, say <span class="math inline">\(f(x)=b\)</span>, we would apply the inverse <span class="math inline">\(f^{-1}\)</span> to both sides to get
 <span class="math display">\[\begin{align*}
 f(x)&amp;=b\\
 f^{-1}(f(x))&amp;=f^{-1}(b)\\
 x&amp;=f^{-1}(b).
 \end{align*}\]</span></p>
-<p>Note this only works if <span class="math inline">\(f^{-1}\)</span> exists – we know that not all functions have inverses<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a>. We will soon show a condition for the existence of the inverse of a matrix <span class="math inline">\(A\)</span>, which we denote by <span class="math inline">\(A^{-1}\)</span> and that is itself another matrix. We will then have another way to solve linear equations by applying the inverse matrix:</p>
+<p>Note, this only works if <span class="math inline">\(f^{-1}\)</span> exists – we know that not all functions have inverses<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a>. We will soon show a condition for the existence of the inverse of a matrix <span class="math inline">\(A\)</span>, which we denote by <span class="math inline">\(A^{-1}\)</span> and that is itself another matrix. We will then have another way to solve linear equations <em>for invertible matrices</em> by applying the inverse matrix:</p>
 <p><span class="math display">\[\begin{align*}
 A\mathbf{x}&amp;=\mathbf{b}\\
 A^{-1}(A\mathbf{x})&amp;=A^{-1}\mathbf{b}\\
@@ -443,7 +443,7 @@ A^{-1}(A\mathbf{x})&amp;=A^{-1}\mathbf{b}\\
 <h2><span class="header-section-number">9.1</span> Matrix Algebra<a href="linear-transformations.html#matrix-algebra" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="addition-and-subtraction" class="section level3 hasAnchor" number="9.1.1">
 <h3><span class="header-section-number">9.1.1</span> Addition and Subtraction<a href="linear-transformations.html#addition-and-subtraction" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We can add and subtract two matrices, so long as the have the same dimensions <span class="math inline">\(m\times n\)</span>. Then the sum and difference of two matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are</p>
+<p>We can add and subtract two matrices, so long as they have the same dimensions <span class="math inline">\(m\times n\)</span>. The sum and difference of two such matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are defined as</p>
 <p><span class="math display">\[A+B=(a_{ij}+b_{ij}),\qquad A-B=(a_{ij}-b_{ij}),\]</span></p>
 <p>that is, we simply add or subtract the corresponding entries.</p>
 <div class="example">
@@ -453,13 +453,13 @@ A = \begin{pmatrix} 2 &amp; 9 &amp; 6 \\ -1 &amp; 3 &amp; 5 \end{pmatrix}
 \qquad\text{and}\qquad
 B = \begin{pmatrix} 0 &amp; 3 &amp; -1 \\ 2 &amp; 7 &amp; 8 \end{pmatrix}.
 \]</span>
-Because the both matrices have dimensions <span class="math inline">\(2 \times 3\)</span>, we may calculate
+Because both the matrices have dimensions <span class="math inline">\(2 \times 3\)</span>, we may calculate
 <span class="math display">\[
 A + B = \begin{pmatrix} 2 &amp; 12 &amp; 5 \\ 1 &amp; 10 &amp; 13 \end{pmatrix}
 \qquad\text{and}\qquad
 A - B = \begin{pmatrix} 2 &amp; 6 &amp; 7 \\ -3 &amp; -4 &amp; -3 \end{pmatrix}.
 \]</span>
-Note, that matrix addition is <em>commutative</em><a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a>, that is
+Note that matrix addition is <em>commutative</em><a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a>, that is
 <span class="math display">\[
 A + B = B + A.
 \]</span></p>
@@ -473,7 +473,7 @@ A + B = B + A.
 \]</span>
 that is, we multiply every entry of <span class="math inline">\(A\)</span> by <span class="math inline">\(\lambda\)</span>.</p>
 <div class="example">
-<p><span id="exm:matscalar" class="example"><strong>Example 9.3  (Scalar Multiplication) </strong></span>With <span class="math inline">\(A\)</span> as in Example @ref(exm:mat_add), <span class="math inline">\(\lambda = 2\)</span> and <span class="math inline">\(\mu = -1\)</span>, we have
+<p><span id="exm:matscalar" class="example"><strong>Example 9.3  (Scalar Multiplication) </strong></span>With <span class="math inline">\(A\)</span> as in Example <a href="linear-transformations.html#exm:matadd">9.2</a>, <span class="math inline">\(\lambda = 2\)</span> and <span class="math inline">\(\mu = -1\)</span>, we have
 <span class="math display">\[
 \lambda A = 2A = \begin{pmatrix} 4 &amp; 18 &amp; 12 \\ -2 &amp; 6 &amp; 10 \end{pmatrix}
 \qquad\text{and}\qquad
@@ -802,7 +802,7 @@ It can easily be checked that <span class="math inline">\(AX = I_3 = XA\)</span>
 <div class="footnotes">
 <hr />
 <ol start="10">
-<li id="fn10"><p>Sometimes we make do with so called <em>partial inverses</em> as we have for the inverse trigonometric functions and the square root function.<a href="linear-transformations.html#fnref10" class="footnote-back">↩︎</a></p></li>
+<li id="fn10"><p>Sometimes we make do with so called <em>partial inverses</em> as we previously introduced for the cases of inverse trigonometric functions and the square root function.<a href="linear-transformations.html#fnref10" class="footnote-back">↩︎</a></p></li>
 <li id="fn11"><p>The technical term for the fact that we can swap the order.<a href="linear-transformations.html#fnref11" class="footnote-back">↩︎</a></p></li>
 <li id="fn12"><p>Due to the <a href="https://en.wikipedia.org/wiki/Rank%E2%80%93nullity_theorem">rank-nullity theorem</a>.<a href="linear-transformations.html#fnref12" class="footnote-back">↩︎</a></p></li>
 </ol>

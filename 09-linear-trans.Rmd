@@ -108,17 +108,17 @@ With $A$ as in Example \@ref(exm:matadd), $\lambda = 2$ and $\mu = -1$, we have
 $$
 \lambda A = 2A = \begin{pmatrix} 4 & 18 & 12 \\ -2 & 6 & 10 \end{pmatrix}
 \qquad\text{and}\qquad
-\mu A = -A = \begin{pmatrix} -2 &-9 &-6 \\ 1 & -3 & -5\end{pmatrix}
+\mu A = -A = \begin{pmatrix} -2 &-9 &-6 \\ 1 & -3 & -5\end{pmatrix}.
 $$
 :::
 
 ### Matrix multiplication
 
-We saw in section \@ref(linearrevisited) how to multiply a vector by a matrix. This idea extends naturally to multiplying two matrices together as follows.
+We saw in section \@ref(linearrevisited) how to multiply a vector by a matrix. This idea extends naturally to multiplying two matrices together, as follows:
 
 Let $A = (a_{ij})_{m\times l}$ and $B = (b_{ij})_{l \times n}$. Then the *matrix product* $C = AB$ is defined to be the matrix $AB = (c_{ij})_{m\times n}$ such that $c_{ij}$ is the dot product of row $i$ of $A$ with column $j$ of $B$. That is, for all $i =1,\dotsc, m$ and all $j =1, \dotsc, n$,
 $$
-c_{ij} = a_{i1} b_{1j} + a_{i2} b_{2j} + \dots + a_{il} b_{lj}
+c_{ij} = a_{i1} b_{1j} + a_{i2} b_{2j} + \dots + a_{il} b_{lj}.
 $$
 
 Note that the product $AB$ is defined only if the number of **columns** of $A$ is the equal to the number of **rows** of $B$. The product matrix has the same number of **rows** as $A$ and the same number of **columns** as $B$.
@@ -136,41 +136,47 @@ AB = \begin{pmatrix} 3 & 2 & -1\\ 0 & 5 & 4 \end{pmatrix}
 \begin{pmatrix} 1 & 2 & 4 & 6\\ 5 & 3 & 0 & 7\\ -1 & -2 & 1 & 5	\end{pmatrix}
 = \begin{pmatrix}	14 & 14 & 11 & 27\\ 21 & 7 & 4 & 55 \end{pmatrix}.
 $$
-Note that $A$ is $2\times3$, that $B$ is $3\times 4$ and that the product $AB$ is a $2\times 4$ matrix. We have skipped the intermediate steps of multiplying all rows of $A$ with all columns of $B$, but to give an example, the $1$--$3$ entry of $AB$ is 11, which must be the dot product of the $1^\text{st}$ row of $A$ and the $3^\text{rd}$ column of $B$:
+Note that $A$ is $2\times3$, that $B$ is $3\times 4$, and that the product $AB$ is a $2\times 4$ matrix. We have skipped the intermediate steps of multiplying all rows of $A$ with all columns of $B$, but to give an example, the $1$--$3$ entry of $AB$ is 11, which must be the dot product of the $1^\text{st}$ row of $A$ and the $3^\text{rd}$ column of $B$:
 $$
 \begin{pmatrix} 3 & 2 & -1\end{pmatrix} \cdot \begin{pmatrix} 4\\ 0\\ 1\end{pmatrix}
 = 3 \times 4 + 2 \times 0 - 1\times 1 = 11.
 $$
 :::
 
-Unlike with ordinary (scalar) numbers, we do not normally have $AB = BA$, that is Matrix multiplication is **not** commutative. Indeed, in the above example, $BA$ is not even defined. The reason is that $B$ has $4$ columns, but $A$ has $2$ rows.
+Unlike with ordinary (scalar) numbers, we do not normally have $AB = BA$. That is, matrix multiplication is **not** commutative. Indeed, in the above example, $BA$ is not even defined. The reason is that $B$ has $4$ columns, but $A$ has $2$ rows.
 
 
 ### Functional interpretations
 
-Here we understand what the algebraic operations above mean when we are considering a matrix as a function. We let $A$ and $B$ be compatible matrices, $\mathbf{x}$ a vector and for comparison to other (non-linear) functions we take the examples $f(x)=x^2$ and $g(x)=x^3$.
+Here, we consider how to interpret matrix addition, subtraction, scaling and multiplication when we are considering a matrix as a function. 
+
+We let $A$ and $B$ be compatible matrices (i.e. they have appropriate dimensions to ensure that any operations described in this section -- additions, subtractions and multiplications -- can be carried out). We also let $\mathbf{x}$ be a vector. And, for comparison to other (non-linear) functions, we take the examples $f(x)=x^2$ and $g(x)=x^3$.
 
 **Addition/Subtraction**
 
-$$(A+B)\mathbf{x}=A\mathbf{x}+B\mathbf{x}$$
+$$(A+B)\mathbf{x}=A\mathbf{x}+B\mathbf{x}.$$
 
-This agrees with the usual definition of the sum of two functions, for example we have $(f+g)(x)=f(x)+g(x)=x^2+x^3$.
+This agrees with the usual definition of the sum of two functions. For example, 
+
+$$(f+g)(x)=f(x)+g(x)=x^2+x^3.$$
 
 **Scalar multiplication**
 
-$$(\lambda A)\mathbf{x}=\lambda (A \mathbf{x})$$
+$$(\lambda A)\mathbf{x}=\lambda (A \mathbf{x}).$$
 
-Again this agrees with the usual definition for functions, for example $(\lambda f)(x)=\lambda f(x)=\lambda x^2$.
+Again, this agrees with the usual definition for functions. For example, $(\lambda f)(x)=\lambda f(x)=\lambda x^2$.
 
 **Matrix Multiplication**
 
-$$(AB)\mathbf{x}=A(B\mathbf{x})$$
+$$(AB)\mathbf{x}=A(B\mathbf{x}).$$
 
-Matrix multiplication corresponds to *function composition*, that is, first apply matrix $B$ then apply matrix $A$. In our example for non-linear functions, $(f\circ g)(x)=f(g(x))=f(x^3)=(x^3)^2=x^6$ (where $\circ$ denotes function composition).
+Matrix multiplication corresponds to *function composition*. That is, first apply the transformation corresponding to matrix $B$ then apply the transformation corresponding to matrix $A$. 
+
+Similarly, considering the non-linear functions $f$ and $g$, $(f\circ g)(x)=f(g(x))=f(x^3)=(x^3)^2=x^6$ (where $\circ$ denotes function composition).
 
 When we have repeated multiplication of a matrix with itself $n$ times we use the power notation:
 
-$$A\dotsb A=A^n$$
+$$A\dotsb A=A^n,$$
 
 for example, $AA=A^2$.
 
@@ -196,7 +202,7 @@ Note that for any vector $\mathbf{x}$ of length $n$, we have $0_{m\times n} \mat
 The $n\times n$ *identity matrix* $I_n$, is defined by $I_n = (\delta_{ij})_{n\times n}$, where $\delta_{ij}$ is given as
 $$\delta_{ij} = \begin{cases} 1 & \text{if $i = j$,} \\ 0 & \text{if $i \neq j$.} \end{cases}
 $$
-The function (or sometimes referred to as a "symbol") $\delta$ of the two variables $i$ and $j$ is called the *Kronecker delta* and pops up often in pure and applied mathematics.
+The function <!-- (or sometimes referred to as a "symbol") -->$\delta$ of the two variables $i$ and $j$ is called the *Kronecker delta* and pops up often in pure and applied mathematics.
 
 ::: {.example #identmat name="Identity Matrix"}
 For $n = 3$, we have
@@ -211,7 +217,7 @@ $$I_n\mathbf{x}=\mathbf{x}.$$
 
 ### Some further properties
 
-Assuming the matrices $A, B, C$ all have compatible dimensions and with $\lambda, \mu$ being scalars, we have: 
+Let $A, B, C$ all have compatible dimensions, and let $\lambda, \mu$ be scalars. Then: 
 
 1. $\lambda(A+B)=\lambda A + \lambda B$
 1. $(\lambda + \mu)A=\lambda A +\mu A$
@@ -219,7 +225,7 @@ Assuming the matrices $A, B, C$ all have compatible dimensions and with $\lambda
 1. $0_{l\times m}A=0_{l\times n}$ and $A0_{n\times p}=0_{m\times p}$
 1. $(AB)C=A(BC)$
 1. $A(B+C)=AB+AC$
-1. $(A+B)C=AC+BC$
+1. $(A+B)C=AC+BC$.
 
 **Exercise:** pick some matrices and check that these hold.
 
@@ -228,12 +234,12 @@ Assuming the matrices $A, B, C$ all have compatible dimensions and with $\lambda
 
 We are now ready to discuss the matrix inverse. By definition, the inverse $f^{-1}$ of a function $f$ is the function that satisfies
 $$f^{-1}(f(x))=x\quad\text{and}\quad f(f^{-1}(y))=y$$
-for all input values $x$ and output values $y$ (the function and its inverse "reverse" the action of one another.)
-For a matrix, function composition is given by matrix mutiplication, so the definition of the inverse matrix $A^{-1}$ of a matrix $A$ requires
+for all input values $x$ and output values $y$ (the function and its inverse "reverse" the action of one another).
+For a matrix, function composition is given by matrix multiplication, so the definition of the inverse matrix $A^{-1}$ of a matrix $A$ requires
 $$A^{-1}A\mathbf{x}=\mathbf{x}\quad\text{and}\quad AA^{-1}\mathbf{y}=\mathbf{y}$$
 for all input vectors $\mathbf{x}$ and output vectors $\mathbf{y}$.
 
-It turns out^[Due to the [rank-nullity theorem](https://en.wikipedia.org/wiki/Rank%E2%80%93nullity_theorem).] this will only work for *square* matrices, that is, a matrix $A$ with same number of rows and columns: an $n\times n$ matrix. This immediately implies that $A^{-1}$ is also an $n\times n$ matrix.
+It turns out^[Due to the <a href="https://en.wikipedia.org/wiki/Rank%E2%80%93nullity_theorem" target="_blank">rank-nullity theorem</a>.] that this only works for *square* matrices, that is, a matrix $A$ with same number of rows and columns. This immediately implies that $A^{-1}$ is also an $n\times n$ matrix.
 
 Now another way to express the matrix inverse is via the statement:
 $$A^{-1}A=I_n=AA^{-1}$$
