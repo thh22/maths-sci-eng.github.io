@@ -196,20 +196,22 @@ We refer to the operations used in Gaussian elimination as *elementary row opera
 
 for any given pair of rows $R_i$, $R_k$ of the augmented matrix, $i \neq k$.
 
-We now present a sketch of the full Gaussian elimination procedure using these EROs. The key is to use the non-zero coefficient in a given row of the augmented matrix, and then apply the first of the three EROs in order to transform all of the other rows such that the corresponding coefficient in each of these other rows becomes zero. This process can be repeated in a systematic way going from the top of the augmented matrix to the bottom then returning to the top, such that the resulting transformed matrix has at most one non-zero coefficient in each row (not including the final column of the augmented matrix), and the columns containing of the non-zero entries in each of the rows are distinct. Moreover, the second of the three EROs can be used to set the value of the non-zero coefficients to one (again, not including the final column of the augmented matrix). The approach is as follows:
+We now present a sketch of the full Gaussian elimination procedure using these EROs. The key is to use the non-zero coefficient in a given row of the augmented matrix, and then apply the first of the three EROs in order to transform all of the other rows such that the corresponding coefficient in each of these other rows becomes zero. This process can be repeated in a systematic way going from the top of the augmented matrix to the bottom then returning to the top, such that the resulting transformed matrix has at most one non-zero coefficient in each row (not including the final column of the augmented matrix), and the columns containing the non-zero entries in each of the rows are distinct. Moreover, the second of the three EROs can be used to set the value of the non-zero coefficients to one (again, not including the final column of the augmented matrix). The approach is as follows:
 
 <!--
 First, note that we call the first non-zero entry (reading from left to right) in any row of a matrix the *leading entry*. A leading entry will always be used as a *pivot*, where a pivot is an element used to zero-out the other entries in the same column as the pivot.
 -->
 
-1. select the first non-zero entry in the top row as a pivot (if this row is non-zero);
+1. start at the first row of the matrix (the current row);
+1. select the first non-zero entry in the current row as a pivot (if this row is non-zero);
 1. perform EROs to eliminate the entries below the pivot;
 1. move down to the next row and continue the process;
 1. having reached the bottom row, work back up again, that is:
-1. select the final non-zero entry in the final row of the matrix of coefficients as the pivot (if this row is non-zero);
+1. start at the final row of the matrix (the current row);
+1. select the final non-zero entry in the current row of the matrix of coefficients as the pivot (if this row is non-zero);
 1. scale this row to set the value of the pivot to one;
 1. perform EROs to eliminate the entries above the pivot;
-1. move to the row above and continue the process (from step 4 onwards);
+1. move to the row above and continue the process (from step 6 onwards);
 1. having reached the top row, stop and read off the solutions.
 
 Let's have a look at another example applying these steps, this time in 3-dimensions.
@@ -305,7 +307,7 @@ We note that there are alternative approaches to Gaussian elimination. For examp
 
 ## Echelon Form
 
-Recall that in general there may be one, none or infinitely many solutions to a system of linear equations. We now see what happens in Guassian elimination in these scenarios. When following the proceedure of Gaussian elimination we reduce the coefficient matrix to make the leading entry in each row equal to 1 and then clear all the values (make them zero) above and below this entry. This results in a coefficient matrix in what is known as *reduced echelon form*. This allows us to easily read off the solutions. Here is a formal definition of the reduced echelon form.
+Recall that in general there may be one, none, or infinitely many solutions to a system of linear equations. We now see what happens in Guassian elimination in these scenarios. When following the proceedure of Gaussian elimination we reduce the coefficient matrix to make the leading entry in each row equal to 1 and then clear all the values (make them zero) above and below this entry. This results in a coefficient matrix in what is known as *reduced echelon form*. This allows us to easily read off the solutions. Here is a formal definition of the reduced echelon form.
 
 ::: {.definition #REF name="Reduced Echelon Form"}
 A matrix is said to be in *reduced echelon form (REF)* if
