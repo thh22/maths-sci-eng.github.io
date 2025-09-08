@@ -1,30 +1,30 @@
 # Systems of Linear Equations {#gauss}
 
-So-called *linear equations* arise often in mathematical problems in science and engineering. In this chapter we will see a very useful method for solving simultaneous linear equations, known as *Gaussian elimination*. We'll start by understanding the geometric nature of linear equations.
+So-called *linear equations* arise often in data science. In this chapter we will see a very useful method for solving simultaneous linear equations, known as *Gaussian elimination*. We'll start by discussing the geometric nature of linear equations.
 
 ## Lines and planes
 
 A linear equation is one of the form
 $$a_1x_1+a_2x_2+\dotsb+a_nx_n=b$$
-where the $x_i$'s are variables, the $a_i$'s are coefficients, $b$ is a constant and $n$ is the number of variables in the equation. For $n=2$, we have an equation of the form
+where the $x_i$ are variables, the $a_i$ are coefficients, $b$ is a constant and $n$ is the number of variables in the equation. For $n=2$, we have an equation of the form
 $$a_1x_1+a_2x_2=b$$
 which we know to be the equation of a line in the Cartesian plane (see section \@ref(lines), where we used the notation $ax+by=c$). Suppose we have a pair of such equations. Then we could conveniently write them as
 \begin{align*}
 a_{11}x_1+a_{12}x_2&=b_1\\
 a_{21}x_1+a_{22}x_2&=b_2
 \end{align*}
-where now the first subscipt $i$ on the $a_{ij}$'s and $b_i$'s denotes the equation it belongs to and the second subscipt $j$ denotes the variable it belongs to. If we need to solve these equations to find the values of $x_1$ and $x_2$ that satisfy both equations simultaneously, then we call this a *system of linear equations*.
+where now the first subscript $i$ on the $a_{ij}$ and $b_i$ terms denotes the equation it belongs to, and the second subscipt $j$ denotes the variable it belongs to. If we need to solve these equations to find the values of $x_1$ and $x_2$ that satisfy both equations simultaneously, then we call this a *system of linear equations*.
 
-```{r sim-lines, fig.cap = "The two intersecting lines from example \\ref@(exm:gaus1).", fig.alt = "The two intersecting lines from example \\ref@(exm:gaus1)."}
-knitr::include_url("https://www.desmos.com/calculator/inagw05txf")
-```
-
-Geometrically, a solution to the equations corresponds to those coordinates $(x_1,x_2)$ where the lines meet -- these are values of $x_1$ and $x_2$ that satisfy both equations *simultaneously* -- see figure \ref@(fig:sim-lines). We therefore have three different scenarios for the solutions of such equations.
+Geometrically, a solution to the equations corresponds to those coordinates $(x_1,x_2)$ where the lines meet -- these are values of $x_1$ and $x_2$ that satisfy both equations *simultaneously* -- see figure \@ref(fig:sim-lines). We therefore have three different scenarios for the solutions of such equations.
 
 1. Most of the time, two lines in the plane will cross at exactly one point, hence we have just **one solution** (one pair of coordinates $(x_1,x_2)$).
 1. It is possible that both lines are parallel to one another, with different axis intercepts. In this case, the lines never meet -- there are **no solutions**.
 1. Finally, it is possible that the two equations actually describe the same line. In this case, any pair of coordinates $(x_1,x_2)$ that lies on the (common) line is a solution -- there are **infinitely many solutions**.
 
+
+```{r sim-lines, fig.cap = "The two intersecting lines $3x+2y=5$ and $x-4y=1$. Their point of intersection gives the one solution for $(x,y)$ to this pair of equations.", fig.alt = "The two intersecting lines $3x+2y=5$ and $x-4y=1$."}
+knitr::include_url("https://www.desmos.com/calculator/inagw05txf")
+```
 
 This idea extends to having more equations. For example, if we have a system of three equations in two variables:
 \begin{align*}
