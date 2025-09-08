@@ -168,7 +168,7 @@ This represents
 1\times x_1 + 0 \times x_2 &=x_1= \frac{11}{7}\\
 0\times x_1 + 1 \times x_2 &=x_2= \frac{1}{7}\\
 \end{align*}
-that is, we can just read off the solutions in the right-most column. This is an application of a general method known as Gaussian elimination^[The method is named after Carl Friedrich Gauss (1777--1855), a mathematician and physicist born in Braunschweig in the Holy Roman Empire, in what is now Germany. Gauss contributed broadly to mathematics and science and had a reputation for perfectionism and only publishing work that he considered to be complete and above criticism.], and provides a systematic way to solve simultaneous linear equations. 
+that is, we can just read off the solutions in the right-most column. This is an application of a general method known as Gaussian elimination^[The method is named after Carl Friedrich Gauss (1777--1855), a mathematician and physicist born in Braunschweig in the Holy Roman Empire, in what is now Germany. Gauss contributed broadly to mathematics and science, and had a reputation for perfectionism and only publishing work that he considered to be complete and above criticism.], and provides a systematic way to solve simultaneous linear equations. 
 
 Note that each step in the above process can be reversed using the same set of operations. For instance, the operation
 $$R_1 \to R_1 + 4R_2$$
@@ -320,7 +320,7 @@ A matrix is said to be in *reduced echelon form (REF)* if:
 1. the first non-zero entry in each row is the only non-zero entry in its column.
 :::
 
-The following are some examples of possible reduced echelon forms for $3\times 3$ coefficient matrices.
+The following are some examples of possible reduced echelon forms for $3\times 3$ coefficient matrices:
 
 $$
 \left(\begin{array}{rrr|r}
@@ -340,7 +340,7 @@ $$
 \end{array}\right).
 $$
 
-The previous examples were all square coefficient matrices (the same number of equations as variables). It is also possible that we have rectangular coefficient matrices. Here are some possible echelon forms.
+The previous examples were all square coefficient matrices (the same number of equations as variables). It is also possible that we have rectangular coefficient matrices. Here are some possible echelon forms:
 
 $$
 \left(\begin{array}{rrr|r}
@@ -379,7 +379,7 @@ If $\omega_3=0$ the equations read
 \begin{align*}
 x_1+\alpha x_3&=\omega_1\\
 x_2&=\omega_2\\
-0&=0
+0&=0.
 \end{align*}
 In effect, we only have two equations. There is no constraint on $x_3$ and we call this a *free variable*. We can *parameterise* the solution by setting $x_3=\beta$. There are infinitely many solutions corresponding to the set of points
 $$(\omega_1-\alpha\beta,\omega_2,\beta),$$

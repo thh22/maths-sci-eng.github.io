@@ -1,10 +1,10 @@
 # Matrices
 
-A matrix $A$ is a two-dimensional array of numbers. We say that $A$ is an $m \times n$ matrix if it has $m$ rows and $n$ columns, for some natural numbers $m$ and $n$. We use the notation
+A matrix $A$ is a two-dimensional array of numbers. For a given pair of natural numbers $m$ and $n$, we say that $A$ is an $m \times n$ matrix if it has $m$ rows and $n$ columns. We use the notation
 $$
 A = (a_{ij})_{m \times n}, \qquad \text{or more simply} \qquad A = (a_{ij}),
 $$
-to indicate that the entry in row $i$ and column $j$ of $A$ is $a_{ij}$. We refer to $a_{ij}$ as the $i$--$j$ entry of the matrix $A$.
+to indicate that $A$ is an $m \times n$ matrix and the entry in row $i$ and column $j$ of $A$ is $a_{ij}$. We refer to $a_{ij}$ as the $i$--$j$ entry of the matrix $A$.
 
 ## Solving linear systems revisited {#linearrevisited}
 
@@ -29,14 +29,14 @@ a_{m1}&a_{n2}&\dotsb&a_{mn}
 \end{pmatrix}.
 $$
 
-We will now write the variables and r.h.s. as vectors of length $n$ and $m$ respectively
+We will now write the variables and right hand sides of the set of linear equations as vectors of length $n$ and $m$ respectively:
 $$
 \mathbf{x} = \begin{pmatrix} x_1 \\ x_2 \\ \vdots \\ x_n \end{pmatrix}
 \qquad\text{and}\qquad
 \mathbf{b} = \begin{pmatrix} b_1 \\ b_2 \\ \vdots \\ b_m \end{pmatrix}.
 $$
 
-Next, we define the operation of multiplying a vector $\mathbf{x}$ of length $n$ by an $m\times n$ matrix $A$. The result is a vector of length $m$ whose first entry is the sum of the element-wise products of the first row of $A$ with the vector $\mathbf{x}$, the second entry is the sum of the element-wise products of the second row of $A$ with the vector $\mathbf{x}$ and so on:
+Next, we define the operation of multiplying a vector $\mathbf{x}$ of length $n$ by an $m\times n$ matrix $A$. The result is a vector of length $m$ whose first entry is the sum of the element-wise products of the first row of $A$ with the vector $\mathbf{x}$, the second entry is the sum of the element-wise products of the second row of $A$ with the vector $\mathbf{x}$, and so on:
 
 $$
 A\mathbf{x}=\begin{pmatrix}
@@ -52,29 +52,31 @@ a_{11}x_1+a_{12}x_2+\dotsb+a_{1n}x_n\\
 a_{21}x_1+a_{22}x_2+\dotsb+a_{2n}x_n\\
 \vdots\\
 a_{m1}x_1+a_{m2}x_2+\dotsb+a_{mn}x_n
-\end{pmatrix}
+\end{pmatrix}.
 $$
 Hence we can express the system of equations more compactly as
 $$A\mathbf{x}=\mathbf{b}$$
-where each row of the expanded equation corresponds to one of the linear equations. In the previous chapter we saw that solving such a system corresponds to finding the intersection points of the hyperplanes defined by these rows. We will call this the *row picture* of linear equations. However, there is another way to interpret $A\mathbf{x}=\mathbf{b}$ in terms of column vectors. We must first introduce some new definitions.
+where each row of the expanded equation corresponds to one of the linear equations. In the previous chapter, we saw that solving such a system corresponds to finding the intersection points of the hyperplanes defined by these rows. We will call this the *row picture* of linear equations. 
+
+There is another way to interpret $A\mathbf{x}=\mathbf{b}$ in terms of column vectors. To describe this, we first introduce some new definitions.
 
 ::: {.definition #lincomb name="Linear combinations"}
 Consider a list of vectors
 $$\mathbf{v}_1, \mathbf{v}_2,\dotsc,\mathbf{v}_n.$$
 
-* A *linear combination* of a list of vectors is a sum of the form
+* A *linear combination* of these vectors is a sum of the form
     $$
     \alpha_1\mathbf{v}_1+\alpha_2\mathbf{v}_2 + \dotsb + \alpha_n\mathbf{v}_n
     $$
     for some scalar coefficients $\alpha_i$.
 
-* A list of vectors is called *linearly independent* if we cannot write one of the vectors as a linear combination of the others, such as
+* A list of vectors $\mathbf{v}_1, \ldots , \mathbf{v}_n$ is called *linearly independent* if we cannot write one of the vectors as a linear combination of the others, that is, if there do not exist any relationships among the vectors of the form
     $$
     \mathbf{v}_i=\alpha_1\mathbf{v}_1+\alpha_2\mathbf{v}_2+\dotsb+\alpha_{i-1}\mathbf{v}_{i-1}+\alpha_{i+1}\mathbf{v}_{i+1}+\dotsb+\alpha_n\mathbf{v}_n
     $$
-    (none of the vectors depends on the others).
-
-* The *span* of a list of vectors is all of the possible linear combinations. If we can reach any vector in the space by taking some linear combination then we say the vectors *span* the space.
+    (none of the vectors depends linearly on the others).
+* A linear subspace is a set of vectors of the form $\alpha_1 \mathbf{v}_1 + \ldots + \alpha_n \mathbf{v}_n$, where $\alpha_1, \ldots , \alpha_n$ range over all possible values, and $\mathbf{v}_1, \ldots \mathbf{v}_n$ are fixed vectors. Examples include lines (one-dimensional subspaces) and planes (two-dimensional subspaces).
+* The *span* of a list of vectors $\mathbf{v}_1, \ldots , \mathbf{v}_n$ is all of the possible linear combinations, that is, the set of vectors of the form $\alpha_1 \mathbf{v}_1 + \ldots + \alpha_n \mathbf{v}_n$. If we can reach any vector in a given linear subspace by taking some linear combination of $\mathbf{v}_1, \ldots , \mathbf{v}_n$, then we say that the vectors $\mathbf{v}_1, \ldots , \mathbf{v}_n$ *span* the subspace.
 :::
 
 An intuitive way to think about linearly independent vectors is that they all point in "independent" directions. An intuitive way to think about the span is as all the points we can reach in the space by only walking in the directions of the list of vectors. Figure \@ref(fig:2dspan) demonstrates the concepts of linear combinations and span in 2-dimensions.
