@@ -23,7 +23,7 @@
 <meta name="author" content="Drs Mark Callaway, Tim Hughes and Ed Branford" />
 
 
-<meta name="date" content="2025-09-07" />
+<meta name="date" content="2025-09-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -382,32 +382,32 @@
             <section class="normal" id="section-">
 <div id="gauss" class="section level1 hasAnchor" number="7">
 <h1><span class="header-section-number">Chapter 7</span> Systems of Linear Equations<a href="gauss.html#gauss" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>So-called <em>linear equations</em> arise often in mathematical problems in science and engineering. In this chapter we will see a very useful method for solving simultaneous linear equations, known as <em>Gaussian elimination</em>. We’ll start by understanding the geometric nature of linear equations.</p>
+<p>So-called <em>linear equations</em> arise often in data science. In this chapter we will see a very useful method for solving simultaneous linear equations, known as <em>Gaussian elimination</em>. We’ll start by discussing the geometric nature of linear equations.</p>
 <div id="lines-and-planes" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> Lines and planes<a href="gauss.html#lines-and-planes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A linear equation is one of the form
 <span class="math display">\[a_1x_1+a_2x_2+\dotsb+a_nx_n=b\]</span>
-where the <span class="math inline">\(x_i\)</span>’s are variables, the <span class="math inline">\(a_i\)</span>’s are coefficients, <span class="math inline">\(b\)</span> is a constant and <span class="math inline">\(n\)</span> is the number of variables in the equation. For <span class="math inline">\(n=2\)</span>, we have an equation of the form
+where the <span class="math inline">\(x_i\)</span> are variables, the <span class="math inline">\(a_i\)</span> are coefficients, <span class="math inline">\(b\)</span> is a constant and <span class="math inline">\(n\)</span> is the number of variables in the equation. For <span class="math inline">\(n=2\)</span>, we have an equation of the form
 <span class="math display">\[a_1x_1+a_2x_2=b\]</span>
 which we know to be the equation of a line in the Cartesian plane (see section <a href="functions-and-graphs.html#lines">2.1</a>, where we used the notation <span class="math inline">\(ax+by=c\)</span>). Suppose we have a pair of such equations. Then we could conveniently write them as
 <span class="math display">\[\begin{align*}
 a_{11}x_1+a_{12}x_2&amp;=b_1\\
 a_{21}x_1+a_{22}x_2&amp;=b_2
 \end{align*}\]</span>
-where now the first subscipt <span class="math inline">\(i\)</span> on the <span class="math inline">\(a_{ij}\)</span>’s and <span class="math inline">\(b_i\)</span>’s denotes the equation it belongs to and the second subscipt <span class="math inline">\(j\)</span> denotes the variable it belongs to. If we need to solve these equations to find the values of <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> that satisfy both equations simultaneously, then we call this a <em>system of linear equations</em>.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:sim-lines"></span>
-<iframe src="https://www.desmos.com/calculator/inagw05txf" width="672" height="400px" data-external="1">
-</iframe>
-<p class="caption">
-Figure 7.1: The two intersecting lines from example (exm:gaus1).
-</p>
-</div>
-<p>Geometrically, a solution to the equations corresponds to those coordinates <span class="math inline">\((x_1,x_2)\)</span> where the lines meet – these are values of <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> that satisfy both equations <em>simultaneously</em> – see figure (fig:sim-lines). We therefore have three different scenarios for the solutions of such equations.</p>
+where now the first subscript <span class="math inline">\(i\)</span> on the <span class="math inline">\(a_{ij}\)</span> and <span class="math inline">\(b_i\)</span> terms denotes the equation it belongs to, and the second subscipt <span class="math inline">\(j\)</span> denotes the variable it belongs to. If we need to solve these equations to find the values of <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> that satisfy both equations simultaneously, then we call this a <em>system of linear equations</em>.</p>
+<p>Geometrically, a solution to the equations corresponds to those coordinates <span class="math inline">\((x_1,x_2)\)</span> where the lines meet – these are values of <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> that satisfy both equations <em>simultaneously</em> – see figure <a href="gauss.html#fig:sim-lines">7.1</a>. We therefore have three different scenarios for the solutions of such equations.</p>
 <ol style="list-style-type: decimal">
 <li>Most of the time, two lines in the plane will cross at exactly one point, hence we have just <strong>one solution</strong> (one pair of coordinates <span class="math inline">\((x_1,x_2)\)</span>).</li>
 <li>It is possible that both lines are parallel to one another, with different axis intercepts. In this case, the lines never meet – there are <strong>no solutions</strong>.</li>
 <li>Finally, it is possible that the two equations actually describe the same line. In this case, any pair of coordinates <span class="math inline">\((x_1,x_2)\)</span> that lies on the (common) line is a solution – there are <strong>infinitely many solutions</strong>.</li>
 </ol>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:sim-lines"></span>
+<iframe src="https://www.desmos.com/calculator/inagw05txf" width="672" height="400px" data-external="1">
+</iframe>
+<p class="caption">
+Figure 7.1: The two intersecting lines <span class="math inline">\(3x+2y=5\)</span> and <span class="math inline">\(x-4y=1\)</span>. Their point of intersection gives the one solution for <span class="math inline">\((x,y)\)</span> to this pair of equations.
+</p>
+</div>
 <p>This idea extends to having more equations. For example, if we have a system of three equations in two variables:
 <span class="math display">\[\begin{align*}
 a_{11}x_1+a_{12}x_2&amp;=b_1\\

@@ -30,22 +30,24 @@ This idea extends to having more equations. For example, if we have a system of 
 \begin{align*}
 a_{11}x_1+a_{12}x_2&=b_1\\
 a_{21}x_1+a_{22}x_2&=b_2\\
-a_{31}x_1+a_{32}x_2&=b_3
+a_{31}x_1+a_{32}x_2&=b_3,
 \end{align*}
 
-Then it is possible that:
+then it is possible that:
 
 1. All three lines will cross at exactly one point, hence we have just **one solution**.
 1. The three lines don't cross at a common point -- there are **no solutions**. This is the most probable scenario in this set-up: whilst any two of the lines might cross at a point, we need all three to cross at the same point in order for there to be a solution to the simultaneous equations.
 1. Finally, it is possible that the three equations actually describe the same line and again there are **infinitely many solutions**.
 
-When there are more equations than variables, the system is sometimes called *overdetermined*, since then we usually have scenario 2 above where trying to satsify the contraints impossed by the three equations is not possible. On the other hand, a system with less equations is sometimes called *underdetermined*, since in these cases we usually have an infinite number of solutions. For example, if we had a system with just one equation in two variables
+When there are more equations than variables, the system is sometimes called *overdetermined*. In this case, we usually (but don't always) have scenario 2 above where trying to satisfy the constraints imposed by the three equations is not possible. More generally, for an overdetermined system, it is always the case that at least one of the equations is redundant, in the sense that it may be removed from the set of equations without changing the set of solutions (however, care may be required to select those equations that can be removed in this way). 
+
+On the other hand, a system with fewer equations than unknowns is sometimes called *underdetermined*. In these cases we usually have an infinite number of solutions, although it may be the case that we have no solutions. For example, if we had a system with just one equation in two variables
 \begin{align*}
 a_{11}x_1+a_{12}x_2&=b_1\\
 \end{align*}
 then all points $(x_1,x_2)$ lying on this line are solutions.
 
-We can extend these ideas to higher dimensional systems, i.e. a higher number of variables. For example, if we have three equations in three variables
+Considering the case of three equations in three variables:
 
 \begin{align*}
 a_{11}x_1+a_{12}x_2+a_{13}x_3&=b_1\\
@@ -59,7 +61,9 @@ then each equation describes a *plane* in 3-dimensional Cartesian coordinates. N
 1. No solutions if none of the planes cross at a common point -- think about all the ways this could happen, there are more ways than in two dimensions!
 1. Infinetely many solutions if all three planes intersect along a line or all are the same plane -- again, think about the ways this could happen!
 
-You should also think about the meaning of overdetermined and underdetermined systems in 3-dimensions and how they look geometrically. We can of course extend these ideas to as many variables and equations as we wish: a linear equation in $n$ variables represents a *hyperplane* in $n$-dimensional space, which is a subspace with dimension $n-1$, but is impossible for us to directly visualise things in dimensions greater than 3!
+You should also think about the meaning of overdetermined and underdetermined systems in 3-dimensions and how they look geometrically. 
+
+While our examples thus far have been two and three dimensional, these concepts hold also for higher dimensional systems, that is, for equations with greater numbers of variables. Indeed, we can extend these concepts to as many variables and equations as we wish. We have seen how a (non-zero) linear equation $a_1 x_1 + a_2 x_2 + a_3 x_3 = 0$ in 3 dimensional space corresponds to a plane (an object with 2 dimensions), and accordingly we call a linear equation $a_1 x_1 + a_2 x_2 + \ldots + a_n x_n = 0$ in $n$-dimensional space a *hyperplane*, which will be shown to be a so-called *linear subspace of dimension $n-1$*. The geometric visualisation and interpretation of the results becomes challenging when there are more than three dimensions, but we can still develop mathematical concepts and tools that allow us to describe and find the sets of solutions to linear equations in higher dimensions.  
 
 
 ## Solving linear systems - Gaussian elimination
