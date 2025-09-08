@@ -1,6 +1,8 @@
 # Eigenvalues and Eigenvectors
 
-Some linear transformations have "natural directions" associated with them.
+Here is a test of the bibliography functionality: [@xie2015]
+
+Linear transformations have "natural directions" associated with them -- vectors whose directions are unchanged by the transformation.
 
 ::: {.example #eigen1}
 Let
