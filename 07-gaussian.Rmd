@@ -307,14 +307,17 @@ We note that there are alternative approaches to Gaussian elimination. For examp
 
 ## Echelon Form
 
-Recall that in general there may be one, none, or infinitely many solutions to a system of linear equations. We now see what happens in Guassian elimination in these scenarios. When following the proceedure of Gaussian elimination we reduce the coefficient matrix to make the leading entry in each row equal to 1 and then clear all the values (make them zero) above and below this entry. This results in a coefficient matrix in what is known as *reduced echelon form*. This allows us to easily read off the solutions. Here is a formal definition of the reduced echelon form.
+Recall that in general there may be one, none, or infinitely many solutions to a system of linear equations. We will next look at what happens in Gaussian elimination in these scenarios. When following the procedure of Gaussian elimination, we reduce the coefficient matrix to make the leading entry in each row equal to 1 and then clear all the values (make them zero) above and below this entry. We may also apply the third of the EROs (swapping pairs of rows) in order to ensure that the first non-zero entries go from left to right as you go down the matrix. This results in a coefficient matrix in what is known as *reduced echelon form*. This allows us to easily read off the solutions.
+
+Here is a formal definition of the reduced echelon form.
 
 ::: {.definition #REF name="Reduced Echelon Form"}
-A matrix is said to be in *reduced echelon form (REF)* if
-    1. all the rows consisting entirely of zeros lie below all non-zero rows (note, there need not be any zero or non-zero rows);
-    1. each leading entry in a row lies at least one place to the right of all leading entries in any previous rows;
+A matrix is said to be in *reduced echelon form (REF)* if:
+
+    1. all the rows consisting entirely of zeros lie below all non-zero rows (note, there need not be any zero rows, and there need not be any non-zero rows);
+    1. the first non-zero entry in a given row lies at least one place to the right of all the first non-zero entries in each of the previous rows;
     1. every leading entry is $1$;
-    1. each leading entry is the only non-zero entry in its column.
+    1. the first non-zero entry in each row is the only non-zero entry in its column.
 :::
 
 The following are some examples of possible reduced echelon forms for $3\times 3$ coefficient matrices.
@@ -360,7 +363,9 @@ $$
 
 Note that the reduced echelon form resuts in a "staircase" of $1$'s appearing either on or above the diagonal, with all entries below the staircase being zero. We can only take one step down any column, but might take multiple steps right along a row.
 
-So far, we have only seen examples like the first matrix above, where we have a diagonal of $1$'s. Since in this case we simply read off the solutions, it is easy to see that such forms result in a unique solution. We now give some examples and interpretations for other echelon forms. In the following $\alpha_i$ and $\omega_i$ can be any value.
+So far, we have only seen examples in which the coefficient matrix is square and the reduced echelon form has entries equal to $1$ along the diagonal and $0$ elsewhere. Since in this case we simply read off the solutions, it is easy to see that such forms result in a unique solution. 
+
+We next give some examples and interpretations for other echelon forms. In the following $\alpha_i$ and $\omega_i$ can take any value.
 
 ::: {.example #zerorow name="Zero coefficient row"}
 $$
@@ -376,9 +381,9 @@ x_1+\alpha x_3&=\omega_1\\
 x_2&=\omega_2\\
 0&=0
 \end{align*}
-In effect, we only have two equations. There is no constraint on $x_3$ and we call this a *free variable*. We can *parameterise* the solution by setting $x_3=\beta$ where $\beta$ can take any values -- there are infinitely many solutions. So the solution is all points
-$$(\omega_1-\alpha\beta,\omega_2,\beta).$$
-Geometrically, this is a line in 3-dimensional Cartesian coordinates which is drawn by varying $\beta$.
+In effect, we only have two equations. There is no constraint on $x_3$ and we call this a *free variable*. We can *parameterise* the solution by setting $x_3=\beta$. There are infinitely many solutions corresponding to the set of points
+$$(\omega_1-\alpha\beta,\omega_2,\beta),$$
+where $\beta$ can take any value. Geometrically, this is a line in 3-dimensional Cartesian coordinates.
 
 On the other hand, if $\omega_3\neq 0$, then in the bottom row we have the equation
 $$0=\omega_3$$
@@ -402,7 +407,7 @@ x_1 & = \omega_1 - \alpha_1x_3 - \alpha_2x_5\\
 x_2 & = \omega_2 - \alpha_3x_3 -\alpha_4 x_5\\
 x_4 & = \omega_3 - \alpha_5x_5
 \end{align*}
-where $x_3$ and $x_5$ are free variables, and hence we can set them as parameterise $x_3=\beta$, $x_4=\gamma$. More generally, any column that does not have a leading entry will correspond to a free variable. Since we have 2 parameters, this describes a plane in 5-dimensional space. The solution is all points
-$$(\omega_1 - \alpha_1\beta - \alpha_2\gamma, \omega_2 - \alpha_3\beta -\alpha_4\gamma, \beta, \omega_3 - \alpha_5\gamma, \gamma).$$
+where $x_3$ and $x_5$ are free variables, and hence we can set them as parameters $x_3=\beta$, $x_4=\gamma$. More generally, any column that does not have a leading entry (that is, a first non-zero entry in one of the rows of the matrix) will correspond to a free variable. Since we have 2 parameters, this describes a plane in 5-dimensional space. The solution is the set of points
+$$(\omega_1 - \alpha_1\beta - \alpha_2\gamma, \omega_2 - \alpha_3\beta -\alpha_4\gamma, \beta, \omega_3 - \alpha_5\gamma, \gamma),$$
+where $\beta$ and $\gamma$ can take any values.
 :::
-
