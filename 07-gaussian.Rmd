@@ -45,7 +45,7 @@ On the other hand, a system with fewer equations than unknowns is sometimes call
 \begin{align*}
 a_{11}x_1+a_{12}x_2&=b_1\\
 \end{align*}
-then all points $(x_1,x_2)$ lying on this line are solutions.
+then all points $(x_1,x_2)$ lying on this line are solutions except, that is, if we have $a_{11} = a_{12} = 0$ and $b_1 \neq 0$.
 
 Considering the case of three equations in three variables:
 
@@ -68,7 +68,7 @@ While our examples thus far have been two and three dimensional, these concepts 
 
 ## Solving linear systems - Gaussian elimination
 
-There are a number of different approaches to solving linear equations. They all ultimately amount to the same thing, but some methods are more straighforward or computationally efficient depending on the situation. In example \@ref(exm:simul-lin) we use rearrangement and substitution to solve
+There are a number of different approaches to solving linear equations. They all ultimately amount to the same thing, but some methods are more straighforward or computationally efficient depending on the situation. In example \@ref(exm:simul-lin-1) we used rearrangement and substitution to solve
 \begin{align*}
 3x_1+2x_2&=5\\
 x_1-4x_2&=1.
