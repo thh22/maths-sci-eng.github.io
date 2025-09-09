@@ -23,7 +23,7 @@
 <meta name="author" content="Drs Mark Callaway, Tim Hughes and Ed Branford" />
 
 
-<meta name="date" content="2025-09-08" />
+<meta name="date" content="2025-09-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,7 @@
 <ul>
 <li class="chapter" data-level="7.1" data-path="gauss.html"><a href="gauss.html#lines-and-planes"><i class="fa fa-check"></i><b>7.1</b> Lines and planes</a></li>
 <li class="chapter" data-level="7.2" data-path="gauss.html"><a href="gauss.html#solving-linear-systems---gaussian-elimination"><i class="fa fa-check"></i><b>7.2</b> Solving linear systems - Gaussian elimination</a></li>
-<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon-form"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
+<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>8</b> Matrices</a>
 <ul>
@@ -208,7 +208,7 @@
 <li class="chapter" data-level="10" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html"><i class="fa fa-check"></i><b>10</b> Eigenvalues and Eigenvectors</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#matrix-diagonalisation"><i class="fa fa-check"></i><b>10.1</b> Matrix Diagonalisation</a></li>
-<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvalues"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
+<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#FindEigen"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
 <li class="chapter" data-level="10.3" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvectors"><i class="fa fa-check"></i><b>10.3</b> Finding Eigenvectors</a></li>
 <li class="chapter" data-level="10.4" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#powers-of-diagonalisable-matrices"><i class="fa fa-check"></i><b>10.4</b> Powers of diagonalisable matrices</a></li>
 </ul></li>
@@ -278,9 +278,8 @@
 <li class="chapter" data-level="18" data-path="numerics.html"><a href="numerics.html"><i class="fa fa-check"></i><b>18</b> Numerical Methods</a>
 <ul>
 <li class="chapter" data-level="18.1" data-path="numerics.html"><a href="numerics.html#numerical-root-finding"><i class="fa fa-check"></i><b>18.1</b> Numerical Root Finding</a></li>
-<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation</a></li>
+<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation-and-solutions-to-odes"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation and solutions to ODEs</a></li>
 <li class="chapter" data-level="18.3" data-path="numerics.html"><a href="numerics.html#numerical-integration"><i class="fa fa-check"></i><b>18.3</b> Numerical Integration</a></li>
-<li class="chapter" data-level="18.4" data-path="numerics.html"><a href="numerics.html#numerical-solutions-to-odes"><i class="fa fa-check"></i><b>18.4</b> Numerical Solutions to ODEs</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html"><i class="fa fa-check"></i><b>19</b> Probability Fundamentals</a>
 <ul>
@@ -439,7 +438,7 @@
 </table>
 </div>
 <p>The convention is to denote a random variable using upper case letters and lower-case letters to denote a value that the random variable takes e.g. here we have <span class="math inline">\(X=x\)</span> with <span class="math inline">\(x = 0, 1, 2, 3\)</span>.</p>
-<p>A random variable is said to be <em>discrete</em> if its range of values is finite or countably infinite (i.e. it must be possible to list all the values in a, possibly infinite, sequence).</p>
+<p>A random variable is said to be <em>discrete</em> if its range of values is finite or countably infinite (that is, it must be possible to list all the values in a, possibly infinite, sequence).</p>
 <p>In the coin toss example, we could write a function to map the probabilities of observing <span class="math inline">\(x\)</span> heads from three tosses as:
 <span class="math display">\[
 P(X = x) = {3 \choose x} p^x (1 - p)^{3 - x}\quad\mbox{for}~x = 0, 1, 2, 3.
@@ -451,9 +450,9 @@ P(X = x) \geq 0
 \]</span>
 and
 <span class="math display">\[
-\sum_{x} P(X = x) = 1.
+\sum_{x} P(X = x) = 1,
 \]</span>
-Where the notation <span class="math inline">\(\displaystyle \sum_x\)</span> means to sum over all possible values of <span class="math inline">\(x\)</span>.</p>
+where the notation <span class="math inline">\(\displaystyle \sum_x\)</span> means to sum over all possible values of <span class="math inline">\(x\)</span>.</p>
 <div id="bernoulli-trials" class="section level2 hasAnchor" number="20.1">
 <h2><span class="header-section-number">20.1</span> Bernoulli trials<a href="discrete-random-variables.html#bernoulli-trials" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Possibly the simplest example of a random variable is when an outcome can only take one of two values e.g.</p>
@@ -473,7 +472,7 @@ X = \begin{cases}
 <span class="math display">\[
 p_X(x) = P(X = x) = p^x (1 - p)^{1 - x} \qquad \mbox{for}~x = 0, 1.
 \]</span>
-The experiment is known as a <em>Bernoulli trial</em>, after <a href="https://en.wikipedia.org/wiki/Jacob_Bernoulli">Jacob Bernoulli (1654–1705)</a>.</p>
+The experiment is known as a <em>Bernoulli trial</em>, after the Swiss mathematician <a href="https://en.wikipedia.org/wiki/Jacob_Bernoulli">Jacob Bernoulli (1654–1705)</a>.</p>
 <p>We write <span class="math inline">\(X \sim \mbox{Bern}(p)\)</span> to say that the random variable <span class="math inline">\(X\)</span> has a Bernoulli probability distribution with parameter <span class="math inline">\(p\)</span>.</p>
 </div>
 <div id="binomial-distribution" class="section level2 hasAnchor" number="20.2">
@@ -532,7 +531,7 @@ P(X &lt; 2) &amp;=&amp; P(X = 0) + P(X = 1)\\
 </div>
 <div id="poisson-distribution" class="section level2 hasAnchor" number="20.4">
 <h2><span class="header-section-number">20.4</span> Poisson distribution<a href="discrete-random-variables.html#poisson-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The Poisson distribution is named after <a href="https://en.wikipedia.org/wiki/Sim%C3%A9on_Denis_Poisson">Simeon Denis Poisson (1781–1840)</a>. The Poisson distribution has been used to model (according to Wikipedia):</p>
+<p>The Poisson distribution is named after the French mathematician and physicist <a href="https://en.wikipedia.org/wiki/Sim%C3%A9on_Denis_Poisson">Simeon Denis Poisson (1781–1840)</a>. The Poisson distribution has been used to model (according to Wikipedia):</p>
 <ul>
 <li>the number of goals in a football match,</li>
 <li>the number of children in a family,</li>
@@ -593,7 +592,7 @@ The expectation of <span class="math inline">\(X\)</span> corresponds to the app
 <span class="math display">\[\begin{eqnarray*}
 \operatorname{E}(X) &amp;=&amp; \sum_{x = 1}^6 x p_X(x)\\
 &amp;=&amp; \left(1 \times \frac{1}{6}\right) + \left(2 \times \frac{1}{6}\right) + \dots + \left(6 \times \frac{1}{6}\right)\\
-&amp;=&amp; 3.5
+&amp;=&amp; 3.5.
 \end{eqnarray*}\]</span></p>
 </div>
 <p>We can apply functions to a random variable, which then define a new random variable. We can then also find the expectation of these new random variables as in the following example.</p>
@@ -608,13 +607,13 @@ The expectation of <span class="math inline">\(X\)</span> corresponds to the app
 </div>
 <p>In general, if <span class="math inline">\(g(\cdot)\)</span> is a function defined on the range of a discrete random variable <span class="math inline">\(X\)</span>, then <span class="math inline">\(g(X)\)</span> is also a random variable, and it follows that
 <span class="math display">\[
-\operatorname{E}[g(X)] = \sum_{x} g(x) p_X(x)
+\operatorname{E}[g(X)] = \sum_{x} g(x) p_X(x).
 \]</span></p>
 <p><strong>Some useful properties of the expectation:</strong></p>
 <ul>
 <li><p>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be constants, and let <span class="math inline">\(g(X)\)</span> and <span class="math inline">\(h(X)\)</span> be functions defined on the range of a random variable <span class="math inline">\(X\)</span>. Then,
 <span class="math display">\[
-  \operatorname{E}\left[ag(X) + bh(X)\right] = a\operatorname{E}[g(X)] + b\operatorname{E}[h(X)]
+  \operatorname{E}\left[ag(X) + bh(X)\right] = a\operatorname{E}[g(X)] + b\operatorname{E}[h(X)].
   \]</span></p></li>
 <li><p>The expected value of a constant, <span class="math inline">\(a\)</span>, is itself i.e.
 <span class="math display">\[
@@ -662,7 +661,7 @@ The standard deviation is
 <ul>
 <li>For <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> constants:
 <span class="math display">\[
-      \operatorname{var}(aX + b) = a^2\operatorname{var}(X)
+      \operatorname{var}(aX + b) = a^2\operatorname{var}(X).
   \]</span></li>
 </ul>
 </div>

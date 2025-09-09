@@ -23,7 +23,7 @@
 <meta name="author" content="Drs Mark Callaway, Tim Hughes and Ed Branford" />
 
 
-<meta name="date" content="2025-09-08" />
+<meta name="date" content="2025-09-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,7 @@
 <ul>
 <li class="chapter" data-level="7.1" data-path="gauss.html"><a href="gauss.html#lines-and-planes"><i class="fa fa-check"></i><b>7.1</b> Lines and planes</a></li>
 <li class="chapter" data-level="7.2" data-path="gauss.html"><a href="gauss.html#solving-linear-systems---gaussian-elimination"><i class="fa fa-check"></i><b>7.2</b> Solving linear systems - Gaussian elimination</a></li>
-<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon-form"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
+<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>8</b> Matrices</a>
 <ul>
@@ -208,7 +208,7 @@
 <li class="chapter" data-level="10" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html"><i class="fa fa-check"></i><b>10</b> Eigenvalues and Eigenvectors</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#matrix-diagonalisation"><i class="fa fa-check"></i><b>10.1</b> Matrix Diagonalisation</a></li>
-<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvalues"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
+<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#FindEigen"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
 <li class="chapter" data-level="10.3" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvectors"><i class="fa fa-check"></i><b>10.3</b> Finding Eigenvectors</a></li>
 <li class="chapter" data-level="10.4" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#powers-of-diagonalisable-matrices"><i class="fa fa-check"></i><b>10.4</b> Powers of diagonalisable matrices</a></li>
 </ul></li>
@@ -278,9 +278,8 @@
 <li class="chapter" data-level="18" data-path="numerics.html"><a href="numerics.html"><i class="fa fa-check"></i><b>18</b> Numerical Methods</a>
 <ul>
 <li class="chapter" data-level="18.1" data-path="numerics.html"><a href="numerics.html#numerical-root-finding"><i class="fa fa-check"></i><b>18.1</b> Numerical Root Finding</a></li>
-<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation</a></li>
+<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation-and-solutions-to-odes"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation and solutions to ODEs</a></li>
 <li class="chapter" data-level="18.3" data-path="numerics.html"><a href="numerics.html#numerical-integration"><i class="fa fa-check"></i><b>18.3</b> Numerical Integration</a></li>
-<li class="chapter" data-level="18.4" data-path="numerics.html"><a href="numerics.html#numerical-solutions-to-odes"><i class="fa fa-check"></i><b>18.4</b> Numerical Solutions to ODEs</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html"><i class="fa fa-check"></i><b>19</b> Probability Fundamentals</a>
 <ul>
@@ -662,8 +661,8 @@ We read off the solution <span class="math inline">\((x,y,z) = (1,3,-1)\)</span>
 </div>
 <p>We note that there are alternative approaches to Gaussian elimination. For example, the method of partial pivoting can be used to select pivots with large magnitudes, which can be preferable from a computational perspective. This is because the method involves dividing by the pivot, and division by a small number is more prone to computational errors due to <em>rounding</em>, since a computer cannot encode every possible number so must instead represent numbers by close approximations (e.g. the nearest <em>floating point</em> number).</p>
 </div>
-<div id="echelon-form" class="section level2 hasAnchor" number="7.3">
-<h2><span class="header-section-number">7.3</span> Echelon Form<a href="gauss.html#echelon-form" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="echelon" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Echelon Form<a href="gauss.html#echelon" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Recall that in general there may be one, none, or infinitely many solutions to a system of linear equations. We will next look at what happens in Gaussian elimination in these scenarios. When following the procedure of Gaussian elimination, we reduce the coefficient matrix to make the leading entry in each row equal to 1 and then clear all the values (make them zero) above and below this entry. We may also apply the third of the EROs (swapping pairs of rows) in order to ensure that the first non-zero entries go from left to right as you go down the matrix. This results in a coefficient matrix in what is known as <em>reduced echelon form</em>. This allows us to easily read off the solutions.</p>
 <p>Here is a formal definition of the reduced echelon form.</p>
 <div class="definition">

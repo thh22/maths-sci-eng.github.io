@@ -23,7 +23,7 @@
 <meta name="author" content="Drs Mark Callaway, Tim Hughes and Ed Branford" />
 
 
-<meta name="date" content="2025-09-08" />
+<meta name="date" content="2025-09-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,7 @@
 <ul>
 <li class="chapter" data-level="7.1" data-path="gauss.html"><a href="gauss.html#lines-and-planes"><i class="fa fa-check"></i><b>7.1</b> Lines and planes</a></li>
 <li class="chapter" data-level="7.2" data-path="gauss.html"><a href="gauss.html#solving-linear-systems---gaussian-elimination"><i class="fa fa-check"></i><b>7.2</b> Solving linear systems - Gaussian elimination</a></li>
-<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon-form"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
+<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>8</b> Matrices</a>
 <ul>
@@ -208,7 +208,7 @@
 <li class="chapter" data-level="10" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html"><i class="fa fa-check"></i><b>10</b> Eigenvalues and Eigenvectors</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#matrix-diagonalisation"><i class="fa fa-check"></i><b>10.1</b> Matrix Diagonalisation</a></li>
-<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvalues"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
+<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#FindEigen"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
 <li class="chapter" data-level="10.3" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvectors"><i class="fa fa-check"></i><b>10.3</b> Finding Eigenvectors</a></li>
 <li class="chapter" data-level="10.4" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#powers-of-diagonalisable-matrices"><i class="fa fa-check"></i><b>10.4</b> Powers of diagonalisable matrices</a></li>
 </ul></li>
@@ -278,9 +278,8 @@
 <li class="chapter" data-level="18" data-path="numerics.html"><a href="numerics.html"><i class="fa fa-check"></i><b>18</b> Numerical Methods</a>
 <ul>
 <li class="chapter" data-level="18.1" data-path="numerics.html"><a href="numerics.html#numerical-root-finding"><i class="fa fa-check"></i><b>18.1</b> Numerical Root Finding</a></li>
-<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation</a></li>
+<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation-and-solutions-to-odes"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation and solutions to ODEs</a></li>
 <li class="chapter" data-level="18.3" data-path="numerics.html"><a href="numerics.html#numerical-integration"><i class="fa fa-check"></i><b>18.3</b> Numerical Integration</a></li>
-<li class="chapter" data-level="18.4" data-path="numerics.html"><a href="numerics.html#numerical-solutions-to-odes"><i class="fa fa-check"></i><b>18.4</b> Numerical Solutions to ODEs</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html"><i class="fa fa-check"></i><b>19</b> Probability Fundamentals</a>
 <ul>
@@ -383,19 +382,19 @@
 <div id="numerics" class="section level1 hasAnchor" number="18">
 <h1><span class="header-section-number">Chapter 18</span> Numerical Methods<a href="numerics.html#numerics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>In general, many mathematical problems do not have algebraic solution methods. Instead, we need to resort to <em>numerical methods</em>. This usually results in an approximate solution: we get an answer that is close to the true solution <span class="math inline">\(x\)</span>, but might have an error <span class="math inline">\(\varepsilon\)</span>, so that we obtain some value in the interval <span class="math inline">\(x-\varepsilon\)</span> to <span class="math inline">\(x+\varepsilon\)</span>. For many practical applications an approximate solution is “good enough”.</p>
+<p>This section includes some pointers to further reading on numerical methods.</p>
 <div id="numerical-root-finding" class="section level2 hasAnchor" number="18.1">
 <h2><span class="header-section-number">18.1</span> Numerical Root Finding<a href="numerics.html#numerical-root-finding" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We have seen how to solve linear and quadratic equations algebraically. We mentioned in section <a href="functions-and-graphs.html#polynomials">2.2</a> that there also exist formulae for finding roots of cubic and quartic polynomial equations, but not quintic or higher.</p>
-<p>We often need to find the roots (values of <span class="math inline">\(x\)</span> for which <span class="math inline">\(f(x)=0\)</span>) of some function…</p>
+<p>We often need to find the roots (values of <span class="math inline">\(x\)</span> for which <span class="math inline">\(f(x)=0\)</span>) of some function. Methods for achieving this include the <a href="https://en.wikipedia.org/wiki/Bisection_method" target="_blank">Bisection method</a> and the <a href="https://en.wikipedia.org/wiki/Newton%27s_method" target="_blank">Newton-Raphson method</a>.</p>
 </div>
-<div id="numerical-differentiation" class="section level2 hasAnchor" number="18.2">
-<h2><span class="header-section-number">18.2</span> Numerical differentiation<a href="numerics.html#numerical-differentiation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="numerical-differentiation-and-solutions-to-odes" class="section level2 hasAnchor" number="18.2">
+<h2><span class="header-section-number">18.2</span> Numerical differentiation and solutions to ODEs<a href="numerics.html#numerical-differentiation-and-solutions-to-odes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Approaches include the backward Euler, forward Euler and <a href="https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods" target="_blank">Runge-Kutta</a> methods.</p>
 </div>
 <div id="numerical-integration" class="section level2 hasAnchor" number="18.3">
 <h2><span class="header-section-number">18.3</span> Numerical Integration<a href="numerics.html#numerical-integration" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-</div>
-<div id="numerical-solutions-to-odes" class="section level2 hasAnchor" number="18.4">
-<h2><span class="header-section-number">18.4</span> Numerical Solutions to ODEs<a href="numerics.html#numerical-solutions-to-odes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Methods include the rectangle rule, trapezoidal rule and techniques based on interpolation. See the Wikipedia page on <a href="https://en.wikipedia.org/wiki/Numerical_integration" target="_blank">Numerical Integration</a>.</p>
 
 </div>
 </div>

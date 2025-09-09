@@ -305,7 +305,7 @@ We read off the solution $(x,y,z) = (1,3,-1)$.
 
 We note that there are alternative approaches to Gaussian elimination. For example, the method of partial pivoting can be used to select pivots with large magnitudes, which can be preferable from a computational perspective. This is because the method involves dividing by the pivot, and division by a small number is more prone to computational errors due to *rounding*, since a computer cannot encode every possible number so must instead represent numbers by close approximations (e.g. the nearest *floating point* number).
 
-## Echelon Form
+## Echelon Form {#echelon}
 
 Recall that in general there may be one, none, or infinitely many solutions to a system of linear equations. We will next look at what happens in Gaussian elimination in these scenarios. When following the procedure of Gaussian elimination, we reduce the coefficient matrix to make the leading entry in each row equal to 1 and then clear all the values (make them zero) above and below this entry. We may also apply the third of the EROs (swapping pairs of rows) in order to ensure that the first non-zero entries go from left to right as you go down the matrix. This results in a coefficient matrix in what is known as *reduced echelon form*. This allows us to easily read off the solutions.
 

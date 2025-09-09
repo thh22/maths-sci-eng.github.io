@@ -23,7 +23,7 @@
 <meta name="author" content="Drs Mark Callaway, Tim Hughes and Ed Branford" />
 
 
-<meta name="date" content="2025-09-08" />
+<meta name="date" content="2025-09-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,7 @@
 <ul>
 <li class="chapter" data-level="7.1" data-path="gauss.html"><a href="gauss.html#lines-and-planes"><i class="fa fa-check"></i><b>7.1</b> Lines and planes</a></li>
 <li class="chapter" data-level="7.2" data-path="gauss.html"><a href="gauss.html#solving-linear-systems---gaussian-elimination"><i class="fa fa-check"></i><b>7.2</b> Solving linear systems - Gaussian elimination</a></li>
-<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon-form"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
+<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>8</b> Matrices</a>
 <ul>
@@ -208,7 +208,7 @@
 <li class="chapter" data-level="10" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html"><i class="fa fa-check"></i><b>10</b> Eigenvalues and Eigenvectors</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#matrix-diagonalisation"><i class="fa fa-check"></i><b>10.1</b> Matrix Diagonalisation</a></li>
-<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvalues"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
+<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#FindEigen"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
 <li class="chapter" data-level="10.3" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvectors"><i class="fa fa-check"></i><b>10.3</b> Finding Eigenvectors</a></li>
 <li class="chapter" data-level="10.4" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#powers-of-diagonalisable-matrices"><i class="fa fa-check"></i><b>10.4</b> Powers of diagonalisable matrices</a></li>
 </ul></li>
@@ -278,9 +278,8 @@
 <li class="chapter" data-level="18" data-path="numerics.html"><a href="numerics.html"><i class="fa fa-check"></i><b>18</b> Numerical Methods</a>
 <ul>
 <li class="chapter" data-level="18.1" data-path="numerics.html"><a href="numerics.html#numerical-root-finding"><i class="fa fa-check"></i><b>18.1</b> Numerical Root Finding</a></li>
-<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation</a></li>
+<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation-and-solutions-to-odes"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation and solutions to ODEs</a></li>
 <li class="chapter" data-level="18.3" data-path="numerics.html"><a href="numerics.html#numerical-integration"><i class="fa fa-check"></i><b>18.3</b> Numerical Integration</a></li>
-<li class="chapter" data-level="18.4" data-path="numerics.html"><a href="numerics.html#numerical-solutions-to-odes"><i class="fa fa-check"></i><b>18.4</b> Numerical Solutions to ODEs</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html"><i class="fa fa-check"></i><b>19</b> Probability Fundamentals</a>
 <ul>
@@ -383,13 +382,13 @@
 <div id="header">
 <h1 class="title">Introduction to Mathematics for Data Science</h1>
 <p class="author"><em>Drs Mark Callaway, Tim Hughes and Ed Branford</em></p>
-<p class="date"><em>2025-09-08</em></p>
+<p class="date"><em>2025-09-09</em></p>
 </div>
 <div id="preface" class="section level1 unnumbered hasAnchor">
 <h1>Preface<a href="index.html#preface" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>These notes have been compiled for self study and to complement courses at the University of Exeter in Cornwall. They are a work in progress – please get in touch if you find any errors or have any feedback.</p>
 <p>Contact: <a href="mailto:m.callaway@exeter.ac.uk" class="email">m.callaway@exeter.ac.uk</a>, <a href="mailto:t.h.hughes@exeter.ac.uk" class="email">t.h.hughes@exeter.ac.uk</a>, <a href="mailto:e.h.branford@exeter.ac.uk" class="email">e.h.branford@exeter.ac.uk</a></p>
-<p>Recommended text: Engineering Mathematics, John Bird. Available online through the UoE library here: <a href="https://encore.exeter.ac.uk/iii/encore/record/C__Rb4511752" class="uri">https://encore.exeter.ac.uk/iii/encore/record/C__Rb4511752</a></p>
+<p>Recommended text: Engineering Mathematics, John Bird. Available online through the University of Exeter library here: <a href="https://encore.exeter.ac.uk/iii/encore/record/C__Rb4511752" class="uri">https://encore.exeter.ac.uk/iii/encore/record/C__Rb4511752</a></p>
 <div id="acknowledgements" class="section level2 unnumbered hasAnchor">
 <h2>Acknowledgements<a href="index.html#acknowledgements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Thank you to our colleagues who have contributed to these notes by sharing lecture materials: Dr TJ McKinley, Dr Houry Melkonian, Dr Markus Mueller and Prof Stuart Townley.</p>

@@ -3,18 +3,16 @@
 
 In general, many mathematical problems do not have algebraic solution methods. Instead, we need to resort to *numerical methods*. This usually results in an approximate solution: we get an answer that is close to the true solution $x$, but might have an error $\varepsilon$, so that we obtain some value in the interval $x-\varepsilon$ to $x+\varepsilon$. For many practical applications an approximate solution is "good enough".
 
-## Numerical Root Finding
+This section includes some pointers to further reading on numerical methods.
 
+## Numerical Root Finding
 
 We have seen how to solve linear and quadratic equations algebraically. We mentioned in section \@ref(polynomials) that there also exist formulae for finding roots of cubic and quartic polynomial equations, but not quintic or higher.
 
-We often need to find the roots (values of $x$ for which $f(x)=0$) of some function...
+We often need to find the roots (values of $x$ for which $f(x)=0$) of some function. Methods for achieving this include the <a href="https://en.wikipedia.org/wiki/Bisection_method" target="_blank">Bisection method</a> and the <a href="https://en.wikipedia.org/wiki/Newton%27s_method" target="_blank">Newton-Raphson method</a>.
 
-## Numerical differentiation
-
+## Numerical differentiation and solutions to ODEs
+Approaches include the backward Euler, forward Euler and <a href="https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods" target="_blank">Runge-Kutta</a> methods.
 
 ## Numerical Integration
-
-
-## Numerical Solutions to ODEs
-
+Methods include the rectangle rule, trapezoidal rule and techniques based on interpolation. See the Wikipedia page on <a href="https://en.wikipedia.org/wiki/Numerical_integration" target="_blank">Numerical Integration</a>.

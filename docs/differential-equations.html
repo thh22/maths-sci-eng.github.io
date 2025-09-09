@@ -23,7 +23,7 @@
 <meta name="author" content="Drs Mark Callaway, Tim Hughes and Ed Branford" />
 
 
-<meta name="date" content="2025-09-08" />
+<meta name="date" content="2025-09-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,7 @@
 <ul>
 <li class="chapter" data-level="7.1" data-path="gauss.html"><a href="gauss.html#lines-and-planes"><i class="fa fa-check"></i><b>7.1</b> Lines and planes</a></li>
 <li class="chapter" data-level="7.2" data-path="gauss.html"><a href="gauss.html#solving-linear-systems---gaussian-elimination"><i class="fa fa-check"></i><b>7.2</b> Solving linear systems - Gaussian elimination</a></li>
-<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon-form"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
+<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>8</b> Matrices</a>
 <ul>
@@ -208,7 +208,7 @@
 <li class="chapter" data-level="10" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html"><i class="fa fa-check"></i><b>10</b> Eigenvalues and Eigenvectors</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#matrix-diagonalisation"><i class="fa fa-check"></i><b>10.1</b> Matrix Diagonalisation</a></li>
-<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvalues"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
+<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#FindEigen"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
 <li class="chapter" data-level="10.3" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvectors"><i class="fa fa-check"></i><b>10.3</b> Finding Eigenvectors</a></li>
 <li class="chapter" data-level="10.4" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#powers-of-diagonalisable-matrices"><i class="fa fa-check"></i><b>10.4</b> Powers of diagonalisable matrices</a></li>
 </ul></li>
@@ -278,9 +278,8 @@
 <li class="chapter" data-level="18" data-path="numerics.html"><a href="numerics.html"><i class="fa fa-check"></i><b>18</b> Numerical Methods</a>
 <ul>
 <li class="chapter" data-level="18.1" data-path="numerics.html"><a href="numerics.html#numerical-root-finding"><i class="fa fa-check"></i><b>18.1</b> Numerical Root Finding</a></li>
-<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation</a></li>
+<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation-and-solutions-to-odes"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation and solutions to ODEs</a></li>
 <li class="chapter" data-level="18.3" data-path="numerics.html"><a href="numerics.html#numerical-integration"><i class="fa fa-check"></i><b>18.3</b> Numerical Integration</a></li>
-<li class="chapter" data-level="18.4" data-path="numerics.html"><a href="numerics.html#numerical-solutions-to-odes"><i class="fa fa-check"></i><b>18.4</b> Numerical Solutions to ODEs</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html"><i class="fa fa-check"></i><b>19</b> Probability Fundamentals</a>
 <ul>
@@ -382,24 +381,24 @@
             <section class="normal" id="section-">
 <div id="differential-equations" class="section level1 hasAnchor" number="17">
 <h1><span class="header-section-number">Chapter 17</span> Differential Equations<a href="differential-equations.html#differential-equations" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>A <em>differential equation</em> (DE) is an equation containing an unknown function and one or more of its derivatives. Here we stick to Ordinary Differential Equations (ODEs) which are DEs of only one independent variable<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a>.</p>
+<p>A <em>differential equation</em> (DE) is an equation containing an unknown function and one or more of its derivatives. Here we stick to Ordinary Differential Equations (ODEs) which are DEs of only one independent variable<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a>.</p>
 <p>Here are some classic examples:</p>
 <ul>
 <li><p>Falling under constant gravity
 <span class="math display">\[
-m \frac{d^2h}{dt^2} (t) = -mg
+m \frac{d^2h}{dt^2} (t) = -mg.
 \]</span></p></li>
 <li><p>Newton’s Law of Cooling
 <span class="math display">\[
-\frac{dT_{in}}{dt} = c (T_{out} - T_{in})
+\frac{dT_{in}}{dt} = c (T_{out} - T_{in}).
 \]</span></p></li>
 <li><p>Cash in the bank (with interest rate <span class="math inline">\(r\)</span>)
 <span class="math display">\[
-\frac{dc}{dt} = r c
+\frac{dc}{dt} = r c.
 \]</span></p></li>
 <li><p>Mass on the end of a spring (Newton’s law + Hooke’s law)
 <span class="math display">\[
-m \frac{d^2 x}{dt^2} = -k x
+m \frac{d^2 x}{dt^2} = -k x.
 \]</span></p></li>
 </ul>
 <p>Many physical laws are formulated in terms of differential equations: we know how the rate of change of some quantity is related to the value of that quantity, then to find the function that describes the system, we need to solve the differential equation.</p>
@@ -450,7 +449,7 @@ The constant of integration gives the one arbitrary constant required for the ge
 <div class="example">
 <p><span id="exm:separable" class="example"><strong>Example 17.1  (Separable First Order ODEs) </strong></span>Solve the differential equation
 <span class="math display">\[
-\frac{dy}{dx} = \frac{1-y^2}{y(1-x)}
+\frac{dy}{dx} = \frac{1-y^2}{y(1-x)}.
 \]</span>
 Separating the terms <span class="math inline">\(x\)</span>, <span class="math inline">\(dx\)</span> and <span class="math inline">\(y\)</span>, <span class="math inline">\(dy\)</span> gives
 <span class="math display">\[
@@ -458,7 +457,7 @@ Separating the terms <span class="math inline">\(x\)</span>, <span class="math i
 \]</span>
 so that
 <span class="math display">\[
-\int \frac{ y \; dy}{(1-y^2)}= \int \frac{dx}{(1-x)} \mbox{ or } \int - \frac{1}{2}\frac{d(1-y^2)}{1-y^2}= -\int \frac{d(1-x)}{(1-x)}
+\int \frac{ y \; dy}{(1-y^2)}= \int \frac{dx}{(1-x)} \mbox{ or } \int - \frac{1}{2}\frac{d(1-y^2)}{1-y^2}= -\int \frac{d(1-x)}{(1-x)}.
 \]</span>
 Integrating the above equation, we obtain an equation defining <span class="math inline">\(y\)</span> as an implicit function of <span class="math inline">\(x\)</span>:
 <span class="math display">\[
@@ -467,7 +466,7 @@ Integrating the above equation, we obtain an equation defining <span class="math
 i.e.
 <span class="math display">\[
 \ln \frac{|1-x|^2}{|1-y^2|}= C, \;\;
-\frac{|1-x|^2}{|1-y^2|}=e^C=k^2, \;\; k^2 \ne 0
+\frac{|1-x|^2}{|1-y^2|}=e^C=k^2, \;\; k^2 \ne 0.
 \]</span>
 Clearing the fractions and eliminating the absolute values gives:
 <span class="math display">\[
@@ -475,7 +474,7 @@ Clearing the fractions and eliminating the absolute values gives:
 \frac{(x-1)^2}{\lambda}+y^2=1
 \]</span>
 where <span class="math inline">\(\lambda\)</span> takes on any real value, except for <span class="math inline">\(0\)</span>. If <span class="math inline">\(\lambda &gt; 0\)</span>, the solution curves are all ellipses; If <span class="math inline">\(\lambda &lt; 0\)</span>, the solution curves are all hyperbolas.</p>
-<p>For example, the particular solution passing through the point <span class="math inline">\((x=0, y=0)\)</span>, we then have <span class="math inline">\(\lambda=1\)</span> giving
+<p>For example, if we want the particular solution passing through the point <span class="math inline">\((x=0, y=0)\)</span>, then we must have <span class="math inline">\(\lambda=1\)</span>, giving
 <span class="math display">\[
 (x-1)^2+y^2=1.
 \]</span></p>
@@ -504,7 +503,7 @@ u(x)y(x) = \int u(x) r(x) \, dx +C\,.
 <p>This means that
 <span class="math display">\[
 y(x) = \left[\int \left( e^{\int p(x) \, dx} \right) r(x) \, dx
-+C \; \right] e^{-\int p(x) \, dx}.
++C \; \right] e^{-\int p(x) \, dx}
 \]</span>
 is the general solution of the linear first order inhomogeneous ODE
 <span class="math display">\[
@@ -520,15 +519,15 @@ with the initial condition <span class="math inline">\(y(0) = 1\)</span>.</p>
 <span class="math display">\[
 \exp \left( - \int \frac{ 2x}{1 +x^2 } \, dx \right)=\exp \left( - \ln (1 +x^2)\right)=\frac{1}{\exp(\ln(1+x^2))} = \frac{1}{1 +x^2 }.
 \]</span></p>
-<p>Multiplying the equation by this factor
+<p>Multiplying the equation by this factor gives
 <span class="math display">\[
 \frac{ 1}{1 +x^2 } \frac{dy}{dx} - \frac{ 2x}{(1 +x^2)^2 }y=\frac{d}{d x } \left( \frac{ y}{1 +x^2 } \right) =\frac{ 1}{1 +x^2 }.
 \]</span>
-Integrating
+Integrating gives
 <span class="math display">\[
 \left( \frac{ y}{1 +x^2 } \right) = \int \frac{ 1}{1 +x^2 } \; dx= \tan^{-1} x+C.
 \]</span>
-When <span class="math inline">\(x=0, y=1\)</span> so that
+When <span class="math inline">\(x=0, y=1\)</span>, so that
 <span class="math display">\[
 C = 1, \;\; \mbox{and  } y(x)= (1 +x^2 )(\tan^{-1} x+1).
 \]</span></p>
@@ -538,7 +537,7 @@ C = 1, \;\; \mbox{and  } y(x)= (1 +x^2 )(\tan^{-1} x+1).
 <h2><span class="header-section-number">17.4</span> Linear Second Order ODEs<a href="differential-equations.html#linear-second-order-odes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A general second order linear differential equation has the form
 <span class="math display">\[
-\frac{d^2 y}{dx^2} + p(x) \frac{dy}{dx} + q(x) y = r(x).
+\frac{d^2 y}{dx^2} + p(x) \frac{dy}{dx} + q(x) y = r(x)
 \]</span>
 where <span class="math inline">\(p(x)\)</span> and <span class="math inline">\(q(x)\)</span> are coefficient functions. When <span class="math inline">\(p(x)\)</span> and <span class="math inline">\(q(x)\)</span> are constants <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> then the equation is said to have constant coefficients
 <span class="math display">\[
@@ -548,7 +547,7 @@ When <span class="math inline">\(r(x)=0\)</span>, the equation is said to be hom
 <span class="math display">\[
 \frac{d^2 y}{dx^2} + p(x) \frac{dy}{dx} + q(x) y = 0.
 \]</span></p>
-<p>We will only study equations with constant coefficients here, and begin with the homogeneous case since this is used in the solution of the inhomogeneous case.</p>
+<p>We will only study equations with constant coefficients here. We will begin with the homogeneous case, since this is used in the solution of the inhomogeneous case.</p>
 <div id="homogeneous-equation-with-constant-coefficients" class="section level3 hasAnchor" number="17.4.1">
 <h3><span class="header-section-number">17.4.1</span> Homogeneous equation with constant coefficients<a href="differential-equations.html#homogeneous-equation-with-constant-coefficients" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The standard form is
@@ -561,7 +560,7 @@ where <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)
 q \right)=0 \text{ (since $e^{mx}$ is never zero)},
 \]</span>
 which is called the <em>auxiliary equation</em> or <em>characteristic equation</em>.</p>
-<p>The two roots <span class="math inline">\(m_1, m_2\)</span> are are given by the quadratic formula
+<p>The two roots <span class="math inline">\(m_1, m_2\)</span> of the auxiliary equation are are given by the quadratic formula
 <span class="math display">\[
 m_1, m_2= \frac{ -p \pm \sqrt{p^2- 4q} }{2}.
 \]</span></p>
@@ -595,15 +594,15 @@ y_1= e^{m x}, \;\; y_2= x e^{m x}
 \]</span>
 and the general solution is
 <span class="math display">\[
-y(x)= C_1 e^{m x} +C_2 x e^{m x}
+y(x)= C_1 e^{m x} +C_2 x e^{m x}.
 \]</span></p>
-<p>Given sufficient information, we can fix the constants in the general solution to obtain a particular solution. There are two situations: having the values of <span class="math inline">\(y\)</span> and <span class="math inline">\(y&#39;\)</span> at a particular value of <span class="math inline">\(x\)</span>, or having the value of <span class="math inline">\(y\)</span> at different values of <span class="math inline">\(x\)</span>.</p>
-<p><strong>Initial-value problems.</strong> This consists of finding a solution of <span class="math inline">\(y\)</span> that satisfies initial conditions of the form
+<p>Given sufficient information, we can fix the constants in the general solution to obtain a particular solution. For a second order equation, two conditions are almost always sufficient for specifying the particular solution, for example, the values of <span class="math inline">\(y\)</span> and <span class="math inline">\(y&#39;\)</span> at a particular value of <span class="math inline">\(x\)</span>, or the value of <span class="math inline">\(y\)</span> for two different values of <span class="math inline">\(x\)</span>.</p>
+<p><strong>Initial-value problems.</strong> This consists of finding a solution for <span class="math inline">\(y\)</span> that satisfies initial conditions of the form
 <span class="math display">\[
 y(a)=A, \;\; y&#39;(a)=B,
 \]</span>
 where <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are given constants.</p>
-<p><strong>Boundary-value problems.</strong> This consists of finding a solution of <span class="math inline">\(y\)</span> that satisfies boundary conditions of the form
+<p><strong>Boundary-value problems.</strong> This consists of finding a solution for <span class="math inline">\(y\)</span> that satisfies boundary conditions of the form
 <span class="math display">\[
 y(a)=A, \;\; y(b)=B,
 \]</span>
@@ -611,9 +610,9 @@ where <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)
 <div class="example">
 <p><span id="exm:initval" class="example"><strong>Example 17.3  (Initial Conditions) </strong></span>Solve the initial-value problem:
 <span class="math display">\[
-y&#39;&#39;+ y=0 \;;\; y(0)=2 \;;\; y&#39;(0)=3
+y&#39;&#39;+ y=0 \;;\; y(0)=2 \;;\; y&#39;(0)=3.
 \]</span>
-The auxiliary equation is ,
+The auxiliary equation is
 <span class="math display">\[
 m^2+1=0
 \]</span>
@@ -622,7 +621,7 @@ whose roots are <span class="math inline">\(m_1=i, m_2=-i\)</span>. The general 
 y(x)=c_1 \cos(x) + c_2 \sin(x)
 \]</span>
 <span class="math display">\[
-y&#39;(x)= -c_1 \sin(x) + c_2 \cos(x)
+y&#39;(x)= -c_1 \sin(x) + c_2 \cos(x).
 \]</span>
 This yields
 <span class="math display">\[
@@ -641,7 +640,7 @@ y(x)=2 \cos(x) +3 \sin(x).
 \frac{d^2 y}{dx^2} + p \frac{dy}{dx} + q  y = r(x),
 \]</span>
 where <span class="math inline">\(r(x) \ne 0\)</span> and <span class="math inline">\(p\)</span> and <span class="math inline">\(q\)</span> are constants.</p>
-<p><strong>The First step</strong> is to solve the equivalent homogeneous problem,
+<p><strong>The first step</strong> is to solve the equivalent homogeneous problem,
 the so-called <em>Complementary Equation</em>,
 <span class="math display">\[
 \frac{d^2 y}{dx^2} + p \frac{dy}{dx} + q  y = 0,
@@ -651,7 +650,7 @@ and <span class="math inline">\(y_2(x)\)</span>, the <em>Complementary Function<
 <span class="math display">\[
 y_c = C_1 y_1+ C_2 y_2.
 \]</span></p>
-<p><strong>The Second step</strong> is to find a <em>Particular Integral</em>, <span class="math inline">\(y_p\)</span>. This is basically a matter of trial and error, but the following guidelines are helpful.</p>
+<p><strong>The second step</strong> is to find a <em>Particular Integral</em>, <span class="math inline">\(y_p\)</span>. This is basically a matter of trial and error, but the following guidelines are helpful.</p>
 <ol style="list-style-type: decimal">
 <li><p>If <span class="math inline">\(r(x)\)</span> is a polynomial of degree <span class="math inline">\(m\)</span>, try
 <span class="math display">\[
@@ -659,22 +658,22 @@ y = a_n x^m + a_{n-1} x^{m-1} + \cdots +a_0
 \]</span>
 and substitute in to the ODE. Equate the powers of <span class="math inline">\(x\)</span> in the
 result with <span class="math inline">\(r(x)\)</span> to determine the coefficients. (This is
-sometimes called the <em>method of undetermined coefficients</em>.)</p></li>
-<li><p>If <span class="math inline">\(r(x)\)</span> contains <span class="math inline">\(h e^{\lambda x}\)</span>, try for the P.I.
+sometimes called the <em>method of undetermined coefficients</em>).</p></li>
+<li><p>If <span class="math inline">\(r(x)\)</span> contains <span class="math inline">\(h e^{\lambda x}\)</span> try, for the P.I.,
 <span class="math display">\[
 y= a e^{\lambda x}.
 \]</span>
-Again substitute into the ODE and equate both sides to determine
+Again, substitute into the ODE and equate both sides to determine
 <span class="math inline">\(a\)</span>.</p></li>
 <li><p>If <span class="math inline">\(r(x) = C \cos(\lambda x) + D \sin(\lambda x)\)</span>, try <span class="math inline">\(y = a\cos(\lambda x) + b\sin (\lambda x)\)</span>, substitute in and equate coefficients of <span class="math inline">\(\cos \lambda x\)</span> and <span class="math inline">\(\sin(\lambda x)\)</span> to determine <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p></li>
-<li><p>If <span class="math inline">\(r(x)\)</span> is any combination of the above, find P.I.’s for each piece separately, and add to find the full P.I.</p></li>
+<li><p>If <span class="math inline">\(r(x)\)</span> is any combination of the above, find Particular Integrals for each piece separately, and add to find the full P.I.</p></li>
 <li><p>If <span class="math inline">\(r(x) = h e^{\lambda x}\)</span> and <span class="math inline">\(e^{\lambda x}\)</span> happens to be a part of the C.F., try <span class="math inline">\(a x e^{\lambda x}\)</span> instead of <span class="math inline">\(a e^{\lambda x}\)</span>.
 If <span class="math inline">\(r(x) = he^{\lambda x}\)</span> is a double root of the homogeneous problem, try <span class="math inline">\(a x^2 e^{\lambda x}\)</span>.
 Similarly, if <span class="math inline">\(r(x)= \exp(px) [C \cos(qx) + D \sin(qx)]\)</span> happens to be part of the C.F., try <span class="math inline">\(y = x e^{px} (a \cos(qx) + b \sin(qx))\)</span> for the P.I.</p></li>
 </ol>
 <p><strong>The third step.</strong> The general solution of the inhomogeneous equation is written as
 <span class="math display">\[
-y(x)=y_p +y_c
+y(x)=y_p +y_c.
 \]</span>
 Since the complementary function has two arbitrary constants if the equation is of second order, this general solution has the correct number of arbitrary constants.</p>
 <div class="example">
@@ -722,7 +721,7 @@ Then
 y_p&#39;= a \cos(x) + b \sin(x) + x( -a \sin(x) + b \cos(x))
 \]</span>
 <span class="math display">\[
-y_p&#39;&#39;= -2a \sin(x) + 2b \cos(x)  -a x \cos(x) - b x \sin(x)
+y_p&#39;&#39;= -2a \sin(x) + 2b \cos(x)  -a x \cos(x) - b x \sin(x).
 \]</span>
 Substitution in the equation gives
 <span class="math display">\[
@@ -745,8 +744,8 @@ y=y_p+ y_c=  c_1 \cos(x) + c_2 \sin(x)  -\frac{x}{2} \cos(x).
 </div>
 <div class="footnotes">
 <hr />
-<ol start="15">
-<li id="fn15"><p>In contrast to <em>partial</em> differential equations (PDEs) which involve derivatives of multiple independent variables.<a href="differential-equations.html#fnref15" class="footnote-back">↩︎</a></p></li>
+<ol start="17">
+<li id="fn17"><p>In contrast to <em>partial</em> differential equations (PDEs) which involve derivatives of multiple independent variables.<a href="differential-equations.html#fnref17" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

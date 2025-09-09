@@ -2,7 +2,7 @@
 
 This section provides an introduction to vectors using examples in two and three dimensions. Such examples arise regularly in physics, relating to forces and motions acting in three dimensional space or on a two dimensional plane. Accordingly, most of our examples in this section refer to applications in physics. 
 
-Later sections will explore how vectors can be applied to much higher dimensional problems, where the dimensions can correspond to more general quantities (e.g., sets of numbers in a computer algorithm, or observations of various quantities with which we may wish to draw inferences or make decisions, e.g., in social/environmental policymaking). So if physics is not your thing please do not be discouraged!
+Later sections will explore how vectors can be applied to much higher dimensional problems, where the dimensions can correspond to more general quantities (e.g., sets of numbers in a computer algorithm, or observations of various quantities with which we may wish to draw inferences or make decisions, e.g., in social science, life science, physical science, or policymaking). So if physics is not your thing please do not be discouraged!
 
 We first describe the distinction between *scalar* quantities and *vector* quantities:
 

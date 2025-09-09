@@ -31,5 +31,5 @@ These exercises cover the topics of Algebra.
 1. Make $b$ the subject of the following formula.
     $$W=\frac{t\sqrt{a+b^2}}{2\pi}$$  
 
-
+1. Practice further questions in this <a href="https://numbas.mathcentre.ac.uk/exam/40940/test/embed/?token=1e382fb0-24ea-448c-a280-5818b6b391f3" target="_blank">Numbas quiz</a>.
     

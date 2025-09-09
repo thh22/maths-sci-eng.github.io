@@ -23,7 +23,7 @@
 <meta name="author" content="Drs Mark Callaway, Tim Hughes and Ed Branford" />
 
 
-<meta name="date" content="2025-09-08" />
+<meta name="date" content="2025-09-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,7 @@
 <ul>
 <li class="chapter" data-level="7.1" data-path="gauss.html"><a href="gauss.html#lines-and-planes"><i class="fa fa-check"></i><b>7.1</b> Lines and planes</a></li>
 <li class="chapter" data-level="7.2" data-path="gauss.html"><a href="gauss.html#solving-linear-systems---gaussian-elimination"><i class="fa fa-check"></i><b>7.2</b> Solving linear systems - Gaussian elimination</a></li>
-<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon-form"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
+<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>8</b> Matrices</a>
 <ul>
@@ -208,7 +208,7 @@
 <li class="chapter" data-level="10" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html"><i class="fa fa-check"></i><b>10</b> Eigenvalues and Eigenvectors</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#matrix-diagonalisation"><i class="fa fa-check"></i><b>10.1</b> Matrix Diagonalisation</a></li>
-<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvalues"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
+<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#FindEigen"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
 <li class="chapter" data-level="10.3" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvectors"><i class="fa fa-check"></i><b>10.3</b> Finding Eigenvectors</a></li>
 <li class="chapter" data-level="10.4" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#powers-of-diagonalisable-matrices"><i class="fa fa-check"></i><b>10.4</b> Powers of diagonalisable matrices</a></li>
 </ul></li>
@@ -278,9 +278,8 @@
 <li class="chapter" data-level="18" data-path="numerics.html"><a href="numerics.html"><i class="fa fa-check"></i><b>18</b> Numerical Methods</a>
 <ul>
 <li class="chapter" data-level="18.1" data-path="numerics.html"><a href="numerics.html#numerical-root-finding"><i class="fa fa-check"></i><b>18.1</b> Numerical Root Finding</a></li>
-<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation</a></li>
+<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation-and-solutions-to-odes"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation and solutions to ODEs</a></li>
 <li class="chapter" data-level="18.3" data-path="numerics.html"><a href="numerics.html#numerical-integration"><i class="fa fa-check"></i><b>18.3</b> Numerical Integration</a></li>
-<li class="chapter" data-level="18.4" data-path="numerics.html"><a href="numerics.html#numerical-solutions-to-odes"><i class="fa fa-check"></i><b>18.4</b> Numerical Solutions to ODEs</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html"><i class="fa fa-check"></i><b>19</b> Probability Fundamentals</a>
 <ul>
@@ -382,7 +381,7 @@
             <section class="normal" id="section-">
 <div id="eigenvalues-and-eigenvectors" class="section level1 hasAnchor" number="10">
 <h1><span class="header-section-number">Chapter 10</span> Eigenvalues and Eigenvectors<a href="eigenvalues-and-eigenvectors.html#eigenvalues-and-eigenvectors" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Some linear transformations have “natural directions” associated with them.</p>
+<p>Linear transformations have “natural directions” associated with them – vectors which are scaled by some scalar whenever the transformation is applied.</p>
 <div class="example">
 <p><span id="exm:eigen1" class="example"><strong>Example 10.1  </strong></span>Let
 <span class="math display">\[
@@ -409,37 +408,37 @@ and so
 A\mathbf{u}_2 = -\mathbf{u}_2, \qquad \text{where }\quad \mathbf{u}_2 = \begin{pmatrix} 1 \\ -2 \end{pmatrix}.
 \]</span></p>
 </div>
-<p>The above example shows that there are vectors associated to a matrix, which, when multiplied with the matrix from the left, are only scaled by a factor. This motivates the following definition.</p>
+<p>Thus, in the above example, there were two vectors associated with the matrix <span class="math inline">\(A\)</span>, which, when multiplied with the matrix from the left, were scaled by a factor. This motivates the following definition.</p>
 <div class="definition">
 <p><span id="def:eigen" class="definition"><strong>Definition 10.1  (Eigenvalues and Eigenvectors) </strong></span>Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(n\times n\)</span> matrix. Then a non-zero vector <span class="math inline">\(\mathbf{u}\)</span> is said to be an <em>eigenvector</em> of <span class="math inline">\(A\)</span> if there exists a scalar <span class="math inline">\(\lambda\)</span> such that
 <span class="math display">\[
-A\mathbf{u} = \lambda \mathbf{u}
+A\mathbf{u} = \lambda \mathbf{u}.
 \]</span>
-The scalar <span class="math inline">\(\lambda\)</span> is called the <em>eigenvalue</em> associated to <span class="math inline">\(\mathbf{u}\)</span>.</p>
+The scalar <span class="math inline">\(\lambda\)</span> is called the <em>eigenvalue</em> associated with <span class="math inline">\(\mathbf{u}\)</span>.</p>
 </div>
 <div class="example">
 <p><span id="exm:eigen2" class="example"><strong>Example 10.2  </strong></span>In Example <a href="eigenvalues-and-eigenvectors.html#exm:eigen1">10.1</a>, we have that <span class="math inline">\(\mathbf{u}_1 = \left(\begin{smallmatrix}1\\1\end{smallmatrix}\right)\)</span> is an eigenvector associated with an eigenvalue <span class="math inline">\(\lambda_1 = 2\)</span>, and that <span class="math inline">\(\mathbf{u}_2 = \left(\begin{smallmatrix}1\\-2\end{smallmatrix}\right)\)</span> is an eigenvector associated with an eigenvalue <span class="math inline">\(\lambda_2 = -1\)</span>.</p>
-<p>We claim that any vector may be written as a linear combination of <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>. That is, for all <span class="math inline">\(\mathbf{v}\)</span>, there exist scalars <span class="math inline">\(x_1, x_2\)</span> such that
+<p>It is also the case that any two dimensional vector may be written as a linear combination of <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>. That is, for any given two dimensional vector <span class="math inline">\(\mathbf{v}\)</span>, there exist scalars <span class="math inline">\(x_1, x_2\)</span> such that
 <span class="math display">\[
 x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2 = \mathbf{v}.
 \]</span>
-Write <span class="math inline">\(\mathbf{x} = \left(\begin{smallmatrix}x_1\\ x_2\end{smallmatrix}\right)\)</span>, then we may write the above equation as <span class="math inline">\(B \mathbf{x} = \mathbf{v}\)</span>, where <span class="math inline">\(B = (\mathbf{u}_1 \ \mathbf{u}_2)\)</span>, i.e. the columns of the matrix <span class="math inline">\(B\)</span> are <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>. Note that
+Here, writing <span class="math inline">\(\mathbf{x} = \left(\begin{smallmatrix}x_1\\ x_2\end{smallmatrix}\right)\)</span>, then the above equation can be written using matrix notation as <span class="math inline">\(B \mathbf{x} = \mathbf{v}\)</span>, where <span class="math inline">\(B = (\mathbf{u}_1 \ \mathbf{u}_2)\)</span>, that is, the columns of the matrix <span class="math inline">\(B\)</span> are <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>. Note that
 <span class="math display">\[
 \det(B) = \begin{vmatrix} 1 &amp; 1 \\ 1 &amp; -2 \end{vmatrix} = -2 -1 = -3,
 \]</span>
-which is non-zero, hence the matrix is invertible, and so the equation <span class="math inline">\(B \mathbf{x} = \mathbf{v}\)</span> has the (unique) solution <span class="math inline">\(\mathbf{x} = B^{-1} \mathbf{v}\)</span>. The matrix <span class="math inline">\(B\)</span> being invertible is equivalent to saying that <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span> are <em>linearly independent</em>.</p>
-<p>Having shown that any vector <span class="math inline">\(\mathbf{v}\)</span> may be written as a (unique) linear combination of <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>, we apply <span class="math inline">\(A\)</span> to both sides of and deduce
+which is non-zero, hence <span class="math inline">\(B\)</span> is invertible, and so the equation <span class="math inline">\(B \mathbf{x} = \mathbf{v}\)</span> has the (unique) solution <span class="math inline">\(\mathbf{x} = B^{-1} \mathbf{v}\)</span>. The matrix <span class="math inline">\(B\)</span> being invertible is equivalent to saying that <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span> are <em>linearly independent</em>.</p>
+<p>Now that we have shown that the vector <span class="math inline">\(\mathbf{v}\)</span> may be written as a (unique) linear combination of <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>, we apply <span class="math inline">\(A\)</span> to both sides of the equation <span class="math inline">\(\mathbf{v} = x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2\)</span>, and deduce that
 <span class="math display">\[\begin{align*}
 A\mathbf{v} &amp;= A(x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2)\\
 &amp;= x_1 A\mathbf{u}_1 + x_2 A\mathbf{u}_2\\
 &amp;= \lambda _1 x_1 \mathbf{u}_1 + \lambda_2 x_2 \mathbf{u}_2,
 \end{align*}\]</span>
-where we use the facts <span class="math inline">\(A\mathbf{u}_1 = \lambda_1 \mathbf{u}_1\)</span> and <span class="math inline">\(A\mathbf{u}_2 = \lambda_2 \mathbf{u}_2\)</span> for the last equality. Hence if we write a vector <span class="math inline">\(\mathbf{v}\)</span> in terms of the eigenvectors <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>, it is simple to calculate the result of multiplying by the matrix <span class="math inline">\(A\)</span>: we simply multiply these components by their eigenvalues. That is, we just strech/compress by a factor <span class="math inline">\(\lambda_i\)</span> in the <span class="math inline">\(\mathbf{u}_i\)</span> direction (and reverse direction if <span class="math inline">\(\lambda_i\)</span> is negative).</p>
+where we use the equations <span class="math inline">\(A\mathbf{u}_1 = \lambda_1 \mathbf{u}_1\)</span> and <span class="math inline">\(A\mathbf{u}_2 = \lambda_2 \mathbf{u}_2\)</span> for the last equality. Hence, by writing a given two dimensional vector <span class="math inline">\(\mathbf{v}\)</span> in terms of the eigenvectors <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>, it is simple to calculate the result of multiplying by the matrix <span class="math inline">\(A\)</span>: we simply multiply these components by their eigenvalues. That is, we just stretch/compress the vector by a factor <span class="math inline">\(\lambda_i\)</span> in the <span class="math inline">\(\mathbf{u}_i\)</span> direction (and reverse direction if <span class="math inline">\(\lambda_i\)</span> is negative), for <span class="math inline">\(i = 1, 2\)</span>. The same holds more generally for any square <span class="math inline">\(n \times n\)</span> matrix providing it has <span class="math inline">\(n\)</span> independent eigenvectors. However, not all matrices have this property.</p>
 </div>
 <div id="matrix-diagonalisation" class="section level2 hasAnchor" number="10.1">
 <h2><span class="header-section-number">10.1</span> Matrix Diagonalisation<a href="eigenvalues-and-eigenvectors.html#matrix-diagonalisation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="definition">
-<p><span id="def:diag" class="definition"><strong>Definition 10.2  (Diagonal Matrix) </strong></span>A square matrix is said to be a <em>diagonal matrix</em> if its non-diagonal entries are zero. That is, a matrix of the form</p>
+<p><span id="def:diag" class="definition"><strong>Definition 10.2  (Diagonal Matrix) </strong></span>A square matrix is said to be a <em>diagonal matrix</em> if its non-diagonal entries are zero. In other words, if it is a matrix of the form</p>
 <p><span class="math display">\[
 D = \begin{pmatrix}
 \lambda_1 &amp; 0 &amp; 0 &amp; \dotsb &amp; 0\\
@@ -448,14 +447,14 @@ D = \begin{pmatrix}
 0&amp; &amp; \dotsb &amp; &amp; \lambda_n\\
 \end{pmatrix}
 \]</span></p>
-<p>for any scalars <span class="math inline">\(\lambda_1,\dotsc,\lambda_n\)</span>.</p>
+<p>where <span class="math inline">\(\lambda_1,\dotsc,\lambda_n\)</span> are scalars.</p>
 </div>
-<p>Consider the diagonal matrix
+<p>Now, consider the diagonal matrix
 <span class="math display">\[
 D = \begin{pmatrix} \lambda_1 &amp; 0 \\ 0 &amp; \lambda_2 \end{pmatrix}
-= \begin{pmatrix} 2 &amp; 0 \\ 0 &amp; -1 \end{pmatrix},
+= \begin{pmatrix} 2 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}.
 \]</span></p>
-<p>Note that this acts very simply on a vector <span class="math inline">\(\mathbf{x}=\left(\begin{smallmatrix}x_1\\x_2\end{smallmatrix}\right)\)</span>:</p>
+<p>Note that multiplication of a vector <span class="math inline">\(\mathbf{x}=\left(\begin{smallmatrix}x_1\\x_2\end{smallmatrix}\right)\)</span> by this matrix causes each of its entries to be scaled by the corresponding diagonal entry:</p>
 <p><span class="math display">\[
 D\mathbf{x}=
 \begin{pmatrix} \lambda_1 &amp; 0 \\ 0 &amp; \lambda_2 \end{pmatrix}
@@ -468,33 +467,37 @@ D\mathbf{x}=
 \begin{pmatrix}
 2 x_1\\
 -x_2
-\end{pmatrix}
+\end{pmatrix}.
 \]</span></p>
-<p>it simply multiplies each element of the vector by a value on the diagonal. This is reminiscent of the action of <span class="math inline">\(A\)</span> on</p>
+<p>This is reminiscent of the action of <span class="math inline">\(A\)</span> on its eigenvectors.</p>
 <p>We’ll now look at an example to understand the meaning of the term “diagonalising a matrix”.</p>
 <div class="example">
-<p><span id="exm:diagonal" class="example"><strong>Example 10.3  </strong></span>Suppose that we write a vector <span class="math inline">\(\mathbf{v} = x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2\)</span> in terms of the eigenvectors <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span> from example (exm:eigen2). We say that <span class="math inline">\(\mathbf{v}\)</span> has the <em>coordinate vector</em>
+<p><span id="exm:diagonal" class="example"><strong>Example 10.3  </strong></span>Consider again the matrix in example <a href="eigenvalues-and-eigenvectors.html#exm:eigen2">10.2</a>. Suppose that we write a 2 dimensional vector <span class="math inline">\(\mathbf{v} = x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2\)</span> in terms of the eigenvectors <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>. We say that <span class="math inline">\(\mathbf{v}\)</span> has the <em>coordinate vector</em>
 <span class="math display">\[\mathbf{x}_{\mathcal{P}}=\begin{pmatrix}x_1\\x_2\end{pmatrix}\]</span>
 with respect to the vectors<a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a> <span class="math inline">\(\mathcal{P}=[\mathbf{u}_1,\mathbf{u}_2]\)</span> – these vectors take the place of the usual vectors <span class="math inline">\(\mathcal{E}=[\mathbf{e}_1,\mathbf{e}_2]\)</span> (although note that the vectors in <span class="math inline">\(\mathcal{P}\)</span> are not unit vectors here). We may write <span class="math inline">\(\mathbf{v}\)</span> as
 <span class="math display">\[
 \mathbf{v} = P \mathbf{x}_\mathcal{P},
 \]</span>
-where <span class="math inline">\(P = (\mathbf{u}_1\; \mathbf{u}_2)\)</span> is the matrix whose columns are the vectors <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>.
-Consider an exemplar vector
+where <span class="math inline">\(P = (\mathbf{u}_1\; \mathbf{u}_2)\)</span> is the matrix whose columns are the vectors <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span>.</p>
+<p>Consider an exemplar vector
 <span class="math display">\[
-\mathbf{v} = 5 \mathbf{u}_1 - 3 \mathbf{u}_2= 2 \mathbf{e}_1 + 11 \mathbf{e}_2
+\mathbf{v} = 5 \mathbf{u}_1 - 3 \mathbf{u}_2
 \]</span>
 Then <span class="math inline">\(\mathbf{v}\)</span> has co-ordinate vector <span class="math inline">\(\mathbf{x}_\mathcal{P}=(5,-3)\)</span> and
 <span class="math display">\[
 \mathbf{v} = P \begin{pmatrix} 5 \\ -3 \end{pmatrix}
 = \begin{pmatrix} 1 &amp; 1 \\ 1 &amp; -2 \end{pmatrix} \begin{pmatrix} 5 \\ -3 \end{pmatrix}
-= \begin{pmatrix} 2\\ 11\end{pmatrix}
-\]</span></p>
-<p>We have seen that <span class="math inline">\(A\)</span> acts very simply in these coordinates:
-<span class="math display">\[
-A\mathbf{v}=\lambda _1 x_1 \mathbf{u}_1 + \lambda_2 x_2 \mathbf{u}_2
+= \begin{pmatrix} 2\\ 11\end{pmatrix},
 \]</span>
-and writing this result as a coordinate vector with respect to <span class="math inline">\(\mathcal{P}\)</span> we would have
+that is,
+<span class="math display">\[
+\mathbf{v} = 2 \mathbf{e}_1 + 11 \mathbf{e}_2.
+\]</span>
+We have shown already that <span class="math inline">\(A\)</span> acts very simply in the coordinates specified by <span class="math inline">\(\mathcal{P} = (\mathbf{u}_1\; \mathbf{u}_2)\)</span>:
+<span class="math display">\[
+A\mathbf{v}=\lambda _1 x_1 \mathbf{u}_1 + \lambda_2 x_2 \mathbf{u}_2,
+\]</span>
+and, writing this result as a coordinate vector with respect to <span class="math inline">\(\mathcal{P}\)</span>, we have that
 <span class="math display">\[
 (A\mathbf{v})_\mathcal{P}=
 \begin{pmatrix}
@@ -502,9 +505,9 @@ and writing this result as a coordinate vector with respect to <span class="math
 \lambda_2 x_2
 \end{pmatrix}
 \]</span>
-We can see that <span class="math inline">\(A\)</span> acts like a diagonal matrix in the coordinates <span class="math inline">\(\mathcal{P}\)</span>. If we defined
+We can see that <span class="math inline">\(A\)</span> acts like a diagonal matrix in the coordinates specified by <span class="math inline">\(\mathcal{P}\)</span>. If we defined
 <span class="math display">\[D=\begin{pmatrix} \lambda_1 &amp; 0 \\ 0 &amp; \lambda_2 \end{pmatrix}\]</span>
-then note that <span class="math inline">\(D\)</span> acts on the coordinate vector as
+then <span class="math inline">\(D\)</span> acts on the coordinate vector as
 <span class="math display">\[D\mathbf{x}_\mathcal{P}=
 \begin{pmatrix} \lambda_1 &amp; 0 \\
 0 &amp; \lambda_2
@@ -516,39 +519,38 @@ x_2
 =\begin{pmatrix}
 \lambda_1 x_1\\
 \lambda_2 x_2
-\end{pmatrix}
+\end{pmatrix}.
 \]</span></p>
-<p>Since the matrix <span class="math inline">\(P\)</span> converts between coordinates <span class="math inline">\(\mathcal{P}\)</span> and standard coordinates <span class="math inline">\(\mathcal{E}\)</span>, that is <span class="math inline">\(\mathbf{v}=P\mathbf{x}_\mathcal{P}\)</span>, we can see that <span class="math inline">\(P^{-1}\)</span> converts in the other direction <span class="math inline">\(\mathbf{x}_\mathcal{P}=P^{-1}\mathbf{v}\)</span>. We can use this to write <span class="math inline">\(A\)</span> as</p>
+<p>Since the matrix <span class="math inline">\(P\)</span> converts between coordinates <span class="math inline">\(\mathcal{P}\)</span> and standard coordinates <span class="math inline">\(\mathcal{E}\)</span>, that is, <span class="math inline">\(\mathbf{v}=P\mathbf{x}_\mathcal{P}\)</span>, then <span class="math inline">\(P^{-1}\)</span> converts in the other direction: <span class="math inline">\(\mathbf{x}_\mathcal{P}=P^{-1}\mathbf{v}\)</span>. We can use this to write <span class="math inline">\(A\)</span> as</p>
 <p><span class="math display">\[A=PDP^{-1}.\]</span></p>
 <p>This decomposes <span class="math inline">\(A\mathbf{v}\)</span> into three operations <span class="math inline">\(PDP^{-1}\mathbf{v}\)</span>:</p>
 <ol style="list-style-type: decimal">
 <li>Apply <span class="math inline">\(P^{-1}\)</span> to convert <span class="math inline">\(\mathbf{v}\)</span> to <span class="math inline">\(P^{-1}\mathbf{v}=\mathbf{x}_\mathcal{P}\)</span>;</li>
-<li>Now apply the diagonal matrix <span class="math inline">\(D\)</span> to <span class="math inline">\(\mathbf{x}_\mathcal{P}\)</span>, which simply multiplies each component by the eigenvalue <span class="math inline">\(\lambda_i\)</span>;</li>
+<li>Now apply the diagonal matrix <span class="math inline">\(D\)</span> to <span class="math inline">\(\mathbf{x}_\mathcal{P}\)</span>, which simply multiplies each component <span class="math inline">\(x_i\)</span> by the corresponding eigenvalue <span class="math inline">\(\lambda_i\)</span>;</li>
 <li>Finally, convert back to standard coordinates by applying <span class="math inline">\(P\)</span> to give the result <span class="math inline">\(A\mathbf{v}\)</span>.</li>
 </ol>
 <p>We call the matrix <span class="math inline">\(D\)</span> the <em>diagonalisation</em> of the matrix <span class="math inline">\(A\)</span>. Note that <span class="math inline">\(D\)</span> can be obtained by applying <span class="math inline">\(P^{-1}\)</span> to the left and <span class="math inline">\(P\)</span> to the right of the above equation to obtain:</p>
-<p><span class="math display">\[P^{-1}AP=P^{-1}PDP^{-1}P=D.\]</span></p>
-<p>(using <span class="math inline">\(P^{-1}P=I\)</span>).</p>
+<p><span class="math display">\[P^{-1}AP=P^{-1}PDP^{-1}P=D,\]</span></p>
+<p>where we have used the result <span class="math inline">\(P^{-1}P=I\)</span>. This result can be useful for analysing the properties of matrices, however, it is an inefficient way to compute the matrix <span class="math inline">\(D\)</span>. Instead, <span class="math inline">\(D\)</span> is better obtained at the time of computing the eigenvectors <span class="math inline">\(\mathbf{u}_1\)</span> and <span class="math inline">\(\mathbf{u}_2\)</span> (as will be discussed in section <a href="eigenvalues-and-eigenvectors.html#FindEigen">10.2</a>) – it is a diagonal matrix whose <span class="math inline">\(i\)</span>th diagonal entry is equal to the eigenvalue corresponding to the eigenvector <span class="math inline">\(\mathbf{u}_i\)</span>.</p>
 </div>
 <div class="theorem">
-<p><span id="thm:diagonalisation" class="theorem"><strong>Theorem 10.1  (Diagonalisation) </strong></span>Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(n\times n\)</span> matrix with <span class="math inline">\(n\)</span> eigenvectors <span class="math inline">\(\mathbf{u}_1, \dots, \mathbf{u}_n\)</span> with corresponding eigenvalues <span class="math inline">\(\lambda_1, \dotsc, \lambda_n\)</span>. If the matrix <span class="math inline">\(P=(\mathbf{u}_1 \dotsb \mathbf{u}_n)\)</span> is invertible (in other words, the eigenvectors are linearly independent) then
+<p><span id="thm:diagonalisation" class="theorem"><strong>Theorem 10.1  (Diagonalisation) </strong></span>Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(n\times n\)</span> matrix with <span class="math inline">\(n\)</span> eigenvectors <span class="math inline">\(\mathbf{u}_1, \dots, \mathbf{u}_n\)</span> with corresponding eigenvalues <span class="math inline">\(\lambda_1, \dotsc, \lambda_n\)</span>. If the matrix <span class="math inline">\(P=(\mathbf{u}_1 \dotsb \mathbf{u}_n)\)</span> is invertible (in other words, the eigenvectors are linearly independent), then
 <span class="math display">\[
 D = P^{-1}A P,
 \]</span>
-where <span class="math inline">\(D\)</span> is the diagonal matrix whose <span class="math inline">\(i\)</span>-th diagonal entry is <span class="math inline">\(\lambda_i\)</span>.
-We say that <span class="math inline">\(A\)</span> is <em>diagonalisable</em>.</p>
+where <span class="math inline">\(D\)</span> is the diagonal matrix whose <span class="math inline">\(i\)</span>-th diagonal entry is <span class="math inline">\(\lambda_i\)</span>.</p>
 </div>
-<p>It is worth noting here that it is <strong>not</strong> always possible to diagonalise a matrix. We shall see an example later.</p>
+<p>If a given <span class="math inline">\(n \times n\)</span> matrix <span class="math inline">\(A\)</span> has <span class="math inline">\(n\)</span> independent eigenvalues, then it may be diagonalised in accordance with the previous theorem, and we say that <span class="math inline">\(A\)</span> is <em>diagonalisable</em>. It is worth noting here that it is <strong>not</strong> always possible to diagonalise a matrix. We shall see an example later.</p>
 </div>
-<div id="finding-eigenvalues" class="section level2 hasAnchor" number="10.2">
-<h2><span class="header-section-number">10.2</span> Finding Eigenvalues<a href="eigenvalues-and-eigenvectors.html#finding-eigenvalues" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="FindEigen" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Finding Eigenvalues<a href="eigenvalues-and-eigenvectors.html#FindEigen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Suppose <span class="math inline">\(\mathbf{u}\)</span> is an eigenvector of a matrix <span class="math inline">\(A\)</span> with associated eigenvalue <span class="math inline">\(\lambda\)</span>. This means that <span class="math inline">\(\mathbf{u}\)</span> is a non-zero vector such that <span class="math inline">\(A\mathbf{u} = \lambda \mathbf{u}\)</span>. Equally,
 <span class="math display">\[\begin{array}{rrcl}
 &amp; \lambda \mathbf{u} - A \mathbf{u} &amp;=&amp; \mathbf{0} \\
 \Longleftrightarrow\qquad &amp; \lambda I_n \mathbf{u} - A\mathbf{u} &amp;=&amp; \mathbf{0} \\
 \Longleftrightarrow\qquad &amp; (\lambda I_n-A) \mathbf{u} &amp;=&amp; \mathbf{0}.
 \end{array}\]</span>
-Setting <span class="math inline">\(B_{\lambda} = \lambda I_n - A\)</span>, we have that <span class="math inline">\(\lambda\)</span> is an eigenvalue of <span class="math inline">\(A\)</span> if, and only if, <span class="math inline">\(B_{\lambda}\mathbf{u} = \mathbf{0}\)</span> has a non-zero solution <span class="math inline">\(\mathbf{u}\)</span>. Recall that for a general square matrix <span class="math inline">\(M\)</span>, the matrix–vector system <span class="math inline">\(M \mathbf{v} = \mathbf{b}\)</span> has a unique solution for <span class="math inline">\(\mathbf{v}\)</span> if, and only if, <span class="math inline">\(\det(M) \neq 0\)</span>. Note the system <span class="math inline">\(B_{\lambda} \mathbf{v} = \mathbf{0}\)</span> always has at least one solution, namely <span class="math inline">\(\mathbf{v} = \mathbf{0}\)</span>, so the system has a non-zero solution if, and only if, it has more than one solution, which is equivalent to <span class="math inline">\(\det(B_{\lambda}) = 0\)</span>. We use this fact to find eigenvalues, as shown in the following example.</p>
+Setting <span class="math inline">\(B_{\lambda} = \lambda I_n - A\)</span>, we have that <span class="math inline">\(\lambda\)</span> is an eigenvalue of <span class="math inline">\(A\)</span> if, and only if, <span class="math inline">\(B_{\lambda}\mathbf{u} = \mathbf{0}\)</span> has a non-zero solution <span class="math inline">\(\mathbf{u}\)</span>. Recall that for a general square matrix <span class="math inline">\(M\)</span>, the matrix equation <span class="math inline">\(M \mathbf{v} = \mathbf{b}\)</span> has a unique solution for <span class="math inline">\(\mathbf{v}\)</span> if, and only if, <span class="math inline">\(\det(M) \neq 0\)</span>. Note also that the equation <span class="math inline">\(B_{\lambda} \mathbf{v} = \mathbf{0}\)</span> always has at least one solution, namely, <span class="math inline">\(\mathbf{v} = \mathbf{0}\)</span>. So the equation has a non-zero solution if, and only if, it has more than one solution, which is equivalent to requiring <span class="math inline">\(\det(B_{\lambda}) = 0\)</span>. We use this fact to find eigenvalues, as shown in the following example.</p>
 <div class="example">
 <p><span id="exm:eigenvals" class="example"><strong>Example 10.4  (Finding Eigenvalues) </strong></span>Let
 <span class="math display">\[
@@ -558,7 +560,7 @@ Then the matrix <span class="math inline">\(B_{\lambda} = \lambda I_{2} - A\)</s
 <span class="math display">\[
 B_{\lambda} = \begin{pmatrix} \lambda - 1 &amp; -1 \\ -2 &amp; \lambda \end{pmatrix}.
 \]</span>
-Then we have
+We have that
 <span class="math display">\[\begin{align*}
 \det(B_{\lambda}) &amp;= \lambda(\lambda-1) - 2 \\
 &amp;= \lambda^2 - \lambda - 2 \\
@@ -568,13 +570,13 @@ Thus, <span class="math inline">\(\lambda\)</span> is an eigenvalue of <span cla
 <span class="math display">\[
 0 = (\lambda - 2)(\lambda + 1),
 \]</span>
-and equivalently if and only if <span class="math inline">\(\lambda = 2\)</span> or <span class="math inline">\(\lambda = -1\)</span>. Hence, the eigenvalues of <span class="math inline">\(A\)</span> are
+and, equivalently, if and only if <span class="math inline">\(\lambda = 2\)</span> or <span class="math inline">\(\lambda = -1\)</span>. Hence, the eigenvalues of <span class="math inline">\(A\)</span> are
 <span class="math display">\[
 \lambda_1 = 2 \qquad\text{and}\qquad \lambda_2 = -1.
 \]</span>
 </p>
 </div>
-<p>Note, that in the above example <span class="math inline">\(\det(B_\lambda)\)</span> is a polynomial of degree 2 in the variable <span class="math inline">\(\lambda\)</span>. We can generalise this observation.</p>
+<p>Note that, in the above example, <span class="math inline">\(\det(B_\lambda)\)</span> is a polynomial of degree 2 in the variable <span class="math inline">\(\lambda\)</span>. This observation generalises as follows:</p>
 <div class="definition">
 <p><span id="def:charpoly" class="definition"><strong>Definition 10.3  (Characteristic Polynomial) </strong></span>Let <span class="math inline">\(A\)</span> be an <span class="math inline">\(n\times n\)</span> matrix. Then the function
 <span class="math display">\[
@@ -582,21 +584,21 @@ p_A(\lambda)=\det(\lambda I_n - A)
 \]</span>
 is a polynomial of degree <span class="math inline">\(n\)</span> in the variable <span class="math inline">\(\lambda\)</span>. We call this polynomial <span class="math inline">\(p_A\)</span> the <em>characteristic polynomial</em> of <span class="math inline">\(A\)</span>.</p>
 </div>
-<p>So in general, we can find the eigenvalues of a square matrix <span class="math inline">\(A\)</span> by finding the roots of the characteristic polynomial <span class="math inline">\(p_A\)</span>, which is obtained from computing the determinant <span class="math inline">\(\det(\lambda I_n - A)\)</span>.</p>
+<p>So, in general, we can find the eigenvalues of a square matrix <span class="math inline">\(A\)</span> by finding the roots of the characteristic polynomial <span class="math inline">\(p_A\)</span>, which is obtained from computing the determinant <span class="math inline">\(\det(\lambda I_n - A)\)</span>. We recall also from the Fundamental Theorem of Algebra (Theorem <a href="complex.html#thm:FTA">5.1</a>) that this polynomial, which has degree <span class="math inline">\(n\)</span>, will necessarily have exactly <span class="math inline">\(n\)</span> complex roots (although some may be coincident). Thus, solving the equation <span class="math inline">\(\det(\lambda I_n - A) = 0\)</span> will give <span class="math inline">\(n\)</span> complex numbers (some of which may be coincident) corresponding to the eigenvalues of the matrix <span class="math inline">\(A\)</span>. Whether the matrix <span class="math inline">\(A\)</span> is diagonalisable will then depend on whether we can find independent eigenvectors corresponding to each of these eigenvalues. The task of finding eigenvectors will be considered in the next section.</p>
 </div>
 <div id="finding-eigenvectors" class="section level2 hasAnchor" number="10.3">
 <h2><span class="header-section-number">10.3</span> Finding Eigenvectors<a href="eigenvalues-and-eigenvectors.html#finding-eigenvectors" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="example">
-<p><span id="exm:eigenvecs" class="example"><strong>Example 10.5  (Finding Eigenvectors) </strong></span>Let again
+<p><span id="exm:eigenvecs" class="example"><strong>Example 10.5  (Finding Eigenvectors) </strong></span>Consider again the matrix
 <span class="math display">\[
 A = \begin{pmatrix} 1 &amp; 1 \\ 2 &amp; 0 \end{pmatrix}.
 \]</span>
-We know from above that <span class="math inline">\(\lambda_1 = 2\)</span> and <span class="math inline">\(\lambda_2 = -1\)</span> are the eigenvalues of <span class="math inline">\(A\)</span>. We first find an eigenvector corresponding to <span class="math inline">\(\lambda_1\)</span>. Any non-zero solution <span class="math inline">\(\mathbf{v} = \left(\begin{smallmatrix}v_1\\v_2\end{smallmatrix}\right)\)</span> of the equation <span class="math inline">\(B_2 \mathbf{v} = \mathbf{0}\)</span> is such an eigenvector.
-For <span class="math inline">\(\lambda = \lambda_1 = 2\)</span>, we have
+We showed earlier that <span class="math inline">\(\lambda_1 = 2\)</span> and <span class="math inline">\(\lambda_2 = -1\)</span> are the eigenvalues of <span class="math inline">\(A\)</span>. We first find an eigenvector corresponding to <span class="math inline">\(\lambda_1\)</span>. Recall that this eigenvector corresponds to a vector <span class="math inline">\(\mathbf{v} = \left(\begin{smallmatrix}v_1\\v_2\end{smallmatrix}\right)\)</span> of the matrix equation <span class="math inline">\(A\mathbf{v} = \lambda_1 \mathbf{v}\)</span>. Thus, any non-zero solution <span class="math inline">\(\mathbf{v} = \left(\begin{smallmatrix}v_1\\v_2\end{smallmatrix}\right)\)</span> of the equation <span class="math inline">\(B_{\lambda_1} \mathbf{v} = (\lambda_1 I_2 - A)\mathbf{v} = \mathbf{0}\)</span> is such an eigenvector.</p>
+<p>Since <span class="math inline">\(\lambda_1 = 2\)</span>, we have
 <span class="math display">\[
-B_2 = \begin{pmatrix} 1 &amp; -1 \\ -2 &amp; 2 \end{pmatrix}.
+B_{\lambda_1} = \begin{pmatrix} 1 &amp; -1 \\ -2 &amp; 2 \end{pmatrix}.
 \]</span>
-We solve <span class="math inline">\(B_2 \mathbf{v} = \mathbf{0}\)</span> via Gaussian elimination. The augmented matrix for <span class="math inline">\(B_2 \mathbf{v} = \mathbf{0}\)</span> is given by
+We solve <span class="math inline">\(B_{\lambda_1} \mathbf{v} = \mathbf{0}\)</span> via Gaussian elimination. The augmented matrix for <span class="math inline">\(B_{\lambda_1} \mathbf{v} = \mathbf{0}\)</span> is given by
 <span class="math display">\[
 \left(\begin{array}{rr|r}
 1  &amp; -1 &amp; 0 \\
@@ -614,17 +616,19 @@ From this, we see that <span class="math inline">\(v_2\)</span> is arbitrary, sa
 <span class="math display">\[
 \alpha \begin{pmatrix} 1 \\ 1 \end{pmatrix}
 \]</span>
-for any non-zero value of <span class="math inline">\(\alpha\)</span>. By a similar process, we find an eigenvector corresponding to <span class="math inline">\(\lambda_2 = -1\)</span>. Any non-zero solution <span class="math inline">\(\mathbf{v} = \left(\begin{smallmatrix}v_1\\v_2\end{smallmatrix}\right)\)</span> of the equation <span class="math inline">\(B_{-1} \mathbf{v} = \mathbf{0}\)</span> is such an eigenvector. We have
+for any non-zero value of <span class="math inline">\(\alpha\)</span>.</p>
+<p>Note that, in the Gaussian elimination process, the solution vector remained unchanged at each stage. It was always equal to the zero vector. This is because the effects of the EROs on the solution vector corresponded to replacing the entries in the solution vector with linear combinations of entries in the prior solution vector. Accordingly, it is not necessary to keep track of the effect of these transformations on the solution vector, so it need not be included in the augmented matrix. Thus, in future examples for computing eigenvectors, we will omit the solution vector from the augmented matrix.</p>
+<p>By a similar process, we find an eigenvector corresponding to <span class="math inline">\(\lambda_2 = -1\)</span>. Any non-zero solution <span class="math inline">\(\mathbf{v} = \left(\begin{smallmatrix}v_1\\v_2\end{smallmatrix}\right)\)</span> of the equation <span class="math inline">\(B_{\lambda_2} \mathbf{v} = (\lambda_2 I_2 - A)\mathbf{v} = \mathbf{0}\)</span> is such an eigenvector. Since <span class="math inline">\(\lambda_2 = -1\)</span>, we have
 <span class="math display">\[
-B_{-1} = \begin{pmatrix} -2 &amp; -1 \\ -2 &amp; -1\end{pmatrix},
+B_{\lambda_2} = \begin{pmatrix} -2 &amp; -1 \\ -2 &amp; -1\end{pmatrix},
 \]</span>
-and again solve <span class="math inline">\(B_{-1} \mathbf{v} = \mathbf{0}\)</span> via Gaussian elimination to give the eigenvectors corresponding to <span class="math inline">\(\lambda_2 = -1\)</span> as
+and we may similarly solve <span class="math inline">\(B_{\lambda_2} \mathbf{v} = \mathbf{0}\)</span> via Gaussian elimination to give the eigenvectors corresponding to <span class="math inline">\(\lambda_2 = -1\)</span> as
 <span class="math display">\[
 \beta \begin{pmatrix} 1 \\ -2\end{pmatrix}
 \]</span>
 for any non-zero value of <span class="math inline">\(\beta\)</span>.</p>
-<p>Note that there are infinitely many eigenvectors corresponding to an eigenvalue, because if a non-zero vector <span class="math inline">\(\mathbf{v}\)</span> satisfies <span class="math inline">\(B_{\lambda} \mathbf{v} = \mathbf{0}\)</span>, then any multiple of <span class="math inline">\(\mathbf{v}\)</span>, i.e. <span class="math inline">\(\mu\mathbf{v}\)</span> for any <span class="math inline">\(\mu \neq 0\)</span> satisfies the equation, too, as we have <span class="math inline">\(B_{\lambda} (\mu\mathbf{v}) = \mu (B_{\lambda}{\mathbf{v}}) = \mu\mathbf{0} = \mathbf{0}\)</span>.</p>
-<p>In order to obtain specific eigenvectors, we simply need to set <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> to some non-zero value, for which we usually simply take <span class="math inline">\(\alpha=1\)</span> and <span class="math inline">\(\beta=1\)</span>. Hence two suitable eigenvectors of <span class="math inline">\(A\)</span> are
+<p>Note that there are infinitely many eigenvectors corresponding to an eigenvalue, because if a non-zero vector <span class="math inline">\(\mathbf{v}\)</span> satisfies <span class="math inline">\(B_{\lambda} \mathbf{v} = \mathbf{0}\)</span>, then any multiple of <span class="math inline">\(\mathbf{v}\)</span>, i.e. <span class="math inline">\(\mu\mathbf{v}\)</span> for any given <span class="math inline">\(\mu \neq 0\)</span>, also satisfies the equation. This follows since <span class="math inline">\(B_{\lambda} (\mu\mathbf{v}) = \mu (B_{\lambda}{\mathbf{v}}) = \mu\mathbf{0} = \mathbf{0}\)</span>.</p>
+<p>In order to obtain specific eigenvectors, we simply need to set <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> to some non-zero value, for example, we may simply take <span class="math inline">\(\alpha=1\)</span> and <span class="math inline">\(\beta=1\)</span>. Hence two suitable eigenvectors of <span class="math inline">\(A\)</span> are
 <span class="math display">\[
 \mathbf{u}_1=\begin{pmatrix} 1 \\ 1 \end{pmatrix} \quad\text{ and }\quad \mathbf{u}_2=\begin{pmatrix} 1 \\ -2\end{pmatrix}
 \]</span></p>
@@ -659,9 +663,9 @@ B_{\lambda} = \begin{pmatrix} \lambda - 1 &amp; 0 &amp; 1 \\ -1 &amp; \lambda - 
 <li><p>We find the eigenvectors for the eigenvalue <span class="math inline">\(\lambda_1 = 1\)</span>.
 For <span class="math inline">\(\lambda = \lambda_1 = 1\)</span>, we have
 <span class="math display">\[
-B_{1} = \begin{pmatrix} 0 &amp; 0 &amp; 1 \\ -1 &amp; -1 &amp; -1 \\ -2 &amp; -2 &amp; -2 \end{pmatrix},
+B_{\lambda_1} = \begin{pmatrix} 0 &amp; 0 &amp; 1 \\ -1 &amp; -1 &amp; -1 \\ -2 &amp; -2 &amp; -2 \end{pmatrix},
 \]</span>
-which is (automatically) the augmented matrix representing <span class="math inline">\(B_{1} \mathbf{v} = \mathbf{0}\)</span> where we omit the solution vector. We perform a Gaussian elimination. First, we apply EROs <span class="math inline">\(R_3 \to R_3 - 2 R_2\)</span> and <span class="math inline">\(R_2 \to -R_2\)</span> to obtain
+which is the augmented matrix representing <span class="math inline">\(B_{\lambda_1} \mathbf{v} = \mathbf{0}\)</span> when we omit the solution vector. We perform a Gaussian elimination. First, we apply EROs <span class="math inline">\(R_3 \to R_3 - 2 R_2\)</span> and <span class="math inline">\(R_2 \to -R_2\)</span> to obtain
 <span class="math display">\[
 \begin{pmatrix}
 0 &amp; 0 &amp; 1 \\
@@ -669,7 +673,7 @@ which is (automatically) the augmented matrix representing <span class="math inl
 0 &amp; 0 &amp; 0
 \end{pmatrix},
 \]</span>
-and then we apply <span class="math inline">\(R_1 \leftrightarrow R_2\)</span> to have
+and then we apply <span class="math inline">\(R_1 \leftrightarrow R_2\)</span> to give
 <span class="math display">\[
 \begin{pmatrix}
 1 &amp; 1 &amp; 1 \\
@@ -685,20 +689,20 @@ and finally <span class="math inline">\(R_1 \to R_1 - R_2\)</span> to arrive at
 0 &amp; 0 &amp; 0
 \end{pmatrix}.
 \]</span>
-From this we see that <span class="math inline">\(v_2\)</span> can be chosen arbitrary, say <span class="math inline">\(v_2 = \alpha\)</span>. Then, in view of <span class="math inline">\(v_1 = -v_2\)</span> and <span class="math inline">\(v_3 = 0\)</span>, we have the set of eigenvectors corresponding to the eigenvalue <span class="math inline">\(\lambda_1 = 1\)</span> given as
+As explained in section <a href="gauss.html#echelon">7.3</a>, it follows that <span class="math inline">\(v_2\)</span> is a free variable. That is, <span class="math inline">\(v_2\)</span> can be chosen arbitrarily, say <span class="math inline">\(v_2 = \alpha\)</span>. Then, in view of <span class="math inline">\(v_1 = -v_2\)</span> and <span class="math inline">\(v_3 = 0\)</span>, we find that the set of eigenvectors corresponding to the eigenvalue <span class="math inline">\(\lambda_1 = 1\)</span> are given by
 <span class="math display">\[
 \alpha \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}
 \]</span>
-For instance, taking <span class="math inline">\(\alpha = 1\)</span>, gives a specific eigenvector
+where <span class="math inline">\(\alpha\)</span> can be assigned arbitrarily. For instance, taking <span class="math inline">\(\alpha = 1\)</span> gives the specific eigenvector:
 <span class="math display">\[
 \mathbf{u}_1 = \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}.
 \]</span></p></li>
 <li><p>We find the eigenvectors for the eigenvalue <span class="math inline">\(\lambda_2 = 2\)</span>.
 For <span class="math inline">\(\lambda = \lambda_2 = 2\)</span>, we have
 <span class="math display">\[
-B_{2} = \begin{pmatrix} 1 &amp; 0 &amp; 1 \\ -1 &amp; 0 &amp; -1 \\ -2 &amp; -2 &amp; -1 \end{pmatrix}.
+B_{\lambda_2} = \begin{pmatrix} 1 &amp; 0 &amp; 1 \\ -1 &amp; 0 &amp; -1 \\ -2 &amp; -2 &amp; -1 \end{pmatrix}.
 \]</span>
-As above, we use Gaussian elimination to find non-zero solutions <span class="math inline">\(\mathbf{v}\)</span> to the equation <span class="math inline">\(B_{2} \mathbf{v} = \mathbf{0}\)</span>. This gives the set of eigenvectors
+As above, we use Gaussian elimination to find non-zero solutions <span class="math inline">\(\mathbf{v}\)</span> to the equation <span class="math inline">\(B_{\lambda_2} \mathbf{v} = \mathbf{0}\)</span>. This gives the set of eigenvectors
 <span class="math display">\[
 \beta \begin{pmatrix} -2 \\ 1 \\ 2 \end{pmatrix}
 \]</span>
@@ -707,21 +711,21 @@ For instance, taking <span class="math inline">\(\beta = 1\)</span>, we find the
 \mathbf{u}_2 = \begin{pmatrix} -2 \\ 1 \\ 2 \end{pmatrix}.
 \]</span></p></li>
 <li><p>We find the eigenvectors for the eigenvalue <span class="math inline">\(\lambda_3 = 3\)</span>.
-For <span class="math inline">\(\lambda = \lambda_3 = 4\)</span>, we have
+For <span class="math inline">\(\lambda = \lambda_3 = 3\)</span>, we have
 <span class="math display">\[
-B_{3} = \begin{pmatrix} 2 &amp; 0 &amp; 1 \\ -1 &amp; 1 &amp; -1 \\ -2 &amp; -2 &amp; 0 \end{pmatrix}.
+B_{\lambda_3} = \begin{pmatrix} 2 &amp; 0 &amp; 1 \\ -1 &amp; 1 &amp; -1 \\ -2 &amp; -2 &amp; 0 \end{pmatrix}.
 \]</span>
-As above, we use Gaussian elimination to find non-zero solutions <span class="math inline">\(\mathbf{v}\)</span> to the equation <span class="math inline">\(B_{3} \mathbf{v} = \mathbf{0}\)</span>. This gives the set of eigenvectors
+As above, we use Gaussian elimination to find non-zero solutions <span class="math inline">\(\mathbf{v}\)</span> to the equation <span class="math inline">\(B_{\lambda_3} \mathbf{v} = \mathbf{0}\)</span>. This gives the set of eigenvectors
 <span class="math display">\[
 \gamma \begin{pmatrix} -1 \\ 1 \\ 2 \end{pmatrix}.
 \]</span>
 For instance, taking <span class="math inline">\(\gamma = -1\)</span>, we find the specific eigenvector
 <span class="math display">\[
-\mathbf{u}_3 = (1,-1,-2).
+\mathbf{u}_3 = \begin{pmatrix}1 \\-1 \\-2\end{pmatrix}.
 \]</span></p></li>
 </ol>
 </div>
-<p>It also makes sense to consider vectors and matrices with complex number entries. These arise in applications such as analysis of electronic circuits and in quantum mechanics. We won’t consider such situations here, but we will now see that even if we start with vectors and matrices with real entries, complex number eigenvalues and eigenvectors with complex entries can still arise. We can immediately see that this could be possible, since the eigenvalues are calculated as roots of the characteristic polynomial and we know that real polynomials can have complex roots.</p>
+<p>It also makes sense to consider vectors and matrices with complex number entries. These arise in applications such as the analysis of electronic circuits and in quantum mechanics. As we will illustrate in the next example, even if we start with vectors and matrices with real entries, complex number eigenvalues and eigenvectors with complex entries can still arise. This follows since the eigenvalues are calculated as roots of the characteristic polynomial, and real polynomials can have complex roots (see section <a href="complex.html#complex">5</a>).</p>
 <div class="example">
 <p><span id="exm:complexeig" class="example"><strong>Example 10.7  (Complex Eigenvalues and Eigenvectors) </strong></span>Consider the matrix</p>
 <p><span class="math display">\[
@@ -731,31 +735,34 @@ A=
 1&amp;0
 \end{pmatrix}
 \]</span></p>
-<p>The matrix <span class="math inline">\(A\)</span> has the effect of rotating vectors in the plane anticlockwise by <span class="math inline">\(\pi/2\)</span> (it is matrix <span class="math inline">\(R_{\pi/2}\)</span> from example (exm:rotmat)), so we can see geometrically that it can’t have any real eigenvectors, since these would correspond to fixed directions in the plane that are scaled by an eigenvalue.</p>
-<p>The characteristic polynomial is</p>
+<p>The matrix <span class="math inline">\(A\)</span> has the effect of rotating vectors in the plane anticlockwise by <span class="math inline">\(\pi/2\)</span> (it is matrix <span class="math inline">\(R_{\pi/2}\)</span> from example <a href="linear-transformations.html#exm:rotation">9.1</a>). So we can see geometrically that it can’t have any real eigenvectors, since these would correspond to fixed directions in the plane that are scaled by an eigenvalue, yet a rotation by <span class="math inline">\(\pi/2\)</span> will change the direction of all non-zero vectors.</p>
+<p>The characteristic polynomial of <span class="math inline">\(A\)</span> is</p>
 <p><span class="math display">\[p_A(\lambda)=\lambda^2+1\]</span></p>
-<p>which has solutions <span class="math inline">\(\lambda_1=i\)</span> and <span class="math inline">\(\lambda_2=-i\)</span>. We can also find the eigenvectors in the usual way by solving <span class="math inline">\((A-\lambda I)\mathbf{v}=0\)</span>. For <span class="math inline">\(\lambda_1\)</span>
+<p>which has solutions <span class="math inline">\(\lambda_1=i\)</span> and <span class="math inline">\(\lambda_2=-i\)</span>. We can also find the eigenvectors in the usual way by solving <span class="math inline">\((\lambda I-A)\mathbf{v}=0\)</span>. For <span class="math inline">\(\lambda_1 = i\)</span>,
 <span class="math display">\[
-(A-iI)=
+(iI-A)=
 \begin{pmatrix}
--i&amp;-1\\
-1&amp;-i
+i&amp;1\\
+-1&amp;i
 \end{pmatrix}
 \]</span>
-and performing <span class="math inline">\(R_1\to iR_1\)</span>
-<span class="math display">\[
+and it may be verified that
+<!--performing $R_1\to -iR_1$
+$$
 \begin{pmatrix}
-1&amp;-i\\
-1&amp;-i
+1&-i\\
+-1&i
 \end{pmatrix}
-\]</span>
-we find that the corresponding eigenvectors are <span class="math inline">\(\alpha\left(\begin{smallmatrix}1\\-i\end{smallmatrix}\right)\)</span> and taking <span class="math inline">\(\alpha=1\)</span>,</p>
+$$
+we find that 
+-->
+the corresponding eigenvectors are <span class="math inline">\(\alpha\left(\begin{smallmatrix}1\\-i\end{smallmatrix}\right)\)</span>. Taking <span class="math inline">\(\alpha=1\)</span> then gives the specific eigenvector:</p>
 <p><span class="math display">\[
 \mathbf{u}_1=
 \begin{pmatrix}
 1\\
 -i
-\end{pmatrix}
+\end{pmatrix}.
 \]</span></p>
 <p>Similarly, we find an eigenvector for <span class="math inline">\(\lambda_2\)</span>:
 <span class="math display">\[
@@ -799,18 +806,18 @@ we may write
 <span class="math display">\[
 A=PDP^{-1}.
 \]</span>
-Although <span class="math inline">\(P^{-1}\)</span>, <span class="math inline">\(D\)</span> and <span class="math inline">\(P\)</span> all contain complex numbers, their product leaves only real numbers and we get back to the real matrix <span class="math inline">\(A\)</span> (check that <span class="math inline">\(PDP^{-1}\)</span> does indeed equal <span class="math inline">\(A\)</span>).</p>
+Although <span class="math inline">\(P^{-1}\)</span>, <span class="math inline">\(D\)</span> and <span class="math inline">\(P\)</span> all contain complex numbers, their product leaves only real numbers and we get back to the real matrix <span class="math inline">\(A\)</span> (you are recommended to check that <span class="math inline">\(PDP^{-1}\)</span> does indeed equal <span class="math inline">\(A\)</span>).</p>
 </div>
-<p>Complex roots of real polynomials always come in complex conjugate pairs and so we will have complex conjugate eigenvalue pairs and corresponding complex conjugate eigenvector pairs. To see this, if <span class="math inline">\(p_B(\lambda)=\lambda^n+a_{n-1}\lambda^{n-1}+\dotsb+a_1\lambda+a_0\)</span> is a (real) characteristic polynomial of a real <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(B\)</span> and <span class="math inline">\(\lambda\)</span> is a complex root, then taking the complex conjugate
+<p>Complex roots of real polynomials always come in complex conjugate pairs, and so we will have complex conjugate eigenvalue pairs, and it turns out that the corresponding eigenvectors also come in complex conjugate pairs. To see this, note that if <span class="math inline">\(p_B(\lambda)=\lambda^n+a_{n-1}\lambda^{n-1}+\dotsb+a_1\lambda+a_0\)</span> is a (real) characteristic polynomial of a real <span class="math inline">\(n\times n\)</span> matrix <span class="math inline">\(B\)</span> and <span class="math inline">\(\lambda\)</span> is a complex root, then taking the complex conjugate gives
 <span class="math display">\[\begin{align*}
 0=p_B(\lambda)=\overline{p_B(\lambda)}&amp;=\overline{\lambda^n}+\overline{a_{n-1}\lambda^{n-1}}+\dotsb+\overline{a_1\lambda}+\overline{a_0}\\
-&amp;=\overline{\lambda}^n+a_{n-1}\overline{\lambda}^{n-1}+\dotsb+a_1\overline{\lambda}+{a_0}
+&amp;=\overline{\lambda}^n+a_{n-1}\overline{\lambda}^{n-1}+\dotsb+a_1\overline{\lambda}+{a_0},
 \end{align*}\]</span>
-(using that the coefficients <span class="math inline">\(a_j\)</span> are real) shows that <span class="math inline">\(\overline{\lambda}\)</span> is also a root. Let <span class="math inline">\(\mathbf{u}\)</span> be an eigenvector corresponding to <span class="math inline">\(\lambda\)</span>. Then,
+where we have used the fact that the coefficients <span class="math inline">\(a_j\)</span> are real. It therefore follows that <span class="math inline">\(\overline{\lambda}\)</span> is also a root. Also, let <span class="math inline">\(\mathbf{u}\)</span> be an eigenvector corresponding to the eigenvalue <span class="math inline">\(\lambda\)</span>. Then,
 <span class="math display">\[
-B\overline{\mathbf{u}}=\overline{B}\overline{\mathbf{u}}=\overline{B\mathbf{u}}=\overline{\lambda \mathbf{u}}=\overline{\lambda}\overline{\mathbf{u}}
+B\overline{\mathbf{u}}=\overline{B}\overline{\mathbf{u}}=\overline{B\mathbf{u}}=\overline{\lambda \mathbf{u}}=\overline{\lambda}\overline{\mathbf{u}},
 \]</span>
-(using that <span class="math inline">\(B\)</span> is real in the first step) i.e. the vector <span class="math inline">\(\overline{\mathbf{u}}\)</span> is an eigenvector with eigenvalue <span class="math inline">\(\overline{\lambda}\)</span>.</p>
+where we have used the fact that <span class="math inline">\(B\)</span> is real in the first step. This implies that the vector <span class="math inline">\(\overline{\mathbf{u}}\)</span> is an eigenvector with eigenvalue <span class="math inline">\(\overline{\lambda}\)</span>.</p>
 <p>As we mentioned earlier, not all matrices are diagonalisable. Here is an example.</p>
 <div class="example">
 <p><span id="exm:nondiag" class="example"><strong>Example 10.8  (A non-diagonalisable matrix) </strong></span>Consider the matrix
@@ -843,19 +850,19 @@ so the eigenvectors are
 \begin{pmatrix}
 1\\
 0
-\end{pmatrix}
+\end{pmatrix}.
 \]</span>
-So we do not have 2 linearly independent eigenvectors since all eigenvectors are multiples of <span class="math inline">\(\mathbf{u}=\left(\begin{smallmatrix}1\\0\end{smallmatrix}\right)\)</span>. Therefore, we cannot diagonalise this matrix.</p>
+In this case, we do not have 2 linearly independent eigenvectors, since all eigenvectors are multiples of <span class="math inline">\(\mathbf{u}=\left(\begin{smallmatrix}1\\0\end{smallmatrix}\right)\)</span>. Therefore, we cannot diagonalise this matrix.</p>
 </div>
-<p>We briefly mention that there are other useful matrix decompositions to diagonalisation that <em>always</em> work. The generalisation of diagonalisation is the <em>Jordan Normal Form</em>, which is an important theoretical tool. Another key technique is the <em>Singular Value Decomposition</em> which is important in numerical applications of matrices and in data science (see <em>Principal Component Analysis</em>).</p>
+<p>We briefly mention that there are other useful matrix decompositions that <em>always</em> work. In particular, the <em>Jordan Normal Form</em>, which, for matrices that cannot be diagonalised, augments the eigenvectors with so-called generalised eigenvectors. Another key technique is the <em>Singular Value Decomposition</em>, which is important in numerical applications of matrices and in data science (such as <em>Principal Component Analysis</em>).</p>
 </div>
 <div id="powers-of-diagonalisable-matrices" class="section level2 hasAnchor" number="10.4">
 <h2><span class="header-section-number">10.4</span> Powers of diagonalisable matrices<a href="eigenvalues-and-eigenvectors.html#powers-of-diagonalisable-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>One of the most important applications of diagaonalisation is in computing powers of matrices. If a matrix <span class="math inline">\(A\)</span> is diagonalisable, we can write it as</p>
-<p><span class="math display">\[A=PDP^{-1}\]</span></p>
+<p>Diagaonalisation is particularly useful for computing powers of matrices. If a matrix <span class="math inline">\(A\)</span> is diagonalisable, we can write it as</p>
+<p><span class="math display">\[A=PDP^{-1}.\]</span></p>
 <p>Now if we want to compute <span class="math inline">\(A^2\)</span>, we have
 <span class="math display">\[A^2=PDP^{-1}PDP^{-1}=PD^2P^{-1}\]</span>
-where we used <span class="math inline">\(P^{-1}P=I\)</span>. Now, more generally
+where we used <span class="math inline">\(P^{-1}P=I\)</span>. Even more generally,
 <span class="math display">\[
 A^n=PDP^{-1}PDP^{-1}\dotsb PDP^{-1}=PD^nP^{-1}
 \]</span>
@@ -927,7 +934,7 @@ A^n=
 -2^{n}+5^n&amp; 2^{n+1}-5^n
 \end{pmatrix}.
 \]</span></p>
-<p>We now have a nice expression that works for any <span class="math inline">\(n\)</span> and this is much easier than trying to calculate <span class="math inline">\(A^n\)</span> directly.</p>
+<p>We now have a nice expression that works for any <span class="math inline">\(n\)</span> and is much easier than trying to calculate <span class="math inline">\(A^n\)</span> directly.</p>
 </div>
 
 </div>

@@ -1,8 +1,6 @@
 # Eigenvalues and Eigenvectors
 
-Here is a test of the bibliography functionality: [@xie2015]
-
-Linear transformations have "natural directions" associated with them -- vectors whose directions are unchanged by the transformation.
+Linear transformations have "natural directions" associated with them -- vectors which are scaled by some scalar whenever the transformation is applied.
 
 ::: {.example #eigen1}
 Let
@@ -32,44 +30,44 @@ $$
 :::
 
 
-The above example shows that there are vectors associated to a matrix, which, when multiplied with the matrix from the left, are only scaled by a factor. This motivates the following definition.
+Thus, in the above example, there were two vectors associated with the matrix $A$, which, when multiplied with the matrix from the left, were scaled by a factor. This motivates the following definition.
 
 ::: {.definition #eigen name="Eigenvalues and Eigenvectors"}
 Let $A$ be an $n\times n$ matrix. Then a non-zero vector $\mathbf{u}$ is said to be an *eigenvector* of $A$ if there exists a scalar $\lambda$ such that
 $$
-A\mathbf{u} = \lambda \mathbf{u}
+A\mathbf{u} = \lambda \mathbf{u}.
 $$
-The scalar $\lambda$ is called the *eigenvalue* associated to $\mathbf{u}$.
+The scalar $\lambda$ is called the *eigenvalue* associated with $\mathbf{u}$.
 :::
 
 
 ::: {.example #eigen2}
 In Example \@ref(exm:eigen1), we have that $\mathbf{u}_1 = \left(\begin{smallmatrix}1\\1\end{smallmatrix}\right)$ is an eigenvector associated with an eigenvalue $\lambda_1 = 2$, and that $\mathbf{u}_2 = \left(\begin{smallmatrix}1\\-2\end{smallmatrix}\right)$ is an eigenvector associated with an eigenvalue $\lambda_2 = -1$.
 
-We claim that any vector may be written as a linear combination of $\mathbf{u}_1$ and $\mathbf{u}_2$. That is, for all $\mathbf{v}$, there exist scalars $x_1, x_2$ such that
+It is also the case that any two dimensional vector may be written as a linear combination of $\mathbf{u}_1$ and $\mathbf{u}_2$. That is, for any given two dimensional vector $\mathbf{v}$, there exist scalars $x_1, x_2$ such that
 $$
 x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2 = \mathbf{v}.
 $$
-Write $\mathbf{x} = \left(\begin{smallmatrix}x_1\\ x_2\end{smallmatrix}\right)$, then we may write the above equation as $B \mathbf{x} = \mathbf{v}$, where $B = (\mathbf{u}_1 \ \mathbf{u}_2)$, i.e. the columns of the matrix $B$ are $\mathbf{u}_1$ and $\mathbf{u}_2$. Note that
+Here, writing $\mathbf{x} = \left(\begin{smallmatrix}x_1\\ x_2\end{smallmatrix}\right)$, then the above equation can be written using matrix notation as $B \mathbf{x} = \mathbf{v}$, where $B = (\mathbf{u}_1 \ \mathbf{u}_2)$, that is, the columns of the matrix $B$ are $\mathbf{u}_1$ and $\mathbf{u}_2$. Note that
 $$
 \det(B) = \begin{vmatrix} 1 & 1 \\ 1 & -2 \end{vmatrix} = -2 -1 = -3,
 $$
-which is non-zero, hence the matrix is invertible, and so the equation $B \mathbf{x} = \mathbf{v}$ has the (unique) solution $\mathbf{x} = B^{-1} \mathbf{v}$. The matrix $B$ being invertible is equivalent to saying that $\mathbf{u}_1$ and $\mathbf{u}_2$ are *linearly independent*.
+which is non-zero, hence $B$ is invertible, and so the equation $B \mathbf{x} = \mathbf{v}$ has the (unique) solution $\mathbf{x} = B^{-1} \mathbf{v}$. The matrix $B$ being invertible is equivalent to saying that $\mathbf{u}_1$ and $\mathbf{u}_2$ are *linearly independent*.
 
-Having shown that any vector $\mathbf{v}$ may be written as a (unique) linear combination of $\mathbf{u}_1$ and $\mathbf{u}_2$, we apply $A$ to both sides of and deduce
+Now that we have shown that the vector $\mathbf{v}$ may be written as a (unique) linear combination of $\mathbf{u}_1$ and $\mathbf{u}_2$, we apply $A$ to both sides of the equation $\mathbf{v} = x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2$, and deduce that
 \begin{align*}
 A\mathbf{v} &= A(x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2)\\
 &= x_1 A\mathbf{u}_1 + x_2 A\mathbf{u}_2\\
 &= \lambda _1 x_1 \mathbf{u}_1 + \lambda_2 x_2 \mathbf{u}_2,
 \end{align*}
-where we use the facts $A\mathbf{u}_1 = \lambda_1 \mathbf{u}_1$ and $A\mathbf{u}_2 = \lambda_2 \mathbf{u}_2$ for the last equality. Hence if we write a vector $\mathbf{v}$ in terms of the eigenvectors $\mathbf{u}_1$ and $\mathbf{u}_2$, it is simple to calculate the result of multiplying by the matrix $A$: we simply multiply these components by their eigenvalues. That is, we just strech/compress by a factor $\lambda_i$ in the $\mathbf{u}_i$ direction (and reverse direction if $\lambda_i$ is negative).
+where we use the equations $A\mathbf{u}_1 = \lambda_1 \mathbf{u}_1$ and $A\mathbf{u}_2 = \lambda_2 \mathbf{u}_2$ for the last equality. Hence, by writing a given two dimensional vector $\mathbf{v}$ in terms of the eigenvectors $\mathbf{u}_1$ and $\mathbf{u}_2$, it is simple to calculate the result of multiplying by the matrix $A$: we simply multiply these components by their eigenvalues. That is, we just stretch/compress the vector by a factor $\lambda_i$ in the $\mathbf{u}_i$ direction (and reverse direction if $\lambda_i$ is negative), for $i = 1, 2$. The same holds more generally for any square $n \times n$ matrix providing it has $n$ independent eigenvectors. However, not all matrices have this property.
 :::
 
 
 ## Matrix Diagonalisation
 
 ::: {.definition #diag name="Diagonal Matrix"}
-A square matrix is said to be a *diagonal matrix* if its non-diagonal entries are zero. That is, a matrix of the form
+A square matrix is said to be a *diagonal matrix* if its non-diagonal entries are zero. In other words, if it is a matrix of the form
 
 $$
 D = \begin{pmatrix}
@@ -80,16 +78,16 @@ D = \begin{pmatrix}
 \end{pmatrix}
 $$
 
-for any scalars $\lambda_1,\dotsc,\lambda_n$.
+where $\lambda_1,\dotsc,\lambda_n$ are scalars.
 :::
 
-Consider the diagonal matrix
+Now, consider the diagonal matrix
 $$
 D = \begin{pmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{pmatrix}
-= \begin{pmatrix} 2 & 0 \\ 0 & -1 \end{pmatrix},
+= \begin{pmatrix} 2 & 0 \\ 0 & -1 \end{pmatrix}.
 $$
 
-Note that this acts very simply on a vector $\mathbf{x}=\left(\begin{smallmatrix}x_1\\x_2\end{smallmatrix}\right)$:
+Note that multiplication of a vector $\mathbf{x}=\left(\begin{smallmatrix}x_1\\x_2\end{smallmatrix}\right)$ by this matrix causes each of its entries to be scaled by the corresponding diagonal entry:
 
 $$
 D\mathbf{x}=
@@ -103,37 +101,41 @@ D\mathbf{x}=
 \begin{pmatrix}
 2 x_1\\
 -x_2
-\end{pmatrix}
+\end{pmatrix}.
 $$
 
-it simply multiplies each element of the vector by a value on the diagonal. This is reminiscent of the action of $A$ on 
+This is reminiscent of the action of $A$ on its eigenvectors.
 
 We'll now look at an example to understand the meaning of the term "diagonalising a matrix".
 
 ::: {.example #diagonal}
-Suppose that we write a vector $\mathbf{v} = x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2$ in terms of the eigenvectors $\mathbf{u}_1$ and $\mathbf{u}_2$ from example \ref@(exm:eigen2). We say that $\mathbf{v}$ has the *coordinate vector*
+Consider again the matrix in example \@ref(exm:eigen2). Suppose that we write a 2 dimensional vector $\mathbf{v} = x_1 \mathbf{u}_1 + x_2 \mathbf{u}_2$ in terms of the eigenvectors $\mathbf{u}_1$ and $\mathbf{u}_2$. We say that $\mathbf{v}$ has the *coordinate vector*
 $$\mathbf{x}_{\mathcal{P}}=\begin{pmatrix}x_1\\x_2\end{pmatrix}$$
 with respect to the vectors^[Technically, $\mathcal{P}$ is what is known as a *basis* -- a list of vectors that are linearly independent and span the space and hence can act as a coordinate system.] $\mathcal{P}=[\mathbf{u}_1,\mathbf{u}_2]$ -- these vectors take the place of the usual vectors $\mathcal{E}=[\mathbf{e}_1,\mathbf{e}_2]$ (although note that the vectors in $\mathcal{P}$ are not unit vectors here). We may write $\mathbf{v}$ as
 $$
 \mathbf{v} = P \mathbf{x}_\mathcal{P},
 $$
 where $P = (\mathbf{u}_1\; \mathbf{u}_2)$ is the matrix whose columns are the vectors $\mathbf{u}_1$ and $\mathbf{u}_2$.
+
 Consider an exemplar vector
 $$
-\mathbf{v} = 5 \mathbf{u}_1 - 3 \mathbf{u}_2= 2 \mathbf{e}_1 + 11 \mathbf{e}_2
+\mathbf{v} = 5 \mathbf{u}_1 - 3 \mathbf{u}_2
 $$
 Then $\mathbf{v}$ has co-ordinate vector $\mathbf{x}_\mathcal{P}=(5,-3)$ and
 $$
 \mathbf{v} = P \begin{pmatrix} 5 \\ -3 \end{pmatrix}
 = \begin{pmatrix} 1 & 1 \\ 1 & -2 \end{pmatrix} \begin{pmatrix} 5 \\ -3 \end{pmatrix}
-= \begin{pmatrix} 2\\ 11\end{pmatrix}
+= \begin{pmatrix} 2\\ 11\end{pmatrix},
 $$
-
-We have seen that $A$ acts very simply in these coordinates:
+that is,
 $$
-A\mathbf{v}=\lambda _1 x_1 \mathbf{u}_1 + \lambda_2 x_2 \mathbf{u}_2
+\mathbf{v} = 2 \mathbf{e}_1 + 11 \mathbf{e}_2.
 $$
-and writing this result as a coordinate vector with respect to $\mathcal{P}$ we would have
+We have shown already that $A$ acts very simply in the coordinates specified by $\mathcal{P} = (\mathbf{u}_1\; \mathbf{u}_2)$:
+$$
+A\mathbf{v}=\lambda _1 x_1 \mathbf{u}_1 + \lambda_2 x_2 \mathbf{u}_2,
+$$
+and, writing this result as a coordinate vector with respect to $\mathcal{P}$, we have that
 $$
 (A\mathbf{v})_\mathcal{P}=
 \begin{pmatrix}
@@ -141,9 +143,9 @@ $$
 \lambda_2 x_2
 \end{pmatrix}
 $$
-We can see that $A$ acts like a diagonal matrix in the coordinates $\mathcal{P}$. If we defined
+We can see that $A$ acts like a diagonal matrix in the coordinates specified by $\mathcal{P}$. If we defined
 $$D=\begin{pmatrix} \lambda_1 & 0 \\ 0 & \lambda_2 \end{pmatrix}$$
-then note that $D$ acts on the coordinate vector as
+then $D$ acts on the coordinate vector as
 $$D\mathbf{x}_\mathcal{P}=
 \begin{pmatrix} \lambda_1 & 0 \\
 0 & \lambda_2
@@ -155,40 +157,39 @@ x_2
 =\begin{pmatrix}
 \lambda_1 x_1\\
 \lambda_2 x_2
-\end{pmatrix}
+\end{pmatrix}.
 $$
 
-Since the matrix $P$ converts between coordinates $\mathcal{P}$ and standard coordinates $\mathcal{E}$, that is $\mathbf{v}=P\mathbf{x}_\mathcal{P}$, we can see that $P^{-1}$ converts in the other direction $\mathbf{x}_\mathcal{P}=P^{-1}\mathbf{v}$. We can use this to write $A$ as
+Since the matrix $P$ converts between coordinates $\mathcal{P}$ and standard coordinates $\mathcal{E}$, that is, $\mathbf{v}=P\mathbf{x}_\mathcal{P}$, then $P^{-1}$ converts in the other direction: $\mathbf{x}_\mathcal{P}=P^{-1}\mathbf{v}$. We can use this to write $A$ as
 
 $$A=PDP^{-1}.$$
 
 This decomposes $A\mathbf{v}$ into three operations $PDP^{-1}\mathbf{v}$:
 
 1. Apply $P^{-1}$ to convert $\mathbf{v}$ to $P^{-1}\mathbf{v}=\mathbf{x}_\mathcal{P}$;
-1. Now apply the diagonal matrix $D$ to $\mathbf{x}_\mathcal{P}$, which simply multiplies each component by the eigenvalue $\lambda_i$;
+1. Now apply the diagonal matrix $D$ to $\mathbf{x}_\mathcal{P}$, which simply multiplies each component $x_i$ by the corresponding eigenvalue $\lambda_i$;
 1. Finally, convert back to standard coordinates by applying $P$ to give the result $A\mathbf{v}$.
 
 We call the matrix $D$ the *diagonalisation* of the matrix $A$. Note that $D$ can be obtained by applying $P^{-1}$ to the left and $P$ to the right of the above equation to obtain:
 
-$$P^{-1}AP=P^{-1}PDP^{-1}P=D.$$
+$$P^{-1}AP=P^{-1}PDP^{-1}P=D,$$
 
-(using $P^{-1}P=I$).
+where we have used the result $P^{-1}P=I$. This result can be useful for analysing the properties of matrices, however, it is an inefficient way to compute the matrix $D$. Instead, $D$ is better obtained at the time of computing the eigenvectors $\mathbf{u}_1$ and $\mathbf{u}_2$  (as will be discussed in section \@ref(FindEigen)) -- it is a diagonal matrix whose $i$th diagonal entry is equal to the eigenvalue corresponding to the eigenvector $\mathbf{u}_i$.
 :::
 
 
 ::: {.theorem #diagonalisation name="Diagonalisation"}
-Let $A$ be an $n\times n$ matrix with $n$ eigenvectors $\mathbf{u}_1, \dots, \mathbf{u}_n$ with corresponding eigenvalues $\lambda_1, \dotsc, \lambda_n$. If the matrix $P=(\mathbf{u}_1 \dotsb \mathbf{u}_n)$ is invertible (in other words, the eigenvectors are linearly independent) then
+Let $A$ be an $n\times n$ matrix with $n$ eigenvectors $\mathbf{u}_1, \dots, \mathbf{u}_n$ with corresponding eigenvalues $\lambda_1, \dotsc, \lambda_n$. If the matrix $P=(\mathbf{u}_1 \dotsb \mathbf{u}_n)$ is invertible (in other words, the eigenvectors are linearly independent), then
 $$
 D = P^{-1}A P,
 $$
 where $D$ is the diagonal matrix whose $i$-th diagonal entry is $\lambda_i$.
-We say that $A$ is *diagonalisable*.
 :::
 
-It is worth noting here that it is **not** always possible to diagonalise a matrix. We shall see an example later.
+If a given $n \times n$ matrix $A$ has $n$ independent eigenvalues, then it may be diagonalised in accordance with the previous theorem, and we say that $A$ is *diagonalisable*. It is worth noting here that it is **not** always possible to diagonalise a matrix. We shall see an example later.
 
 
-## Finding Eigenvalues
+## Finding Eigenvalues {#FindEigen}
 
 
 Suppose $\mathbf{u}$ is an eigenvector of a matrix $A$ with associated eigenvalue $\lambda$. This means that $\mathbf{u}$ is a non-zero vector such that $A\mathbf{u} = \lambda \mathbf{u}$. Equally,
@@ -197,7 +198,7 @@ $$\begin{array}{rrcl}
 \Longleftrightarrow\qquad & \lambda I_n \mathbf{u} - A\mathbf{u} &=& \mathbf{0} \\
 \Longleftrightarrow\qquad & (\lambda I_n-A) \mathbf{u} &=& \mathbf{0}.
 \end{array}$$
-Setting $B_{\lambda} = \lambda I_n - A$, we have that $\lambda$ is an eigenvalue of $A$ if, and only if, $B_{\lambda}\mathbf{u} = \mathbf{0}$ has a non-zero solution $\mathbf{u}$. Recall that for a general square matrix $M$, the matrix--vector system $M \mathbf{v} = \mathbf{b}$ has a unique solution for $\mathbf{v}$ if, and only if, $\det(M) \neq 0$. Note the system $B_{\lambda} \mathbf{v} = \mathbf{0}$ always has at least one solution, namely $\mathbf{v} = \mathbf{0}$, so the system has a non-zero solution if, and only if, it has more than one solution, which is equivalent to $\det(B_{\lambda}) = 0$. We use this fact to find eigenvalues, as shown in the following example.
+Setting $B_{\lambda} = \lambda I_n - A$, we have that $\lambda$ is an eigenvalue of $A$ if, and only if, $B_{\lambda}\mathbf{u} = \mathbf{0}$ has a non-zero solution $\mathbf{u}$. Recall that for a general square matrix $M$, the matrix equation $M \mathbf{v} = \mathbf{b}$ has a unique solution for $\mathbf{v}$ if, and only if, $\det(M) \neq 0$. Note also that the equation $B_{\lambda} \mathbf{v} = \mathbf{0}$ always has at least one solution, namely, $\mathbf{v} = \mathbf{0}$. So the equation has a non-zero solution if, and only if, it has more than one solution, which is equivalent to requiring $\det(B_{\lambda}) = 0$. We use this fact to find eigenvalues, as shown in the following example.
 
 
 ::: {.example #eigenvals name="Finding Eigenvalues"}
@@ -210,7 +211,7 @@ Then the matrix $B_{\lambda} = \lambda I_{2} - A$ is given as
 $$
 B_{\lambda} = \begin{pmatrix} \lambda - 1 & -1 \\ -2 & \lambda \end{pmatrix}.
 $$
-Then we have
+We have that
 \begin{align*}
 \det(B_{\lambda}) &= \lambda(\lambda-1) - 2 \\
 &= \lambda^2 - \lambda - 2 \\
@@ -220,14 +221,14 @@ Thus, $\lambda$ is an eigenvalue of $A$ if and only if
 $$
 0 = (\lambda - 2)(\lambda + 1),
 $$
-and equivalently if and only if $\lambda = 2$ or $\lambda = -1$. Hence, the eigenvalues of $A$ are
+and, equivalently, if and only if $\lambda = 2$ or $\lambda = -1$. Hence, the eigenvalues of $A$ are
 $$
 \lambda_1 = 2 \qquad\text{and}\qquad \lambda_2 = -1.
 $$
 \exend
 :::
 
-Note, that in the above example $\det(B_\lambda)$ is a polynomial of degree 2 in the variable $\lambda$. We can generalise this observation.
+Note that, in the above example, $\det(B_\lambda)$ is a polynomial of degree 2 in the variable $\lambda$. This observation generalises as follows:
 
 ::: {.definition #charpoly name="Characteristic Polynomial"}
 Let $A$ be an $n\times n$ matrix. Then the function
@@ -237,21 +238,22 @@ $$
 is a polynomial of degree $n$ in the variable $\lambda$. We call this polynomial $p_A$ the *characteristic polynomial* of $A$.
 :::
 
-So in general, we can find the eigenvalues of a square matrix $A$ by finding the roots of the characteristic polynomial $p_A$, which is obtained from computing the determinant $\det(\lambda I_n - A)$.
+So, in general, we can find the eigenvalues of a square matrix $A$ by finding the roots of the characteristic polynomial $p_A$, which is obtained from computing the determinant $\det(\lambda I_n - A)$. We recall also from the Fundamental Theorem of Algebra (Theorem \@ref(thm:FTA)) that this polynomial, which has degree $n$, will necessarily have exactly $n$ complex roots (although some may be coincident). Thus, solving the equation $\det(\lambda I_n - A) = 0$ will give $n$ complex numbers (some of which may be coincident) corresponding to the eigenvalues of the matrix $A$. Whether the matrix $A$ is diagonalisable will then depend on whether we can find independent eigenvectors corresponding to each of these eigenvalues. The task of finding eigenvectors will be considered in the next section.
 
 ## Finding Eigenvectors
 
 ::: {.example #eigenvecs name="Finding Eigenvectors"}
-Let again
+Consider again the matrix
 $$
 A = \begin{pmatrix} 1 & 1 \\ 2 & 0 \end{pmatrix}.
 $$
-We know from above that $\lambda_1 = 2$ and $\lambda_2 = -1$ are the eigenvalues of $A$. We first find an eigenvector corresponding to $\lambda_1$. Any non-zero solution $\mathbf{v} = \left(\begin{smallmatrix}v_1\\v_2\end{smallmatrix}\right)$ of the equation $B_2 \mathbf{v} = \mathbf{0}$ is such an eigenvector.
-For $\lambda = \lambda_1 = 2$, we have
+We showed earlier that $\lambda_1 = 2$ and $\lambda_2 = -1$ are the eigenvalues of $A$. We first find an eigenvector corresponding to $\lambda_1$. Recall that this eigenvector corresponds to a vector $\mathbf{v} = \left(\begin{smallmatrix}v_1\\v_2\end{smallmatrix}\right)$ of the matrix equation $A\mathbf{v} = \lambda_1 \mathbf{v}$. Thus, any non-zero solution $\mathbf{v} = \left(\begin{smallmatrix}v_1\\v_2\end{smallmatrix}\right)$ of the equation $B_{\lambda_1} \mathbf{v} = (\lambda_1 I_2 - A)\mathbf{v} = \mathbf{0}$ is such an eigenvector.
+
+Since $\lambda_1 = 2$, we have
 $$
-B_2 = \begin{pmatrix} 1 & -1 \\ -2 & 2 \end{pmatrix}.
+B_{\lambda_1} = \begin{pmatrix} 1 & -1 \\ -2 & 2 \end{pmatrix}.
 $$
-We solve $B_2 \mathbf{v} = \mathbf{0}$ via Gaussian elimination. The augmented matrix for $B_2 \mathbf{v} = \mathbf{0}$ is given by
+We solve $B_{\lambda_1} \mathbf{v} = \mathbf{0}$ via Gaussian elimination. The augmented matrix for $B_{\lambda_1} \mathbf{v} = \mathbf{0}$ is given by
 $$
 \left(\begin{array}{rr|r}
 1  & -1 & 0 \\
@@ -269,19 +271,23 @@ From this, we see that $v_2$ is arbitrary, say $v_2 = \alpha$, and $v_1 = v_2 = 
 $$
 \alpha \begin{pmatrix} 1 \\ 1 \end{pmatrix}
 $$
-for any non-zero value of $\alpha$.	By a similar process, we find an eigenvector corresponding to $\lambda_2 = -1$. Any non-zero solution $\mathbf{v} = \left(\begin{smallmatrix}v_1\\v_2\end{smallmatrix}\right)$ of the equation $B_{-1} \mathbf{v} = \mathbf{0}$ is such an eigenvector. We have
+for any non-zero value of $\alpha$.	
+
+Note that, in the Gaussian elimination process, the solution vector remained unchanged at each stage. It was always equal to the zero vector. This is because the effects of the EROs on the solution vector corresponded to replacing the entries in the solution vector with linear combinations of entries in the prior solution vector. Accordingly, it is not necessary to keep track of the effect of these transformations on the solution vector, so it need not be included in the augmented matrix. Thus, in future examples for computing eigenvectors, we will omit the solution vector from the augmented matrix. 
+
+By a similar process, we find an eigenvector corresponding to $\lambda_2 = -1$. Any non-zero solution $\mathbf{v} = \left(\begin{smallmatrix}v_1\\v_2\end{smallmatrix}\right)$ of the equation $B_{\lambda_2} \mathbf{v} = (\lambda_2 I_2 - A)\mathbf{v} = \mathbf{0}$ is such an eigenvector. Since $\lambda_2 = -1$, we have
 $$
-B_{-1} = \begin{pmatrix} -2 & -1 \\ -2 & -1\end{pmatrix},
+B_{\lambda_2} = \begin{pmatrix} -2 & -1 \\ -2 & -1\end{pmatrix},
 $$
-and again solve $B_{-1} \mathbf{v} = \mathbf{0}$ via Gaussian elimination to give the eigenvectors corresponding to $\lambda_2 = -1$ as
+and we may similarly solve $B_{\lambda_2} \mathbf{v} = \mathbf{0}$ via Gaussian elimination to give the eigenvectors corresponding to $\lambda_2 = -1$ as
 $$
 \beta \begin{pmatrix} 1 \\ -2\end{pmatrix}
 $$
 for any non-zero value of $\beta$.
 
-Note that there are infinitely many eigenvectors corresponding to an eigenvalue, because if a non-zero vector $\mathbf{v}$ satisfies $B_{\lambda} \mathbf{v} = \mathbf{0}$, then any multiple of $\mathbf{v}$, i.e.\ $\mu\mathbf{v}$ for any $\mu \neq 0$ satisfies the equation, too, as we have $B_{\lambda} (\mu\mathbf{v}) = \mu (B_{\lambda}{\mathbf{v}}) = \mu\mathbf{0} = \mathbf{0}$.
+Note that there are infinitely many eigenvectors corresponding to an eigenvalue, because if a non-zero vector $\mathbf{v}$ satisfies $B_{\lambda} \mathbf{v} = \mathbf{0}$, then any multiple of $\mathbf{v}$, i.e.\ $\mu\mathbf{v}$ for any given $\mu \neq 0$, also satisfies the equation. This follows since $B_{\lambda} (\mu\mathbf{v}) = \mu (B_{\lambda}{\mathbf{v}}) = \mu\mathbf{0} = \mathbf{0}$.
 
-In order to obtain specific eigenvectors, we simply need to set $\alpha$ and $\beta$ to some non-zero value, for which we usually simply take $\alpha=1$ and $\beta=1$. Hence two suitable eigenvectors of $A$ are 
+In order to obtain specific eigenvectors, we simply need to set $\alpha$ and $\beta$ to some non-zero value, for example, we may simply take $\alpha=1$ and $\beta=1$. Hence two suitable eigenvectors of $A$ are 
 $$
 \mathbf{u}_1=\begin{pmatrix} 1 \\ 1 \end{pmatrix} \quad\text{ and }\quad \mathbf{u}_2=\begin{pmatrix} 1 \\ -2\end{pmatrix}
 $$
@@ -320,9 +326,9 @@ $$
 1. We find the eigenvectors for the eigenvalue $\lambda_1 = 1$.
     For $\lambda = \lambda_1 = 1$, we have
     $$
-    B_{1} = \begin{pmatrix} 0 & 0 & 1 \\ -1 & -1 & -1 \\ -2 & -2 & -2 \end{pmatrix},
+    B_{\lambda_1} = \begin{pmatrix} 0 & 0 & 1 \\ -1 & -1 & -1 \\ -2 & -2 & -2 \end{pmatrix},
     $$
-    which is (automatically) the augmented matrix representing $B_{1} \mathbf{v} = \mathbf{0}$ where we omit the solution vector. We perform a Gaussian elimination. First, we apply EROs $R_3 \to R_3 - 2 R_2$ and $R_2 \to -R_2$ to obtain
+    which is the augmented matrix representing $B_{\lambda_1} \mathbf{v} = \mathbf{0}$ when we omit the solution vector. We perform a Gaussian elimination. First, we apply EROs $R_3 \to R_3 - 2 R_2$ and $R_2 \to -R_2$ to obtain
     $$
     \begin{pmatrix}
     0 & 0 & 1 \\
@@ -330,7 +336,7 @@ $$
     0 & 0 & 0
     \end{pmatrix},
     $$
-    and then we apply $R_1 \leftrightarrow R_2$ to have
+    and then we apply $R_1 \leftrightarrow R_2$ to give
     $$
     \begin{pmatrix}
     1 & 1 & 1 \\
@@ -346,11 +352,11 @@ $$
     0 & 0 & 0
     \end{pmatrix}.
     $$
-    From this we see that $v_2$ can be chosen arbitrary, say $v_2 = \alpha$. Then, in view of $v_1 = -v_2$ and $v_3 = 0$, we have the set of eigenvectors corresponding to the eigenvalue $\lambda_1 = 1$ given as
+    As explained in section \@ref(echelon), it follows that $v_2$ is a free variable. That is, $v_2$ can be chosen arbitrarily, say $v_2 = \alpha$. Then, in view of $v_1 = -v_2$ and $v_3 = 0$, we find that the set of eigenvectors corresponding to the eigenvalue $\lambda_1 = 1$ are given by
     $$
     \alpha \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}
     $$
-    For instance, taking $\alpha = 1$, gives a specific eigenvector
+    where $\alpha$ can be assigned arbitrarily. For instance, taking $\alpha = 1$ gives the specific eigenvector:
     $$
     \mathbf{u}_1 = \begin{pmatrix} -1 \\ 1 \\ 0 \end{pmatrix}.
     $$
@@ -358,9 +364,9 @@ $$
 1. We find the eigenvectors for the eigenvalue $\lambda_2 = 2$.
     For $\lambda = \lambda_2 = 2$, we have
     $$
-    B_{2} = \begin{pmatrix} 1 & 0 & 1 \\ -1 & 0 & -1 \\ -2 & -2 & -1 \end{pmatrix}.
+    B_{\lambda_2} = \begin{pmatrix} 1 & 0 & 1 \\ -1 & 0 & -1 \\ -2 & -2 & -1 \end{pmatrix}.
     $$
-    As above, we use Gaussian elimination to find non-zero solutions $\mathbf{v}$ to the equation $B_{2} \mathbf{v} = \mathbf{0}$. This gives the set of eigenvectors
+    As above, we use Gaussian elimination to find non-zero solutions $\mathbf{v}$ to the equation $B_{\lambda_2} \mathbf{v} = \mathbf{0}$. This gives the set of eigenvectors
     $$
     \beta \begin{pmatrix} -2 \\ 1 \\ 2 \end{pmatrix}
     $$
@@ -370,22 +376,22 @@ $$
     $$
 
 1. We find the eigenvectors for the eigenvalue $\lambda_3 = 3$.
-    For $\lambda = \lambda_3 = 4$, we have
+    For $\lambda = \lambda_3 = 3$, we have
     $$
-    B_{3} = \begin{pmatrix} 2 & 0 & 1 \\ -1 & 1 & -1 \\ -2 & -2 & 0 \end{pmatrix}.
+    B_{\lambda_3} = \begin{pmatrix} 2 & 0 & 1 \\ -1 & 1 & -1 \\ -2 & -2 & 0 \end{pmatrix}.
     $$
-    As above, we use Gaussian elimination to find non-zero solutions $\mathbf{v}$ to the equation $B_{3} \mathbf{v} = \mathbf{0}$. This gives the set of eigenvectors
+    As above, we use Gaussian elimination to find non-zero solutions $\mathbf{v}$ to the equation $B_{\lambda_3} \mathbf{v} = \mathbf{0}$. This gives the set of eigenvectors
     $$
     \gamma \begin{pmatrix} -1 \\ 1 \\ 2 \end{pmatrix}.
     $$
     For instance, taking $\gamma = -1$, we find the specific eigenvector
     $$
-    \mathbf{u}_3 = (1,-1,-2).
+    \mathbf{u}_3 = \begin{pmatrix}1 \\-1 \\-2\end{pmatrix}.
     $$
 :::
 
 
-It also makes sense to consider vectors and matrices with complex number entries. These arise in applications such as analysis of electronic circuits and in quantum mechanics. We won't consider such situations here, but we will now see that even if we start with vectors and matrices with real entries, complex number eigenvalues and eigenvectors with complex entries can still arise. We can immediately see that this could be possible, since the eigenvalues are calculated as roots of the characteristic polynomial and we know that real polynomials can have complex roots.
+It also makes sense to consider vectors and matrices with complex number entries. These arise in applications such as the analysis of electronic circuits and in quantum mechanics. As we will illustrate in the next example, even if we start with vectors and matrices with real entries, complex number eigenvalues and eigenvectors with complex entries can still arise. This follows since the eigenvalues are calculated as roots of the characteristic polynomial, and real polynomials can have complex roots (see section \@ref(complex)).
 
 ::: {.example #complexeig name="Complex Eigenvalues and Eigenvectors"}
 Consider the matrix
@@ -398,35 +404,38 @@ A=
 \end{pmatrix}
 $$
 
-The matrix $A$ has the effect of rotating vectors in the plane anticlockwise by $\pi/2$ (it is matrix $R_{\pi/2}$ from example \ref@(exm:rotmat)), so we can see geometrically that it can't have any real eigenvectors, since these would correspond to fixed directions in the plane that are scaled by an eigenvalue.
+The matrix $A$ has the effect of rotating vectors in the plane anticlockwise by $\pi/2$ (it is matrix $R_{\pi/2}$ from example \@ref(exm:rotation)). So we can see geometrically that it can't have any real eigenvectors, since these would correspond to fixed directions in the plane that are scaled by an eigenvalue, yet a rotation by $\pi/2$ will change the direction of all non-zero vectors.
 
-The characteristic polynomial is
+The characteristic polynomial of $A$ is
 
 $$p_A(\lambda)=\lambda^2+1$$
 
-which has solutions $\lambda_1=i$ and $\lambda_2=-i$. We can also find the eigenvectors in the usual way by solving $(A-\lambda I)\mathbf{v}=0$. For $\lambda_1$
+which has solutions $\lambda_1=i$ and $\lambda_2=-i$. We can also find the eigenvectors in the usual way by solving $(\lambda I-A)\mathbf{v}=0$. For $\lambda_1 = i$,
 $$
-(A-iI)=
+(iI-A)=
 \begin{pmatrix}
--i&-1\\
-1&-i
+i&1\\
+-1&i
 \end{pmatrix}
 $$
-and performing $R_1\to iR_1$
+and it may be verified that 
+<!--performing $R_1\to -iR_1$
 $$
 \begin{pmatrix}
 1&-i\\
-1&-i
+-1&i
 \end{pmatrix}
 $$
-we find that the corresponding eigenvectors are $\alpha\left(\begin{smallmatrix}1\\-i\end{smallmatrix}\right)$ and taking $\alpha=1$,
+we find that 
+-->
+the corresponding eigenvectors are $\alpha\left(\begin{smallmatrix}1\\-i\end{smallmatrix}\right)$. Taking $\alpha=1$ then gives the specific eigenvector:
 
 $$
 \mathbf{u}_1=
 \begin{pmatrix}
 1\\
 -i
-\end{pmatrix}
+\end{pmatrix}.
 $$
 
 Similarly, we find an eigenvector for $\lambda_2$:
@@ -472,20 +481,19 @@ we may write
 $$
 A=PDP^{-1}.
 $$
-Although $P^{-1}$, $D$ and $P$ all contain complex numbers, their product leaves only real numbers and we get back to the real matrix $A$ (check that $PDP^{-1}$ does indeed equal $A$).
+Although $P^{-1}$, $D$ and $P$ all contain complex numbers, their product leaves only real numbers and we get back to the real matrix $A$ (you are recommended to check that $PDP^{-1}$ does indeed equal $A$).
 :::
 
-Complex roots of real polynomials always come in complex conjugate pairs and so we will have complex conjugate eigenvalue pairs and corresponding complex conjugate eigenvector pairs. To see this, if $p_B(\lambda)=\lambda^n+a_{n-1}\lambda^{n-1}+\dotsb+a_1\lambda+a_0$ is a (real) characteristic polynomial of a real $n\times n$ matrix $B$ and $\lambda$ is a complex root, then taking the complex conjugate
+Complex roots of real polynomials always come in complex conjugate pairs, and so we will have complex conjugate eigenvalue pairs, and it turns out that the corresponding eigenvectors also come in complex conjugate pairs. To see this, note that if $p_B(\lambda)=\lambda^n+a_{n-1}\lambda^{n-1}+\dotsb+a_1\lambda+a_0$ is a (real) characteristic polynomial of a real $n\times n$ matrix $B$ and $\lambda$ is a complex root, then taking the complex conjugate gives
 \begin{align*}
 0=p_B(\lambda)=\overline{p_B(\lambda)}&=\overline{\lambda^n}+\overline{a_{n-1}\lambda^{n-1}}+\dotsb+\overline{a_1\lambda}+\overline{a_0}\\
-&=\overline{\lambda}^n+a_{n-1}\overline{\lambda}^{n-1}+\dotsb+a_1\overline{\lambda}+{a_0}
+&=\overline{\lambda}^n+a_{n-1}\overline{\lambda}^{n-1}+\dotsb+a_1\overline{\lambda}+{a_0},
 \end{align*}
-(using that the coefficients $a_j$ are real) shows that $\overline{\lambda}$ is also a root. Let $\mathbf{u}$ be an eigenvector corresponding to $\lambda$. Then,
+where we have used the fact that the coefficients $a_j$ are real. It therefore follows that $\overline{\lambda}$ is also a root. Also, let $\mathbf{u}$ be an eigenvector corresponding to the eigenvalue $\lambda$. Then,
 $$
-B\overline{\mathbf{u}}=\overline{B}\overline{\mathbf{u}}=\overline{B\mathbf{u}}=\overline{\lambda \mathbf{u}}=\overline{\lambda}\overline{\mathbf{u}}
+B\overline{\mathbf{u}}=\overline{B}\overline{\mathbf{u}}=\overline{B\mathbf{u}}=\overline{\lambda \mathbf{u}}=\overline{\lambda}\overline{\mathbf{u}},
 $$
-(using that $B$ is real in the first step) i.e. the vector $\overline{\mathbf{u}}$ is an eigenvector with eigenvalue $\overline{\lambda}$.
-
+where we have used the fact that $B$ is real in the first step. This implies that the vector $\overline{\mathbf{u}}$ is an eigenvector with eigenvalue $\overline{\lambda}$.
 
 As we mentioned earlier, not all matrices are diagonalisable. Here is an example.
 
@@ -520,23 +528,23 @@ $$
 \begin{pmatrix}
 1\\
 0
-\end{pmatrix}
+\end{pmatrix}.
 $$
-So we do not have 2 linearly independent eigenvectors since all eigenvectors are multiples of $\mathbf{u}=\left(\begin{smallmatrix}1\\0\end{smallmatrix}\right)$. Therefore, we cannot diagonalise this matrix.
+In this case, we do not have 2 linearly independent eigenvectors, since all eigenvectors are multiples of $\mathbf{u}=\left(\begin{smallmatrix}1\\0\end{smallmatrix}\right)$. Therefore, we cannot diagonalise this matrix.
 :::
 
-We briefly mention that there are other useful matrix decompositions to diagonalisation that *always* work. The generalisation of diagonalisation is the *Jordan Normal Form*, which is an important theoretical tool. Another key technique is the *Singular Value Decomposition* which is important in numerical applications of matrices and in data science (see *Principal Component Analysis*).
+We briefly mention that there are other useful matrix decompositions that *always* work. In particular, the *Jordan Normal Form*, which, for matrices that cannot be diagonalised, augments the eigenvectors with so-called generalised eigenvectors. Another key technique is the *Singular Value Decomposition*, which is important in numerical applications of matrices and in data science (such as *Principal Component Analysis*).
 
 
 ## Powers of diagonalisable matrices
 
-One of the most important applications of diagaonalisation is in computing powers of matrices. If a matrix $A$ is diagonalisable, we can write it as
+Diagaonalisation is particularly useful for computing powers of matrices. If a matrix $A$ is diagonalisable, we can write it as
 
-$$A=PDP^{-1}$$
+$$A=PDP^{-1}.$$
 
 Now if we want to compute $A^2$, we have
 $$A^2=PDP^{-1}PDP^{-1}=PD^2P^{-1}$$
-where we used $P^{-1}P=I$. Now, more generally
+where we used $P^{-1}P=I$. Even more generally,
 $$
 A^n=PDP^{-1}PDP^{-1}\dotsb PDP^{-1}=PD^nP^{-1}
 $$
@@ -614,5 +622,5 @@ A^n=
 \end{pmatrix}.
 $$
 
-We now have a nice expression that works for any $n$ and this is much easier than trying to calculate $A^n$ directly.
+We now have a nice expression that works for any $n$ and is much easier than trying to calculate $A^n$ directly.
 :::

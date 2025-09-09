@@ -23,7 +23,7 @@
 <meta name="author" content="Drs Mark Callaway, Tim Hughes and Ed Branford" />
 
 
-<meta name="date" content="2025-09-08" />
+<meta name="date" content="2025-09-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,7 @@
 <ul>
 <li class="chapter" data-level="7.1" data-path="gauss.html"><a href="gauss.html#lines-and-planes"><i class="fa fa-check"></i><b>7.1</b> Lines and planes</a></li>
 <li class="chapter" data-level="7.2" data-path="gauss.html"><a href="gauss.html#solving-linear-systems---gaussian-elimination"><i class="fa fa-check"></i><b>7.2</b> Solving linear systems - Gaussian elimination</a></li>
-<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon-form"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
+<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>8</b> Matrices</a>
 <ul>
@@ -208,7 +208,7 @@
 <li class="chapter" data-level="10" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html"><i class="fa fa-check"></i><b>10</b> Eigenvalues and Eigenvectors</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#matrix-diagonalisation"><i class="fa fa-check"></i><b>10.1</b> Matrix Diagonalisation</a></li>
-<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvalues"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
+<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#FindEigen"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
 <li class="chapter" data-level="10.3" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvectors"><i class="fa fa-check"></i><b>10.3</b> Finding Eigenvectors</a></li>
 <li class="chapter" data-level="10.4" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#powers-of-diagonalisable-matrices"><i class="fa fa-check"></i><b>10.4</b> Powers of diagonalisable matrices</a></li>
 </ul></li>
@@ -278,9 +278,8 @@
 <li class="chapter" data-level="18" data-path="numerics.html"><a href="numerics.html"><i class="fa fa-check"></i><b>18</b> Numerical Methods</a>
 <ul>
 <li class="chapter" data-level="18.1" data-path="numerics.html"><a href="numerics.html#numerical-root-finding"><i class="fa fa-check"></i><b>18.1</b> Numerical Root Finding</a></li>
-<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation</a></li>
+<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation-and-solutions-to-odes"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation and solutions to ODEs</a></li>
 <li class="chapter" data-level="18.3" data-path="numerics.html"><a href="numerics.html#numerical-integration"><i class="fa fa-check"></i><b>18.3</b> Numerical Integration</a></li>
-<li class="chapter" data-level="18.4" data-path="numerics.html"><a href="numerics.html#numerical-solutions-to-odes"><i class="fa fa-check"></i><b>18.4</b> Numerical Solutions to ODEs</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html"><i class="fa fa-check"></i><b>19</b> Probability Fundamentals</a>
 <ul>
@@ -385,7 +384,7 @@
 <div id="integration-by-substitution" class="section level2 hasAnchor" number="16.1">
 <h2><span class="header-section-number">16.1</span> Integration by Substitution<a href="further-integration-techniques.html#integration-by-substitution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div class="theorem">
-<p><span id="thm:intsubstitution" class="theorem"><strong>Theorem 16.1  (Integration by Substitution) </strong></span>If $ u=u(x)$ is a differentiable function and <span class="math inline">\(f\)</span> is continuous, then
+<p><span id="thm:intsubstitution" class="theorem"><strong>Theorem 16.1  (Integration by Substitution) </strong></span>If <span class="math inline">\(u\)</span> is a differentiable function and <span class="math inline">\(f\)</span> is continuous, then
 <span class="math display">\[
 \int f( u(x) ) \frac{du(x)}{dx} dx = \int f( u ) du \quad \text{indefinite integral}
 \]</span>
@@ -402,7 +401,7 @@ du= \frac{du(x)}{dx} dx, \;\;  d (c+x)=dx; \;\; d (x^2)=2x dx, \;\; d (\sin x)= 
 <ol style="list-style-type: decimal">
 <li><p>Evaluate the indefinite integral
 <span class="math display">\[
-\int (3x+2)^4 dx
+\int (3x+2)^4 dx.
 \]</span>
 Introduce <span class="math inline">\(u=3x+2\)</span>, then <span class="math inline">\(du= \frac{du}{dx}\; dx = 3\; dx\)</span>, so <span class="math inline">\(dx=\frac{1}{3} du\)</span>. Now we can write
 <span class="math display">\[\begin{align*}
@@ -411,7 +410,7 @@ Introduce <span class="math inline">\(u=3x+2\)</span>, then <span class="math in
 &amp;=\frac{1}{15}(3x+2)^5+C.
 \end{align*}\]</span></p></li>
 <li><p>Evaluate the indefinite integral
-<span class="math display">\[\int \cos(5x) dx\]</span>
+<span class="math display">\[\int \cos(5x) dx.\]</span>
 Introduce <span class="math inline">\(u=5x\)</span>, then <span class="math inline">\(du = \frac{du}{dx}\; dx = 5\; dx\)</span>, so <span class="math inline">\(dx = \frac{1}{5} du\)</span>.
 Now we can write
 <span class="math display">\[\begin{align*}
@@ -495,7 +494,7 @@ where we have used <span class="math inline">\(\cos(2\theta)=2\cos^2(\theta)-1\)
 where we have used <span class="math inline">\(\sin(\theta)\cos(\phi)=\frac{1}{2}(\sin(\theta-\phi)+\sin(\theta+\phi))\)</span>.</p></li>
 <li><p>Evaluate the indefinite integral
 <span class="math display">\[\begin{equation*}
-\int \frac{\sqrt{9-x^2}}{x^2}  dx\\
+\int \frac{\sqrt{9-x^2}}{x^2}  dx.\\
 \end{equation*}\]</span>
 Making the substitution <span class="math inline">\(x=3\sin(\theta), \;\; -\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}\)</span>,
 <span class="math display">\[\begin{align*}
@@ -539,30 +538,30 @@ where the degree of <span class="math inline">\(r\)</span> will be strictly less
 <ol style="list-style-type: decimal">
 <li><p>Evaluate the indefinite integral
 <span class="math display">\[
-I=\int  \frac{2x^2 -x + 4} { x(x^2+4) } dx
+I=\int  \frac{2x^2 -x + 4} { x(x^2+4) } dx.
 \]</span>
-we have
+We have
 <span class="math display">\[
-\left[ \frac{2x^2 -x + 4} { x(x^2+4)}=\frac{A} { x}+\frac{Bx+C} {(x^2+4)}, A=1, B=1, C=-1 \right] \\
+\left[ \frac{2x^2 -x + 4} { x(x^2+4)}=\frac{A} { x}+\frac{Bx+C} {(x^2+4)}, A=1, B=1, C=-1 \right], \\
 \]</span>
 then
 <span class="math display">\[\begin{align*}
 I= \int \left[ \frac{1} {x}  + \frac{x-1} {x^2 +4 } \right] \\
 &amp; =\int  \frac{dx} {x} +  \int  \frac{x} {x^2 +4 } dx -\int  \frac{1} {x^2 +4 } dx \\
-&amp; = \ln |x| +\frac{1}{2} \ln (x^2 +4) - \frac{1}{2} \tan^{-1}(x/2)+C
+&amp; = \ln |x| +\frac{1}{2} \ln (x^2 +4) - \frac{1}{2} \tan^{-1}(x/2)+C.
 \end{align*}\]</span></p></li>
 <li><p>Evaluate the indefinite integral (the degree of the numerator is not less than the degree of the denominator)
 <span class="math display">\[
-I=\int  \frac{4x^2 -3x + 2} { 4x^2 -4x +3 } dx
+I=\int  \frac{4x^2 -3x + 2} { 4x^2 -4x +3 } dx.
 \]</span>
 We have
-<span class="math display">\[\frac{4x^2 -3x + 2} { 4x^2 -4x +3 }=1+\frac{x-1} { 4x^2 -4x +3 }; 4x^2 -4x +3=( 2x -1)^2 +2\]</span>
+<span class="math display">\[\frac{4x^2 -3x + 2} { 4x^2 -4x +3 }=1+\frac{x-1} { 4x^2 -4x +3 }; 4x^2 -4x +3=( 2x -1)^2 +2.\]</span>
 Hence
 <span class="math display">\[\begin{align*}
 I  &amp; =\int \left[ 1+ \frac{x-1} {(2x-1)^2+2 } \right]dx \\
 &amp;= x+ \int \left[ \frac{ (1/2)(2x-1)-(1/2) } {(2x-1)^2+2 } \right] (1/2) d(2x-1) \\
 &amp;= x+\int  \left(\frac{1}{4}  \frac{(2x-1)} {(2x-1)^2+2 } - \frac{1}{4}  \frac{1} {(2x-1)^2+2 } \right)  d(2x-1)\\
-&amp;=x+  \frac{1}{8}  \ln[(2x-1)^2+2] -  \frac{1}{4 \sqrt{2}}\tan^{-1} \frac{2x-1}{ \sqrt{2}} +C
+&amp;=x+  \frac{1}{8}  \ln[(2x-1)^2+2] -  \frac{1}{4 \sqrt{2}}\tan^{-1} \frac{2x-1}{ \sqrt{2}} +C.
 \end{align*}\]</span></p></li>
 </ol>
 </div>
@@ -605,7 +604,7 @@ u=\ln x, \;\; v=x
 uv - \int  v \; d u &amp;= x \ln x - \int x  d \ln x \\
 &amp; =  x \ln x - \int x \left( \frac{1}{x}  \; d x \right) \\
 &amp; =  x \ln x - \int  \; d x \\
-&amp; =  x \ln x - x +C
+&amp; =  x \ln x - x +C.
 \end{align*}\]</span></p></li>
 <li><p>Evaluate the indefinite integral
 <span class="math display">\[
@@ -617,32 +616,32 @@ u=x^2, \;\; v=e^x, \;\;  dv=d e^x= e^x \; dx
 \]</span></p>
 <p><span class="math display">\[\begin{align*}
 uv - \int  v \; d u&amp;= x^2 e^x - \int e^x  d x^2\\
-&amp;=   x^2 e^x - \int e^x  (2x d x)
+&amp;=   x^2 e^x - \int e^x  (2x d x).
 \end{align*}\]</span>
 We need to use integration by parts again by taking
 <span class="math display">\[
-u=x, \;\; v=e^x, \;\;  dv=d e^x= e^x \; dx
+u=x, \;\; v=e^x, \;\;  dv=d e^x= e^x \; dx.
 \]</span>
 <span class="math display">\[\begin{align*}
 x^2 e^x -  \left( 2 \int x  d e^x \right)&amp; =   x^2 e^x - \left( 2 x e^x - 2 \int e^x d x \right)
 \\
 &amp; =   x^2 e^x - \left( 2 x e^x - 2 e^x  +C
-\right)
+\right).
 \end{align*}\]</span></p></li>
 <li><p>Evaluate the indefinite integral
 <span class="math display">\[
 I=\int e^x  \sin(x) \;   dx,
 \]</span>
-where we take <span class="math inline">\(u=e^x, v=-\cos(x), dv= d (-\cos(x))=\sin(x) dx\)</span></p>
+where we take <span class="math inline">\(u=e^x, v=-\cos(x), dv= d (-\cos(x))=\sin(x) dx.\)</span></p>
 <p><span class="math display">\[\begin{align*}
 I=uv - \int  v \; d u &amp;= - e^x \cos(x)  + \int \cos(x) e^x  d x  \; \;  \\
 &amp; = - e^x \cos(x)  + \left( \int e^x d \sin(x) \right) \\
 &amp; = - e^x \cos(x)  + \left( \sin(x)  e^x -  \int  \sin  x d e^x\right)  \\
-&amp; = - e^x \cos(x)  + \sin(x)  e^x - I
+&amp; = - e^x \cos(x)  + \sin(x)  e^x - I.
 \end{align*}\]</span>
 Solving for <span class="math inline">\(I\)</span>:
 <span class="math display">\[\begin{align*}
-I=\frac{1}{2}(- e^x \cos(x)  +  \sin(x)  e^x) + C
+I=\frac{1}{2}(- e^x \cos(x)  +  \sin(x)  e^x) + C.
 \end{align*}\]</span></p></li>
 </ol>
 </div>

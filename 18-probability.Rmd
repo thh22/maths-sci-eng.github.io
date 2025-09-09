@@ -1,11 +1,10 @@
 # Probability Fundamentals
 
-Uncertainty is an integral component of our everyday lives, and we are always making decisions in the face of it e.g.
+Uncertainty is an integral component of our everyday lives, and we are always making decisions in the face of it. For example,
 
 * Will it rain today?
-* Should I take out life insurance?
 * Should I buy a lottery ticket?
-* Should I buy ten lottery tickets?
+* Should I buy ten lottery tickets???^[Gambling examples can feature a lot in introductions to probability, as it is an application where the theory holds in a precise way. This is not to condone gambling! It is a safe bet (excuse the pun) that you can expect to lose money if you purchase tickets for lotteries run by commercial organisations, and learning probability can help you to verify that this is the case! Probability is also required for understanding statistics, whose applications are much broader.]
 
 
 **Probability** is the branch of mathematics that seeks to study uncertainty in a systematic way. We measure the likelihood of something happening on a scale from 0 to 1.
@@ -25,10 +24,10 @@ In contrast, a *deterministic* experiment is one that produces the same outcome 
 
 The collection of all possible outcomes is known as the *sample space*. Mathematically, it is a *set* $S$ -- this can be thought of as a box containing a collection of objects, but where we do not consider duplicate objects. We denote this set and the objects it contains, known as the *elements* of the set, as a pair of braces containing the elements $\{\dotsb\}$. For example:
 
-* Tossing a coin: $S=\{H,T\}$
-* The number of days it rains in a week: $S=\{0,1,2,3,4,5,6,7\}$
-* Number of cars that pass a given point on a motorway in one minute: $S=\{0,1,2,3,\dotsc\}$
-* The sum of the values on two dice, that is all of the values in the following table.
+* Tossing a coin: $S=\{H,T\}$;
+* The number of days it rains in a week: $S=\{0,1,2,3,4,5,6,7\}$;
+* Number of cars that pass a given point on a motorway in one minute: $S=\{0,1,2,3,\dotsc\}$;
+* The sum of the values on two dice, that is all of the values in the following table:
 
     |$+$  |**1**|**2**|**3**|**4**|**5**|**6**|
     |-----|-----|-----|-----|-----|-----|-----|
@@ -39,32 +38,32 @@ The collection of all possible outcomes is known as the *sample space*. Mathemat
     |**5**|6    |7    |8    |9    |10   |11   |
     |**6**|7    |8    |9    |10   |11   |12   |
 
-    Note that many of the 36 outcomes in this table are repetitions -- we only record the 11 unique possibilities in the sample space: $S=\{2,3,4,5,6,7,8,9,10,11,12\}$
+    Note that many of the 36 outcomes in this table are repetitions -- we only record the 11 unique possibilities in the sample space: $S=\{2,3,4,5,6,7,8,9,10,11,12\}$.
 
 
 An *event* $A$ is a particular collection of outcomes from a stochastic experiment. Mathematically, it is a *subset* of $S$. That is, a set consisting of some (possibly all or none) of the elements of $S$. We write this as $A\subset S$. For example:
 
-* The event of obtaining a heads in a coin toss: $A=\{H\}$
-* It rains an odd number of days in the week: $A=\{1,3,5,7\}$
-* More than 5 cars pass by on the motorway: $A=\{6,7,8,\dotsc\}$
-* The sum of the value on two dice is greater than 1: $A=S$
+* The event of obtaining a heads in a coin toss: $A=\{H\}$;
+* It rains an odd number of days in the week: $A=\{1,3,5,7\}$;
+* More than 5 cars pass by on the motorway: $A=\{6,7,8,\dotsc\}$;
+* The sum of the value on two dice is greater than 1: $A=S$.
 
 It is sometimes the case that an event does not correspond to any elements of the sample space. For example, the event that it rains 8 days in a week. In this case the event set is empty. Although this was a silly example, it is in general useful to have a particular notation for this: the set with no elements $\{\;\}$ is called the *empty set* and is denoted by $\emptyset$.
 
 We sometimes need to consider combinations of events occuring at the same time. For example,
 
-* More than 5 cars **and** less than 10 cars pass by on the motorway: The events $A=\{6,7,8,\dotsc\}$ and $B=\{0,1,2,3,4,5,6,7,8,9\}$, resulting in the event $C=\{6,7,8,9\}$
-* The sum of two dice rolls is an odd number **or** it is less than or equal to 4: The events $A=\{3,5,7,9,11\}$ and $B=\{2,3,4\}$, resulting in the event $C=\{2,3,4,5,7,9,11\}$
+* More than 5 cars **and** less than 10 cars pass by on the motorway. That is, the events $A=\{6,7,8,\dotsc\}$ and $B=\{0,1,2,3,4,5,6,7,8,9\}$, resulting in the event $C=\{6,7,8,9\}$.
+* The sum of two dice rolls is an odd number **or** it is less than or equal to 4. That is, the events $A=\{3,5,7,9,11\}$ and $B=\{2,3,4\}$, resulting in the event $C=\{2,3,4,5,7,9,11\}$.
 
 Taking the outcomes that only occur in both $A$ **and** $B$ is known as taking the *intersection* of the two sets, denoted
 $$C=A\cap B.$$
 
-Combining all of the outcomes in $A$ **or**^[in mathematics the word *or* used in the inclusive sense, rather than the *exclusive* sense, which is sometimes abreviated as *xor*.] $B$ is known as taking the *union* of the two sets, denoted
-$$C=A\cup B$$.
+Combining all of the outcomes in $A$ **or** $B$ is known as taking the *union* of the two sets^[in mathematics the word *or* used in the inclusive sense, thus, in this context, $A \cup B$ means the set of all items that are either in $A$ or in $B$ or in both $A$ and $B$. The *exclusive* sense is sometimes abbreviated as *xor* which, in this context, will correspond to the set of items that are either in $A$ or in $B$ but not in both $A$ and $B$.], denoted
+$$C=A\cup B.$$
 
 The *complement* of an event $A$ is **the event that $A$ does not occur**, denoted $A^c$. For example, if we have the event that it rains on an odd number of days in the week $A=\{1,3,5,7\}$, then the complement of $A$ is $A^c=\{0,2,4,6\}$.
 
-If $A\cap B=\emptyset$ (they have no outcomes in common) then we say that events $A$ and $B$ are **mutually exclusive**: they cannot occur at the same time. In set language, we say the sets are *disjoint*.
+If $A\cap B=\emptyset$ (they have no outcomes in common), then we say that events $A$ and $B$ are **mutually exclusive**: they cannot occur at the same time. In set language, we say the sets are *disjoint*.
 
 ## Counting
 
@@ -95,7 +94,7 @@ For example in throwing a die 3 times we have 6 possible outcomes in each throw,
 The multiplication principle holds in problems of *sampling with replacement*. For example, if we draw a card from a standard deck of 52 (well shuffled) playing cards three times in a row, putting the card back into the deck after each draw and re-shuffling, then the chance of getting the ace of spades three times $A=\{(\text{A}\spadesuit,\text{A}\spadesuit,\text{A}\spadesuit)\}$ is $P(A)=\dfrac{1}{52^3}$.
 
 In problems where we have *sampling without replacement*, the number of possible outcomes changes at each stage. For example, the number of ways 3 runners can be placed at the finish are: any one of the 3 could come first, leaving 2 possibilities for second and 1 possibility for third, that is
-$$3\times 2\times 1=6$$
+$$3\times 2\times 1=6.$$
 We call this the *factorial* of 3, denoted $3!$. It is more generally defined for a number $n$ as
 $$n!=n\times(n-1)\times(n-2)\times\dotsb\times 2\times 1.$$
 
@@ -134,8 +133,8 @@ We have already looked at how to find probabilities when we have equally likely 
 
 The probability $P$ is a function that associates every possible event $A$ to a value $P(A)$ in the range $0\leq P(A) \leq 1$, such that
 
-1. $P(A)\geq 0$ for all events $A$
-2. $P(S)=1$
+1. $P(A)\geq 0$ for all events $A$;
+2. $P(S)=1$;
 3. $P(A\cup B)=P(A)+P(B)$ when $A$ and $B$ are *mutually exclusive*.
 
 The term "mutually exclusive" means that $A$ and $B$ cannot take place at the same time. In terms of sets we have
@@ -145,7 +144,7 @@ Since $A\cap A^c=\emptyset$ together with $A\cup A^c=S$ we have
 $$1=P(S)=P(A\cup A^c)=P(A)+P(A^c)$$
 and hence
 $$P(A)=1-P(A^c).$$
-(Note in particular that this implies $P(\emptyset)=0$, why?) This is useful because sometimes it is easier to calculate $P(A^c)$ instead calculating $P(A)$ directly.
+This is useful because sometimes it is easier to calculate $P(A^c)$ instead calculating $P(A)$ directly. Note in particular that this result also implies $P(\emptyset)=0$ -- can you show why?
 
 To simplify notation, we sometimes just write the outcomes of an event directly in the argument of $P$. For example, we could write the probability of getting a head from a coin toss as $P(H)$ or of getting the sequence $HTT$ in 3 tosses as $P(HTT)$.
 
@@ -176,7 +175,7 @@ $$P(A\cap B)=P(A|B)P(A)=\frac{4}{19}\times \frac{6}{20}=\frac{6}{95}.$$
 
 Two events $A$ and $B$ are *independent* if
 $$P(A\cap B)=P(A)P(B)$$
-or equivalently (from the deifinition of conditional probability) if
+or equivalently (from the definition of conditional probability) if
 $$P(A|B)=P(A).$$
 
 We have already seen many examples of independent events. For example, in tossing a coin twice, the sample space is $S=\{TT,TH,HT,HH\}$. The event that the first toss is a heads $A=\{HH,HT\}$ has $P(A)=\frac{2}{4}=\frac{1}{2}$ and the event the second toss is a heads $B=\{TH, HH\}$ also has $P(B)=\frac{1}{2}$. These events are independent -- intuitively, the outcome of the first toss has no influence on the outcome of the second toss. Mathematically we have:
@@ -187,12 +186,11 @@ $$P(A)P(B)=\frac{1}{2}\times\frac{1}{2}=\frac{1}{4}.$$
 
 ## Law of Total Probability
 
-A sequence of sets $B_1,B_2,\dotsc,B_n$ is said to form a *partition* of $S$ if for all $i\neq j$ we have
-$$B_i\cap B_j = \emptyset$$
-(no two sets have any elements in common)
-and
-$$B_1\cup B_2\cup \dotsb\cup B_n=S$$
-(taking all the sets together, they include all of the outcomes in $S$).
+A sequence of sets $B_1,B_2,\dotsc,B_n$ is said to form a *partition* of $S$ if, for all $i\neq j$, we have
+$$B_i\cap B_j = \emptyset,$$
+that is, no two sets $B_i$ and $B_j$ have any elements in common; and if
+$$B_1\cup B_2\cup \dotsb\cup B_n=S,$$
+that is, taking all the sets together, they include all of the outcomes in $S$.
 
 ::: {.theorem #totalprob name="Law of Total Probability"}
 Let $B_1,B_2,\dotsc,B_n$ be a partition of $S$ and let $A$ be an event. Then

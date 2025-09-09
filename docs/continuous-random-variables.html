@@ -23,7 +23,7 @@
 <meta name="author" content="Drs Mark Callaway, Tim Hughes and Ed Branford" />
 
 
-<meta name="date" content="2025-09-08" />
+<meta name="date" content="2025-09-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,7 @@
 <ul>
 <li class="chapter" data-level="7.1" data-path="gauss.html"><a href="gauss.html#lines-and-planes"><i class="fa fa-check"></i><b>7.1</b> Lines and planes</a></li>
 <li class="chapter" data-level="7.2" data-path="gauss.html"><a href="gauss.html#solving-linear-systems---gaussian-elimination"><i class="fa fa-check"></i><b>7.2</b> Solving linear systems - Gaussian elimination</a></li>
-<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon-form"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
+<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>8</b> Matrices</a>
 <ul>
@@ -208,7 +208,7 @@
 <li class="chapter" data-level="10" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html"><i class="fa fa-check"></i><b>10</b> Eigenvalues and Eigenvectors</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#matrix-diagonalisation"><i class="fa fa-check"></i><b>10.1</b> Matrix Diagonalisation</a></li>
-<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvalues"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
+<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#FindEigen"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
 <li class="chapter" data-level="10.3" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvectors"><i class="fa fa-check"></i><b>10.3</b> Finding Eigenvectors</a></li>
 <li class="chapter" data-level="10.4" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#powers-of-diagonalisable-matrices"><i class="fa fa-check"></i><b>10.4</b> Powers of diagonalisable matrices</a></li>
 </ul></li>
@@ -278,9 +278,8 @@
 <li class="chapter" data-level="18" data-path="numerics.html"><a href="numerics.html"><i class="fa fa-check"></i><b>18</b> Numerical Methods</a>
 <ul>
 <li class="chapter" data-level="18.1" data-path="numerics.html"><a href="numerics.html#numerical-root-finding"><i class="fa fa-check"></i><b>18.1</b> Numerical Root Finding</a></li>
-<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation</a></li>
+<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation-and-solutions-to-odes"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation and solutions to ODEs</a></li>
 <li class="chapter" data-level="18.3" data-path="numerics.html"><a href="numerics.html#numerical-integration"><i class="fa fa-check"></i><b>18.3</b> Numerical Integration</a></li>
-<li class="chapter" data-level="18.4" data-path="numerics.html"><a href="numerics.html#numerical-solutions-to-odes"><i class="fa fa-check"></i><b>18.4</b> Numerical Solutions to ODEs</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html"><i class="fa fa-check"></i><b>19</b> Probability Fundamentals</a>
 <ul>
@@ -2859,14 +2858,14 @@ P(-0.45&lt;X&lt;1.25) &amp;=&amp;P(X&lt;1.25)\\
 &amp;=&amp;P(X&lt;1.25)\\
 &amp;&amp; \quad -\left[1 - P(X&lt;0.45)\right]\\
 &amp;\approx&amp;0.8944-(1 - 0.6736)\\
-&amp;\approx&amp;0.568
+&amp;\approx&amp;0.568.
 \end{eqnarray*}\]</span></p>
-<p>Or using table <a href="continuous-random-variables.html#tab:normtable2">21.3</a>
+<p>Or, using table <a href="continuous-random-variables.html#tab:normtable2">21.3</a>
 <span class="math display">\[\begin{eqnarray*}
 P(-0.45&lt;X&lt;1.25) &amp;=&amp;P(0&lt;X&lt;1.25)\\
 &amp;&amp; \quad + P(0&lt;X&lt;0.45)\\
 &amp;=&amp;0.3944+0.1736\\
-&amp;\approx&amp;0.568
+&amp;\approx&amp;0.568.
 \end{eqnarray*}\]</span></p>
 </div>
 <p>We can use standard tables to find probabilities of general normal random variables. If <span class="math inline">\(Y\)</span> is normal with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^2\)</span>,
@@ -2886,13 +2885,13 @@ P(a\le Y\le b)&amp;=&amp;P(a\le \sigma X+\mu\le b)\\
 <span class="math display">\[\begin{eqnarray*}
 P(0&lt;Y&lt;2.5)&amp;=&amp;P(-0.5&lt;X&lt;0.75)\\
 &amp;=&amp;P(X&lt;0.75)-\left[1 - P(X&lt;0.5)\right]\\
-&amp;\approx&amp;0.7734 - (1 - 0.6915)\approx 0.4649
+&amp;\approx&amp;0.7734 - (1 - 0.6915)\approx 0.4649.
 \end{eqnarray*}\]</span></p>
-<p>or using table <a href="continuous-random-variables.html#tab:normtable2">21.3</a>
+<p>or, using table <a href="continuous-random-variables.html#tab:normtable2">21.3</a>
 <span class="math display">\[\begin{eqnarray*}
 P(0&lt;Y&lt;2.5)&amp;=&amp;P(-0.5&lt;X&lt;0.75)\\
 &amp;=&amp;P(0&lt;X&lt;0.75)+ P(0&lt;X&lt;0.5)\\
-&amp;\approx&amp;0.2734 + 0.1915\approx 0.4649
+&amp;\approx&amp;0.2734 + 0.1915\approx 0.4649.
 \end{eqnarray*}\]</span></p></li>
 <li><p>If <span class="math inline">\(Y\)</span> is normal with mean <span class="math inline">\(3\)</span> and variance <span class="math inline">\(25\)</span>, calculate <span class="math inline">\(P(4&lt;Y&lt;8)\)</span>.</p>
 <p><span class="math display">\[\begin{eqnarray*}

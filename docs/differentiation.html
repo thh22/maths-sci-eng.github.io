@@ -23,7 +23,7 @@
 <meta name="author" content="Drs Mark Callaway, Tim Hughes and Ed Branford" />
 
 
-<meta name="date" content="2025-09-08" />
+<meta name="date" content="2025-09-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -181,7 +181,7 @@
 <ul>
 <li class="chapter" data-level="7.1" data-path="gauss.html"><a href="gauss.html#lines-and-planes"><i class="fa fa-check"></i><b>7.1</b> Lines and planes</a></li>
 <li class="chapter" data-level="7.2" data-path="gauss.html"><a href="gauss.html#solving-linear-systems---gaussian-elimination"><i class="fa fa-check"></i><b>7.2</b> Solving linear systems - Gaussian elimination</a></li>
-<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon-form"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
+<li class="chapter" data-level="7.3" data-path="gauss.html"><a href="gauss.html#echelon"><i class="fa fa-check"></i><b>7.3</b> Echelon Form</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>8</b> Matrices</a>
 <ul>
@@ -208,7 +208,7 @@
 <li class="chapter" data-level="10" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html"><i class="fa fa-check"></i><b>10</b> Eigenvalues and Eigenvectors</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#matrix-diagonalisation"><i class="fa fa-check"></i><b>10.1</b> Matrix Diagonalisation</a></li>
-<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvalues"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
+<li class="chapter" data-level="10.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#FindEigen"><i class="fa fa-check"></i><b>10.2</b> Finding Eigenvalues</a></li>
 <li class="chapter" data-level="10.3" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvectors"><i class="fa fa-check"></i><b>10.3</b> Finding Eigenvectors</a></li>
 <li class="chapter" data-level="10.4" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#powers-of-diagonalisable-matrices"><i class="fa fa-check"></i><b>10.4</b> Powers of diagonalisable matrices</a></li>
 </ul></li>
@@ -278,9 +278,8 @@
 <li class="chapter" data-level="18" data-path="numerics.html"><a href="numerics.html"><i class="fa fa-check"></i><b>18</b> Numerical Methods</a>
 <ul>
 <li class="chapter" data-level="18.1" data-path="numerics.html"><a href="numerics.html#numerical-root-finding"><i class="fa fa-check"></i><b>18.1</b> Numerical Root Finding</a></li>
-<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation</a></li>
+<li class="chapter" data-level="18.2" data-path="numerics.html"><a href="numerics.html#numerical-differentiation-and-solutions-to-odes"><i class="fa fa-check"></i><b>18.2</b> Numerical differentiation and solutions to ODEs</a></li>
 <li class="chapter" data-level="18.3" data-path="numerics.html"><a href="numerics.html#numerical-integration"><i class="fa fa-check"></i><b>18.3</b> Numerical Integration</a></li>
-<li class="chapter" data-level="18.4" data-path="numerics.html"><a href="numerics.html#numerical-solutions-to-odes"><i class="fa fa-check"></i><b>18.4</b> Numerical Solutions to ODEs</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="probability-fundamentals.html"><a href="probability-fundamentals.html"><i class="fa fa-check"></i><b>19</b> Probability Fundamentals</a>
 <ul>
@@ -530,7 +529,7 @@ The functions <span class="math inline">\(f^{(n)}\)</span> for <span class="math
 <span class="math display">\[
 \frac{df(x)}{dx}
 \]</span>
-This notation ties in with Leibniz’s intuitive notion of the derivative as the quotient of the “infinitely small difference <span class="math inline">\(df(x)=f(x+dx)-f(x)\)</span>”, by the “infinitely small number <span class="math inline">\(dx\)</span>”; but it is important to note that the derivative is defined as the limit, and the symbols <span class="math inline">\(df(x)\)</span> and <span class="math inline">\(dx\)</span> have no meaning of their own, and cannot be manipulated separately.</p>
+This notation ties in with Leibniz’s intuitive notion of the derivative as the quotient of the “infinitely small difference <span class="math inline">\(df(x)=f(x+dx)-f(x)\)</span>”, by the “infinitely small number <span class="math inline">\(dx\)</span>”; but it is important to note that the derivative is defined as the limit, and the symbols <span class="math inline">\(df(x)\)</span> and <span class="math inline">\(dx\)</span> have no meaning of their own, and cannot be manipulated separately.<a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a></p>
 <p>Higher order derivatives are denoted
 <span class="math display">\[
 \frac{d^2f(x)}{dx^2},\frac{d^3f(x)}{dx^3},\dotsc,\frac{d^nf(x)}{dx^n},\dotsc
@@ -682,6 +681,12 @@ Alternatively, we could use the quotient rule, but this is more complicated:
 
 </div>
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="15">
+<li id="fn15"><p>This notation and concept is due to the German mathematician, philosopher, scientist and diplomat Gottfried Wilhelm Leibniz (1646-1716) who, independently of the English mathematician and scientist Isaac Newton (1643-1727), developed the concept of calculus. It is believed that Newton was the first to develop the concepts, which were later independently developed by Leibniz, whose notation became more widely adopted. Among other things, Leibniz was an early contributor to the binary number system and logic forming the basis of computer science, and designed a machine to perform the four operations of addition, subtraction, multiplication and division. See the Wikipedia page for <a href="https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz" target="_blank">Gottfried Wilhelm Leibniz</a> and the reference Couturat, Louis, 1901. La Logique de Leibniz. Paris: Felix Alcan, p. 115, therein, and <a href="https://en.wikipedia.org/wiki/Isaac_Newton" target="_blank">Sir Isaac Newton</a> and the reference Hall, Alfred Rupert (1980). <a href="https://archive.org/details/a.-rupert-hall-philosophers-at-war-the-quarrel-between-newton-and-leibniz" target="_blank">Philosophers at War: The Quarrel Between Newton and Leibniz</a>. Cambridge University Press. ISBN 978-0-521-22732-2 therein.<a href="differentiation.html#fnref15" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 

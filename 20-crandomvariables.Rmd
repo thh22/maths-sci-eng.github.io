@@ -321,15 +321,15 @@ P(-0.45<X<1.25) &=&P(X<1.25)\\
 &=&P(X<1.25)\\
 && \quad -\left[1 - P(X<0.45)\right]\\
 &\approx&0.8944-(1 - 0.6736)\\
-&\approx&0.568
+&\approx&0.568.
 \end{eqnarray*}
 
-Or using table \@ref(tab:normtable2)
+Or, using table \@ref(tab:normtable2)
 \begin{eqnarray*}
 P(-0.45<X<1.25) &=&P(0<X<1.25)\\
 && \quad + P(0<X<0.45)\\
 &=&0.3944+0.1736\\
-&\approx&0.568
+&\approx&0.568.
 \end{eqnarray*}
 :::
 
@@ -352,14 +352,14 @@ P(a\le Y\le b)&=&P(a\le \sigma X+\mu\le b)\\
     \begin{eqnarray*}
     P(0<Y<2.5)&=&P(-0.5<X<0.75)\\
     &=&P(X<0.75)-\left[1 - P(X<0.5)\right]\\
-    &\approx&0.7734 - (1 - 0.6915)\approx 0.4649
+    &\approx&0.7734 - (1 - 0.6915)\approx 0.4649.
     \end{eqnarray*}
 
-    or using table \@ref(tab:normtable2)
+    or, using table \@ref(tab:normtable2)
     \begin{eqnarray*}
     P(0<Y<2.5)&=&P(-0.5<X<0.75)\\
     &=&P(0<X<0.75)+ P(0<X<0.5)\\
-    &\approx&0.2734 + 0.1915\approx 0.4649
+    &\approx&0.2734 + 0.1915\approx 0.4649.
     \end{eqnarray*}
 
 1. If $Y$ is normal with mean $3$ and variance $25$, calculate $P(4<Y<8)$.

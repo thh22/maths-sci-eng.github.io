@@ -18,7 +18,7 @@ These notes have been compiled for self study and to complement courses at the U
 
 Contact: m.callaway@exeter.ac.uk, t.h.hughes@exeter.ac.uk, e.h.branford@exeter.ac.uk
 
-Recommended text: Engineering Mathematics, John Bird. Available online through the UoE library here: <https://encore.exeter.ac.uk/iii/encore/record/C__Rb4511752>
+Recommended text: Engineering Mathematics, John Bird. Available online through the University of Exeter library here: <https://encore.exeter.ac.uk/iii/encore/record/C__Rb4511752>
 
 
 ## Acknowledgements {-}

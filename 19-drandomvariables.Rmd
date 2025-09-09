@@ -22,7 +22,7 @@ There are 8 possible outcomes from the experiment. Let $X$ be a random variable 
 
 The convention is to denote a random variable using upper case letters and lower-case letters to denote a value that the random variable takes e.g. here we have $X=x$ with $x = 0, 1, 2, 3$.
 
-A random variable is said to be *discrete* if its range of values is finite or countably infinite (i.e. it must be possible to list all the values in a, possibly infinite, sequence).
+A random variable is said to be *discrete* if its range of values is finite or countably infinite (that is, it must be possible to list all the values in a, possibly infinite, sequence).
 
 In the coin toss example, we could write a function to map the probabilities of observing $x$ heads from three tosses as:
 $$
@@ -37,9 +37,9 @@ P(X = x) \geq 0
 $$
 and
 $$
-\sum_{x} P(X = x) = 1.
+\sum_{x} P(X = x) = 1,
 $$
-Where the notation $\displaystyle \sum_x$ means to sum over all possible values of $x$.
+where the notation $\displaystyle \sum_x$ means to sum over all possible values of $x$.
 
 
 ## Bernoulli trials
@@ -62,7 +62,7 @@ If we assume that the **probability of success** is given by a value $0\le p\le 
 $$
 p_X(x) = P(X = x) = p^x (1 - p)^{1 - x} \qquad \mbox{for}~x = 0, 1.
 $$ 
-The experiment is known as a *Bernoulli trial*, after [Jacob Bernoulli (1654--1705)](https://en.wikipedia.org/wiki/Jacob_Bernoulli).
+The experiment is known as a *Bernoulli trial*, after the Swiss mathematician [Jacob Bernoulli (1654--1705)](https://en.wikipedia.org/wiki/Jacob_Bernoulli).
 
 We write $X \sim \mbox{Bern}(p)$ to say that the random variable $X$ has a Bernoulli probability distribution with parameter $p$.
 
@@ -131,7 +131,7 @@ P(X < 2) &=& P(X = 0) + P(X = 1)\\
 
 
 ## Poisson distribution
-The Poisson distribution is named after [Simeon Denis Poisson (1781--1840)](https://en.wikipedia.org/wiki/Sim\%C3\%A9on_Denis_Poisson). The Poisson distribution has been used to model (according to Wikipedia):
+The Poisson distribution is named after the French mathematician and physicist [Simeon Denis Poisson (1781--1840)](https://en.wikipedia.org/wiki/Sim\%C3\%A9on_Denis_Poisson). The Poisson distribution has been used to model (according to Wikipedia):
 
 * the number of goals in a football match,
 * the number of children in a family,
@@ -205,7 +205,7 @@ Find the expected score from a single roll of a fair die.
 \begin{eqnarray*}
 \operatorname{E}(X) &=& \sum_{x = 1}^6 x p_X(x)\\
 &=& \left(1 \times \frac{1}{6}\right) + \left(2 \times \frac{1}{6}\right) + \dots + \left(6 \times \frac{1}{6}\right)\\
-&=& 3.5
+&=& 3.5.
 \end{eqnarray*}
 :::
 
@@ -224,14 +224,14 @@ We note that $Y$ can take values $\{1, 4, 9, 16, 25, 36\}$, each with probabilit
 
 In general, if $g(\cdot)$ is a function defined on the range of a discrete random variable $X$, then $g(X)$ is also a random variable, and it follows that
 $$
-\operatorname{E}[g(X)] = \sum_{x} g(x) p_X(x)
+\operatorname{E}[g(X)] = \sum_{x} g(x) p_X(x).
 $$
 
 **Some useful properties of the expectation:**
 
 * Let $a$ and $b$ be constants, and let $g(X)$ and $h(X)$ be functions defined on the range of a random variable $X$. Then,
     $$
-    \operatorname{E}\left[ag(X) + bh(X)\right] = a\operatorname{E}[g(X)] + b\operatorname{E}[h(X)]
+    \operatorname{E}\left[ag(X) + bh(X)\right] = a\operatorname{E}[g(X)] + b\operatorname{E}[h(X)].
     $$
 
 * The expected value of a constant, $a$, is itself i.e.
@@ -287,7 +287,7 @@ $$
 
 * For $a$ and $b$ constants:
     $$
-        \operatorname{var}(aX + b) = a^2\operatorname{var}(X)
+        \operatorname{var}(aX + b) = a^2\operatorname{var}(X).
     $$
 
 ## Summary of Discrete Distributions
