@@ -2,11 +2,8 @@ bookdown::gitbook:
   css: style.css
   config:
     toc:
-      before: |
-        <li><a href="./">Mathematics for Scientists and Engineers</a></li>
-      after: |
-        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/%s
+      before: null
+      after: null
     download: ["pdf", "epub"]
     sharing: null
 bookdown::pdf_book:

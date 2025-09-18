@@ -3,11 +3,11 @@
 A function $f$ can be thought of as a system that takes an input value $x$ and returns an output value $y$. The output value $y$ corresponding to the input $x$ is also denoted by $f(x)$ (read "$f$ of $x$"). We most commonly encounter functions whose input is a real number and output is a real number, but there are many other types of functions in mathematics.
 
 
-```{r func, echo=FALSE, fig.cap = "A function can be thought of as a system: we have an input value $x$, the system is the function $f$, and the output is the value $f(x)$", fig.alt = "Depiction of a function as a system, which takes an input $x$ and returns an output $f(x)$."}
+```{r func, echo=FALSE, fig.cap = "A function can be thought of as a system: we have an input value $x$, the system is the function $f$, and the output is the value $f(x)$.", fig.alt = "Depiction of a function as a system, which takes an input $x$ and returns an output $f(x)$."}
 knitr::include_graphics("figures/function.png")
 ```
 
-You may be familiar with plotting such functions on a graph, where the coordinates $(x,f(x))$, or $(x,y)$ are plotted, against perpendicular axes. This is known as the *Cartesian coordinate system*^[Cartesian coordinates are named after the French mathematician, physicist and philosopher René Descartes (1596-1650), who is credited as a founder of analytic geometry and a leading figure in the Scientific Revolution, Descartes also contributed to the nowadays more problematic anthropocentric views, including denying that other (non-human) animals have reason or intelligence -- see Waddicor, M. H., Montesquieu and the Philosophy of Natural Law (Leiden: Martinus Nijhoff Publishers, 1970), p. 63 <a href="https://web.archive.org/web/20210816214230/https://books.google.com/books?id=sLooBgAAQBAJ&pg=PA63" target="_blank">Archived</a> 16 August 2021 at the Wayback Machine].
+You may be familiar with plotting such functions on a graph, where the coordinates $(x,f(x))$, or $(x,y)$ are plotted, against perpendicular axes. This is known as the *Cartesian coordinate system*^[Cartesian coordinates are named after the French mathematician, physicist and philosopher [René Descartes](https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes) (1596-1650), who is credited as a founder of analytic geometry and a leading figure in the Scientific Revolution, Descartes also contributed to the nowadays more problematic anthropocentric views, including denying that other (non-human) animals have reason or intelligence [@Wadd, p. 63].].
 
 ```{r graph, echo=FALSE, fig.cap = "A function can be plotted in Cartesian Coordinates: the corresponding inputs $x$ and outputs $y=f(x)$ are plotted as points; these sometimes form a continuous curve in the plane.", fig.alt = "Depiction of an arbitrary curve in Cartesian coordinates."}
 knitr::include_graphics("figures/graph.png")
@@ -237,7 +237,7 @@ knitr::include_url("https://www.desmos.com/calculator/g22ec0pwpq")
 ```
 <a href="https://www.desmos.com/calculator/g22ec0pwpq" target="_blank">[Open preceding graph in new browser tab.]</a>
 
-There is a special value of the base $a$ for which the constant of proportionality is $k=1$. This is known as Euler's number^[Named after the Swiss mathematician Leonhard Euler, an extraordinarily prolific mathematician even after losing his sight. Indeed, when discussing his blindness, Euler is reported to have said ``Now I will have fewer distractions'' -- see Eves, Howard W. (1969). "Euler's blindness". In Mathematical Circles: A Selection of Mathematical Stories and Anecdotes, Quadrants III and IV. Prindle, Weber, & Schmidt. p. 48. OCLC 260534353. Also quoted by Richeson (2012), p. 17, cited to Eves.] and is denoted as $e$. It is an irrational number (has an infinitely long, never repeating decimal expansion):
+There is a special value of the base $a$ for which the constant of proportionality is $k=1$. This is known as Euler's number^[Named after the Swiss mathematician [Leonhard Euler](https://en.wikipedia.org/wiki/Leonhard_Euler), an extraordinarily prolific mathematician even after losing his sight. Indeed, when discussing his blindness, Euler is reported to have said ``Now I will have fewer distractions'' [@Eves, p. 48].] and is denoted as $e$. It is an irrational number (has an infinitely long, never repeating decimal expansion):
 
 $$e=2.71828182846...$$
 
@@ -327,16 +327,16 @@ knitr::include_graphics("figures/inverse.png")
 When we have an algebraic formula for a function there is a general procedure for finding the inverse:
 
 1. If necessary, restrict to inputs where the function is one-to-one (to obtain a partial inverse);
-2. Re-arrange $y=f(x)$ to give $x$ in terms of $y$;
+2. Rearrange $y=f(x)$ to give $x$ in terms of $y$;
 3. Interchange the variable labels $x$ and $y$ to obtain $y=f^{-1}(x)$.
 
 Let's take a look at some examples.
 
-:::{.example algebraic_inverses}
+::: {.example #AlgebraicInverses}
 
 1. Find the inverse of $f(x)=2x+1$.
 
-This function is one-to-one. Re-arraging for $x$
+This function is one-to-one. Rearranging for $x$
 
 \begin{align*}
 y&=2x+1\\
@@ -356,7 +356,7 @@ $$f^{-1}(x)=\frac{1}{2}x-\frac{1}{2}.$$
 
 By restricting to non-negative values of $x$, the function is one-to-one. 
 
-Re-arranging for $x$:
+Rearranging for $x$:
 
 \begin{align*}
 y&=x^2-1\\
@@ -420,11 +420,11 @@ knitr::include_url("https://www.desmos.com/calculator/exmc148194")
 ```
 <a href="https://www.desmos.com/calculator/exmc148194" target="_blank">[Open preceding graph in new browser tab.]</a>
 
-It is important to keep these facts in mind when re-arranging equations. For example, consider the equation of the area $A$ of a circle of radius $r$:
+It is important to keep these facts in mind when rearranging equations. For example, consider the equation of the area $A$ of a circle of radius $r$:
 
 $$A=\pi r^2.$$
 
-To find the radius as a function of area, we first re-arrange to give
+To find the radius as a function of area, we first rearrange to give
 
 $$r^2=\frac{A}{\pi}$$
 

@@ -49,7 +49,7 @@ We deal with various number systems in mathematics.
 
 Algebra is the general name given to the rules for manipulating numerical variables.
 
-We often use letters as placeholders for numerical values. We can then manipulate these letters as if they were numbers using the rules of algebra, re-arranging formulae, or finding the general solution to an equation. We can then "plug-in" specific numbers to get the answer.
+We often use letters as placeholders for numerical values. We can then manipulate these letters as if they were numbers using the rules of algebra, rearranging formulae, or finding the general solution to an equation. We can then "plug-in" specific numbers to get the answer.
 
 Being fluent in the notation and manipulations of algebra allows us to progress to higher (more useful and more interesting) areas of mathematics.
 
@@ -422,7 +422,7 @@ Equations are often regarded as *formulas*, which can be used to calculate the v
 
 $$A=\pi r^2$$
 
-where the independent variable $r$ is the radius of the cirle and $\pi$ is the mathematical constant $3.141...$. By plugging in a particular value for $r$ we then obtain a value for the area $A$.  We often want to re-arrange equations to make a different variable the dependent variable, or *subject*, of the formula, i.e. to place it alone on the left hand-side. Re-arranging formulae is also known as *transposition*. For example, if we knew the area of a circle and wanted to calculate the corresponding radius, we can re-arrange the equation to make $r$ the subject:
+where the independent variable $r$ is the radius of the cirle and $\pi$ is the mathematical constant $3.141...$. By plugging in a particular value for $r$ we then obtain a value for the area $A$.  We often want to rearrange equations to make a different variable the dependent variable, or *subject*, of the formula, i.e. to place it alone on the left hand-side. Rearranging formulae is also known as *transposition*. For example, if we knew the area of a circle and wanted to calculate the corresponding radius, we can rearrange the equation to make $r$ the subject:
 
 $$r=\sqrt{\frac{A}{\pi}}.$$
 
@@ -488,7 +488,7 @@ $$x<5$$ denotes all numbers that are strictly less that $5$ (so not including $5
 $$-1< x \leq 1$$ denotes all numbers that are strictly greater than $-1$ but less that or equal to $1$ (so $x=1$ is a possibility).
 :::
 
-When re-arranging inequalities we need to be a bit more careful with their manipulation than with equalities. If we perform the same operation to both sides in an equality then the equality still holds true, but this is not the case in general for inequalities -- in particular we need to be careful with multiplication by negative numbers which "flips" the inequality.
+When rearranging inequalities we need to be a bit more careful with their manipulation than with equalities. If we perform the same operation to both sides in an equality then the equality still holds true, but this is not the case in general for inequalities -- in particular we need to be careful with multiplication by negative numbers which "flips" the inequality.
 
 For example, if we take all values $x$ such that $x>10$, then an equivalent expression after multiplying by $-1$ is $-x<-10$ (NOT $-x>-10$).
 

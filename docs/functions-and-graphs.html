@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Functions and Graphs | Introduction to Mathematics for Data Science</title>
   <meta name="description" content="Mathematics Self Study Materials for University of Exeter in Cornwall" />
-  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Functions and Graphs | Introduction to Mathematics for Data Science" />
   <meta property="og:type" content="book" />
@@ -23,7 +23,7 @@
 <meta name="author" content="Drs Mark Callaway, Tim Hughes and Ed Branford" />
 
 
-<meta name="date" content="2025-09-09" />
+<meta name="date" content="2025-09-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -63,6 +63,29 @@
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -77,9 +100,6 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Mathematics for Scientists and Engineers</a></li>
-
-<li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
 <ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
@@ -359,9 +379,6 @@
 <li class="chapter" data-level="" data-path="exercise-set-18.html"><a href="exercise-set-18.html"><i class="fa fa-check"></i>Exercise Set 18</a></li>
 <li class="chapter" data-level="" data-path="notation.html"><a href="notation.html"><i class="fa fa-check"></i>Notation</a></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-
 </ul>
 
       </nav>
@@ -385,7 +402,7 @@
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:func"></span>
 <img src="figures/function.png" alt="Depiction of a function as a system, which takes an input $x$ and returns an output $f(x)$." width="200" />
 <p class="caption">
-Figure 2.1: A function can be thought of as a system: we have an input value <span class="math inline">\(x\)</span>, the system is the function <span class="math inline">\(f\)</span>, and the output is the value <span class="math inline">\(f(x)\)</span>
+Figure 2.1: A function can be thought of as a system: we have an input value <span class="math inline">\(x\)</span>, the system is the function <span class="math inline">\(f\)</span>, and the output is the value <span class="math inline">\(f(x)\)</span>.
 </p>
 </div>
 <p>You may be familiar with plotting such functions on a graph, where the coordinates <span class="math inline">\((x,f(x))\)</span>, or <span class="math inline">\((x,y)\)</span> are plotted, against perpendicular axes. This is known as the <em>Cartesian coordinate system</em><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</p>
@@ -652,7 +669,7 @@ y=a\cosh\left(\frac{x}{a}\right)
 \end{equation*}\]</span>
 and is known as a <em>catenary curve</em>.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:catenary"></span>
-<img src="figures/Kette_Kettenkurve_Catenary_2008_PD.jpg" alt="A chain hanging from points forms a catenary." width="1136" />
+<img src="figures/Kette_Kettenkurve_Catenary_2008_PD.jpg" alt="A chain hanging from points forms a catenary."  />
 <p class="caption">
 Figure 2.14: A chain hanging from points forms a catenary. From <a href="https://commons.wikimedia.org/w/index.php?curid=5609313">Wikipedia - Kamel15</a>
 </p>
@@ -687,15 +704,16 @@ Figure 2.15: The function y=2x+1 and its inverse y=0.5x-0.5.
 <p>When we have an algebraic formula for a function there is a general procedure for finding the inverse:</p>
 <ol style="list-style-type: decimal">
 <li>If necessary, restrict to inputs where the function is one-to-one (to obtain a partial inverse);</li>
-<li>Re-arrange <span class="math inline">\(y=f(x)\)</span> to give <span class="math inline">\(x\)</span> in terms of <span class="math inline">\(y\)</span>;</li>
+<li>Rearrange <span class="math inline">\(y=f(x)\)</span> to give <span class="math inline">\(x\)</span> in terms of <span class="math inline">\(y\)</span>;</li>
 <li>Interchange the variable labels <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> to obtain <span class="math inline">\(y=f^{-1}(x)\)</span>.</li>
 </ol>
 <p>Let’s take a look at some examples.</p>
-<p>:::{.example algebraic_inverses}</p>
+<div class="example">
+<p><span id="exm:AlgebraicInverses" class="example"><strong>Example 2.1  </strong></span></p>
 <ol style="list-style-type: decimal">
 <li>Find the inverse of <span class="math inline">\(f(x)=2x+1\)</span>.</li>
 </ol>
-<p>This function is one-to-one. Re-arraging for <span class="math inline">\(x\)</span></p>
+<p>This function is one-to-one. Rearranging for <span class="math inline">\(x\)</span></p>
 <p><span class="math display">\[\begin{align*}
 y&amp;=2x+1\\
 y-1&amp;=2x\\
@@ -710,7 +728,7 @@ x&amp;=\frac{1}{2}y-\frac{1}{2}
 <li>Find an inverse of <span class="math inline">\(g(x)=x^2-1\)</span>, by restricting to suitable inputs.</li>
 </ol>
 <p>By restricting to non-negative values of <span class="math inline">\(x\)</span>, the function is one-to-one.</p>
-<p>Re-arranging for <span class="math inline">\(x\)</span>:</p>
+<p>Rearranging for <span class="math inline">\(x\)</span>:</p>
 <p><span class="math display">\[\begin{align*}
 y&amp;=x^2-1\\
 y+1&amp;=x^2\\
@@ -751,8 +769,8 @@ x&amp;=\dfrac{3y-2}{y-1}
 Figure 2.17: The function <span class="math inline">\(h(x)=\dfrac{x-2}{x-3}\)</span> (red curve) and its partial inverse <span class="math inline">\(h^{-1}(x)=\dfrac{3x-2}{x-1}\)</span> (blue curve) together with the line of symmetry <span class="math inline">\(y=x\)</span>.
 </p>
 </div>
-<p><a href="https://www.desmos.com/calculator/wsktzns4ca" target="_blank">[Open preceding graph in new browser tab.]</a>
-:::</p>
+<p><a href="https://www.desmos.com/calculator/wsktzns4ca" target="_blank">[Open preceding graph in new browser tab.]</a></p>
+</div>
 </div>
 <div id="root-functions" class="section level3 hasAnchor" number="2.7.2">
 <h3><span class="header-section-number">2.7.2</span> Root functions<a href="functions-and-graphs.html#root-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -775,9 +793,9 @@ Figure 2.19: The functions <span class="math inline">\(f(x)=x^3\)</span> (red cu
 </p>
 </div>
 <p><a href="https://www.desmos.com/calculator/exmc148194" target="_blank">[Open preceding graph in new browser tab.]</a></p>
-<p>It is important to keep these facts in mind when re-arranging equations. For example, consider the equation of the area <span class="math inline">\(A\)</span> of a circle of radius <span class="math inline">\(r\)</span>:</p>
+<p>It is important to keep these facts in mind when rearranging equations. For example, consider the equation of the area <span class="math inline">\(A\)</span> of a circle of radius <span class="math inline">\(r\)</span>:</p>
 <p><span class="math display">\[A=\pi r^2.\]</span></p>
-<p>To find the radius as a function of area, we first re-arrange to give</p>
+<p>To find the radius as a function of area, we first rearrange to give</p>
 <p><span class="math display">\[r^2=\frac{A}{\pi}\]</span></p>
 <p>and now if we take the square root of both sides, mathematically there are TWO possible solutions, one positive and one negative</p>
 <p><span class="math display">\[r=\pm \sqrt{\frac{A}{\pi}}.\]</span></p>
@@ -882,11 +900,20 @@ Figure 2.25: Semi log graph paper (base 10). From <a href="https://commons.wikim
 </div>
 </div>
 </div>
+<h3>References<a href="references.html#references" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-Eves" class="csl-entry">
+Eves, Howard W. 1969. <em>"Euler’s Blindness". In Mathematical Circles: A Selection of Mathematical Stories and Anecdotes, Quadrants III and IV</em>. Prindle, Weber, &amp; Schmidt.
+</div>
+<div id="ref-Wadd" class="csl-entry">
+Waddicor, M. H. 1970. <em>Montesquieu and the Philosophy of Natural Law</em>. Leiden: Martinus Nijhoff Publishers. <a href="https://web.archive.org/web/20210816214230/https://books.google.com/books?id=sLooBgAAQBAJ&amp;pg=PA63">https://web.archive.org/web/20210816214230/https://books.google.com/books?id=sLooBgAAQBAJ&amp;pg=PA63</a>.
+</div>
+</div>
 <div class="footnotes">
 <hr />
 <ol start="3">
-<li id="fn3"><p>Cartesian coordinates are named after the French mathematician, physicist and philosopher René Descartes (1596-1650), who is credited as a founder of analytic geometry and a leading figure in the Scientific Revolution, Descartes also contributed to the nowadays more problematic anthropocentric views, including denying that other (non-human) animals have reason or intelligence – see Waddicor, M. H., Montesquieu and the Philosophy of Natural Law (Leiden: Martinus Nijhoff Publishers, 1970), p. 63 <a href="https://web.archive.org/web/20210816214230/https://books.google.com/books?id=sLooBgAAQBAJ&pg=PA63" target="_blank">Archived</a> 16 August 2021 at the Wayback Machine<a href="functions-and-graphs.html#fnref3" class="footnote-back">↩︎</a></p></li>
-<li id="fn4"><p>Named after the Swiss mathematician Leonhard Euler, an extraordinarily prolific mathematician even after losing his sight. Indeed, when discussing his blindness, Euler is reported to have said ``Now I will have fewer distractions’’ – see Eves, Howard W. (1969). “Euler’s blindness”. In Mathematical Circles: A Selection of Mathematical Stories and Anecdotes, Quadrants III and IV. Prindle, Weber, &amp; Schmidt. p. 48. OCLC 260534353. Also quoted by Richeson (2012), p. 17, cited to Eves.<a href="functions-and-graphs.html#fnref4" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Cartesian coordinates are named after the French mathematician, physicist and philosopher <a href="https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes">René Descartes</a> (1596-1650), who is credited as a founder of analytic geometry and a leading figure in the Scientific Revolution, Descartes also contributed to the nowadays more problematic anthropocentric views, including denying that other (non-human) animals have reason or intelligence <span class="citation">(<a href="#ref-Wadd">Waddicor 1970, 63</a>)</span>.<a href="functions-and-graphs.html#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Named after the Swiss mathematician <a href="https://en.wikipedia.org/wiki/Leonhard_Euler">Leonhard Euler</a>, an extraordinarily prolific mathematician even after losing his sight. Indeed, when discussing his blindness, Euler is reported to have said ``Now I will have fewer distractions’’ <span class="citation">(<a href="#ref-Eves">Eves 1969, 48</a>)</span>.<a href="functions-and-graphs.html#fnref4" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
@@ -909,32 +936,32 @@ Figure 2.25: Semi log graph paper (base 10). From <a href="https://commons.wikim
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-"sharing": null,
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/maths-sci-eng/maths-sci-eng.github.io/edit/master/02-funcs_graphs.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["maths-notes.pdf", "maths-notes.epub"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "subsection"
-}
+  "sharing": null,
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["maths-notes.pdf", "maths-notes.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
 });
 });
 </script>

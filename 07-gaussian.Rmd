@@ -168,7 +168,7 @@ This represents
 1\times x_1 + 0 \times x_2 &=x_1= \frac{11}{7}\\
 0\times x_1 + 1 \times x_2 &=x_2= \frac{1}{7}\\
 \end{align*}
-that is, we can just read off the solutions in the right-most column. This is an application of a general method known as Gaussian elimination^[The method is named after Carl Friedrich Gauss (1777--1855), a mathematician and physicist born in Braunschweig in the Holy Roman Empire, in what is now Germany. Gauss contributed broadly to mathematics and science, and had a reputation for perfectionism and only publishing work that he considered to be complete and above criticism.], and provides a systematic way to solve simultaneous linear equations. 
+that is, we can just read off the solutions in the right-most column. This is an application of a general method known as Gaussian elimination^[The method is named after [Carl Friedrich Gauss](https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss) (1777--1855), a mathematician and physicist born in Braunschweig in the Holy Roman Empire, in what is now Germany. Gauss contributed broadly to mathematics and science, and had a reputation for perfectionism and only publishing work that he considered to be complete and above criticism.], and provides a systematic way to solve simultaneous linear equations. 
 
 Note that each step in the above process can be reversed using the same set of operations. For instance, the operation
 $$R_1 \to R_1 + 4R_2$$

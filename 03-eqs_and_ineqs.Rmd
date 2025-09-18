@@ -200,7 +200,7 @@ x-4y&=1.
 \end{align*}
 We could start by rearranging the second equation to make $x$ the subject:
 $$x=1+4y.$$
-It does not matter which equation we choose first or which variable we choose first, this choice was just easier to re-arrange. We can then substitute this back in for $x$ in the first equation:
+It does not matter which equation we choose first or which variable we choose first, this choice was just easier to rearrange. We can then substitute this back in for $x$ in the first equation:
 $$3(1+4y)+2y=5$$
 and then solve for $y$
 \begin{align*}
@@ -371,7 +371,7 @@ We wish to find all values of $x$ satisfying the following inequalities.
 
 1. $2x+6<18.$
 
-    Here we can easily re-arrange the inequality (subtract $6$ from each side and divide by the positive number $2$ -- which preserves the direction of the inequality). This gives
+    Here we can easily rearrange the inequality (subtract $6$ from each side and divide by the positive number $2$ -- which preserves the direction of the inequality). This gives
     $$x<6.$$
 
 1. $x^2-7x+12>0$

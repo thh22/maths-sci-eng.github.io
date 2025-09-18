@@ -14,16 +14,20 @@ description: "Mathematics Self Study Materials for University of Exeter in Cornw
 
 # Preface {-}
 
-These notes have been compiled for self study and to complement courses at the University of Exeter in Cornwall. They are a work in progress -- please get in touch if you find any errors or have any feedback.
+These notes have been compiled for self study and to complement courses at the University of Exeter in Cornwall. They were originally developed for scientists and engineers and we are in the process of adding in examples from other application areas. 
 
-Contact: m.callaway@exeter.ac.uk, t.h.hughes@exeter.ac.uk, e.h.branford@exeter.ac.uk
+They are a work in progress -- please get in touch if you find any errors or have any feedback.
 
-Recommended text: Engineering Mathematics, John Bird. Available online through the University of Exeter library here: <https://encore.exeter.ac.uk/iii/encore/record/C__Rb4511752>
+Contact: <m.callaway@exeter.ac.uk>, <t.h.hughes@exeter.ac.uk>, <e.h.branford@exeter.ac.uk>.
+
+Recommended text for chapters 1--21: [@Bird]. Available online through the University of Exeter library.
 
 
 ## Acknowledgements {-}
 
-Thank you to our colleagues who have contributed to these notes by sharing lecture materials: Dr TJ McKinley, Dr Houry Melkonian, Dr Markus Mueller and Prof Stuart Townley.
+Thank you to our many colleagues who have contributed to these notes by sharing lecture materials, and especially to Dr TJ McKinley, Dr Houry Melkonian, Dr Markus Mueller and Prof Stuart Townley.
+
+This book has been written in Rmarkdown using the [bookdown package](https://bookdown.org/yihui/rmarkdown/books.html). Thank you to the bookdown creator, Yihui Xie.
 
 
 ```{r, include=FALSE}
